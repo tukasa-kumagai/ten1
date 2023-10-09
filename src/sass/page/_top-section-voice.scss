@@ -1,0 +1,179 @@
+@use "global" as *;
+
+
+.vice {
+  position: relative;
+  margin-top: rem(72);
+
+  @include mq("md") {
+    margin-top: rem(468);
+  }
+}
+
+.vice::before {
+  background-image: url("/assets/images/top/coral(2).png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(50);
+  position: absolute;
+
+  @include mq("md") {
+    height: rem(162);
+    right: rem(124);
+    top: rem(539);
+    width: rem(71);
+    z-index: 1;
+    right: calc(50% - min(48.5vw, rem(539)));
+  }
+
+}
+
+
+.vice__title-inner {
+  max-width: rem(1280);
+  margin: 0 auto;
+
+
+  @include mq("md") {
+
+    margin: 0 auto;
+
+  }
+}
+
+
+
+.vice__bg-img1 {
+  display: none;
+
+  @include mq("md") {
+    display: flex;
+    position: absolute;
+    top: 84%;
+    left: 82.5%;
+    width: rem(71);
+  }
+}
+
+.vice__bg-img2 {
+  display: none;
+
+  @include mq("md") {
+
+    display: flex;
+    left: 7%;
+    position: absolute;
+    top: -18%;
+    width: rem(302);
+
+  }
+}
+
+.card-list-items {
+  margin-top: rem(42);
+
+ 
+  @include mq("md") {
+    margin: 0 auto;
+    margin-top: rem(30);
+
+  }
+}
+
+.card-list-item {
+ 
+  margin: 0 auto;
+
+  box-shadow: 0 0 rem(8) gray;
+  padding: rem(15) rem(16) rem(24) rem(16);
+margin-top: rem(0);
+max-width: 100%;
+  @include mq("md") {
+  
+
+  }
+}
+
+
+.vice__section-title {
+  width: rem(87);
+  margin: 0 auto;
+
+  @include mq("md") {
+    width: rem(157);
+    margin: 0 auto;
+  }
+
+  @include mq("md") {
+    width: rem(109);
+  }
+}
+
+.vice__section-text {
+  font-size: rem(12);
+  color: $green;
+  text-align: center;
+  margin-top: rem(14);
+
+  @include mq("md") {
+    margin-top: rem(17);
+  }
+
+}
+
+.space__vice-foot {
+  padding-top: rem(41);
+
+  @include mq("md") {
+    padding-top: rem(32);
+  }
+}
+
+
+div.card2__img {
+
+  position: relative;
+  width: 100%;
+  margin: rem(0) auto rem(0);
+  margin-top: rem(10);
+  height: rem(120);
+
+  @include mq("md") {
+    height: rem(150);
+    position: relative;
+    margin: rem(0) auto rem(0);
+
+
+  }
+}
+
+.card2__img {
+  padding-top: 0%; //比率の計算式 横233/縦350*100%=画像の比率
+}
+
+.card2__img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+div.card2__img div.color {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: $green;
+}
+
+div.card2__img img {
+  display: block;
+  width: 100%;
+}

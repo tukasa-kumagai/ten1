@@ -1,0 +1,300 @@
+@use "global" as *;
+
+.contact {
+    
+    position: relative;
+
+
+    @include mq("md") {
+    
+        position: relative;
+
+     
+
+    }
+}
+
+.contact::before {
+    background-image: url(/assets/images/top/sea-bream.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    height: rem(50);
+    position: absolute;
+    height: rem(51);
+    right: rem(14);
+    top: rem(-29);
+    width: rem(109);
+
+
+ 
+    @include mq("md") {
+        height: rem(150);
+        right: rem(46);
+        top: rem(-36);
+        width: rem(301);
+        right: calc(50% - min(48.5vw, rem(670)));
+    }
+}
+
+
+
+.contact__title-name {
+    font-size: rem(80);
+    line-height: rem(80);
+max-width: rem(315);
+margin: 0 auto;
+    @include mq("md") {
+        
+    }
+
+}
+.contact__title-name::first-letter {
+    color: $green;
+   
+   } 
+
+.contact__bg {
+
+    @include mq("md") {}
+}
+
+.contact__inner-bg {
+
+    @include mq("md") {}
+}
+
+.contact__ba-img {
+    left: 66.5%;
+    top: -4.6%;
+    position: absolute;
+    width: rem(109);
+
+    @include mq("md") {
+
+        display: flex;
+        position: absolute;
+        top: 10%;
+        left: 72%;
+        width: rem(301);
+
+    }
+}
+
+.contact__ba-img::before {
+    height: 8.625rem;
+    right: 3.125rem;
+    top: 6.25rem;
+    width: 18.8125rem;
+}
+
+
+
+
+
+.contact__maim {
+
+    @include mq("md") {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 0 rem(8) gray;
+        max-width: rem(1080);
+        width: 100%;
+        margin: 0 auto;
+        padding-top: rem(83);
+        padding-bottom: rem(83);
+        padding-left: rem(51);
+        padding-right: rem(112);
+        overflow: visible;
+
+    }
+}
+
+
+.space__contact-head {
+    padding-top: rem(40);
+
+    @include mq("md") {
+        width: rem(140);
+
+
+    }
+}
+
+.space__contact-foot {
+    padding-top: rem(0);
+    position: relative;
+}
+
+.contact__logo {
+    margin: 0 auto;
+    max-width: rem(174);
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-bottom: rem(6);
+
+    @include mq("md") {
+        max-width: rem(200);
+        top: rem(0);
+        left: rem(0);
+    }
+}
+
+.contact__logo::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: rem(-63);
+    position: absolute;
+    width: 170%;
+    border-bottom: rem(1) solid $green;
+
+    @include mq("md") {
+        width: 220%;
+        left: rem(-128);
+
+
+    }
+}
+
+
+
+.contact__head {
+
+    @include mq("md") {
+        border-right: 0.0625rem solid #408F95;
+        padding-right: rem(80);
+    }
+}
+
+.contact__head-under {
+
+    @include mq("md") {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: rem(24);
+        justify-content: left;
+
+    }
+}
+
+.contact__information {
+    text-align: center;
+    margin: rem(16) rem(0);
+    font-size: rem(16);
+
+    @include mq("md") {
+        padding: rem(0) rem(0);
+        margin: rem(0) rem(0);
+    }
+}
+
+.contact__address {}
+
+.contact__phone {
+    margin-top: rem(4);
+    letter-spacing: -0.1em;
+}
+
+.contact__holiday {
+    margin-top: rem(4);
+    letter-spacing: 0em;
+}
+
+.contact__window {
+    margin: 0 auto;
+    @include mq("md") {
+        aspect-ratio: 273/148;
+        margin-left: auto;
+        margin-top: 0;
+        width: 62.0454545455%;
+    }
+}
+
+
+.contact__map {
+    text-align: center;
+    margin-left: rem(0);
+    @include mq("md") {
+    aspect-ratio: 273/148;
+    margin-left: rem(32);
+    margin-top: 0;
+    width: 62.0454545455%;
+}
+}
+
+.contact__map iframe  {
+    width: rem(295);
+}
+
+
+  
+  
+.contact__footer {
+
+
+    @include mq("md") {
+        
+    }
+
+}
+
+.contact__title {
+    margin-top: rem(38);
+ 
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mq("md") {
+  
+        margin-top: rem(21);
+    }
+
+
+}
+
+.contact__inquiry {
+    text-align: center;
+    color: $green;
+   
+
+    @include mq("md") {
+        
+    }
+
+}
+
+.sp-contact__text {
+    font-size: rem(12);
+    line-height: 1;
+
+    @include mq("md") {
+        display: none;
+       
+    }
+}
+
+.pc-contact__text {
+    font-size: rem(12);
+    line-height: 1;
+    display: none;
+
+    @include mq("md") {
+        line-height: 1;
+        display: block;
+    }
+}
+
+.contact__subtext {
+    font-size: rem(14);
+    margin-top: rem(15);
+
+    @include mq("md") {
+
+        margin-top: rem(15);
+    }
+}
+
+

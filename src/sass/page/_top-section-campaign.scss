@@ -1,0 +1,250 @@
+@use "global" as *;
+
+
+.campaign {
+
+}
+
+
+.l-campaign {
+    margin-top: rem(40);
+
+    @include mq("md") {
+
+        margin-top: rem(120);
+
+    }
+}
+
+.campaign__inner {
+
+        position: relative;
+
+    @include mq("md") {
+    
+    }
+}
+
+
+
+.title-inner {
+    margin: 0 auto;
+    max-width: rem(281);
+
+    @include mq("md") {}
+}
+
+.campaign__section-title {
+    width: rem(157);
+    margin: 0 auto;
+
+    @include mq("md") {
+        width: rem(287);
+
+    }
+}
+
+.campaign__title {
+
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: rem(40);
+        color: $black2;
+        font-weight: 400;
+
+    }
+}
+
+.campaign__title-color {
+    @include mq("md") {
+        font-size: rem(40);
+        line-height: rem(40);
+        color: $green;
+    }
+}
+
+.campaign__section-text {
+    font-size: rem(12);
+    color: $green;
+    text-align: center;
+    margin-top: rem(7);
+
+    @include mq("md") {
+        margin-top: rem(11);
+        margin-bottom: rem(40);
+    }
+}
+
+.p-button-inner.lーposition-inner {
+    max-width: rem(206);
+    margin-top: rem(30);
+
+    @include mq("md") {
+        margin-top: rem(15);
+    }
+}
+
+
+
+//swiper
+
+.l-inner {}
+
+.swiper-area {
+    margin-right: calc(50% - 50vw);
+    @include mq("md") {
+
+        display: flex;
+
+    }
+
+
+}
+
+
+.swiper {
+
+
+    @include mq("md") {
+        margin-top: rem(40);
+        display: flex;
+        margin-right: rem(0);
+
+    }
+}
+
+
+.swiper-wrapper {
+
+    margin-left: rem(6);
+    margin-top: rem(30);
+    margin-bottom: rem(10);
+   
+    
+    @include mq("md") {
+        margin-top: rem(16);
+        margin-bottom: rem(0);
+        margin-left: auto;
+      
+        margin-right: 0;
+     
+        bottom: rem(20);
+    
+
+
+    }
+}
+
+
+.sample-slider {
+    width: 100%;
+    margin-right: calc(50% - 50vw);
+}
+
+.sample-slider img {
+    width: 100%;
+}
+
+.swiper-slide {
+    margin: 0 rem(10);
+    max-width: rem(280);
+    width: 100%;
+    margin-right: rem(24);
+
+  
+    @include mq("md") {
+        padding-bottom: 0;
+        max-width: rem(333);
+        width: 100%;
+        margin-right: rem(20);
+        margin-left: rem(20);
+        transform: translate3d(rem(0), rem(105), rem(0));
+        
+    }
+}
+
+/*デフォルトの矢印を消す*/
+.sample-slider [class^="swiper-button-"]::after {
+    content: "";
+
+}
+
+/*矢印のサイズ調整*/
+.sample-slider [class^="swiper-button-"] {
+    width: rem(80);
+
+}
+
+/*矢印の位置調整*/
+.sample-slider .swiper-button-next {
+    z-index: 10000;
+}
+
+.sample-slider .swiper-button-prev {}
+
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+
+
+    @include mq("md") {
+        display: flex;
+        width: rem(80);
+        position: absolute;
+        top: 14%;
+        height: 14.5%;
+
+    }
+
+}
+
+.swiper-button-prev {
+
+    @include mq("md") {
+        position: absolute;
+        left: 71%;
+        right: auto;
+        top: 3%;
+    }
+}
+
+.swiper-button-next {
+
+    @include mq("md") {
+        position: absolute;
+        top: 3%;
+        left: 82%;
+        right: auto;
+
+    }
+}
+
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    z-index: 100000;
+
+}
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev {
+    background-image: url(/assets/images/top/left矢印.png);
+    width: rem(29);
+
+}
+
+/* 次への矢印カスタマイズ */
+.swiper-button-next {
+    background-image: url(/assets/images/top/right矢印.png);
+}
+
+/* 画像サイズ調整 */
+.swiper-slide img {
+    height: auto;
+    width: 100%;
+}
+

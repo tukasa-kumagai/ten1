@@ -1,0 +1,44 @@
+@use "global" as *;
+
+.button-inner {
+  text-align: center;
+    margin-top: rem(30);
+   @include mq("md") {
+    margin-top: rem(80);
+  text-align: center;
+   }
+  }
+
+  .button-inner.button-inner--position {
+    margin-top: rem(37);
+    @include mq("md") {
+      margin-top: rem(75);
+    }
+
+  }
+
+  .button-inner.button-inner--position2 {
+    margin-top: rem(44);
+
+    @include mq("md") {
+      margin-top: rem(90);
+    }
+      }
+
+      .button-inner.button-inner--position3 {
+        margin-top: rem(40);
+
+        @include mq("md") {
+          margin-top: rem(40);
+      
+        }
+          }
+
+          .button-inner.button-inner--position4 {
+            margin-top: rem(37);
+    text-align: center;
+            @include mq("md") {
+              margin-top: rem(31);
+      
+            }
+              }

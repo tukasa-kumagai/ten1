@@ -1,0 +1,73 @@
+@use "global" as *;
+
+.section__header {
+text-align: center;
+  @include mq("md") {
+
+  }
+}
+
+.section-header__english {
+  font-size: rem(32);
+  font-weight: 400;
+  line-height: rem(40);
+text-align: center;
+color: $black2;
+
+  @include mq("md") {
+    font-size: rem(40);
+
+  }
+}
+.section-header__english::first-letter {
+  color: $green;
+ 
+ } 
+
+.section-header__english-color {
+  font-size: rem(32);
+  font-weight: 400;
+  line-height: rem(40);
+text-align: center;
+color: $black2;
+
+  @include mq("md") {
+
+    font-size: rem(40);
+    color: $white;
+  }
+}
+.section-header__english-color::first-letter {
+ color: $green;
+
+ @include mq("md") {
+  color: $white;
+ }
+} 
+.section-header__japanese {
+text-align: center;
+color: $green;
+font-size: rem(12);
+font-weight: 400;
+line-height: rem(18);
+margin-top: rem(6);
+  @include mq("md") {
+    margin-top: rem(11);
+  }
+}
+
+.section-header__japanese-color {
+  text-align: center;
+  color: $green;
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: rem(18);
+  margin-top: rem(6);
+ 
+    @include mq("md") {
+   
+      margin-top: rem(11);
+      color: $white;
+    }
+  }
+
