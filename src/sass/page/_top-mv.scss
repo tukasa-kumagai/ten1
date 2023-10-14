@@ -47,7 +47,7 @@ text-indent: 0.55em;
   text-align: center;
 
   @include mq("md") {
-    padding-top: rem(10);
+    margin-top: rem(10);
    
 
   }

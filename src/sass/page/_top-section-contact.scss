@@ -103,7 +103,7 @@ margin: 0 auto;
         width: 100%;
         margin: 0 auto;
         padding-top: rem(83);
-        padding-bottom: rem(83);
+        padding-bottom: rem(66);
         padding-left: rem(51);
         padding-right: rem(112);
         overflow: visible;
@@ -137,7 +137,7 @@ margin: 0 auto;
 
     @include mq("md") {
         max-width: rem(200);
-        top: rem(0);
+        top: rem(7);
         left: rem(0);
     }
 }
@@ -165,7 +165,7 @@ margin: 0 auto;
 
     @include mq("md") {
         border-right: 0.0625rem solid #408F95;
-        padding-right: rem(80);
+        padding-right: rem(72);
     }
 }
 
@@ -174,9 +174,9 @@ margin: 0 auto;
     @include mq("md") {
         display: flex;
         flex-wrap: wrap;
-        margin-top: rem(24);
+        margin-top: rem(35);
         justify-content: left;
-
+        gap: rem(15);
     }
 }
 
@@ -186,8 +186,11 @@ margin: 0 auto;
     font-size: rem(16);
 
     @include mq("md") {
+        text-align: left;
         padding: rem(0) rem(0);
         margin: rem(0) rem(0);
+        white-space: nowrap;
+    width: 33.1818181818%;
     }
 }
 
@@ -195,12 +198,18 @@ margin: 0 auto;
 
 .contact__phone {
     margin-top: rem(4);
-    letter-spacing: -0.1em;
+    
+}
+
+
+.contact__time {
+    margin-top: rem(4);
+   
 }
 
 .contact__holiday {
     margin-top: rem(4);
-    letter-spacing: 0em;
+    
 }
 
 .contact__window {
@@ -216,17 +225,16 @@ margin: 0 auto;
 
 .contact__map {
     text-align: center;
-    margin-left: rem(0);
     @include mq("md") {
     aspect-ratio: 273/148;
-    margin-left: rem(32);
+
     margin-top: 0;
     width: 62.0454545455%;
 }
 }
 
 .contact__map iframe  {
-    width: rem(295);
+    width: rem(273);
 }
 
 

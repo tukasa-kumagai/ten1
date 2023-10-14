@@ -36,7 +36,7 @@
     margin-top: rem(0);
 
     @include mq("md") {
-        margin-top: rem(41);    
+        padding-top: rem(41);    
     }
 }
 
@@ -75,7 +75,7 @@
 .card2__title {
     font-size: rem(16);
     font-weight: 500;
-    margin-top: rem(4);
+    padding-top: rem(4);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -84,8 +84,8 @@
     @include mq("md") {
         font-size: rem(24);
         font-weight: 500;
-        margin-top: rem(8);
-        margin-left: rem(9);
+        padding-top: rem(8);
+        padding-left: rem(9);
     }
 }
 
@@ -98,15 +98,15 @@
 }
 
 .card2__text {
-    margin-top: rem(15);
+    padding-top: rem(15);
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 10;
     overflow: hidden;
 
     @include mq("md") {
-        margin-top: rem(42);
-        margin-left: rem(10);
+        padding-top: rem(42);
+        padding-left: rem(10);
         -webkit-line-clamp: 7;
     }
 }

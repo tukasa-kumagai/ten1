@@ -14,14 +14,30 @@ jQuery(function ($) {
         //$('.js-drawer-menu').fadeOut();
         $('.js-drawer-menu').removeClass('is-open');
         $(this).removeClass('is-open');
+        $("body").removeClass("is-open");
+        $(".p-header").removeClass("is-open");
+        
       } else {
         //$('.js-drawer-menu').fadeIn();
         $('.js-drawer-menu').addClass('is-open');
         $(this).addClass('is-open');
+       
       }
     });
   
   });
+
+  $(function () {
+    $(".js-hamburger").click(function () {
+      $(this).toggleClass("active");
+      $(".js-drawer-menu").toggleClass("active");
+      $("body").toggleClass("active");
+    });
+  });
+  
+ 
+
+
 
 
   //ヘッダーの高さによるカラーチェンジ
@@ -114,7 +130,7 @@ const mySwiper = new Swiper('.swiper ', {
       spaceBetween: 20,
     },
     400: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 20,
     },
     600: {

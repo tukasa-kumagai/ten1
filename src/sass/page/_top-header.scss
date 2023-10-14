@@ -1,6 +1,16 @@
 @use "global" as *;
 
 
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
+
+.p-header.is-open {
+  background-color: $green;
+}
+
+
 .header.change-color{
     background-color: $green;
     transition: 0.3s;
@@ -57,9 +67,10 @@
   .p-sp-nav{
     //display: none;
     position: absolute;
-    top: 0;
+    top: rem(60);
     left: 0;
     right: 0;
+    bottom: 0;
     background-color: $green;
     height: 100vh;
     width: 100%;
@@ -67,6 +78,12 @@
     transform: translateX(-100%);
     // transform: translateY(-100%);
     transition: ease .3s;//表示速度
+
+    -webkit-overflow-scrolling: touch;
+    
+   
+
+
 
     @include mq("md") {
      display: none;
@@ -80,18 +97,20 @@
   }
    
 .p-sp-nav__content {
+ 
   display: flex;
-  margin-top: rem(44);
-  justify-content: center;
   padding-top: rem(0);
-  padding-bottom: rem(200);
+  justify-content: center;
+  padding-bottom: rem(500);
 height: 100vh;
 overflow-x: scroll;
- 
+
+
 }
 
 .p-sp-nav__wrapper {
-
+padding-bottom: rem(530);
+  
 }
 .p-sp-nav__group {
   margin-left: rem(10);
@@ -245,9 +264,11 @@ text-align: center;
   }
 
   //c-hamburger
-  .c-hamburger{
+  .c-hamburger {
    z-index:9999;
-
+   @include mq("md") { 
+    display: none;
+   }
   }
   
   
@@ -291,4 +312,7 @@ text-align: center;
    transform: rotate(-45deg);
   }
   
+  
+
+
   
