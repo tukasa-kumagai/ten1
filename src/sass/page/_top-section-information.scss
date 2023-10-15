@@ -3,15 +3,11 @@
 
 .information {
     background-color: $green2;
-    padding-top: rem(75);
-    padding-bottom: rem(66);
-    margin-top: rem(67);
+  
 
 
     @include mq("md") {
-        padding-bottom: rem(93);
-        margin-top: rem(140);
-        padding-top: rem(100);
+       
 
     }
 }
@@ -211,3 +207,12 @@ div.information__img img {
     display: block;
     width: 100%;
 }
+
+
+.information__button-inner {
+    margin-top: rem(44);
+text-align: center;
+    @include mq("md") {
+      margin-top: rem(38);
+    }
+      }

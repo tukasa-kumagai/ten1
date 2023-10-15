@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.content-block {
+    text-align: left;
+
+    @include mq("md") {
+        position: relative;
+
+    }
+}
+
+.content-block__img1 {
+    max-width: 100%;
+    margin-left: rem(60);
+    margin-top: rem(55);
+    width: 83%;
+
+    @include mq("md") {
+        max-width: 100%;
+        margin: 0 auto;
+        margin-left: 19%;
+        aspect-ratio: 880/581;
+        width: 81.0814814815%;
+    }
+}
+
+.content-block__img1 img {
+    @include mq("md") {}
+}
+
+.content-block__img2 {
+    max-width: 37%;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: -4.5%;
+    left: rem(0);
+
+    @include mq("md") {
+        max-width: rem(398);
+        margin-left: 0;
+        margin-right: 0;
+        top: -14%;
+        left: rem(0);
+        aspect-ratio: 128/194;
+        margin-top: -1.625rem;
+        max-width: 37.1014492754%;
+        width: 100%;
+    }
+}
+
+.content-block__img2 img {
+    @include mq("md") {}
+}
+
+.content-block__group {
+    @include mq("md") {
+        max-width: rem(1200);
+        position: absolute;
+        top: 21%;
+        left: 18%;
+        display: flex;
+        justify-content: space-between;
+        padding-right: rem(70);
+    }
+}
+
+.content-block__title {
+    @include mq("md") {
+        max-width: rem(400);
+        width: 100%;
+    }
+}
+
+.content-block__title-text {
+    font-size: rem(40);
+    color: $green;
+    line-height: rem(40);
+    margin-top: rem(35);
+
+    @include mq("md") {
+        font-size: rem(80);
+        color: $white;
+        line-height: rem(100);
+        margin-top: rem(0);
+    }
+}
+
+.content-block__texts {
+    margin-top: rem(20);
+
+    @include mq("md") {
+        max-width: rem(741);
+        width: 100%;
+        margin-top: rem(7);
+        margin-left: rem(0);
+    }
+}
+
+.content-block__text {
+    font-size: rem(16);
+    margin-top: rem(20);
+    margin-bottom: rem(40);
+    margin-left: rem(0);
+
+    @include mq("md") {
+        max-width: rem(400);
+        width: 100%;
+        color: $white;
+        margin-bottom: rem(0);
+        margin-top: rem(0);
+        margin-left: rem(44);
+    }
+}

@@ -15,7 +15,7 @@ jQuery(function ($) {
         $('.js-drawer-menu').removeClass('is-open');
         $(this).removeClass('is-open');
         $("body").removeClass("is-open");
-        $(".p-header").removeClass("is-open");
+        $(".header").removeClass("is-open");
         
       } else {
         //$('.js-drawer-menu').fadeIn();

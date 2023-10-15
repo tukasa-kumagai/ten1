@@ -1,13 +1,13 @@
 @use "global" as *;
 
 .boxs {
-  margin: 0 auto;
+  
  
   justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;
   @include mq("md") {
     
-    margin-top: rem(76);
+   
   }
 }

@@ -6,7 +6,7 @@ body.active {
   overflow: hidden;
 }
 
-.p-header.is-open {
+.header.is-open {
   background-color: $green;
 }
 
@@ -20,7 +20,7 @@ body.active {
   }
 
 
-.p-header {
+.header {
     position: fixed;
     top: 0;
     right: 0;
@@ -54,7 +54,7 @@ body.active {
      z-index: 9999;
          }
   
-  .c-logo__link {
+  .logo__link {
     width: rem(102);
     position: relative;
     z-index: 9999;
@@ -64,7 +64,7 @@ body.active {
       width: rem(133);
     }
   }
-  .p-sp-nav{
+  .sp-nav{
     //display: none;
     position: absolute;
     top: rem(60);
@@ -91,12 +91,12 @@ body.active {
 
   
   }
-  .p-sp-nav.is-open {
+  .sp-nav.is-open {
     transform: translateX(0%);
     //transform: translateY(0%);
   }
    
-.p-sp-nav__content {
+.sp-nav__content {
  
   display: flex;
   padding-top: rem(0);
@@ -108,26 +108,26 @@ overflow-x: scroll;
 
 }
 
-.p-sp-nav__wrapper {
+.sp-nav__wrapper {
 padding-bottom: rem(530);
   
 }
-.p-sp-nav__group {
+.sp-nav__group {
   margin-left: rem(10);
 
 }
   
-.p-sp-items {
+.sp-items {
   color: $white;
 margin-top: rem(40);
 
 }
 
-.p-sp-item1 {
+.sp-item1 {
  
 
 }
-.p-sp-item1 a {
+.sp-item1 a {
   padding-left: rem(20);
 	line-height: 1.6em;
     background: url(/assets/images/common/starfish.png) left rem(0) top rem(3) no-repeat;
@@ -139,15 +139,15 @@ margin-top: rem(40);
 
 
 
-.p-sp-item1:hover {
+.sp-item1:hover {
   opacity: 0.6;
   
 }
-.p-sp-item2 {
+.sp-item2 {
  
 }
 
-.p-sp-item2 a {
+.sp-item2 a {
   padding-left: rem(20);
   margin-top: rem(24);
   font-size: rem(16);
@@ -155,10 +155,10 @@ margin-top: rem(40);
   width: 100%;
 }
 
-.p-sp-item2:hover {
+.sp-item2:hover {
   opacity: 0.6;
 }
-  .p-pc-nav {
+  .pc-nav {
     height: inherit;
    display: none;
  
@@ -264,7 +264,7 @@ text-align: center;
   }
 
   //c-hamburger
-  .c-hamburger {
+  .hamburger {
    z-index:9999;
    @include mq("md") { 
     display: none;
@@ -272,7 +272,7 @@ text-align: center;
   }
   
   
-  .c-hamburger span {
+  .hamburger span {
    position: relative;
    display: block;
    height: rem(1);
@@ -285,29 +285,29 @@ text-align: center;
   }
   }
   
-  .c-hamburger span:nth-child(1) {
+  .hamburger span:nth-child(1) {
    top: 0;
   }
   
-  .c-hamburger span:nth-child(2) {
+  .hamburger span:nth-child(2) {
    margin: rem(10) 0;
   }
   
-  .c-hamburger span:nth-child(3) {
+  .hamburger span:nth-child(3) {
    top: 0;
   }
   /*is-OPEN時の動き*/
-  .c-hamburger.is-open span:nth-child(1) {
+  .hamburger.is-open span:nth-child(1) {
    top: rem(5);
    transform: rotate(45deg);
   }
   
-  .c-hamburger.is-open span:nth-child(2) {
+  .hamburger.is-open span:nth-child(2) {
    transform: translateY(-50%);
    opacity: 0;
   }
   
-  .c-hamburger.is-open span:nth-child(3) {
+  .hamburger.is-open span:nth-child(3) {
    top: rem(-16);
    transform: rotate(-45deg);
   }

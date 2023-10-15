@@ -2,25 +2,13 @@
 
 
 .about {
-
-
   @include mq("md") {
-
-   position: relative;
+    position: relative;
 
   }
 }
 
-.l-about {
-  
-  margin-top: rem(68);
 
-  @include mq("md") {
-    margin-top: rem(120);
-   position: relative;
-
-  }
-}
 
 .about::before {
   background-image: url(/assets/images/top/coral-image.png);
@@ -29,24 +17,24 @@
   content: "";
   height: rem(50);
   position: absolute;
-  @include mq("md") {
-      height: rem(181);
-      right: rem(84);
-      top: rem(679);
-  width: rem(194);
-  z-index: 10000;
-  right: calc(50% - min(48.5vw, 40rem));
-  
-  }
 
+  @include mq("md") {
+    height: rem(181);
+    right: rem(84);
+    top: rem(679);
+    width: rem(194);
+    z-index: 10000;
+    right: calc(50% - min(48.5vw, 40rem));
+  }
 }
 
 .about__bg-img {
   display: none;
+
   @include mq("md") {
     overflow: hidden;
     display: block;
- position: absolute;
+    position: absolute;
     bottom: -13%;
     right: 7%;
     width: rem(194);
@@ -54,13 +42,11 @@
     z-index: 3;
   }
 }
+
 .about__bg-img img {
-
-
-  @include mq("md") {
-
+  @include mq("md") {}
 }
-}
+
 .about__inner {
   position: relative;
   max-width: rem(600);
@@ -72,162 +58,30 @@
   }
 }
 
-
-
 .about__title-inner {
- 
 
-
-  @include mq("md") {
-  
-
-
-  }
+  @include mq("md") {}
 }
 
 .about__main {
-  text-align: left;
+
   margin-top: rem(30);
 
   @include mq("md") {
-width: 100%;
-max-width: rem(1080);
+    width: 100%;
+    max-width: rem(1080);
     margin: 0 auto;
-    position: relative;
+
     margin-top: rem(120);
-   
+
   }
 }
 
-.about__img1 {
-
-  max-width: 100%;
-  margin-left: rem(60);
-  margin-top: rem(55);
-    width: 83%;
-
+.about__button-inner {
+  margin-top: rem(40);
+text-align: center;
   @include mq("md") {
-    max-width: 100%;
-    margin: 0 auto;
-    margin-left: 19%;
-    aspect-ratio: 880/581;
-    width: 81.0814814815%;
-  }
-}
-.about__img1 img {
-
-  @include mq("md") {
-
- 
+    margin-top: rem(40);
 
   }
-}
-
-.about__img2 {
-  max-width: 37%;
-  width: 100%;
-  margin: 0 auto;
-  position: absolute;
-  top: -4.5%;
-  left: rem(0);
-
-  @include mq("md") {
-    max-width: rem(398);
-    margin-left: 0;
-    margin-right: 0;
-    top: -14%;
-    left: rem(0);
-    aspect-ratio: 128/194;
-    margin-top: -1.625rem;
-    max-width: 37.1014492754%;
-    width: 100%;
-  }
-}
-.about__img2 img {
-
-
-
-@include mq("md") {
-
- 
-}
-}
-
-.about__group {
-
-
-  @include mq("md") {
-    max-width: rem(1200);
-    position: absolute;
-    top: 21%;
-    left: 18%;
-    display: flex;
-    justify-content: space-between;
-    padding-right: rem(70);
-  }
-}
-
-
-
-.about__group-title {
- 
-
-  @include mq("md") {
-    max-width: rem(400);
-    width: 100%;
-  }
-}
-
-.about__title-text {
-  font-size: rem(40);
-  color: $green;
-  line-height: rem(40);
-margin-top: rem(35);
-  @include mq("md") {
- font-size: rem(80);
- color: $white;
- line-height: rem(100);
- margin-top: rem(0);
-  }
-}
-.about__img2-1 img {
-  max-width: rem(200);
-}
-
-.about__img2-2 {
-  display: none;
-
-  @include mq("md") {
-    display: block;
-    margin-top: rem(8);
-    max-width: 98%;
-  }
-}
-
-.about__texts {
-  margin-top: rem(20);
-  @include mq("md") {
-    max-width: rem(741);
-    width: 100%;
-    margin-top: rem(7);
-    margin-left: rem(0);
-
-   
-  }
-}
-
-.about__text {
-  font-size: rem(16);
-  margin-top: rem(20);
-  margin-bottom: rem(40);
-  margin-left: rem(0);
-  @include mq("md") {
-    max-width: rem(400);
-    width: 100%;
-    color: $white;
-    margin-bottom: rem(0);
-    margin-top: rem(0);
-    margin-left: rem(44);
-  }
-}
-
+    }

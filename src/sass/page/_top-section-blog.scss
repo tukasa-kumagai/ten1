@@ -2,8 +2,6 @@
 
 
 .blog {
-
-
   @include mq("md") {
     background-image: url(/assets/images/top/blogbg.png);
     background-repeat: repeat;
@@ -12,16 +10,7 @@
     height: rem(500);
 
     position: relative;
-    padding-top: rem(100);
-  }
-
-}
-
-.l-blog {
-  margin-top: rem(75);
-
-  @include mq("md") {
-    margin-top: rem(0);
+    
   }
 }
 
@@ -62,49 +51,75 @@
 
 
 .blog__title-inner {
-
   margin: 0 auto;
 
-
   @include mq("md") {
-
     margin: 0 auto;
-
-
   }
 }
 
 .blog__items {
-  margin-top: rem(25);
 
+  margin: 0 auto;
   max-width: rem(600);
 
-
   @include mq("md") {
-margin-top: rem(40);
-
+    margin-top: rem(85);
     max-width: rem(1080);
-    margin-top: rem(40);
-
-
   }
 }
 
 .blog__item {
   padding: rem(16) rem(22) rem(21) rem(22);
   max-width: rem(600);
-
- 
+  width: 100%;
 
   @include mq("md") {
     padding: rem(16) rem(16) rem(21) rem(16);
-   
+    max-width: calc(33.33333% - rem(40) * 2 / 3); //計算式calc(100%をカード数で割る - カード間 * 隙間の数/カード数)
     width: 100%;
   }
 }
 
+.blog__item:first-child {
+  margin-top: rem(30);
 
-.lーposition-inner2 {
+  @include mq("md") {
+    margin-top: rem(0);
+  }
+}
+
+.blog__item:nth-child(n + 2) {
   margin-top: rem(40);
 
+  @include mq("md") {
+    margin-top: rem(0);
+  }
+}
+
+.blog__item+.blog__item {
+  margin-left: rem(0);
+
+  @include mq("md") {
+    margin-left: rem(40);
+
+  }
+}
+
+.blog__item:nth-child(3n + 1) {
+  margin-left: rem(0);
+
+  @include mq("md") {
+    margin-left: rem(0);
+  }
+}
+
+.blog__button-inner {
+  text-align: center;
+  margin-top: rem(45);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+ 
+ 
 }
