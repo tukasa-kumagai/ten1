@@ -3,13 +3,10 @@
 
 .footer {
     background-color: $green;
-  
+
     @include mq("md") {
         position: relative;
-   
     }
-
-
 }
 
 .footer__inner {
@@ -25,13 +22,11 @@
 }
 
 .footer__space-top {
-
     padding-top: rem(48);
 
     @include mq("md") {
         padding-top: rem(80);
     }
-
 }
 
 .footer__logo {
@@ -86,12 +81,10 @@
     @include mq("md") {
         display: flex;
         justify-content: start;
-
     }
 }
 
 .footer__wrapper1 {
-
     @include mq("md") {
         display: flex;
         margin-top: rem(24);
@@ -99,10 +92,8 @@
 }
 
 .footer__wrapper1:nth-child(2) {
-
     @include mq("md") {
         margin-left: rem(120);
-
     }
 }
 
@@ -116,7 +107,6 @@
 }
 
 .footer__wrapper2:nth-child(2) {
-
     @include mq("md") {
         margin-left: rem(102);
 
@@ -124,28 +114,24 @@
 }
 
 .footer__group1 {
-
     @include mq("md") {
         width: rem(168);
     }
 }
 
 .footer__group1:nth-child(2) {
-
     @include mq("md") {
         margin-left: rem(120);
     }
 }
 
 .footer__group2 {
-
     @include mq("md") {
         width: rem(168);
     }
 }
 
 .footer__group2:nth-child(2) {
-
     @include mq("md") {
         margin-left: rem(100);
 
@@ -169,7 +155,6 @@
 
     @include mq("md") {
         margin-top: rem(40);
-
     }
 }
 
@@ -230,10 +215,8 @@
     }
 }
 
-
 .footer__button:hover {
     opacity: 0.6;
-
 }
 
 .footer__Copywriter-inner {
@@ -241,13 +224,10 @@
 
     @include mq("md") {
         margin-top: rem(72);
-     
-       
     }
 }
-.footer__Copywriter {
 
-  
+.footer__Copywriter {
     font-size: rem(11);
     color: $white;
     text-align: center;
@@ -260,7 +240,6 @@
         line-height: rem(18);
     }
 }
-
 
 .br-one {
     display: block;

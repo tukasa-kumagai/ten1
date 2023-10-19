@@ -1,9 +1,7 @@
 @use "global" as *;
 
 
-.vice {
-  
-}
+.vice {}
 
 .vice::before {
   background-image: url("/assets/images/top/coral(2).png");
@@ -21,23 +19,16 @@
     z-index: 1;
     right: calc(50% - min(48.5vw, rem(539)));
   }
-
 }
-
 
 .vice__title-inner {
   max-width: rem(1280);
   margin: 0 auto;
 
-
   @include mq("md") {
-
     margin: 0 auto;
-
   }
 }
-
-
 
 .vice__bg-img1 {
   display: none;
@@ -55,24 +46,20 @@
   display: none;
 
   @include mq("md") {
-
     display: flex;
     left: 7%;
     position: absolute;
     top: -18%;
     width: rem(302);
-
   }
 }
 
 .card-list-items {
   margin-top: rem(42);
 
-
   @include mq("md") {
     margin: 0 auto;
     margin-top: rem(30);
-
   }
 }
 
@@ -145,5 +132,4 @@
   @include mq("md") {
     margin-top: rem(75);
   }
-
 }

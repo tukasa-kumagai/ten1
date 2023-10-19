@@ -1,38 +1,26 @@
 @use "global" as *;
 
 
-.campaign {
-
-}
+.campaign {}
 
 .campaign__inner {
-    position: relative;
+  position: relative;
 }
 
 .campaign__title-inner {
-    margin: 0 auto;
+  margin: 0 auto;
 }
-.campaign__title {
 
-}
-.campaign__item {
+.campaign__title {}
 
-  
+.campaign__item {}
+
+.campaign__button-inner {
+  text-align: center;
+  margin-top: rem(30);
+
+  @include mq("md") {
+    margin-top: rem(80);
+    text-align: center;
   }
-
-  .campaign__button-inner {
-    text-align: center;
-      margin-top: rem(30);
-     @include mq("md") {
-      margin-top: rem(80);
-    text-align: center;
-     }
-    }
-
-
-
-
-
-
-
-
+}

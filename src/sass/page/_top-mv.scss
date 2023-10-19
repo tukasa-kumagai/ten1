@@ -5,14 +5,11 @@
   overflow: hidden;
   object-fit: cover;
 
-  @include mq("md") {
-  
-  }
+  @include mq("md") {}
 }
 
 .main-mv__text {
   position: absolute;
-
   color: $white;
   top: 50%;
   left: 50%;
@@ -22,8 +19,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-45%, -25%);
-  
-
   }
 }
 
@@ -31,14 +26,11 @@
   font-size: rem(40);
   letter-spacing: 0.54em;
   line-height: 1;
-text-indent: 0.55em;
+  text-indent: 0.55em;
 
   @include mq("md") {
     font-size: rem(80);
     letter-spacing: 0.55em;
-   
-   
-
   }
 }
 
@@ -48,11 +40,8 @@ text-indent: 0.55em;
 
   @include mq("md") {
     margin-top: rem(10);
-   
-
   }
 }
-
 
 .sp-slide-items {
   display: inline-block;
@@ -62,9 +51,6 @@ text-indent: 0.55em;
     display: none;
   }
 }
-
-
-
 
 .pc-slide-items {
   display: none;
@@ -77,19 +63,16 @@ text-indent: 0.55em;
 
 .slide-items img {
   max-width: 100%;
-  
-}
 
+}
 
 .slick-slide img {
   height: 100vh;
+
   @include mq("md") {
     display: block;
-  
   }
 }
-
-
 
 //スライド
 .slide {
@@ -103,7 +86,6 @@ text-indent: 0.55em;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -139,16 +121,20 @@ text-indent: 0.55em;
     opacity: 0;
     transform: scale(1);
   }
+
   4.16% {
     opacity: 1;
   }
+
   33.33% {
     opacity: 1;
   }
+
   41.66% {
     opacity: 0;
     transform: scale(1.2);
   }
+
   100% {
     opacity: 0;
   }

@@ -4,11 +4,8 @@
 .about {
   @include mq("md") {
     position: relative;
-
   }
 }
-
-
 
 .about::before {
   background-image: url(/assets/images/top/coral-image.png);
@@ -64,24 +61,21 @@
 }
 
 .about__main {
-
   margin-top: rem(30);
 
   @include mq("md") {
     width: 100%;
     max-width: rem(1080);
     margin: 0 auto;
-
     margin-top: rem(120);
-
   }
 }
 
 .about__button-inner {
   margin-top: rem(40);
-text-align: center;
+  text-align: center;
+
   @include mq("md") {
     margin-top: rem(40);
-
   }
-    }
+}

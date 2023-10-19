@@ -5,7 +5,6 @@
 
     @include mq("md") {
         position: relative;
-
     }
 }
 
@@ -24,21 +23,14 @@
         width: rem(439);
         z-index: 10000;
         left: calc(50% - min(48.5vw, 38.75rem));
-
     }
-
 }
 
 .price__title-inner {
-
     margin: 0 auto;
 
-
     @include mq("md") {
-
         margin: 0 auto;
-
-
     }
 }
 
@@ -51,9 +43,6 @@
     @include mq("md") {
         position: relative;
         padding: 0 rem(20);
-
-
-
     }
 }
 
@@ -69,14 +58,10 @@
     }
 }
 
-
-
-
 .price__main {
     max-width: rem(400);
     margin: 0 auto;
     margin-top: rem(30);
-
 
     @include mq("md") {
         display: flex;
@@ -85,8 +70,6 @@
         max-width: 100%;
         width: rem(1080);
         margin-top: rem(40);
-
-
     }
 }
 
@@ -114,7 +97,6 @@
 }
 
 .pc-price__img img {
-
     @include mq("md") {
         position: absolute;
         top: 50%;
@@ -127,11 +109,8 @@
 }
 
 .price__course {
-
     @include mq("md") {
         width: rem(492);
-
-
     }
 }
 
@@ -145,11 +124,9 @@
 }
 
 .price__content+.price__content {
-
     @include mq("md") {
         margin-top: rem(40);
     }
-
 }
 
 .price__title {
@@ -164,13 +141,9 @@
     }
 }
 
-
 .price__information {
     font-size: rem(14);
-
     justify-content: space-between;
-
-
 }
 
 .price__course-title {
@@ -205,13 +178,11 @@
     color: $green;
     text-align: center;
     margin-top: rem(15);
-
 }
 
 .price__subtext {
     margin-top: rem(10);
     font-size: rem(14);
-
     letter-spacing: -0.1em;
 
     @include mq("md") {
@@ -220,10 +191,8 @@
     }
 }
 
-
 div.pc-price__img {
     position: relative;
-
 
     @include mq("md") {}
 }
@@ -243,8 +212,6 @@ div.pc-price__img img {
     width: 100%;
 }
 
-
-
 dl.price__list {
     display: flex;
     justify-content: space-between;
@@ -255,7 +222,6 @@ dl.price__list {
     font-size: rem(14);
 
     @include mq("md") {
-
         font-size: rem(16);
         line-height: rem(24);
     }

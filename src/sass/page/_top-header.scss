@@ -10,129 +10,120 @@ body.active {
   background-color: $green;
 }
 
-
-.header.change-color{
-    background-color: $green;
-    transition: 0.3s;
-    opacity: 1;
-
-   
-  }
-
+.header.change-color {
+  background-color: $green;
+  transition: 0.3s;
+  opacity: 1;
+}
 
 .header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: rem(80);
-    background-color:rgba(0, 0, 0, 0.6);
-    z-index: 1000000;
-  
-    @include mq("md") {
-      height: rem(90);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: rem(80);
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000000;
 
-    }
-  }
-  .header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: inherit;
-    padding: 0 rem(15);
-    padding-right: rem(10);
-    
-    @include mq("md") {
-      padding-left: rem(40);
-      padding-right: rem(20);
-      opacity: 1;
-    }
+  @include mq("md") {
+    height: rem(90);
 
   }
-    .l-header {
+}
 
-     z-index: 9999;
-         }
-  
-  .logo__link {
-    width: rem(102);
-    position: relative;
-    z-index: 9999;
-    opacity: 1;
-
-    @include mq("md") {
-      width: rem(133);
-    }
-  }
-  .sp-nav{
-    //display: none;
-    position: absolute;
-    top: rem(60);
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: $green;
-    height: 100vh;
-    width: 100%;
-    z-index: 8888;
-    transform: translateX(-100%);
-    // transform: translateY(-100%);
-    transition: ease .3s;//表示速度
-    -webkit-overflow-scrolling: touch;
-    overflow: scroll;
-
-    @include mq("md") {
-     display: none;
-    }
-
-  
-  }
-  .sp-nav.is-open {
-    transform: translateX(0%);
-    //transform: translateY(0%);
-  }
-   
-.sp-nav__inner {
+.header__inner {
   display: flex;
-padding:  rem(36) rem(10) rem(50) rem(10);
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  padding: 0 rem(15);
+  padding-right: rem(10);
 
+  @include mq("md") {
+    padding-left: rem(40);
+    padding-right: rem(20);
+    opacity: 1;
+  }
 
 }
 
+.l-header {
+  z-index: 9999;
+}
 
-  
+.logo__link {
+  width: rem(102);
+  position: relative;
+  z-index: 9999;
+  opacity: 1;
+
+  @include mq("md") {
+    width: rem(133);
+  }
+}
+
+.sp-nav {
+  //display: none;
+  position: absolute;
+  top: rem(60);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $green;
+  height: 100vh;
+  width: 100%;
+  z-index: 8888;
+  transform: translateX(-100%);
+  // transform: translateY(-100%);
+  transition: ease .3s; //表示速度
+  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.sp-nav.is-open {
+  transform: translateX(0%);
+  //transform: translateY(0%);
+}
+
+.sp-nav__inner {
+  display: flex;
+  padding: rem(36) rem(10) rem(50) rem(10);
+}
 
 .sp-nav__left {
   margin-left: rem(10);
 
 }
-  
-.p-nav__right {
 
-}
+.p-nav__right {}
 
 .sp-nav__left.sp-nav__right {
   width: 50%;
 }
+
 .sp-nav__left-items {
   color: $white;
   display: flex;
   flex-direction: column;
-
 }
 
 .sp-nav__right-items {
   color: $white;
   display: flex;
   flex-direction: column;
-
 }
 
-.sp-nav__left-item:first-child a,.sp-nav__right-item:first-child a {
+.sp-nav__left-item:first-child a,
+.sp-nav__right-item:first-child a {
   font-weight: 700;
   position: relative;
 
 }
+
 .sp-nav__left-item a {
   color: #fff;
   display: block;
@@ -158,7 +149,7 @@ padding:  rem(36) rem(10) rem(50) rem(10);
 }
 
 
-.sp-nav__right-item a  {
+.sp-nav__right-item a {
   color: #fff;
   display: block;
   font-weight: 400;
@@ -169,7 +160,7 @@ padding:  rem(36) rem(10) rem(50) rem(10);
   width: 100%;
 }
 
-.sp-nav__right-item:first-child a::before   {
+.sp-nav__right-item:first-child a::before {
   background-image: url("/assets/images/common/starfish.png");
   background-position: 50%;
   background-repeat: no-repeat;
@@ -182,47 +173,40 @@ padding:  rem(36) rem(10) rem(50) rem(10);
   width: rem(18);
 }
 
-
-
-
 .sp-nav__left-item:hover {
   opacity: 0.6;
-  
 }
 
 .sp-nav__right-item:hover {
   opacity: 0.6;
 }
-  .pc-nav {
-    height: inherit;
-   display: none;
- 
-   @include mq("md") {
+
+.pc-nav {
+  height: inherit;
+  display: none;
+
+  @include mq("md") {
     display: block;
   }
-  }
-  
-  .pc-nav__items {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    margin:0 0 rem(50) 0;
-    list-style: none;
-   
-  }
-  
+}
+
+.pc-nav__items {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  margin: 0 0 rem(50) 0;
+  list-style: none;
+}
 
 //下線
-.pc-nav__items li a{
+.pc-nav__items li a {
   /*線の基点とするためrelativeを指定*/
-position: relative;
-text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .pc-nav__items li.current a,
-.pc-nav__items li a:hover{
-
-}
+.pc-nav__items li a:hover {}
 
 .pc-nav__items li a::after {
   content: '';
@@ -234,120 +218,111 @@ text-align: center;
   /*線の形状*/
   width: 80%;
   height: rem(2);
-  background:$white;
+  background: $white;
   /*アニメーションの指定*/
   transition: all .3s;
-  transform: scale(0, 1);/*X方向0、Y方向1*/
-  transform-origin: center top;/*上部中央基点*/
+  transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  transform-origin: center top;
+  /*上部中央基点*/
 }
 
 /*現在地とhoverの設定*/
 .pc-nav__items li.current a::after,
 .pc-nav__items li a:hover::after {
-  transform: scale(1, 1);/*X方向にスケール拡大*/
+  transform: scale(1, 1);
+  /*X方向にスケール拡大*/
 }
 
+.pc-nav__item {
+  height: inherit;
 
-
-
-
-  .pc-nav__item  {
-    height: inherit;
-
-   @include mq("md") {
+  @include mq("md") {
     flex-direction: column;
     line-height: rem(18);
 
   }
 }
 
-
-  
-  .pc-nav__item a {
-    height: inherit;
-    color: #FFF;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-  
+.pc-nav__item a {
+  height: inherit;
+  color: #FFF;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
   padding: 0 rem(14);
   font-size: rem(10);
+}
 
-  }
+.header-nav-item-link {
+  flex-direction: column;
+  font-size: rem(18);
+  height: inherit;
+  opacity: 1;
+}
 
-
-  .header-nav-item-link {
-    flex-direction: column;
-    font-size: rem(18);
-    height: inherit;
-    opacity: 1;
-  }
- 
- 
-  .header-nav-item-head{
+.header-nav-item-head {
   font-size: rem(18);
   opacity: 1;
-  }
+}
 
-  .header-nav-item-foot {
-    font-size: rem(10);
-    text-align: center;
-    opacity: 1;
-    @include mq("md") {
-      line-height: rem(15);
-    }
-  }
+.header-nav-item-foot {
+  font-size: rem(10);
+  text-align: center;
+  opacity: 1;
 
-  //c-hamburger
-  .hamburger {
-   z-index:9999;
-   @include mq("md") { 
-    display: none;
-   }
+  @include mq("md") {
+    line-height: rem(15);
   }
-  
-  
-  .hamburger span {
-   position: relative;
-   display: block;
-   height: rem(1);
-   width: rem(32);
-   background: $white;
-   transition: ease .3s;
+}
 
-   @include mq("md") {
+//c-hamburger
+.hamburger {
+  z-index: 9999;
+
+  @include mq("md") {
     display: none;
   }
-  }
-  
-  .hamburger span:nth-child(1) {
-   top: 0;
-  }
-  
-  .hamburger span:nth-child(2) {
-   margin: rem(10) 0;
-  }
-  
-  .hamburger span:nth-child(3) {
-   top: 0;
-  }
-  /*is-OPEN時の動き*/
-  .hamburger.is-open span:nth-child(1) {
-   top: rem(5);
-   transform: rotate(45deg);
-  }
-  
-  .hamburger.is-open span:nth-child(2) {
-   transform: translateY(-50%);
-   opacity: 0;
-  }
-  
-  .hamburger.is-open span:nth-child(3) {
-   top: rem(-16);
-   transform: rotate(-45deg);
-  }
-  
-  
+}
 
 
-  
+.hamburger span {
+  position: relative;
+  display: block;
+  height: rem(1);
+  width: rem(32);
+  background: $white;
+  transition: ease .3s;
+
+  @include mq("md") {
+    display: none;
+  }
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  margin: rem(10) 0;
+}
+
+.hamburger span:nth-child(3) {
+  top: 0;
+}
+
+/*is-OPEN時の動き*/
+.hamburger.is-open span:nth-child(1) {
+  top: rem(5);
+  transform: rotate(45deg);
+}
+
+.hamburger.is-open span:nth-child(2) {
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.hamburger.is-open span:nth-child(3) {
+  top: rem(-16);
+  transform: rotate(-45deg);
+}

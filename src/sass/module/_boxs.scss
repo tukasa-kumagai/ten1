@@ -1,13 +1,9 @@
 @use "global" as *;
 
 .boxs {
-  
- 
   justify-content: flex-start;
   display: flex;
   flex-wrap: wrap;
-  @include mq("md") {
-    
-   
-  }
+
+  @include mq("md") {}
 }

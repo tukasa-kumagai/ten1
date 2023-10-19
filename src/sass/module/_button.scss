@@ -1,34 +1,33 @@
 @use "global" as *;
 
 .button {
-	position: relative;
-	width: rem(207);
-	padding-bottom: rem(10);
-display: inline-block;
-
-	overflow: hidden;
-	cursor: pointer;
+  position: relative;
+  width: rem(207);
+  padding-bottom: rem(10);
+  display: inline-block;
+  overflow: hidden;
+  cursor: pointer;
 }
 
 .button img {
-	position: absolute;
-	top: 44%;
-	left: 70%;
-	-webkit-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-	width: rem(40);
-	display: block;
-	-webkit-transition: .4s ease-in-out;
-	transition: .4s ease-in-out;
+  position: absolute;
+  top: 44%;
+  left: 70%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: rem(40);
+  display: block;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 
-	@include mq("md") {
-		left: 70%;
-		width: rem(40);
-	}
+  @include mq("md") {
+    left: 70%;
+    width: rem(40);
+  }
 }
 
 .button:hover img:nth-of-type(2) {
-	opacity: 0;
+  opacity: 0;
 }
 
 
@@ -37,7 +36,7 @@ display: inline-block;
 .button__bg {
   position: relative;
   background-color: $green;
-  padding:  rem(10) rem(10) rem(10) rem(10);
+  padding: rem(10) rem(10) rem(10) rem(10);
   font-size: rem(14);
   text-decoration: none;
   transition: color .25s ease;
@@ -45,7 +44,7 @@ display: inline-block;
   width: rem(202);
 
   color: $white;
-  
+
   border: rem(1) solid $green;
   z-index: 10;
   padding-top: rem(6);
@@ -120,6 +119,7 @@ display: inline-block;
   margin-top: rem(3);
   top: rem(6);
   left: rem(-24);
+
   @include mq('md') {
     line-height: rem(35);
     font-size: rem(14);
@@ -132,5 +132,3 @@ display: inline-block;
     left: rem(0);
   }
 }
-
-

@@ -25,8 +25,6 @@
     }
 }
 
-
-
 .contact__title-name {
     font-size: rem(80);
     line-height: rem(80);
@@ -34,21 +32,17 @@
     margin: 0 auto;
 
     @include mq("md") {}
-
 }
 
 .contact__title-name::first-letter {
     color: $green;
-
 }
 
 .contact__bg {
-
     @include mq("md") {}
 }
 
 .contact__inner-bg {
-
     @include mq("md") {}
 }
 
@@ -59,29 +53,22 @@
     width: rem(109);
 
     @include mq("md") {
-
         display: flex;
         position: absolute;
         top: 10%;
         left: 72%;
         width: rem(301);
-
     }
 }
 
 .contact__ba-img::before {
-    height: 8.625rem;
-    right: 3.125rem;
-    top: 6.25rem;
-    width: 18.8125rem;
+    height: rem(121);
+    right: rem(44);
+    top: rem(88);
+    width: rem(263);
 }
 
-
-
-
-
 .contact__maim {
-
     @include mq("md") {
         position: relative;
         display: flex;
@@ -105,8 +92,6 @@
 
     @include mq("md") {
         width: rem(140);
-
-
     }
 }
 
@@ -142,15 +127,10 @@
     @include mq("md") {
         width: 220%;
         left: rem(-128);
-
-
     }
 }
 
-
-
 .contact__head {
-
     @include mq("md") {
         border-right: 0.0625rem solid #408F95;
         padding-right: rem(72);
@@ -158,7 +138,6 @@
 }
 
 .contact__head-under {
-
     @include mq("md") {
         display: flex;
         flex-wrap: wrap;
@@ -189,15 +168,12 @@
 
 }
 
-
 .contact__time {
     margin-top: rem(4);
-
 }
 
 .contact__holiday {
     margin-top: rem(4);
-
 }
 
 .contact__window {
@@ -211,13 +187,11 @@
     }
 }
 
-
 .contact__map {
     text-align: center;
 
     @include mq("md") {
         aspect-ratio: 273/148;
-
         margin-top: 0;
         width: 62.0454545455%;
     }
@@ -227,37 +201,25 @@
     width: rem(273);
 }
 
-
-
-
 .contact__footer {
-
-
     @include mq("md") {}
-
 }
 
 .contact__title {
     margin-top: rem(38);
-
     margin-left: auto;
     margin-right: auto;
 
     @include mq("md") {
-
         margin-top: rem(21);
     }
-
-
 }
 
 .contact__inquiry {
     text-align: center;
     color: $green;
 
-
     @include mq("md") {}
-
 }
 
 .sp-contact__text {
@@ -266,7 +228,6 @@
 
     @include mq("md") {
         display: none;
-
     }
 }
 
@@ -286,7 +247,6 @@
     margin-top: rem(15);
 
     @include mq("md") {
-
         margin-top: rem(15);
     }
 }
@@ -297,6 +257,5 @@
 
     @include mq("md") {
         margin-top: rem(31);
-
     }
 }

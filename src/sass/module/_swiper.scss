@@ -6,20 +6,15 @@
     @include mq("md") {
         margin-top: rem(40);
         display: flex;
-
     }
 }
 
 
 .swiper {
-
-
     @include mq("md") {}
 }
 
-
 .swiper-wrapper {
-
     margin-left: rem(6);
     margin-top: rem(30);
     margin-bottom: rem(10);
@@ -32,7 +27,6 @@
         bottom: rem(20);
     }
 }
-
 
 .sample-slider {
     width: 100%;
@@ -67,7 +61,6 @@
 /*矢印のサイズ調整*/
 .sample-slider [class^="swiper-button-"] {
     width: rem(80);
-
 }
 
 /*矢印の位置調整*/
@@ -80,7 +73,6 @@
 .swiper-button-prev,
 .swiper-button-next {
     display: none;
-
 
     @include mq("md") {
         display: flex;
@@ -104,13 +96,11 @@
 }
 
 .swiper-button-next {
-
     @include mq("md") {
         position: absolute;
         top: 3%;
         left: 82%;
         right: auto;
-
     }
 }
 

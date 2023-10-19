@@ -8,9 +8,7 @@
     /* 背景の繰り返し設定 */
     background-position: right center;
     height: rem(500);
-
     position: relative;
-    
   }
 }
 
@@ -32,7 +30,6 @@
   }
 }
 
-
 .blog__bg-img {
   display: none;
 
@@ -43,12 +40,8 @@
     width: rem(377);
     top: rem(20);
     left: rem(100);
-
-
-
   }
 }
-
 
 .blog__title-inner {
   margin: 0 auto;
@@ -59,7 +52,6 @@
 }
 
 .blog__items {
-
   margin: 0 auto;
   max-width: rem(600);
 
@@ -102,7 +94,6 @@
 
   @include mq("md") {
     margin-left: rem(40);
-
   }
 }
 
@@ -117,9 +108,8 @@
 .blog__button-inner {
   text-align: center;
   margin-top: rem(45);
+
   @include mq("md") {
     margin-top: rem(80);
   }
- 
- 
 }
