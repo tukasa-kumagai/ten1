@@ -116,9 +116,7 @@ const mySwiper = new Swiper('.swiper ', {
   slidesPerView: 1,
   spaceBetween: 12,
   grabCursor: true,
- 
   pagination: {
-    
   },
   navigation: {
     nextEl: '  .swiper-button-next',
@@ -126,28 +124,40 @@ const mySwiper = new Swiper('.swiper ', {
   },
   breakpoints: {
     375: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+      slidesPerView: 0.05,
+      spaceBetween: 12,
+    loop: true,
+    loopedSlides: 0.1,
+    slidesPerView: "auto",
+    speed: 8000,
+  
     },
     400: {
-      slidesPerView: 1,
-      spaceBetween: 20,
+      slidesPerView: 0.8,
+      spaceBetween: 14,
+     
     },
     600: {
-      slidesPerView: 1,
+      slidesPerView: 1.8,
       spaceBetween: 20,
+     
+      
     },
     1025: {
-      slidesPerView: 1,
+      slidesPerView: 2.8,
       spaceBetween: 20,
+    
+      
     },
     1400: {
-      slidesPerView: 3,
+      slidesPerView: 3.3,
       spaceBetween: 20,
+      
     },
     2000: {
       slidesPerView: 4,
       spaceBetween: 20,
+      
     },
   },
 });
