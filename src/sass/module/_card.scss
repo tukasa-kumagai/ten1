@@ -49,13 +49,13 @@
 }
 
 .card__body.card__body--under {
-    padding: rem(5) rem(0) rem(0) rem(0);
+    padding: rem(0) rem(0) rem(0) rem(0);
     width: rem(280);
 
     @include mq("md") {
         width: rem(333);
         bottom: rem(20);
-        padding: rem(10) rem(16) rem(0) rem(0);
+        padding: rem(0) rem(0) rem(0) rem(0);
     }
 }
 
@@ -81,10 +81,11 @@
     border-bottom: rem(1) solid $green;
     padding-bottom: rem(6);
     margin-left: rem(15);
-    margin-top: rem(7);
+    margin-top: rem(24);
+    margin-right: rem(13);
 
     @include mq("md") {
-        margin-top: rem(15);
+        margin-top: rem(24);
     }
 }
 
