@@ -133,14 +133,14 @@ const mySwiper = new Swiper('.swiper ', {
   
     },
     400: {
-      slidesPerView: 0.8,
+      slidesPerView: 1.3,
       spaceBetween: 14,
-     
+      loop: true,
     },
     600: {
-      slidesPerView: 1.8,
+      slidesPerView: 3,
       spaceBetween: 20,
-     
+      loop: true,
       
     },
     1025: {
