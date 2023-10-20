@@ -99,7 +99,9 @@ body.active {
 
 }
 
-.p-nav__right {}
+.sp-nav__right {
+  padding-left: rem(20);
+}
 
 .sp-nav__left.sp-nav__right {
   width: 50%;
@@ -115,6 +117,7 @@ body.active {
   color: $white;
   display: flex;
   flex-direction: column;
+ 
 }
 
 .sp-nav__left-item:first-child a,
