@@ -113,51 +113,25 @@ $(document).ready(function() {
 
 //swiper
 const mySwiper = new Swiper('.swiper ', {
-  slidesPerView: 1,
-  spaceBetween: 12,
+  slidesPerView: "auto",
+  spaceBetween: 24,
+  loop: true,
   grabCursor: true,
   pagination: {
   },
+  
   navigation: {
     nextEl: '  .swiper-button-next',
     prevEl: '  .swiper-button-prev',
   },
   breakpoints: {
-    375: {
-      slidesPerView: 0.05,
-      spaceBetween: 12,
-    loop: true,
-    loopedSlides: 0.1,
-    slidesPerView: "auto",
-    speed: 8000,
+    765: {
+      spaceBetween: 40,
+      loop: true,
+    autoplay: {     //追記
+        delay: 0,   //追記
+    },              //追記
   
-    },
-    400: {
-      slidesPerView: 1.3,
-      spaceBetween: 14,
-      loop: true,
-    },
-    600: {
-      slidesPerView: 3,
-      spaceBetween: 20,
-      loop: true,
-      
-    },
-    1025: {
-      slidesPerView: 2.8,
-      spaceBetween: 20,
-    
-      
-    },
-    1400: {
-      slidesPerView: 3.3,
-      spaceBetween: 20,
-      
-    },
-    2000: {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      
     },
   },
 });

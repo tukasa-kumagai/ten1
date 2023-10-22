@@ -68,7 +68,7 @@
         flex-direction: row-reverse;
         justify-content: center;
         max-width: 100%;
-        width: rem(1080);
+    
         margin-top: rem(40);
     }
 }
@@ -87,9 +87,9 @@
 
     @include mq("md") {
         display: block;
-        max-width: rem(492);
-        height: rem(745);
-        width: 100%;
+    
+        
+        width: 50%;
         padding-top: 66.571429%; //比率の計算式 横233/縦350*100%=画像の比率
         position: relative;
         margin-left: rem(90);
@@ -194,7 +194,9 @@
 div.pc-price__img {
     position: relative;
 
-    @include mq("md") {}
+    @include mq("md") {
+
+    }
 }
 
 div.pc-price__img div.color {

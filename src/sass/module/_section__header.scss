@@ -3,9 +3,17 @@
 .section__header {
   text-align: center;
 
-  @include mq("md") {}
-}
+  @include mq("md") {
+  
+  }
 
+}
+.section-header.section-header--white {
+ 
+  @include mq("md") {
+    position: relative;
+  }
+}
 .section-header__english {
   font-size: rem(32);
   font-weight: 400;
