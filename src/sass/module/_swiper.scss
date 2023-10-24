@@ -2,6 +2,8 @@
 
 .swiper-area {
     margin-right: calc(50% - 50vw);
+    display: flex;
+    margin-top: rem(30);
 
     @include mq("md") {
         margin-top: rem(40);
@@ -16,8 +18,9 @@
 
 .swiper-wrapper {
     margin-left: rem(6);
-    margin-top: rem(30);
-    margin-bottom: rem(10);
+    margin-top: rem(0);
+    margin-bottom: rem(0);
+    bottom: rem(3);
 
     @include mq("md") {
         margin-top: rem(16);
@@ -37,9 +40,7 @@
     width: 100%;
 }
 
-.swiper-slide {
-   
-}
+.swiper-slide {}
 
 /*デフォルトの矢印を消す*/
 .sample-slider [class^="swiper-button-"]::after {
