@@ -1,9 +1,8 @@
 @use "global" as *;
 
 
-.blog {
-  
-}
+.blog {}
+
 .blog__bg {
   display: none;
 
@@ -13,20 +12,22 @@
     top: 0;
     left: 0;
     width: 100%;
-    display:initial
+    display: initial
   }
 
 }
 
 .blog__bg img {
   display: none;
+
   @include mq("md") {
-height: 100%;
-width: 100%;
-object-fit: cover;
-display:initial
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: initial
   }
 }
+
 .blog::before {
   background-image: url(/assets/images/top/Group-240.png);
   background-repeat: no-repeat;
@@ -34,6 +35,7 @@ display:initial
   content: "";
   height: rem(50);
   position: absolute;
+
   @include mq("md") {
     height: rem(185);
     left: rem(105);
@@ -43,8 +45,10 @@ display:initial
     left: calc(50% - min(48.5vw, 38.75rem));
   }
 }
+
 .blog__bg-img {
   display: none;
+
   @include mq("md") {
     display: block;
     position: absolute;
@@ -58,20 +62,23 @@ display:initial
 
 .blog__title-inner {
   margin: 0 auto;
+
   @include mq("md") {
     margin: 0 auto;
   }
 }
+
 .blog__items {
   margin: 0 auto;
   display: grid;
-  grid-template-columns:  rem(333);
+  grid-template-columns: rem(333);
   gap: rem(40);
   justify-content: center;
   margin-top: rem(30);
+
   @include mq("md") {
     display: grid;
-    grid-template-columns:  rem(333) rem(333) rem(333);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: rem(40);
     position: relative;
     margin-top: rem(80);
@@ -81,6 +88,7 @@ display:initial
 .blog__item {
   padding: rem(16) rem(22) rem(21) rem(22);
   width: 100%;
+
   @include mq("md") {
     padding: rem(16) rem(16) rem(21) rem(16);
 
@@ -88,16 +96,16 @@ display:initial
   }
 }
 
-.blog__item+.blog__item  {
+.blog__item+.blog__item {
   margin-top: rem(10);
-  @include mq("md") {
-   
-  }
+
+  @include mq("md") {}
 }
 
 .blog__button-inner {
   text-align: center;
   margin-top: rem(50);
+
   @include mq("md") {
     margin-top: rem(80);
   }
