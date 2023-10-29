@@ -2,8 +2,9 @@
 
 .cards2 {
   display: grid;
-  grid-template-columns:  100% ;
+  grid-template-columns: 100%;
   gap: rem(20);
+
   @include mq("md") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

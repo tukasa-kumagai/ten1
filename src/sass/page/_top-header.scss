@@ -145,7 +145,7 @@ body.active {
   background-repeat: no-repeat;
   background-size: cover;
   content: "";
-  height: 1.125rem;
+  height: 1.125;
   left: rem(-5);
   position: absolute;
   top: rem(9);
@@ -254,7 +254,7 @@ body.active {
   opacity: 1;
   display: flex;
   justify-content: center;
-  padding: 0 rem(14);
+  padding: 0 min(1.4vw,1.25);
   font-size: rem(10);
 }
 

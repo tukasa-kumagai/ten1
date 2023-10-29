@@ -81,13 +81,14 @@
     @include mq("md") {
         display: flex;
         justify-content: start;
+        margin-top: rem(24);
     }
 }
 
 .footer__wrapper1 {
     @include mq("md") {
         display: flex;
-        margin-top: rem(24);
+       
     }
 }
 
@@ -102,7 +103,6 @@
 
     @include mq("md") {
         display: flex;
-        margin-top: rem(24);
     }
 }
 
@@ -235,7 +235,6 @@
     @include mq("md") {
         text-align: center;
         font-size: rem(14);
-        margin-top: rem(36);
         letter-spacing: -0.02em;
         line-height: rem(18);
     }

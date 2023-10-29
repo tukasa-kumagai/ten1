@@ -47,7 +47,7 @@
 
   @include mq("md") {
     display: flex;
-    left: 7%;
+    left: calc(50% - min(48.5vw, 38.75rem));
     position: absolute;
     top: -18%;
     width: rem(302);
