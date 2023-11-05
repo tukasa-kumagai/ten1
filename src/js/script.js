@@ -43,10 +43,10 @@ jQuery(function ($) {
   //ヘッダーの高さによるカラーチェンジ
   $(function () {
     $(window).on('scroll', function () {
-      if ($('.fv').height()  < $(this).scrollTop()) {
-          $('.js-header').addClass('change-color');
+      if ($('.header').height()  < $(this).scrollTop()) {
+          $('.header').addClass('change-color');
       } else {
-          $('.js-header').removeClass('change-color');
+          $('.header').removeClass('change-color');
       }
     });
   });
@@ -112,7 +112,7 @@ $(document).ready(function() {
 
 
 //swiper
-const mySwiper = new Swiper('.swiper ', {
+const mySwiper = new Swiper('.swiper,.js-campaign-swiper', {
   slidesPerView: "auto",
   spaceBetween: 24,
   loop: true,

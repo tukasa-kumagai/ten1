@@ -37,3 +37,13 @@
     text-align: center;
   }
 }
+
+
+.campaign-cards {
+  display: flex;
+
+  @include mq("md") {
+
+    display: flex;
+  }
+}

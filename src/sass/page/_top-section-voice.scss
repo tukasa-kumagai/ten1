@@ -54,7 +54,7 @@
   }
 }
 
-.card-list-items {
+.vice__items {
   margin-top: rem(42);
 
   @include mq("md") {
@@ -63,33 +63,6 @@
   }
 }
 
-.card-list-item {
-  margin: 0 auto;
-  box-shadow: 0 0 rem(8) gray;
-  padding: rem(15) rem(16) rem(24) rem(16);
-  margin-top: rem(0);
-  max-width: 100%;
-
-  @include mq("md") {}
-}
-
-.card-list-item+.card-list-item {
-  margin-left: rem(0);
-
-  @include mq("md") {
-    margin-left: rem(20);
-
-  }
-}
-
-.card-list-item:nth-child(n + 2) {
-  margin-top: rem(16);
-
-  @include mq("md") {
-    margin-left: rem(0);
-    margin-top: rem(0);
-  }
-}
 
 .vice__section-title {
   width: rem(87);
