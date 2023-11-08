@@ -1,10 +1,5 @@
 @use "global" as *;
 
-.cards {
-  display: flex;
+.cars {
 
-  @include mq("md") {
-
-    display: flex;
-  }
 }
