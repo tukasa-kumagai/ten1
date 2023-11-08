@@ -1,134 +1,76 @@
 @use "global" as *;
 
 .button {
-  position: relative;
-  width: rem(207);
-
   display: inline-block;
-
-  cursor: pointer;
-}
-
-.button img {
-  position: absolute;
-  top: 44%;
-  left: 70%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: rem(40);
-  display: block;
-  -webkit-transition: .4s ease-in-out;
-  transition: .4s ease-in-out;
-
-  @include mq("md") {
-    left: 70%;
-    width: rem(40);
-  }
-}
-
-.button:hover img:nth-of-type(2) {
-  opacity: 0;
-}
-
-
-
-
-.button__bg {
+  width: rem(202);//横幅
+  text-align: left;//文字を左に寄せる
   position: relative;
-  background-color: $green;
-  padding: rem(10) rem(10) rem(10) rem(10);
-  font-size: rem(14);
-  text-decoration: none;
-  transition: color .25s ease;
-  max-width: 100%;
-  width: rem(202);
-
-  color: $white;
-
-  border: rem(1) solid $green;
-  z-index: 10;
-  padding-top: rem(6);
-  padding-bottom: rem(17);
-
-
-
-  @include mq('md') {
-    position: relative;
-    display: inline;
-    background-color: $green;
-    padding: rem(0) rem(27) rem(0) rem(17);
-    font-size: rem(14);
-    text-decoration: none;
-    color: $black;
-    border: rem(1) solid $black;
-    transition: color .25s ease;
-    max-width: 100%;
-    width: rem(202);
-    height: rem(54);
-    color: $white;
-    display: flex;
-    border: rem(1) solid $green;
-    z-index: 10;
-    padding-top: rem(6);
-    padding-bottom: rem(6);
-
-  }
-
-  &:hover {
-    color: $green;
-
-    &::before {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-  }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: '';
-    display: block;
-    width: 100%;
-    padding-bottom: rem(52);
-    background: $white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: all .25s ease;
-    transition-property: transform;
-  }
+  z-index: 1;
+  background-color: $green;//背景色
+  padding-top: rem(11);//ボタン内範囲
+  padding-left: rem(40);//ボタン内範囲
+  padding-bottom: rem(15);//ボタン内範囲
+  border: rem(1) solid $green;//ボタン縁色
+  transition: background-color .3s;
 }
-
-.button__bg::after {
-  content: '';
-  border: rem(1) solid $green;
-  position: absolute;
-  top: rem(6);
-  right: rem(-5);
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-
-}
-
 
 .button__text {
-  position: relative;
-  line-height: 2;
-  font-weight: 400;
-  margin-top: rem(3);
-  top: rem(6);
-  left: rem(-24);
+  font-size: rem(14);///文字サイズ
+  line-height: 1.5714;//文字の高さ
+  color: $white;//文字の色
+  font-family: $second-font-family;
+  font-weight: $regular;//文字太さ
+  transition: color .3s;//文字色の変化速度
 
-  @include mq('md') {
-    line-height: rem(35);
-    font-size: rem(14);
-    margin-left: rem(0);
-    letter-spacing: 0;
-    font-weight: 500;
-    margin-left: rem(22);
-    margin-top: rem(1);
-    top: rem(0);
-    left: rem(0);
-  }
+}
+
+.button::before {//.buttonの前方
+  background: $white;//アニメーション時の色
+  position: absolute;//親要素の左上にピッタリとつける
+  top: 0;//親要素の左上にピッタリとつける//上方向
+  left: 0;//親要素の左上にピッタリとつける//左方向
+  content: '';//擬似要素
+  width: 100%;//水平(X軸)方向の大きさがそのままの大きさになる
+  height: 100%;//水平(X軸)方向の大きさがそのままの大きさになる
+  transform: scale(0, 1);//水平(X軸)方向の大きさがそのままの大きさになるwith,height,transform: scale(0, 1);はセット
+  transform-origin: left top;//背景が変わる向き
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1);//transition：変化速度 cubic-bezier:変化速度に緩急をつける
+  z-index: -1;
+}
+
+.button::after {
+  content: "";
+  position: absolute;//位置の固定
+  top: rem(4);//上位置
+  left: rem(4);//左位置
+  bottom: rem(-4);//下位置
+  right: rem(-4);//右位置
+  border: rem(1) solid $green;//縁の色
+  z-index: -2;//位置の優先順位
+}
+
+.button__text::after {//右矢印
+  content: "";
+  display: inline-block;
+  width: rem(40);//線長さ
+  height: rem(8);//線厚み
+  border-bottom: rem(1) solid $white;//縦線
+  border-right: rem(1) solid $white;//横線
+  position: absolute;
+  top: 40%;//上下の位置
+  transform: skew(45deg);//縦線を曲げる
+  margin-left: rem(5);//左文字との間
+  transition: border .3s;
+}
+
+.button:hover .button__text {//アニメーション・左文字色を変える
+  color: $green;//左文字色を変える
+}
+
+.button:hover::before {
+  transform: scale(1, 1);//buttonのアニメーションをX軸方向にそのままのサイズに変化させる
+}
+
+.button:hover .button__text::after {//アニメーション・右の矢印の色を変える
+  border-color: $green;//右矢印の色を変える
 }

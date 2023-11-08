@@ -52,16 +52,7 @@ jQuery(function ($) {
   });
 
 
-  $(".sp-slide-items").slick({
-    autoplay:	true,
-    autoplaySpeed: 3000,
-    infinite:true
-  });
-  $(".pc-slide-items").slick({
-    autoplay:	true,
-    autoplaySpeed: 3000,
-    infinite:true
-  });
+
 
 //informationの画像出現
 //要素の取得とスピードの設定
