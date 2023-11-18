@@ -12,14 +12,15 @@ jQuery(function ($) {
     $('.js-hamburger').on('click', function () {
       if ($('.js-hamburger').hasClass('is-open')) {
         //$('.js-drawer-menu').fadeOut();
-        $('.js-drawer-menu').removeClass('is-open');
+        $('.header').removeClass('is-open');
         $(this).removeClass('is-open');
         $("body").removeClass("is-open");
-        $(".header").removeClass("is-open");
+        $(".sp-nav").removeClass("is-open");
         
       } else {
         //$('.js-drawer-menu').fadeIn();
-        $('.js-drawer-menu').addClass('is-open');
+        $('.header').addClass('is-open');
+        $('.sp-nav').addClass('is-open');
         $(this).addClass('is-open');
        
       }
@@ -27,14 +28,7 @@ jQuery(function ($) {
   
   });
 
-  $(function () {
-    $(".js-hamburger").click(function () {
-      $(this).toggleClass("active");
-      $(".js-drawer-menu").toggleClass("active");
-      $("body").toggleClass("active");
-    });
-  });
-  
+ 
  
 
 

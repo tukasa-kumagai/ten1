@@ -82,6 +82,7 @@
     overflow: hidden;
   }
   
+
   .main-mv__slide-image {
     background-position: center;
     background-repeat: no-repeat;
@@ -93,6 +94,11 @@
     height: 100vh;
     opacity: 0;
     animation: slider-1 24s linear infinite;
+  }
+
+  .main-mv__slide-image img {
+    height: 100vh;
+    object-fit: cover;
   }
   
   .main-mv__slide-image:nth-child(1) {
