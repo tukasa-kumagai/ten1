@@ -1,10 +1,6 @@
 @use "global" as *;
 
 
-body.active {
-  height: 100%;
-  overflow: hidden;
-}
 
 .header.is-open {
   background-color: $green;
@@ -62,6 +58,11 @@ body.active {
   }
 }
 
+
+body.active {
+  height: 100%;
+  overflow: hidden;
+}
 .sp-nav {
   //display: none;
   position: absolute;
