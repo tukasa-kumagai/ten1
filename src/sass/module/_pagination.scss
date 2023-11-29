@@ -1,0 +1,61 @@
+@use "global" as *;
+
+
+.pagination {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+.pagination__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+.pagination__list-item {
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+
+}
+
+.pagination li{
+    margin: 5px;
+    border: rem(1) solid $green;//ページの枠
+    
+}
+
+.pagination a{
+    display: block;
+    text-decoration: none;
+    color: $green;//ページの文字色
+    padding: rem(10) rem(14);//ページの文字色内側幅
+    
+}
+
+.pagination a:hover{
+    background-color: $green;//ページのクリック時の背景色
+    color: $white;//ページのクリック時の文字色
+}
+
+.active a {
+    background-color: $green;//ページの現在のページの背景色
+    color: $white;//ページのクリック時の文字色
+    
+}
+
+.page-item.prev.disabled {//戻るリンク
+margin-right: rem(40);
+}
+
+.page-item.next {
+    margin-left: rem(40);//進むリンク
+    }

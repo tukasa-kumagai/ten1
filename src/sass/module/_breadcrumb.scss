@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.breadcrumb {
+    padding: 1em;
+  }
+  .breadcrumb__group {
+    display: flex;
+  }
+  .breadcrumb__item[href]:hover {
+    opacity: 0.5;
+  }
+  .breadcrumb__group > * + * {
+    margin-left: 0.5em;
+  }
+  .breadcrumb__group > * + *::before {
+    content: ">";
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+  }

@@ -74,3 +74,13 @@
 .button:hover .button__text::after {//アニメーション・右の矢印の色を変える
   border-color: $green;//右矢印の色を変える
 }
+
+.button--position {
+display: none;
+
+  @include mq("md") {
+    display: inline;
+    margin: 0 auto;
+    margin-top: rem(16);
+  }
+}

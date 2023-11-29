@@ -1,0 +1,21 @@
+@use "global" as *;
+
+
+.button__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(21);
+    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    justify-items: center;
+  align-items: center;
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+        gap:32px;
+        padding: 10px;
+       
+
+    }
+   
+}
+

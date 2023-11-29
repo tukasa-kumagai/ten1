@@ -122,4 +122,12 @@ const mySwiper = new Swiper('.swiper,.js-campaign-swiper', {
 });
 
 
-
+jQuery(document).ready(function($){
+  $('.pagination__list').paginathing({
+      perPage: 4,
+      firstLast: false,
+      prevText:'<' ,
+      nextText:'>' ,
+      activeClass: 'active',
+  })
+});

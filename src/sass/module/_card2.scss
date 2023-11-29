@@ -9,16 +9,6 @@
    
 }
 
-
-  
-.card2+.card2 {
-    margin-left: rem(0);
-  
-    @include mq("md") {
-      margin-left: rem(20);
-  
-    }
-  }
   
   .card2:nth-child(n + 2) {
     margin-top: rem(16);

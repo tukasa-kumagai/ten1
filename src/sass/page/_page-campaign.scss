@@ -1,0 +1,34 @@
+@use "global" as *;
+
+
+.page-campaign-button__inner {
+  padding: 0 rem(15);
+  margin: 0 auto;
+  @include mq("md") { 
+  
+  }
+}
+
+
+.page-campaign__pagination li {
+  display:inline;
+}
+
+
+.page-campaign__list {
+
+  @include mq("md") { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(21);
+    justify-items: center;
+  align-items: center;
+  }
+}
+
+.page-campaign__button-inner {
+margin: 0 auto;
+text-align: center;
+display: flex;
+justify-content: center;
+}
