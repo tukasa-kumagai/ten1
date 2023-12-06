@@ -6,7 +6,7 @@
     text-align: center;//文字を左に寄せる
     position: relative;
     z-index: 1;
-    background-color: $green;//背景色
+    background-color: $white;//背景色
     padding-top: rem(7);//ボタン内範囲
     padding-left: rem(12);//ボタン内範囲
     padding-right: rem(12);//ボタン内範囲
@@ -18,7 +18,7 @@
   .button__item-link {
     font-size: rem(14);///文字サイズ
     line-height: 1.5714;//文字の高さ
-    color: $white;//文字の色
+    color: $green;//文字の色
     font-family: $second-font-family;
     font-weight: $regular;//文字太さ
     transition: color .3s;//文字色の変化速度
@@ -26,7 +26,7 @@
   }
   
   .button__item::before {//.buttonの前方
-    background: $white;//アニメーション時の色
+    background: $green;//アニメーション時の色
     position: absolute;//親要素の左上にピッタリとつける
     top: 0;//親要素の左上にピッタリとつける//上方向
     left: 0;//親要素の左上にピッタリとつける//左方向
@@ -41,7 +41,7 @@
 
   
   .button__item:hover .button__item-link {//アニメーション・左文字色を変える
-    color: $green;//左文字色を変える
+    color: $white;//左文字色を変える
   }
   
   .button__item:hover::before {

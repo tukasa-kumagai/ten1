@@ -44,7 +44,7 @@
 
 .vice__bg-img2 {
   display: none;
-
+  top: -8%;
   @include mq("md") {
     display: flex;
     left: calc(50% - min(48.5vw, 38.75rem));

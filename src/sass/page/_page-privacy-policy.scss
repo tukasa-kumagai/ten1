@@ -1,0 +1,14 @@
+@use "global" as *;
+
+
+.page-privacy-policy {
+
+}
+
+.page-privacy-policy__inner.inner {
+    max-width: rem(345);
+
+@include mq("md") {
+    max-width: rem(800);
+}
+}

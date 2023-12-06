@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.sentence {
+
+}
+
+.sentence__title {
+    
+}
+.sentence__list {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(40);
+    
+}
+
+.sentence__list-circle {
+    list-style-type: disc;
+   
+}
+
+.sentence__sub-title1 {
+    margin-top: rem(40);
+}
+
+.sentence__sub-title2 {
+    margin-top: rem(40);
+}
+    

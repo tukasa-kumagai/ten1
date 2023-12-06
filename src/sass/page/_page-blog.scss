@@ -1,0 +1,15 @@
+@use "global" as *;
+
+
+.page-blog {
+display: flex;
+
+}
+
+.page-blog__inner {
+display: flex;
+}
+
+.page-blog-sub {
+    background-color: aqua;
+}   

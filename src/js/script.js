@@ -255,4 +255,13 @@ const $js_tab = $(".js-infoTab-trigger");
 
 
 
- 
+ //フォーム
+ $(function(){
+  $('.Form-CheckItem-Label').on('click', function(){
+    if ($('#JS_CheckItem').prop("checked") == true) {
+      $('.JS_FormSubmit').addClass('isActive');
+    } else {
+      $('.JS_FormSubmit').removeClass('isActive');
+    }
+  });
+});
