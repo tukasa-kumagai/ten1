@@ -24,6 +24,21 @@
     }
 }
 
+.content-block__img1--position {
+    margin-left: 0;
+    width: 100%;
+    @include mq("md") {
+
+    }
+}
+.content-block__img2--position {
+display: none;
+    @include mq("md") {
+display: inline;
+    }
+}
+
+
 .content-block__img1 img {
     @include mq("md") {}
 }
@@ -83,6 +98,20 @@
         color: $white;
         line-height: rem(100);
         margin-top: rem(0);
+    }
+}
+
+.content-block__title-text--position {
+    color: $white;
+    position: absolute;
+    margin-top: 0;
+    left: 10%;
+    top: 5%;
+
+    @include mq("md") {
+        left: 0%;
+        top: 0%;
+        position: static;
     }
 }
 

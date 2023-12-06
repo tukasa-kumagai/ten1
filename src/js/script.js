@@ -131,3 +131,128 @@ jQuery(document).ready(function($){
       activeClass: 'active',
   })
 });
+
+//モーダル
+// 変数に要素を入れる
+var trigger = $('.modal__trigger'),
+    wrapper = $('.modal__wrapper'),
+    layer = $('.modal__layer'),
+    container = $('.modal__container'),
+    close = $('.modal__close'),
+    content = $('.modal__content');
+
+// 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
+$(trigger).click(function() {
+  $(wrapper).fadeIn(400);
+
+  // クリックした画像のHTML要素を取得して、置き換える
+  $(content).html($(this).prop('outerHTML'));
+
+  // スクロール位置を戻す
+  $(container).scrollTop(0);
+
+  // サイトのスクロールを禁止にする
+  $('html, body').css('overflow', 'hidden');
+});
+
+// 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
+$(layer).add(close).click(function() {
+  $(wrapper).fadeOut(400);
+
+  // サイトのスクロール禁止を解除する
+  $('html, body').removeAttr('style');
+});
+
+//タブ
+//任意のタブにURLからリンクするための設定
+function GethashID (hashIDName){
+	if(hashIDName){
+		//タブ設定
+		$('.tab li').find('a').each(function() { //タブ内のaタグ全てを取得
+			var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
+			if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
+				var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
+				$('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
+				$(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
+				//表示させるエリア設定
+				$(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
+				$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
+			}
+		});
+	}
+}
+
+//タブをクリックしたら
+$('.tab__box a').on('click', function() {
+	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
+	GethashID (idName);//設定したタブの読み込みと
+	return false;//aタグを無効にする
+});
+
+
+// 上記の動きをページが読み込まれたらすぐに動かす
+$(window).on('load', function () {
+    $('.tab__box li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
+    $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
+	var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
+	GethashID (hashName);//設定したタブの読み込み
+});
+
+
+
+$(function(){
+	$("a").on('click',function(){
+		$(this).toggleClass("active");
+	});
+});
+
+
+
+
+////勉強用
+const $js_tab = $(".js-infoTab-trigger");
+  const $js_tab_target = $(".js-infoContent-target");
+  const cls = "is-active";
+
+  $js_tab.on("click", function () {
+    const this_category = $(this).data("category");
+    $js_tab.removeClass(cls);
+    $(this).addClass(cls);
+    $js_tab_target.removeClass(cls);
+    $js_tab_target.each(function () {
+      const target_data = $(this).data("target");
+      if (this_category === target_data) {
+        $(this).addClass(cls);
+      }
+    });
+  });
+
+
+
+     //タブへダイレクトリンクの実装
+     $(function () {
+      //リンクからハッシュを取得
+      var hash = location.hash;
+      hash = (hash.match(/^#tab_panel-\d+$/) || [])[0];
+      //リンクにハッシュが入っていればtabNameに格納
+      if ($(hash).length) {
+        var tabName = hash.slice(1);
+      } else {
+        var tabName = "tab_panel-1";
+      }
+      //コンテンツ非表示・タブを非アクティブ
+      $(".js-infoTab-trigger").removeClass("is-active");
+      $(".js-infoContent-target").removeClass("is-active");
+      //何番目のタブかを格納
+      var tabNo = $(".js-infoContent-target#" + tabName).index();
+      //コンテンツ表示
+      $(".js-infoContent-target").eq(tabNo).addClass("is-active");
+      //タブのアクティブ化
+      $(".js-infoTab-trigger").eq(tabNo).addClass("is-active");
+    });
+
+
+
+
+
+ 
