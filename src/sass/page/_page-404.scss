@@ -1,0 +1,82 @@
+@use "global" as *;
+
+
+.page-404 {
+position: relative;
+}
+
+.page-404__inner {
+max-width: rem(600);
+margin: 0 auto;
+}
+
+.page-404::before {
+  background-image: url(/assets/images/404/page-ocean-sea-icon.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(50);
+  position: absolute;
+  height: rem(345);
+  left: rem(105);
+  top: rem(-77);
+  width: rem(345);
+  z-index: 100;
+  left: 0%;
+  @include mq("md") {
+    height: rem(698);
+    left: rem(105);
+    top: rem(-140);
+    width: rem(698);
+    z-index: 100;
+    left: calc(50% - min(48.5vw, 38.75rem));
+  }
+}
+
+.page-404__title {
+font-size: rem(80);
+font-weight: $regular;
+font-family: $second-font-family;
+color: $white;
+text-align: center;
+letter-spacing: 0.5em;
+@include mq("md") {
+  font-size: rem(160);
+  
+}
+}
+
+.page-404__text {
+  font-size: rem(16);
+  font-weight: $regular;
+  font-family: $second-font-family;
+  color: $white;
+  text-align: center;
+}
+
+.page-404__button-inner {
+  margin-top: rem(37);
+  text-align: center;
+
+  @include mq("md") {
+    margin-top: rem(75);
+  }
+}
+
+.price::before {
+  background-image: url(/assets/images/top/fish2.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: rem(50);
+  position: absolute;
+
+  @include mq("md") {
+      height: rem(300);
+      left: rem(100);
+      top: rem(928);
+      width: rem(439);
+      z-index: 10000;
+      left: calc(50% - min(48.5vw, 38.75rem));
+  }
+}

@@ -15,6 +15,12 @@
     transition: background-color .3s;
   }
   
+.button__item--green {
+  background-color: $green;//背景色
+}
+.button__item--white {
+  background-color: $white;//背景色
+}
   .button__item-link {
     font-size: rem(14);///文字サイズ
     line-height: 1.5714;//文字の高さ
@@ -23,6 +29,14 @@
     font-weight: $regular;//文字太さ
     transition: color .3s;//文字色の変化速度
   
+  }
+  .button__item-link--white {
+    color: $white;//文字の色
+  }
+
+  .button__item-link--green {
+    color: $green;//文字の色
+    
   }
   
   .button__item::before {//.buttonの前方
@@ -38,10 +52,16 @@
     transition: .2s cubic-bezier(0.45, 0, 0.55, 1);//transition：変化速度 cubic-bezier:変化速度に緩急をつける
     z-index: -1;
   }
-
+  .button__item--white::before {
+    background-color: $white;//背景色
+  }
   
   .button__item:hover .button__item-link {//アニメーション・左文字色を変える
     color: $white;//左文字色を変える
+  }
+
+  .button__item--white:hover .button__item-link--green {
+    color: $green;//左文字色を変える
   }
   
   .button__item:hover::before {

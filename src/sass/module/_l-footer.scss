@@ -11,3 +11,15 @@
         margin-top: rem(155);
     }
 }
+
+.l-footer--404position {
+    padding-top: rem(47);
+    margin-top: rem(0);
+    padding-bottom: rem(52);
+
+    @include mq("md") {
+        padding-bottom: rem(115);
+        padding-top: rem(80);
+        margin-top: rem(0);
+    }
+}

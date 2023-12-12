@@ -14,6 +14,10 @@
   transition: background-color .3s;
 }
 
+.button--white {
+  background-color: $white;//背景色
+}
+
 .button__text {
   font-size: rem(14);///文字サイズ
   line-height: 1.5714;//文字の高さ
@@ -22,6 +26,10 @@
   font-weight: $regular;//文字太さ
   transition: color .3s;//文字色の変化速度
 
+}
+
+.button__text--green {
+  color: $green;//文字の色
 }
 
 .button::before {//.buttonの前方
@@ -38,6 +46,10 @@
   z-index: -1;
 }
 
+.button--white::before {
+  background-color: $white;//背景色
+}
+
 .button::after {
   content: "";
   position: absolute;//位置の固定
@@ -49,6 +61,9 @@
   z-index: -2;//位置の優先順位
 }
 
+.button--white::after {
+  border: rem(1) solid $white;//縁の色
+}
 .button__text::after {//右矢印
   content: "";
   display: inline-block;
@@ -62,6 +77,10 @@
   margin-left: rem(5);//左文字との間
   transition: border .3s;
 }
+.button__text--green::after {
+  border-bottom: rem(1) solid $green;//縦線
+  border-right: rem(1) solid $green;//横線
+}
 
 .button:hover .button__text {//アニメーション・左文字色を変える
   color: $green;//左文字色を変える
@@ -74,6 +93,8 @@
 .button:hover .button__text::after {//アニメーション・右の矢印の色を変える
   border-color: $green;//右矢印の色を変える
 }
+
+
 
 .button--position {
 display: none;

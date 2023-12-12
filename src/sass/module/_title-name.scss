@@ -1,0 +1,24 @@
+@use "global" as *;
+
+
+.title-name {
+    display: flex;
+border-left: rem(3) solid $green;
+padding-left: rem(16);
+}
+.title-name__image {
+width: rem(50);
+
+}
+
+.title-name__image img {
+
+}
+
+.title-name__text {
+    font-size: rem(24);
+    font-weight: $regular;
+    font-family: $base-font-family;
+    display: block;
+    line-height: 2;
+}

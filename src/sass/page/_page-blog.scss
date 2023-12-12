@@ -6,10 +6,104 @@ display: flex;
 
 }
 
-.page-blog__inner {
-display: flex;
+.page-blog__inner .inner {
+
 }
 
-.page-blog-sub {
-    background-color: aqua;
+.page-blog__main {
+   display: flex;
+   width: 70%;
+ 
+ 
+}
+.page-blog__sub {
+  width: 100%;
+
+   
 }   
+
+.page-blog__sub-card {
+    display: flex;
+    box-shadow: rem(2) rem(2) rem(4) gray;
+    padding: rem(16);
+    width: rem(294);
+    margin-top: rem(24);
+}
+.page-blog__sub-card-text {
+padding-left: rem(16);
+}
+
+.page-blog__sub-card-image {
+    width: rem(121);
+}
+
+.page-blog__sub-card-image img {
+}
+.page-blog__sub-card-day {
+font-size: rem(12);
+font-family: $second-font-family;
+}
+
+.page-blog__sub-card-title {
+    font-size: rem(16);
+    font-family: $second-font-family;
+    font-weight: 200;
+}
+
+.page-blog__sub-reviews {
+    display: block;
+    margin-top: rem(80);
+}
+
+.page-blog__sub-reviews-card {
+
+}
+
+.page-blog__sub-reviews-image {
+
+}
+
+.page-blog__sub-reviews-text  {
+
+}
+
+.page-blog__sub-reviews-age {
+font-size: rem(12);
+font-family: $base-font-family;
+font-weight: $regular;
+margin-top: rem(16);
+
+}
+
+.page-blog__sub-reviews-title {
+    font-size: rem(24);
+    font-family: $base-font-family;
+    font-weight: $regular;
+    margin-top: rem(16);
+}
+
+.page-blog__sub-reviews-button-inner {
+    text-align: center;
+    margin-top: rem(40);
+
+}
+
+.page-blog__sub-campaign__item  {
+    max-width: rem(280);
+    margin-top: rem(24);
+    @include mq("md") {
+      max-width: rem(333);
+  
+    }
+}
+
+
+    .page-blog__sub-campaign__item:nth-child(n+2) {
+        max-width: rem(280);
+    margin-top: rem(40);
+        @include mq("md") {
+          padding-bottom: 0;
+          max-width: rem(333);
+      
+        }
+    }
