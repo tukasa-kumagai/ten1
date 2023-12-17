@@ -1,6 +1,11 @@
 @use "global" as *;
 
-
+.l-page-about {
+margin-top: rem(0);
+  @include mq("md") {
+  
+  }
+}
 .about {
   @include mq("md") {
     position: relative;
@@ -61,7 +66,7 @@
 }
 
 .about__main {
-  margin-top: rem(30);
+  margin-top: rem(0);
 
   @include mq("md") {
     width: 100%;

@@ -1,12 +1,17 @@
 @use "global" as *;
 
 .page-price {
+margin-top: rem(45);
 
+@include mq("md") {
+  margin-top: rem(140);
+}
 }
 
 .page-price__inner.inner {
   max-width: rem(400);
   margin: 0 auto;
+  position: relative;
   @include mq("md") {
   
     max-width: rem(750);
@@ -14,7 +19,8 @@
 }
 .page-price__main {
 max-width: rem(345);
-border: rem(1) solid $green;
+border-right: rem(1) solid $green;
+border-left: rem(1) solid $green;
 
 @include mq("md") {
   display: flex;
@@ -35,7 +41,7 @@ max-width: rem(345);
 display: flex;
 flex-direction: row-reverse;
 justify-content: center;
-padding: rem(8) 0;
+padding: rem(6) 0;
 width: 100%;
 @include mq("md") {
   max-width: rem(200);
@@ -67,27 +73,53 @@ font-size: rem(16);
 .page-price__tr {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   @include mq("md") {
 
   }
 }
 .page-price__th  {
- border: 1px solid $green;
- padding: rem(8) rem(30);
+ border-bottom: 1px solid $green;
+ border-right: 1px solid $green;
+padding: rem(5) rem(6) rem(7) rem(6);
  text-align: center;
  font-size: rem(16);
+ width: 70%;
  @include mq("md") {
+  border-top: 1px solid $green;
+  border-bottom: 0px solid $green;
+  padding: rem(23) rem(10) rem(10) rem(24);
 width: rem(345);
 text-align: left;
 padding-left: rem(15);
-line-height: 3;
+line-height: 1;
  }
 
 }
+
+.page-price__th--position {
+  padding: rem(20)rem(10) rem(10) rem(10);
+  @include mq("md") {
+    border-bottom: 1px solid $green;
+  }
+}
 .page-price__td  {
-padding: rem(19)rem(16) rem(19) rem(40);
-border: 1px solid $green;
+padding: rem(17.5)rem(16) rem(17.5) rem(20);
+border-bottom: 1px solid $green;
+width: 30%;
 @include mq("md") {
   width: rem(162);
+  text-align: right;
+  border-top: 1px solid $green;
+  border-bottom: 0px solid $green;
+
 }
+}
+
+
+.page-price__td--position {
+
+  @include mq("md") {
+    border-bottom: 1px solid $green;
+  }
 }

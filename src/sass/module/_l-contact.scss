@@ -7,8 +7,41 @@ position: relative;
 @include mq("md") {
     margin-top: rem(136);
     position: relative;
+}
 
+}
+.l-contact--low-page-position {
+    margin-top: rem(97);
+    position: relative;
     
-}
+    @include mq("md") {
+        margin-top: rem(123);
+        position: relative;
+       
+    }
+    
+    }
+.l-contact--low-page-position2 {
+margin-top: rem(115);
+    }
 
-}
+    .l-contact--low-page-position3 {
+        margin-top: rem(107);
+            }
+            .l-contact--low-page-position4 {
+                margin-top: rem(95);
+                    }
+                    .l-contact--low-page-position5 {
+                        margin-top: rem(105);
+
+                        @include mq("md") {
+                            margin-top: rem(120);
+                        }
+                            }
+
+                            .l-contact--low-page-position6 {
+                                margin-top: rem(100);
+                                @include mq("md") {
+                                    margin-top: rem(95);
+                                }
+                                    }

@@ -103,6 +103,13 @@
     }
 }
 
+.card2__text--position {
+  @include mq("md") {
+    margin-top: rem(21);
+    -webkit-line-clamp: 7;
+}
+}
+
 div.card2__img {
 
     position: relative;

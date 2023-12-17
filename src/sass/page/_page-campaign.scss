@@ -1,9 +1,24 @@
 @use "global" as *;
 
 
+.page-campaign__inner .inner {
+  @include mq("md") { 
+
+  }
+}
+.page-campaign-button {
+  position: relative;
+  margin-top: rem(40);
+
+
+  @include mq("md") { 
+    margin-top: rem(130);
+  }
+}
 .page-campaign-button__inner {
   padding: 0 rem(15);
   margin: 0 auto;
+
   @include mq("md") { 
   
   }
@@ -25,6 +40,34 @@
   align-items: center;
   }
 }
+
+.pagination__item {
+
+}
+
+.pagination__list-item {
+
+    width: 100%;
+    @include mq("md")  {
+      padding-bottom: rem(50);
+    }
+}
+.pagination__list-item:nth-child(n+2) {
+ margin-top: rem(40);
+
+ @include mq("md")  {
+    margin-top: rem(0);
+ }
+}
+.pagination__list-item:nth-child(n+3) {
+    margin-top: rem(40);
+   
+    @include mq("md")  {
+       margin-top: rem(80);
+    }
+   }
+
+
 
 .page-campaign__button-inner {
 margin: 0 auto;

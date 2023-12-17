@@ -13,13 +13,13 @@
 }
 
 .l-footer--404position {
-    padding-top: rem(47);
+    padding-top: rem(90);
     margin-top: rem(0);
     padding-bottom: rem(52);
 
     @include mq("md") {
         padding-bottom: rem(115);
-        padding-top: rem(80);
+        padding-top: rem(235);
         margin-top: rem(0);
     }
 }

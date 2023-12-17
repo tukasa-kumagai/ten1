@@ -4,9 +4,26 @@
 
 }
 
+.page-voice{
+  position: relative;
+  margin-top: rem(40);
 
-.page-vice__list {
 
+  @include mq("md") { 
+    margin-top: rem(130);
+  }
+}
+.page-voice__inner{
+  padding: 0 rem(15);
+  margin: 0 auto;
+
+  @include mq("md") { 
+  
+  }
+}
+.pagination__list.page-vice__list {
+  margin: 0;
+  padding: 0;
   @include mq("md") { 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -18,9 +35,16 @@
 
 .page-vice__items {
   margin-top: rem(42);
-
+  text-align: left;
   @include mq("md") {
     margin: 0 auto;
-    margin-top: rem(30);
+    margin-top: rem(40);
   }
 }
+
+.page-vice__items:nth-child(n+2) {
+ margin-top: rem(80);
+
+} 
+
+

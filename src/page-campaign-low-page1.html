@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./assets/js/paginathing.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!--メインのJS-->
@@ -40,7 +41,7 @@
 <body>
   <header class="l-header header">
     <div class="header__inner">
-      <a href="#" class="header__logo-link">
+      <a href="./index.html" class="header__logo-link">
         <img src="./assets/images/common/codeupslogo.png" alt="ヘッダーロゴ">
       </a>
       <button class="header__drawer hamburger js-hamburger">
@@ -52,7 +53,7 @@
         <div class="sp-nav__inner">
           <div class="sp-nav__left">
             <ul class="sp-nav__left-items">
-              <li class="sp-nav__left-item"><a href="/dist/page-campaign.html">キャンペーン</a></li>
+              <li class="sp-nav__left-item"><a href="#">キャンペーン</a></li>
               <li class="sp-nav__left-item"><a href="#">ライセンス取得</a></li>
               <li class="sp-nav__left-item"><a href="#">貸切体験ダイビング</a></li>
               <li class="sp-nav__left-item"><a href="#">ナイトダイビング</a></li>
@@ -99,25 +100,25 @@
       <div class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
-            <a href="./page-campaign.html">
+            <a href="#">
               <span class="pc-nav__item-head">Campaign</span>
               <span class="pc-nav__item-foot">キャンペーン</span>
             </a>
           </li>
           <li class="pc-nav__item">
-            <a href="./page-about.html">
-              <span class="pc-nav__item-head">Aboutus</span>
+            <a href="#">
+              <span class="pc-nav__item-head">About&nbsp;us</span>
               <span class="pc-nav__item-foot">私たちについて</span>
             </a>
           </li>
           <li class="pc-nav__item">
-            <a href="./information.html">
+            <a href="#">
               <span class="pc-nav__item-head">Information</span>
               <span class="pc-nav__item-foot">ダイビング情報</span>
             </a>
           </li>
           <li class="pc-nav__item">
-            <a href="./page-blog.html">
+            <a href="#">
               <span class="pc-nav__item-head">Blog</span>
               <span class="pc-nav__item-foot">ブログ</span>
             </a>
@@ -153,8 +154,8 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="./assets/images/contact/page-contact-pc-mv.png" media="(min-width: 767px)">
-        <img src="./assets/images/contact/page-contact-sp-mv.png" alt="">
+        <source srcset="./assets/images/site-map/page-site-map-pc-mv.png" media="(min-width: 767px)">
+        <img src="./assets/images/site-map/page-site-map-sp-mv.png" alt="キャンペーンメイン画像">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -164,171 +165,152 @@
   <main>
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="./assets/images/common/page-top-bag.png"
           alt="戻るボタン"></a></p>
-    <nav class="breadcrumb">
-      <ol class="breadcrumb__group">
-        <li class="breadcrumb__list">
-          <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">トップ</span></a>
-        </li>
-        <li class="breadcrumb__list">
-          <a class="breadcrumb__item" href="./page-campaign.html"><span class="breadcrumb__item-link">お問い合わせ</span></a>
-        </li>
-      </ol>
-    </nav>
-    <section class="page-contact">
-      <div class="page-contact__inner inner">
-        <div class="page-contact__bg-img">
+    <div class="inner">
+      <nav class="breadcrumb breadcrumb--position">
+        <ol class="breadcrumb__group breadcrumb__group--position2">
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">TOP</span></a>
+          </li>
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./page-site-map.html"><span
+                class="breadcrumb__item-link">キャンペーン</span></a>
+          </li>
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./page-campaign-low-page1.html"><span
+                class="breadcrumb__item-link">ライセンス講習</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <section class="page-campaign-button">
+      <div class="inner page-campaign-button__inner">
+        <div class="fish-bg-img">
           <img src="./assets/images/top/fish1.png" alt="魚画像">
         </div>
-
-
-        <form class="form">
-          <div class="Form-Item">
-            <p class="Form-Item-Label">
-              お名前<span class="Form-Item-Label-Required">必須</span>
-            </p>
-            <input type="text" class="Form-Item-Input" placeholder="沖縄 太郎">
-          </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label">メールアドレス<span class="Form-Item-Label-Required">必須</span></p>
-            <input type="text" class="Form-Item-Input" placeholder="aaa000@ggmail.com">
-          </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label">電話番号<span class="Form-Item-Label-Required">必須</span></p>
-            <input type="text" class="Form-Item-Input" placeholder="000-0000-0000">
-          </div>
-          <tr>
-            <th class="contact-item">スキル</th>
-            <td class="contact-body">
-              <label class="contact-skill">
-                <input type="checkbox" name="スキル" />
-                <span class="contact-skill-txt">HTML,CSS</span>
-              </label>
-              <label class="contact-skill">
-                <input type="checkbox" name="スキル" />
-                <span class="contact-skill-txt">JavaScript,jQuery</span>
-              </label>
-              <label class="contact-skill">
-                <input type="checkbox" name="スキル" />
-                <span class="contact-skill-txt">WordPress</span>
-              </label>
-              <label class="contact-skill">
-                <input type="checkbox" name="スキル" />
-                <span class="contact-skill-txt">その他</span>
-              </label>
-            </td>
-          </tr>
-          <div class="Form-Item">
-            <p class="Form-Item-Label">キャンペーン<span class="Form-Item-Label-Required">必須</span></p>
-            <select class="Form-Item-Input" name="ご用件" required>
-              <option value="">キャンペーン内容を選択</option>
-              <option value="ご質問・お問い合わせ">企業情報に関するお問い合わせ</option>
-              <option value="プレスリリース">プレスリリースに関するお問い合わせや、取材のご依頼</option>
-              <option value="その他お問い合わせ">その他ご質問・お問い合わせ</option>
-            </select>
-          </div>
-          <div class="Form-Item">
-            <p class="Form-Item-Label isMsg">お問い合わせ内容<span class="Form-Item-Label-Required">必須</span></p>
-            <textarea class="Form-Item-Textarea"></textarea>
-          </div>
-          <div class="Form-CheckItem">
-            <label class="Form-CheckItem-Label">
-              <input type="checkbox" name="" value="" id="JS_CheckItem" class="Form-CheckItem-Label-Input">
-              <span class="Form-CheckItem-Label-CheckIcon"></span>
-              <span class="Form-CheckItem-Label-SquareIcon"></span>
-              <span class="Form-CheckItem-Label-Text">個人情報の取り扱いについて同意のうえ送信します。</span>
-            </label>
-          </div>
-          <div class="page-contact__button-inner">
-            <div class="button">
-              <input class="form-btn__text JS_FormSubmit" type="submit" value="send">
-              <span class="button__text tex"></span>
+        <div class="button__items">
+          <a href="./page-campaign.html"  class="button__item button__item--white">
+            <span class="button__item-link button__item-link--green">ALL </span>
+          </a>
+          <a href="./page-campaign.html" class="button__item button__item--green">
+            <span class="button__item-link button__item-link--white">ライセンス講習</span>
+          </a>
+          <a href="./page-campaign-low-page2.html" class="button__item button__item--white">
+            <span class="button__item-link button__item-link--green">ファンダイビング</span>
+          </a>
+          <a href="./page-campaign-low-page3.html" class="button__item button__item--white">
+            <span class="button__item-link button__item-link--green">体験ダイビング</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="l-page-campaign page-campaign">
+      <div class="page-campaign__inner inner">
+        <div class="pagination__list page-campaign__list">
+          <a href="./page-campaign-low-page1.html" class="pagination__list-item  card">
+            <div class="card__img">
+              <img src="./assets/images/campaign/campaign-sp-img1.png" alt="キャンペーンカード1">
             </div>
-          </div>
-
-   
-        </form>
-
-        <body>
-          <div class="contact"></div>
-          <form action="">
-            <table class="contact-table">
-              <tr>
-                <th class="contact-item">名前</th>
-                <td class="contact-body">
-                  <input type="text" name="名前" class="form-text" />
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">性別</th>
-                <td class="contact-body">
-                  <label class="contact-sex">
-                    <input type="radio" name="性別" />
-                    <span class="contact-sex-txt">男</span>
-                  </label>
-                  <label class="contact-sex">
-                    <input type="radio" name="性別" />
-                    <span class="contact-sex-txt">女</span>
-                  </label>
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">メール</th>
-                <td class="contact-body">
-                  <input type="email" name="メール" class="form-text" />
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">電話</th>
-                <td class="contact-body">
-                  <input type="tel" name="電話" class="form-text" />
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">職業</th>
-                <td class="contact-body">
-                  <select name="職業" class="form-select">
-                    <option>選択</option>
-                    <option>学生</option>
-                    <option>主婦</option>
-                    <option>会社員</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">スキル</th>
-                <td class="contact-body">
-                  <label class="contact-skill">
-                    <input type="checkbox" name="スキル" />
-                    <span class="contact-skill-txt">HTML,CSS</span>
-                  </label>
-                  <label class="contact-skill">
-                    <input type="checkbox" name="スキル" />
-                    <span class="contact-skill-txt">JavaScript,jQuery</span>
-                  </label>
-                  <label class="contact-skill">
-                    <input type="checkbox" name="スキル" />
-                    <span class="contact-skill-txt">WordPress</span>
-
-                  </label>
-                  <label class="contact-skill">
-                    <input type="checkbox" name="スキル" />
-                    <span class="contact-skill-txt">その他</span>
-                  </label>
-                  
-                </td>
-              </tr>
-              <tr>
-                <th class="contact-item">お問い合わせ内容</th>
-                <td class="contact-body">
-                  <textarea name="問い合わせ" class="form-textarea"></textarea>
-                </td>
-              </tr>
-            </table>
-
-          
-            <!-- 後ほど送信ボタンを作成 -->
-          </form>
-        </body>
+            <div class="card__body card__body--under">
+              <div class="card__head card__head--campaign-position">
+                <p class="card__head-title">ライセンス講習</p>
+                <p class="card__head-text">ライセンス取得</p>
+              </div>
+            </div>
+            <div class="card__foot card__foot--campaign-under">
+              <p class="card__foot-title">全部コミコミ(お一人様)</p>
+              <div class="card__foot-price">
+                <p class="card__foot-regular">¥56,000</p>
+                <p class="card__foot-discount">¥46,000</p>
+              </div>
+            </div>
+            <p class="card__foot-text card__foot-text--width">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<br>
+            </p>
+            <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+            <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
+            <p href="#" class="button button--position1">
+              <span class="button__text">View more</span>
+            </p>
+          </a>
+          <a href="./page-campaign-low-page1.html" class="pagination__list-item  card">
+            <div class="card__img">
+              <img src="./assets/images/campaign/campaign-sp-img1.png" alt="キャンペーンカード1">
+            </div>
+            <div class="card__body card__body--under">
+              <div class="card__head card__head--campaign-position">
+                <p class="card__head-title">ライセンス講習</p>
+                <p class="card__head-text">ライセンス取得</p>
+              </div>
+            </div>
+            <div class="card__foot card__foot--campaign-under">
+              <p class="card__foot-title">全部コミコミ(お一人様)</p>
+              <div class="card__foot-price">
+                <p class="card__foot-regular">¥56,000</p>
+                <p class="card__foot-discount">¥46,000</p>
+              </div>
+            </div>
+            <p class="card__foot-text card__foot-text--width">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<br>
+            </p>
+            <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+            <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
+            <p href="#" class="button button--position1">
+              <span class="button__text">View more</span>
+            </p>
+          </a>
+          <a href="./page-campaign-low-page1.html" class="pagination__list-item  card">
+            <div class="card__img">
+              <img src="./assets/images/campaign/campaign-sp-img1.png" alt="キャンペーンカード1">
+            </div>
+            <div class="card__body card__body--under">
+              <div class="card__head card__head--campaign-position">
+                <p class="card__head-title">ライセンス講習</p>
+                <p class="card__head-text">ライセンス取得</p>
+              </div>
+            </div>
+            <div class="card__foot card__foot--campaign-under">
+              <p class="card__foot-title">全部コミコミ(お一人様)</p>
+              <div class="card__foot-price">
+                <p class="card__foot-regular">¥56,000</p>
+                <p class="card__foot-discount">¥46,000</p>
+              </div>
+            </div>
+            <p class="card__foot-text card__foot-text--width">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<br>
+            </p>
+            <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+            <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
+            <p href="#" class="button button--position1">
+              <span class="button__text">View more</span>
+            </p>
+          </a>
+           <a href="./page-campaign-low-page1.html" class="pagination__list-item  card">
+            <div class="card__img">
+              <img src="./assets/images/campaign/campaign-sp-img1.png" alt="キャンペーンカード1">
+            </div>
+            <div class="card__body card__body--under">
+              <div class="card__head card__head--campaign-position">
+                <p class="card__head-title">ライセンス講習</p>
+                <p class="card__head-text">ライセンス取得</p>
+              </div>
+            </div>
+            <div class="card__foot card__foot--campaign-under">
+              <p class="card__foot-title">全部コミコミ(お一人様)</p>
+              <div class="card__foot-price">
+                <p class="card__foot-regular">¥56,000</p>
+                <p class="card__foot-discount">¥46,000</p>
+              </div>
+            </div>
+            <p class="card__foot-text card__foot-text--width">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>
+              ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキスト<br>
+            </p>
+            <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+            <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
+            <p href="#" class="button button--position1">
+              <span class="button__text">View more</span>
+            </p>
+          </a>
+        </div>
       </div>
     </section>
   </main>

@@ -3,6 +3,10 @@
 
 .page-404 {
 position: relative;
+
+@include mq("md") {
+  margin-top: rem(65);
+}
 }
 
 .page-404__inner {
@@ -18,18 +22,18 @@ margin: 0 auto;
   height: rem(50);
   position: absolute;
   height: rem(345);
-  left: rem(105);
-  top: rem(-77);
+  left: 3%;
+  top: rem(-47);
   width: rem(345);
   z-index: 100;
-  left: 0%;
+
   @include mq("md") {
     height: rem(698);
-    left: rem(105);
-    top: rem(-140);
+    left: 13%;
+    top: -24%;
     width: rem(698);
     z-index: 100;
-    left: calc(50% - min(48.5vw, 38.75rem));
+   
   }
 }
 
@@ -38,10 +42,13 @@ font-size: rem(80);
 font-weight: $regular;
 font-family: $second-font-family;
 color: $white;
-text-align: center;
+margin: 0 auto;
 letter-spacing: 0.5em;
+width: rem(220);
+line-height: 1.6;
 @include mq("md") {
   font-size: rem(160);
+  width: rem(440);
   
 }
 }

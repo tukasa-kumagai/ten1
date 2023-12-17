@@ -96,7 +96,7 @@
 
 
 
-.button--position {
+.button--position1 {
 display: none;
 
   @include mq("md") {
@@ -104,6 +104,6 @@ display: none;
     margin: 0 auto;
     margin-top: rem(16);
     display: flex;
-    justify-content: center;
+    
   }
 }

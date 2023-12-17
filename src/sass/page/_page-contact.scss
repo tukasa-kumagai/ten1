@@ -395,12 +395,96 @@ justify-content: center;
   border-color: $green;//右矢印の色を変える
 }
 
-.button--position {
+.button--position2 {
 display: none;
 
   @include mq("md") {
     display: inline;
     margin: 0 auto;
-    margin-top: rem(16);
+    margin-top: rem(64);
+
+    
   }
 }
+
+
+//試作品
+.contact {
+  width: 960px;/*横幅*/
+  margin: 0 auto;/*中央寄せ*/
+  padding: 60px 0;
+}
+
+.contact-table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contact-item,
+.contact-body {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.contact-item {
+  text-align: left; /* テキスト左寄せ */
+  width: 30%; /* 横幅30%指定（グレーの背景色部分） */
+  background-color: #eee; /* グレーの背景色 */
+}
+
+.contact-body {
+  width: 70%; /* 横幅70%指定（白背景色部分） */
+}
+
+.contact-skill {
+  display: block;
+  
+}
+
+.contact-skill + .contact-skill {
+  margin-top: 10px;
+}
+
+.contact-skill-txt {
+  margin-left: 5px;
+}
+
+.form-text {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 400px;
+}
+
+.form-select {
+  width: 180px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #333;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+}
+

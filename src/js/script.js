@@ -132,6 +132,16 @@ jQuery(document).ready(function($){
   })
 });
 
+jQuery(document).ready(function($){
+  $('.pagination__list2').paginathing({
+      perPage: 3,
+      firstLast: false,
+      prevText:'<' ,
+      nextText:'>' ,
+      activeClass: 'active',
+  })
+});
+
 //モーダル
 // 変数に要素を入れる
 var trigger = $('.modal__trigger'),
@@ -251,7 +261,17 @@ const $js_tab = $(".js-infoTab-trigger");
       $(".js-infoTab-trigger").eq(tabNo).addClass("is-active");
     });
 
-
+  //アコーディオン
+$(function () {
+	$(".page-faq__list .page-faq__box").css("display", "block"); //.page-faq__list:first-of-typeを.page-faq__listに代入一番目開いておく//
+	$(".page-faq__list .page-faq__title").addClass("open");//.page-faq__list:first-of-typeを.page-faq__listに代入
+	$(".page-faq__title").on("click", function () {
+		$(".page-faq__title").not(this).removeClass("open");
+		$(".page-faq__title").not(this).next().slideUp(200);
+		$(this).toggleClass("open");
+		$(this).next().slideToggle(200);
+	});
+});
 
 
 
@@ -265,3 +285,8 @@ const $js_tab = $(".js-infoTab-trigger");
     }
   });
 });
+
+function OnLinkClick(a_name) { 
+  var elements = document.getElementsByName( "tab-radios" ) ; 
+   elements[1].checked = true ; 
+} 

@@ -1,7 +1,17 @@
 @use "global" as *;
-.page-information-tab {
-	
+.page-information {
+	margin-top: rem(113);
+	position: relative;
+
+	@include mq(md) {
+		margin-top: rem(145);	
+	}
 }
+
+.page-information__inner  {
+
+}
+
 .sub-information {
 	position: relative;
   }

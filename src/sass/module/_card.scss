@@ -19,6 +19,10 @@
     }
 }
 
+.card__img--size {
+    padding-top: 75.071429%;
+}
+
 .card__img img {
     position: absolute;
     top: 50%;
@@ -61,6 +65,16 @@
         padding: rem(0) rem(36) rem(17) rem(30);
     }
 }
+.card__foot.card__foot--campaign-under {
+    padding: rem(6) rem(36) rem(7) rem(30);
+    display: inline-block;
+    margin-top: auto;
+
+    @include mq("md") {
+        margin-top: auto;
+        padding: rem(23) rem(24) rem(5) rem(24);
+    }
+}
 
 .card__foot {
     padding: 0 rem(16) rem(6) rem(16);
@@ -80,6 +94,17 @@
     @include mq("md") {
         padding-left: rem(16);
         padding-top: rem(24);
+    }
+}
+
+ .card__head--campaign-position {
+    text-align: left;
+    padding-left: rem(19);
+    padding-top: rem(10);
+
+    @include mq("md") {
+        padding-left: rem(24);
+        padding-top: rem(17);
     }
 }
 
@@ -106,10 +131,14 @@
     border-bottom: rem(1) solid $green;
 
     @include mq("md") {
-       
+        font-size: rem(24);
+        padding-bottom: rem(0);
     }
 
 }
+
+
+    
 
 .card__foot {}
 
@@ -129,7 +158,9 @@
     display: flex;
     justify-content: space-between;
 
-    @include mq("md") {}
+    @include mq("md") {
+        justify-content: center;
+    }
 }
 
 .card__foot-regular {
@@ -179,6 +210,15 @@
     }
 } 
 
+.card__foot-text--width {
+
+
+    @include mq("md") {
+        padding: rem(0) rem(24) rem(0) rem(24);
+        line-height: 1.5;
+    }
+    }
+
 
 .card__foot-day {
     display: none;
@@ -191,6 +231,13 @@
         font-weight: $bold;
         color: $green;
      
+    }
+}
+
+.card__foot-day--position {
+   
+    @include mq("md") {
+        margin-top: rem(30);
     }
 }
 

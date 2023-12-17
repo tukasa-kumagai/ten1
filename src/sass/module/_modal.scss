@@ -1,8 +1,13 @@
 @use "global" as *;
 
 .modal {
-    padding: 80px 0;
+    margin-top: rem(40);
+    @include mq("md") {
+        margin-top: rem(75);
+    }
 }
+
+
 
 .modal__inner {}
 
@@ -31,7 +36,7 @@
 }
 
 .modal__image-top-bottom {
-    
+
     @include mq("md") {
         display: flex;
     }
@@ -40,33 +45,34 @@
 .modal__image-top-bottom-left {
 
     @include mq("md") {
-      margin-right: rem(8);
+        margin-right: rem(8);
     }
 }
+
 .modal__image-long {
-   
+
     @include mq("md") {
-      margin-top: rem(8);
+        margin-top: rem(8);
     }
 }
+
 .modal__image-long img {
-  
+
 
     @include mq("md") {}
 }
+
 .modal__image-shout {
     margin-top: rem(8);
 
-    @include mq("md") {
-
-    }
+    @include mq("md") {}
 }
 
 
 
 
 .modal__image-shout {
-  
+
 
     @include mq("md") {}
 }
@@ -161,7 +167,3 @@
 
     @include mq("md") {}
 }
-
-
-
-

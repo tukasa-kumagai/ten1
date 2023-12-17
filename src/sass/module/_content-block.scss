@@ -27,6 +27,7 @@
 .content-block__img1--position {
     margin-left: 0;
     width: 100%;
+    margin-top: rem(43);
     @include mq("md") {
 
     }
@@ -140,6 +141,12 @@ display: inline;
         margin-top: rem(0);
         margin-left: rem(44);
     }
+}
+
+.content-block__text--position {
+line-height: 1.5;
+margin-top: rem(40);
+margin-bottom: 0;
 }
 
 .content-block__button-inner {

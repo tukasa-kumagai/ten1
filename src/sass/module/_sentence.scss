@@ -2,28 +2,49 @@
 
 .sentence {
 
+    @include mq("md") {
+        margin-top: rem(140);
+    }
 }
 
 .sentence__title {
     
+    @include mq("md") {
+        font-size: rem(32);
+    }
+}
+
+.sentence__ol {
+
+    @include mq("md") {
+        margin-top: rem(40);
+    }
 }
 .sentence__list {
     list-style-type: decimal;
     line-height: 2;
     margin-top: rem(40);
-    
+    @include mq("md") {
+        margin-top: rem(0);
+    }
 }
 
 .sentence__list-circle {
     list-style-type: disc;
+    margin-top: rem(30);
    
 }
 
 .sentence__sub-title1 {
     margin-top: rem(40);
+    @include mq("md") {
+
+    }
+    margin-top: rem(40);
+    letter-spacing: -0.05em;
 }
 
 .sentence__sub-title2 {
-    margin-top: rem(40);
+    margin-top: rem(25);
 }
     
