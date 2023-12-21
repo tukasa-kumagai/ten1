@@ -3,10 +3,26 @@
 
 .page-contact {
 
+max-width: rem(500) ;
+margin: 0 auto;
+margin-top: rem(28);
+
+
+@include mq("md") {
+
+  max-width: rem(700) ;
+
+}
 }
 
 .page-contact__inner  {
 position: relative;
+
+@include mq("md") {
+
+
+}
+
 
 }
 .page-contact__bg-img{
@@ -25,7 +41,7 @@ position: relative;
   margin-top: rem(40);
 
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(30);
     text-align: center;
   }
 }
@@ -35,18 +51,15 @@ position: relative;
 //form
 
 .Form {
-  margin-top: 80px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
   max-width: 700px;
   @include mq("md") {
+    margin-top: 80px;
   }
 }
-@media screen and (max-width: 480px) {
-  .Form {
-    margin-top: 40px;
-  }
-}
+
 .Form-Item {
   border-bottom: 1px dotted $green;
   padding-bottom: 40px;
@@ -54,31 +67,51 @@ position: relative;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   max-width: rem(700);
     margin: 0 auto;
-  @include mq("md") {
-  }
-}
-@media screen and (max-width: 480px) {
-  .Form-Item {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 0;
+    padding-right: 0;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 21px;
     flex-wrap: wrap;
+  @include mq("md") {
+    border-bottom: 1px dotted $green;
+    padding-bottom: 40px;
+    padding-top: 98px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: rem(700);
+      margin: 0 auto;
+      flex-wrap: nowrap;
   }
 }
-.Form-Item:nth-child(n+2) {
- 
-  @include mq("md") {
 
+.Form-Item:nth-child(n+2) {
+  padding-top: 25px;
+  @include mq("md") {
+    max-width: rem(700);
+  }
+}
+.Form-Item:nth-child(n+5) {
+  padding-top: 6px;
+  @include mq("md") {
+    max-width: rem(700);
+  }
+}
+.Form-Item:nth-child(n+6) {
+  padding-top: 22px;
+  @include mq("md") {
+    max-width: rem(700);
   }
 }
 .Form-Item:nth-child(5) {
   border-bottom: 1px solid #ddd;
   @include mq("md") {
-
+    max-width: rem(700);
+    padding-top: rem(15);
   }
 }
 .Form-Item-Label {
@@ -87,122 +120,115 @@ position: relative;
   letter-spacing: 0.05em;
   font-weight: bold;
   font-size: 18px;
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Label {
-    max-width: inherit;
-    display: flex;
-    align-items: center;
-    font-size: 15px;
+ 
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  @include mq("md") {
+    font-size: 18px;
+    max-width: 170px;
+    margin-left: rem(0);
+    max-width: 210px;
+  
+  
   }
 }
+
 .Form-Item-Label.isMsg {
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: auto;
 
   @include mq("md") {
-    
+    margin-top: 8px; 
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-Item-Label.isMsg {
-    margin-top: 0;
-  }
-}
+
 .Form-Item-Label-Required {
-  margin-left: rem(6);
-  padding-top: rem(4);
-  padding-bottom: rem(4);
-  width: rem(61);
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 63px;
+  font-size: 12px;
   display: inline-block;
   text-align: center;
   background: $red;
   color: #fff;
   font-size: 14px;
+  margin-left: rem(8);
 
   @include mq("md") {
-    
+    margin-left: rem(1);
+    padding-top: rem(0);
+    padding-bottom: rem(0);
+    width: rem(61);
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-Item-Label-Required {
-    border-radius: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    width: 32px;
-    font-size: 10px;
-  }
-}
+
 .Form-Item-Input {
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  border: 1px solid $green;
+  border-radius: 0px;
   margin-left: 0px;
   padding-left: 1em;
   padding-right: 1em;
-  height: 48px;
+  height: 40px;
   flex: 1;
   width: 100%;
   max-width: 410px;
   background: $white;
-  font-size: 18px;
+  font-size: 15px;
   color: $black;
-
+  flex: inherit;
+  margin-top: rem(17);
   @include mq("md") {
-    
+    font-size: 18px;  
+    height: 38px;
+    margin-left: rem(0);
+    max-width: 480px;
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-Item-Input {
-    margin-left: 0;
-    margin-top: 18px;
-    height: 40px;
-    flex: inherit;
-    font-size: 15px;
-  }
+
+.Form-Item-Input:nth-child(n+3) {
+
+ 
 }
+
 .Form-Item-Textarea {
   border: 1px solid $green;
   border-radius: 6px;
-  margin-left: 0px;
+
   padding-left: 1em;
   padding-right: 1em;
-  height: 216px;
+
   flex: 1;
   width: 100%;
   max-width: 410px;
   background: $white;
-  font-size: 18px;
+  margin-top: 18px;
+  height: 200px;
+  flex: inherit;
+  font-size: 15px;
 
   @include mq("md") {
-    
-  }
-}
-@media screen and (max-width: 480px) {
-  .Form-Item-Textarea {
-    margin-top: 18px;
-    margin-left: 0;
+    margin-left: 0px;
+    font-size: 18px;
     height: 200px;
-    flex: inherit;
-    font-size: 15px;
+    max-width: 480px;
+    margin-top: rem(10);
   }
 }
 
 .Form-CheckItem {
-  margin-top: 24px;
+  margin-top: 18px;
 
   @include mq("md") {
-    
+    margin-top: 24px;
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-CheckItem {
-    margin-top: 18px;
-  }
-}
+
 .Form-CheckItem-Label {
   margin-top: 20px;
   position: relative;
-  top: 0;
+  top: 11px;
   left: 0;
   display: flex;
   justify-content: center;
@@ -210,73 +236,61 @@ position: relative;
   cursor: pointer;
 }
 .Form-CheckItem-Label-Input {
-  display: none;
+
 }
 .Form-CheckItem-Label-SquareIcon {
   border: 1px solid #ddd;
   display: block;
   flex: none;
-  width: 24px;
-  height: 24px;
-  background: #eaedf2;
+  height: 21px;
+      width: 21px;
+      margin-right: 15px;
+
 
   @include mq("md") {
-    
+    width: 24px;
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-CheckItem-Label-SquareIcon {
-    width: 15px;
-    height: 15px;
-  }
-}
+
 .Form-CheckItem-Label-Text {
-  padding-left: 8px;
-  font-size: 24px;
-
+  padding-left: 6px;
+  font-size: 3.6vw;
+  margin-top: rem(16);
   @include mq("md") {
-    
+    padding-left: 8px;
+  font-size: 24px;
+  
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-CheckItem-Label-Text {
-    padding-left: 6px;
-    font-size: 3.6vw;
-  }
-}
+
 .Form-Btn {
   border-radius: 6px;
-  margin-top: 32px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 200px;
   display: block;
   letter-spacing: 0.05em;
   background: hsl(165, 50%, 57%);
   color: $black;
   font-weight: bold;
-  font-size: 20px;
   opacity: 0.2;
   pointer-events: none;
   transition: all 0.2s;
 justify-content: center;
+margin-top: 24px;
+padding-top: 8px;
+padding-bottom: 8px;
+width: 200px;
+font-size: 16px;
+justify-content: center;
   @include mq("md") {
-    
+    margin-top: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .Form-Btn {
-    margin-top: 24px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    width: 200px;
-    font-size: 16px;
-    justify-content: center;
-  }
-}
+
 
 .Form-Btn.button__text {
 
@@ -306,17 +320,13 @@ justify-content: center;
 .Form-CheckItem-Label-Input:checked + * {
   width: 0;
   height: 0;
-  transform: translate(8px, 8px) rotateZ(-135deg) scale(1.5);
+  transform: translate(5px, 7px) rotateZ(-135deg) scale(1.5);
 
   @include mq("md") {
-    
+    transform: translate(8px, 8px) rotateZ(-135deg) scale(1.5);
   }
 }
-@media screen and (max-width: 480px) {
-  .Form-CheckItem-Label-Input:checked + * {
-    transform: translate(5px, 7px) rotateZ(-135deg) scale(1.5);
-  }
-}
+
 
 
 
@@ -409,23 +419,14 @@ display: none;
 
 
 //試作品
-.contact {
-  width: 960px;/*横幅*/
-  margin: 0 auto;/*中央寄せ*/
-  padding: 60px 0;
-}
-
-.contact-table {
-  width: 100%;
-  margin-bottom: 20px;
-}
-
 .contact-item,
 .contact-body {
-  padding: 20px;
-  border: 1px solid #ccc;
-}
+display: block;
 
+}
+.er {
+  border-radius: 50%;
+}
 .contact-item {
   text-align: left; /* テキスト左寄せ */
   width: 30%; /* 横幅30%指定（グレーの背景色部分） */
@@ -434,57 +435,53 @@ display: none;
 
 .contact-body {
   width: 70%; /* 横幅70%指定（白背景色部分） */
+display: grid;
 }
 
-.contact-skill {
-  display: block;
-  
-}
 
-.contact-skill + .contact-skill {
-  margin-top: 10px;
-}
+  /*ボックス枠のCSS*/
+  .label_test:after {
+    border: 1px solid $green;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 14px;
+    left: 15px;
+    margin: -8px 0 0 -2px;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+  }
 
-.contact-skill-txt {
-  margin-left: 5px;
-}
+  .label_test {
+    position: relative; 
+    padding: 0 0 0 30px; 
+    width: 104%;
 
-.form-text {
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  max-width: 400px;
-}
+  }
 
-.form-select {
-  width: 180px;
-  height: 40px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.form-textarea {
-  width: 100%;
-  padding: 10px;
-  height: 200px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  color: #333;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-}
-
+ .label_test:hover:after {
+    border-color: #0171bd; 
+ }
+    .label_test:after, .label_test:before{
+    position: absolute; 
+    content: ""; 
+    display: block; 
+    top: 50%; 
+    }
+  /*チェックマークの追加*/
+    .label_test:before {
+      //border-bottom: 4px solid red; 
+      border-right: 8px solid $green;
+      height: 9px;
+      left: 16px;
+      margin-top: -6px;
+      opacity: 0;
+      /* transform: rotate(45deg); */
+      width: 8px;
+      border-radius: 100%;
+    }
+    /*チェックボックスがチェックされた時に動作する内容*/
+    input[type=checkbox]:checked + .label_test:before {
+    opacity: 1; 
+    }

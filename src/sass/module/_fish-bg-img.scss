@@ -8,6 +8,7 @@
     position: absolute;
     top: -20%;
     width: 7.5rem;
+    z-index: 1;
     @include mq("md") {
         display: flex;
         left: calc(50% - min(48.5vw, 38.75rem));
@@ -84,6 +85,18 @@
         left:-5%;
         position: absolute;
         top: -3%;
+        width: rem(301);
+    }
+  }
+  .fish-bg-img---position7 {
+    top: -1.3%;
+    width: rem(120);
+    z-index: 1;
+    @include mq("md") {
+        display: flex;
+        left:-5%;
+        position: absolute;
+        top: 4%;
         width: rem(301);
     }
   }
