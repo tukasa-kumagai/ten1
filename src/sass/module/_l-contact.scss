@@ -50,3 +50,35 @@
         margin-top: rem(95);
     }
 }
+
+.l-contact--low-page-position7 {
+    margin-top: rem(54);
+
+    @include mq("md") {
+        margin-top: rem(95);
+    }
+}
+
+.l-contact--low-page-position8 {
+    margin-top: rem(183);
+
+    @include mq("md") {
+        margin-top: rem(95);
+    }
+}
+
+.l-contact--low-page-position9 {
+    margin-top: rem(183);
+
+    @include mq("md") {
+        margin-top: rem(95);
+    }
+}
+
+.l-contact--low-page-position10 {
+    margin-top: rem(137);
+
+    @include mq("md") {
+        margin-top: rem(95);
+    }
+}

@@ -1,14 +1,15 @@
 @use "global" as *;
 
-.card {
+.card3 {
     box-shadow: 0 0 rem(8) gray;
     display: flex;
     flex-flow: column;
+    z-index: 99999;
     @include mq("md") {}
 }
 
 
-.card__img {
+.card3__img {
     width: 100%;
     padding-top: 66.971429%; //比率の計算式 横233/縦350*100%=画像の比率
     position: relative;
@@ -19,11 +20,11 @@
     }
 }
 
-.card__img--size {
+.card3__img--size {
     padding-top: 75.071429%;
 }
 
-.card__img img {
+.card3__img img {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -37,7 +38,7 @@
     }
 }
 
-.card__body {
+.card3__body {
     padding: rem(16) rem(16) rem(5) rem(16);
 
     @include mq("md") {
@@ -45,7 +46,7 @@
     }
 }
 
-.card__body.card__body--under {
+.card3__body.card3__body--under {
     padding: rem(0) rem(0) rem(0) rem(0);
     bottom: rem(20);
 
@@ -55,7 +56,7 @@
     }
 }
 
-.card__foot.card__foot--under {
+.card3__foot.card3__foot--under {
     padding: rem(10) rem(36) rem(4) rem(30);
     display: inline-block;
     margin-top: auto;
@@ -65,7 +66,7 @@
         padding: rem(0) rem(36) rem(17) rem(30);
     }
 }
-.card__foot.card__foot--campaign-under {
+.card3__foot.card3__foot--campaign-under {
     padding: rem(6) rem(36) rem(7) rem(30);
     display: inline-block;
     margin-top: auto;
@@ -76,7 +77,7 @@
     }
 }
 
-.card__foot {
+.card3__foot {
     padding: 0 rem(16) rem(6) rem(16);
 
     @include mq("md") {
@@ -84,7 +85,7 @@
     }
 }
 
-.card__head {
+.card3__head {
 
     padding-bottom: rem(0);
     padding-left: rem(10);
@@ -97,7 +98,7 @@
     }
 }
 
- .card__head--campaign-position {
+ .card3__head--campaign-position {
     text-align: left;
     padding-left: rem(19);
     padding-top: rem(10);
@@ -108,18 +109,7 @@
     }
 }
 
-.card__head--campaign-position2 {
-    text-align: center;
-    padding-left: rem(19);
-    padding-top: rem(10);
-
-    @include mq("md") {
-        padding-left: rem(24);
-        padding-top: rem(17);
-    }
-}
-
-.card__head.card__head--width {
+.card3__head.card3__head--width {
     padding-left: rem(0);
         padding-top: rem(16);
         padding-right: rem(0);
@@ -128,9 +118,7 @@
     }
 }
 
-
-
-.card__head-title {
+.card3__head-title {
     font-family: $base-font-family;
     font-size: rem(12);
     color: $green;
@@ -144,7 +132,7 @@
     }
 }
 
-.card__head-time {
+.card3__head-time {
     font-size: rem(12);
     @include mq("md") {
         font-size: rem(12);
@@ -152,7 +140,7 @@
     }
 }
 
-.card__head-text {
+.card3__head-text {
     font-size: rem(16);
     color: $black2;
     font-weight: 500;
@@ -167,22 +155,12 @@
 
 }
 
-.card__head-text.card__head-text--size.card__head-text.card__head-text--size {
-
-    @include mq("md") {
-        font-size: rem(16);
-        padding-top: rem(0);
-        padding-bottom: rem(8);
-        
-    }
-}
-
-.card__head-text.card__head-text {
+.card3__head-text.card3__head-text {
     font-size: rem(16);
     color: $black2;
     font-weight: 500;
     @include mq("md") {
-        font-size: rem(24);
+        font-size: rem(16);
         line-height: 1.5;
         
     }
@@ -191,9 +169,9 @@
 
     
 
-.card__foot {}
+.card3__foot {}
 
-.card__foot-title {
+.card3__foot-title {
     font-size: rem(14);
     text-align: center;
     margin-top: rem(0);
@@ -205,7 +183,7 @@
     }
 }
 
-.card__foot-price {
+.card3__foot-price {
     display: flex;
     justify-content: space-between;
 
@@ -214,7 +192,7 @@
     }
 }
 
-.card__foot-regular {
+.card3__foot-regular {
     font-size: rem(20);
     text-decoration: line-through $red;
     line-height: rem(60);
@@ -229,7 +207,7 @@
     }
 }
 
-.card__foot-discount {
+.card3__foot-discount {
     font-size: rem(27);
     color: $green;
     letter-spacing: 0em;
@@ -244,31 +222,31 @@
     }
 }
 
-.card__bg {
+.card3__bg {
     margin-bottom: rem(50);
 }
 
-.card__foot-text {
-    display: none;
+.card3__foot-text {
+  
     @include mq("md") {
-        display: inline;
+       
         font-family: $base-font-family;
         font-size: rem(16);
-        line-height: 1;
+        line-height: 1.5;
         text-align: left;
        
      
     }
 } 
 
-.card__foot-text.card__foot-text--width {
+.card3__foot-text.car3d__foot-text--width {
 
     @include mq("md") {
-    padding: rem(0) rem(16) rem(0) rem(16);
+    padding: rem(16) rem(16) rem(24) rem(16);
     }
 }
 
-.card__foot-text--width {
+.card3__foot-text--width {
 
 
     @include mq("md") {
@@ -278,7 +256,7 @@
     }
 
 
-.card__foot-day {
+.card3__foot-day {
     display: none;
     @include mq("md") {
         display: inline;
@@ -292,14 +270,14 @@
     }
 }
 
-.card__foot-day--position {
+.card3__foot-day--position {
    
     @include mq("md") {
         margin-top: rem(30);
     }
 }
 
-.card__foot-inquiry {
+.card3__foot-inquiry {
     display: none;
     @include mq("md") {
         display: inline;
@@ -315,3 +293,26 @@
 }
 
 
+
+
+.card3__image-box {
+    overflow: hidden;
+}
+
+.card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.card__box {
+    padding: 1rem;
+}
+
+
+
+.card3:hover img {
+    transform: scale(1.2);
+}

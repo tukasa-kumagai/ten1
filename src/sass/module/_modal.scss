@@ -7,9 +7,7 @@
     }
 }
 
-.modal__active:hover {
-    opacity: 0.7;
-}
+
 
 .modal__inner {}
 
@@ -89,7 +87,7 @@
 .modal__wrapper {
     display: none;
     position: fixed;
-    top: 0;
+    top: rem(50);
     left: 0;
     z-index: 10;
     z-index: 20;
@@ -126,7 +124,7 @@
 }
 
 .modal__close:hover {
-    opacity: .6;
+    opacity: 0.6;
 }
 
 .modal__close:before,
@@ -150,6 +148,7 @@
 
 .modal__content .modal__image img {
     width: 100%;
+    
 }
 
 

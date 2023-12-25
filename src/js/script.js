@@ -95,7 +95,6 @@ $(document).ready(function() {
 
 
 
-
 //swiper
 const mySwiper = new Swiper('.swiper,.js-campaign-swiper', {
   slidesPerView: "auto",
@@ -134,7 +133,7 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($){
   $('.pagination__list2').paginathing({
-      perPage: 3,
+      perPage: 10,
       firstLast: false,
       prevText:'<' ,
       nextText:'>' ,
@@ -219,7 +218,7 @@ $(function(){
 
 
 
-////勉強用
+
 const $js_tab = $(".js-infoTab-trigger");
   const $js_tab_target = $(".js-infoContent-target");
   const cls = "is-active";

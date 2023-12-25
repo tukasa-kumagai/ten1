@@ -8,7 +8,8 @@
 }
 
 .sentence__title {
-    
+    font-size: rem(24);
+    margin-top: rem(47);
     @include mq("md") {
         font-size: rem(32);
     }
@@ -23,7 +24,7 @@
 .sentence__list {
     list-style-type: decimal;
     line-height: 2;
-    margin-top: rem(40);
+    margin-top: rem(30);
     @include mq("md") {
         margin-top: rem(0);
     }
@@ -37,6 +38,7 @@
 
 .sentence__sub-title1 {
     margin-top: rem(40);
+    line-height: 2;
     @include mq("md") {
 
     }
@@ -45,6 +47,7 @@
 }
 
 .sentence__sub-title2 {
-    margin-top: rem(25);
+    margin-top: rem(29);
+    line-height: 2;
 }
     

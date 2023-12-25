@@ -100,3 +100,44 @@
         width: rem(301);
     }
   }
+  .fish-bg-img.fish-bg-img---position8 {
+    top: 4%;
+    width: rem(120);
+    z-index: 1;
+    @include mq("md") {
+      display: none;
+        display: flex;
+        left:-50%;
+        position: absolute;
+        top: 4%;
+        width: rem(301);
+    }
+  }
+
+  .fish-bg-img.fish-bg-img---position9 {
+    top: 0.2%;
+    width: rem(120);
+    z-index: 1;
+    @include mq("md") {
+  
+        display: flex;
+        left: -4%;
+        position: absolute;
+        top: 2.5%;
+        width: rem(301);
+    }
+  }
+
+  .fish-bg-img.fish-bg-img---position10 {
+    top: 0.5%;
+    width: rem(120);
+    z-index: 1;
+    @include mq("md") {
+  
+        display: flex;
+        left: -4%;
+        position: absolute;
+        top: 2.5%;
+        width: rem(301);
+    }
+  }

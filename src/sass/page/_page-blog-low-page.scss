@@ -1,0 +1,218 @@
+@use "global" as *;
+
+
+.page-blog-low-page {
+  display: flex;
+  
+  } 
+
+  .page-blog-low-page {
+    display: flex;
+position: relative;
+}
+  
+  
+.page-blog-low-page-main {
+  width: 100%;
+
+  @include mq("md")  {
+    width: 70%;
+  }
+}
+
+.page-blog-low-page__content {
+  width: 100%;
+display: block;
+  margin-top: rem(45);
+  @include mq("md") { 
+    display: flex;
+    margin-top: rem(45);
+  }
+}
+.page-blog-low-page__container {
+
+  @include mq("md")  {
+
+  }
+}
+
+.page-blog-low-page__time {
+font-size: rem(14);
+line-height: 1.3;
+font-family:$second-font-family;
+  @include mq("md")  {
+
+  }
+}
+
+.page-blog-low-page__title {
+  font-size: rem(24);
+  line-height: 1.3;
+  font-family:$base-font-family;
+  margin-top: rem(10);
+  padding-bottom: rem(4);
+  border-bottom: rem(1) solid $green;
+  @include mq("md")  {
+
+  }
+}
+
+.page-blog-low-page__image {
+margin-top: rem(24);
+  @include mq("md")  {
+
+  }
+}
+
+.page-blog-low-page__image img {
+
+  @include mq("md")  {
+
+  }
+}
+
+.page-blog-low-page__text {
+  font-size: rem(16);
+  line-height: 1.5;
+  font-family:$base-font-family;
+  margin-top: rem(23);
+  @include mq("md")  {
+
+  }
+}
+
+.page-blog-low-page__sub {
+  width: rem(300);
+  margin: 0 auto;
+  margin-top: rem(80);
+  @include mq("md") {
+    width: 27%;
+    margin-left: rem(80);
+    
+  }
+}   
+
+.page-blog-low-page__sub-article {
+  
+}
+
+.page-blog-low-page__nav {
+margin-top: rem(24);
+font-size: rem(16);
+line-height: 1.5;
+font-family:$base-font-family;
+font-weight: $regular;
+  @include mq("md")  {
+
+  }
+
+}
+
+.page-blog-low-page__list  {
+  padding-left: rem(26);
+  line-height: 1.6em;
+  background: url(/assets/images/blog/page-blog-low-page-starfish.png) left rem(0) top rem(3) no-repeat;
+  background-size: rem(15) auto;
+  font-size: rem(16);
+  font-weight: $regular;
+  line-height: 1.8;
+  padding-top: rem(0);
+  display: block;
+  width: 100%;
+  letter-spacing: 0.01em;
+
+  @include mq("md") {
+      width: 100%;
+  }
+}
+
+.page-blog-low-page__box {
+display: flex;
+max-width: rem(153);
+justify-content: space-between;
+margin: 0 auto;
+position: relative;
+margin-top: rem(40);
+  @include mq("md") {
+  
+}
+}
+     /* ボタンの基本スタイル */
+     .page-blog-low-page__box-image1 {
+      display: inline-block;
+      padding: 16px 16px;
+      background-color: #FFF; /* 初期のボタンの背景色 */
+      color: $black; /* 初期のボタンの文字色 */
+      text-decoration: none;
+     
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border: #408f95 1px solid;
+      position: relative;
+    }
+
+    /* ホバー時のスタイル変更と矢印の表示 */
+    .page-blog-low-page__box-image1:hover {
+      background-color: $green; /* ホバー時のボタンの背景色 */
+      color: #fff; /* ホバー時のボタンの文字色 */
+    }
+
+    .page-blog-low-page__box-image1::after {
+      border-right: 1px solid #408f95;
+  border-top: 1px solid #408f95;
+  bottom: 0;
+  content: "";
+  height: 0.75rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  vertical-align: middle;
+  width: 0.75rem;
+  left: rem(15);
+    transform: rotate(220deg);
+    }
+
+    /* ホバー時の矢印の色変更 */
+    .page-blog-low-page__box-image1:hover::after {
+      border-color: $white; /* ホバー時の矢印の色 */
+   
+    }
+
+    /* ボタンの基本スタイル */
+    .page-blog-low-page__box-image2 {
+      display: inline-block;
+      padding: 16px 16px;
+      background-color: #FFF; /* 初期のボタンの背景色 */
+      color: $black; /* 初期のボタンの文字色 */
+      text-decoration: none;
+
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border: #408f95 1px solid;
+      position: relative;
+    }
+
+    /* ホバー時のスタイル変更と矢印の表示 */
+    .page-blog-low-page__box-image2:hover {
+      background-color: $green; /* ホバー時のボタンの背景色 */
+      color: #fff; /* ホバー時のボタンの文字色 */
+    }
+
+    .page-blog-low-page__box-image2::after {
+      border-right: 1px solid #408f95;
+  border-top: 1px solid #408f95;
+  bottom: 0;
+  content: "";
+  height: 0.75rem;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  vertical-align: middle;
+  width: 0.75rem;
+  left: rem(8);
+    transform: rotate(40deg);
+    }
+
+    /* ホバー時の矢印の色変更 */
+    .page-blog-low-page__box-image2:hover::after {
+      border-color: $white; /* ホバー時の矢印の色 */
+   
+    }

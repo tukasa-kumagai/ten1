@@ -5,10 +5,12 @@
 
     @include mq("md") {
         margin-top: rem(140);
+        padding-left: 0px;
+padding-right:0px;
     }
 }
 
-.page-privacy-policy__inner.inner {
+.page-privacy-policy__inner {
     max-width: rem(345);
 
 @include mq("md") {

@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./assets/js/paginathing.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!--メインのJS-->
@@ -40,7 +41,7 @@
 <body>
   <header class="l-header header">
     <div class="header__inner">
-      <a href="#" class="header__logo-link">
+      <a href="./index.html" class="header__logo-link">
         <img src="./assets/images/common/codeupslogo.png" alt="ヘッダーロゴ">
       </a>
       <button class="header__drawer hamburger js-hamburger">
@@ -52,7 +53,7 @@
         <div class="sp-nav__inner">
           <div class="sp-nav__left">
             <ul class="sp-nav__left-items">
-              <li class="sp-nav__left-item"><a href="/dist/page-campaign.html">キャンペーン</a></li>
+              <li class="sp-nav__left-item"><a href="#">キャンペーン</a></li>
               <li class="sp-nav__left-item"><a href="#">ライセンス取得</a></li>
               <li class="sp-nav__left-item"><a href="#">貸切体験ダイビング</a></li>
               <li class="sp-nav__left-item"><a href="#">ナイトダイビング</a></li>
@@ -99,25 +100,25 @@
       <div class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
-            <a href="./page-campaign.html">
+            <a href="#">
               <span class="pc-nav__item-head">Campaign</span>
               <span class="pc-nav__item-foot">キャンペーン</span>
             </a>
           </li>
           <li class="pc-nav__item">
-            <a href="./page-about.html">
-              <span class="pc-nav__item-head">Aboutus</span>
+            <a href="#">
+              <span class="pc-nav__item-head">About&nbsp;us</span>
               <span class="pc-nav__item-foot">私たちについて</span>
             </a>
           </li>
           <li class="pc-nav__item">
-            <a href="./information.html">
+            <a href="#">
               <span class="pc-nav__item-head">Information</span>
               <span class="pc-nav__item-foot">ダイビング情報</span>
             </a>
           </li>
           <li class="pc-nav__item">
-            <a href="./page-blog.html">
+            <a href="#">
               <span class="pc-nav__item-head">Blog</span>
               <span class="pc-nav__item-foot">ブログ</span>
             </a>
@@ -153,81 +154,234 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="./assets/images/site-map/page-site-map-pc-mv.png" media="(min-width: 767px)">
-        <img src="./assets/images/site-map/page-site-map-sp-mv.png" alt="">
+        <source srcset="./assets/images/blog/page-blog-pc-mv.png" media="(min-width: 767px)">
+        <img src="./assets/images/blog/page-blog-sp-mv.png" alt="">
       </picture>
     </div>
     <div class="lower-page-mv__text">
-      <p class="lower-page-mv__title lower-page-mv__title--size">Privacy&nbsp;Policy</p>
+      <p class="lower-page-mv__title">Blog</p>
     </div>
   </div>
   <main>
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="./assets/images/common/page-top-bag.png"
           alt="戻るボタン"></a></p>
-          <div class="inner">
-            <nav class="breadcrumb breadcrumb--position">
-              <ol class="breadcrumb__group breadcrumb__group--position2">
-                <li class="breadcrumb__list">
-                  <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">TOP</span></a>
-                </li>
-                <li class="breadcrumb__list">
-                  <a class="breadcrumb__item" href="./page-site-map.html"><span class="breadcrumb__item-link">プライバシーポリシー</span></a>
-                </li>
-              </ol>
-            </nav>
+    <div class="inner">
+      <nav class="breadcrumb breadcrumb--position">
+        <ol class="breadcrumb__group breadcrumb__group--position2">
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">TOP</span></a>
+          </li>
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./page-site-map.html"><span class="breadcrumb__item-link">ブログ一覧</span></a>
+          </li>
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./page-blog-low-page1.html"><span
+                class="breadcrumb__item-link">ブログ詳細</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="page-blog">
+      <div class="page-blog__inner inner">
+        <div class="fish-bg-img fish-bg-img---position9">
+          <img src="./assets/images/top/fish1.png" alt="魚画像">
+        </div>
+
+        <div class="page-blog__content">
+     
+          <div class="page-blog-low-page">
+            <div class="page-blog-low-page__container">
+              <p class="page-blog-low-page__time">2023.11/17</p>
+              <p class="page-blog-low-page__title">ライセンス取得</p>
+              <div class="page-blog-low-page__image">
+                <img src="./assets/images/blog/blog-pc-img3.png" alt="下層画像">
+              </div>
+              <p class="page-blog-low-page__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+            <div class="page-blog-low-page__container">
+              <div class="page-blog-low-page__image">
+                <img src="./assets/images/blog/blog-pc-img3.png" alt="下層画像">
+              </div>
+              <p class="page-blog-low-page__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+            <div class="page-blog-low-page__container">
+              <ul class="page-blog-low-page__nav">
+                <li class="page-blog-low-page__list">リスト1</li>
+                <li class="page-blog-low-page__list">リスト2</li>
+                <li class="page-blog-low-page__list">リスト3</li>
+              </ul>
+              <p class="page-blog-low-page__text">
+                ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。
+              </p>
+            </div>
+            <div class="page-blog-low-page__box">
+              <a href="#" class="page-blog-low-page__box-image1"></a>
+              <a href="#" class="page-blog-low-page__box-image2"></a>
+            </div>
+            <a href="#" class="arrow-button"></a>
           </div>
-    <section class="page-privacy-policy">
-      <div class="page-privacy-policy-inner inner">
-        <div class="page-privacy-policy__inner1">
-          <h2 class="sentence__title">プライバシーポリシー</h2>
-          <p class="sentence__sub-title1">以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。</p>
-        </div>
-        <div class="page-privacy-policy__inner2">
-          <ol class="sentence__ol" type="1">
-            <li class="sentence__list">概要
-              当社は、お客様の個人情報を大切に扱い、個人情報保護に努めています。本プライバシーポリシーには、当社がどのように個人情報を収集し、使用するかについて説明しています。</li>
-            <li class="sentence__list">収集する情報 当社は、お客様が当社のサービスを利用する際に、お名前、住所、電話番号、メールアドレスなどの個人情報を収集する場合があります。
-            </li>
-          </ol>
-        </div>
-        <div class="page-privacy-policy__inner1">
-          <p class="sentence__sub-title2">また、当社のサイトを閲覧する際に、IPアドレス、ブラウザの種類、言語設定、アクセス日時などの情報も収集する場合があります。</p>
-        </div>
-        <div class="page-privacy-policy__inner2">
-          <ol class="sentence__ol" type="1">
-            <li class="sentence__list">お客様からのお問い合わせやサポートの提供 ・当社のサービスや製品の提供 ・当社のサイトの改善や新しいサービスの開発 ・法律や規制に基づく義務の履行</li>
-          </ol>
-        </div>
-        <div class="page-privacy-policy__inner2">
-          <ol class="sentence__ol" type="1">
-            <li class="sentence__list">情報の共有 当社は、お客様から収集した個人情報を、以下の場合に限り第三者に提供することがあります。
-            </li>
-          </ol>
-          <div class="page-privacy-policy__inner2">
-            <ul>
-              <li class="sentence__list-circle">お客様の同意がある場合 ・法律や規制に基づく場合 ・当社が信頼できると判断した業務委託先に必要な範囲で提供する場合</li>
-            </ul>
+          <div class="page-blog__sub page-blog__sub--position ">
+            <div class="page-blog__sub-article">
+              <div class="title-name">
+
+                <p class="title-name__text">人気記事</p>
+              </div>
+            </div>
+            <div class="page-blog__sub-cards">
+              <div class="page-blog__sub-card">
+                <div class="page-blog__sub-card-image">
+                  <img src="./assets/images/blog/page-blog-sub-sea-image1.png" alt="画像">
+                </div>
+                <div class="page-blog__sub-card-text">
+                  <time class="page-blog__sub-card-day" datetime="2023-11-17">2023.11/17</time>
+                  <p class="page-blog__sub-card-title">ライセンス取得</p>
+                </div>
+              </div>
+              <div class="page-blog__sub-card">
+                <div class="page-blog__sub-card-image">
+                  <img src="./assets/images/blog/blog-pc-img2.png" alt="画像">
+                </div>
+                <div class="page-blog__sub-card-text">
+                  <time class="page-blog__sub-card-day" datetime="2023-11-17">2023.11/17</time>
+                  <p class="page-blog__sub-card-title">ライセンス取得</p>
+                </div>
+              </div>
+              <div class="page-blog__sub-card">
+                <div class="page-blog__sub-card-image">
+                  <img src="./assets/images/blog/blog-pc-img3.png" alt="画像">
+                </div>
+                <div class="page-blog__sub-card-text">
+                  <time class="page-blog__sub-card-day" datetime="2023-11-17">2023.11/17</time>
+                  <p class="page-blog__sub-card-title">ライセンス取得</p>
+                </div>
+              </div>
+            </div>
+            <div class="page-blog__sub-reviews">
+              <div class="title-name">
+                <div class="title-name__image">
+                  <img src="./assets/images/blog/page-blog-icon.png" alt="画像">
+                </div>
+                <p class="title-name__text">人気記事</p>
+              </div>
+            </div>
+            <div class="page-blog__sub-reviews-card">
+              <div class="page-blog__sub-reviews-image">
+                <img src="./assets/images/blog/blog-reviews-img1.png" alt=" 画像">
+              </div>
+              <div class="page-blog__sub-reviews-text">
+                <div class="page-blog__sub-reviews-age">30代(カップル)</div>
+                <p class="page-blog__sub-reviews-title">ここにタイトルが入ります。ここにタイトル</p>
+                <div class="page-blog__sub-reviews-button-inner">
+                  <a href="#" class="button">
+                    <span class="button__text">View more</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="page-blog__sub-campaign">
+              <div class="title-name">
+                <div class="title-name__image">
+                  <img src="./assets/images/blog/page-blog-icon.png" alt="画像">
+                </div>
+                <p class="title-name__text">人気記事</p>
+              </div>
+            </div>
+            <div class="page-blog__sub-campaign__items">
+              <a href="#" class="page-blog__sub-campaign__item card">
+                <div class="card__img">
+                  <img src="./assets/images/blog/blog-campaign-img1.png" alt="キャンペーンカード2">
+                </div>
+                <div class="card__body card__body--under">
+                  <div class="card__head">
+                    <p class="card__head-title">ライセンス講習</p>
+                    <p class="card__head-text">貸切体験ダイビング</p>
+                  </div>
+                </div>
+                <div class="card__foot card__foot--under">
+                  <p class="card__foot-title">全部コミコミ(お一人様)</p>
+                  <div class="card__foot-price">
+                    <p class="card__foot-regular">¥24,000</p>
+                    <p class="card__foot-discount">¥18,000</p>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="page-blog__sub-campaign__item card">
+                <div class="card__img">
+                  <img src="./assets/images/blog/blog-campaign-img2.png" alt="キャンペーンカード2">
+                </div>
+                <div class="card__body card__body--under">
+                  <div class="card__head">
+                    <p class="card__head-title">ライセンス講習</p>
+                    <p class="card__head-text">貸切体験ダイビング</p>
+                  </div>
+                </div>
+                <div class="card__foot card__foot--under">
+                  <p class="card__foot-title">全部コミコミ(お一人様)</p>
+                  <div class="card__foot-price">
+                    <p class="card__foot-regular">¥24,000</p>
+                    <p class="card__foot-discount">¥18,000</p>
+                  </div>
+                </div>
+              </a>
+              <div class="page-blog__sub-reviews-button-inner">
+                <a href="#" class="button">
+                  <span class="button__text">View more</span>
+                </a>
+              </div>
+            </div>
+            <div class="page-blog__sub-campaign">
+              <div class="title-name">
+                <div class="title-name__image">
+                  <img src="./assets/images/blog/page-blog-icon.png" alt="画像">
+                </div>
+                <p class="title-name__textarchive">人気記事</p>
+              </div>
+            </div>
+            <div class="page-blog__sub-archive">
+              <ul class="page-blog__sub-archive-items1">
+                <div class="page-blog__sub-archive-item4">
+                  <img class="page-blog__sub-archive-item-image" src="./assets/images/blog/arrow-low.png" alt="arrow">
+                  <li class="page-blog__sub-archive-item1">2023
+                </div>
+                <ul class="page-blog__sub-archive-items2">
+                  <div class="page-blog__sub-archive-item3">
+                    <img class="page-blog__sub-archive-item-image" src="./assets/images/blog/arrow-right.png"
+                      alt="arrow">
+                    <li class="page-blog__sub-archive-item2">3月</li>
+                  </div>
+                  <div class="page-blog__sub-archive-item3">
+                    <img class="page-blog__sub-archive-item-image" src="./assets/images/blog/arrow-right.png"
+                      alt="arrow">
+                    <li class="page-blog__sub-archive-item2">2月</li>
+                  </div>
+                  <div class="page-blog__sub-archive-item3">
+                    <img class="page-blog__sub-archive-item-image" src="./assets/images/blog/arrow-right.png"
+                      alt="arrow">
+                    <li class="page-blog__sub-archive-item2">1月</li>
+                  </div>
+                </ul>
+                </li>
+                <div class="page-blog__sub-archive-item4">
+                  <img class="page-blog__sub-archive-item-image" src="./assets/images/blog/arrow-low.png" alt="arrow">
+                  <li class="page-blog__sub-archive-item1">2022
+                </div>
+                <ul>
+            </div>
           </div>
-          <ol type="1">
-            <li class="sentence__list">セキュリティ
-              当社は、お客様の個人情報を適切に保護するために、適切な安全対策を講じます。個人情報への不正アクセス、紛失、改ざん、漏洩等を防止するための措置を講じます</li>
-            <li class="sentence__list">Cookieの使用
-              当社は、お客様により良いサイトの利用体験を提供するために、Cookieを使用する場合があります。Cookieは、お客様が当社のサイトを訪れた際に、お客様のブラウザに保存される小さなデータファイルです。Cookieには個人情報は含まれません。
-            </li>
-            <li class="sentence__list">お問い合わせ先 当社のプライバシーポリシーに関するご質問やご意見は、以下の連絡先までお問い合わせください。 [会社名] [住所] [電話番号]
-              [メールアドレス]</li>
-            <li class="sentence__list">ライバシーポリシーの変更
-              当社は、必要に応じて本プライバシーポリシーを変更することがあります。変更後のプライバシーポリシーは、当社のサイトに掲載された時点から効力を有するものとします。変更があった場合、当社は適切な手段でお知らせします。
-            </li>
-          </ol>
         </div>
-        <div class="page-privacy-policy__inner1">
-          <p class="sentence__sub-title2 ">以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。</p>
-        </div>
-      </div>
       </div>
     </section>
-    <section class="l-contact l-contact--low-page-position8 contact">
+
+
+
+
+
+    <section class="l-contact contact">
       <div class="contact__bg">
         <div class="inner">
           <div class="contact__maim">
@@ -260,7 +414,7 @@
                 <p class="contact__subtext">ご予約・お問い合わせはコチラ</p>
               </div>
               <div class="contact__button-inner">
-                <a href="./page-contact.html" class="button">
+                <a href="#" class="button">
                   <span class="button__text">View more</span>
                 </a>
               </div>
@@ -285,7 +439,6 @@
           </div>
         </div>
       </div>
-
       <div class="footer__content">
         <div class="footer__wrapper1">
           <div class="footer__group1">

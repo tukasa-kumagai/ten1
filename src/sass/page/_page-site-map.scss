@@ -5,7 +5,7 @@
    
 }
 .page-site-map__inner {
-
+position: relative;
 }
 
 .page-site-map__content {
@@ -14,8 +14,8 @@
 
     @include mq("md") {
         display: flex;
-        justify-content: center;
-        margin-top: rem(24);
+        justify-content: space-around;
+        margin-top: rem(144);
     }
 }
 .page-site-map__wrapper1 {
