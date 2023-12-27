@@ -10,9 +10,10 @@ padding-right:0px;
     }
 }
 
-.page-privacy-policy__inner {
-    max-width: rem(345);
-
+.page-privacy-policy__inner.inner {
+position: relative;
+    padding-right: rem(25);
+    padding-left: rem(25);
 @include mq("md") {
     max-width: rem(1000);
   

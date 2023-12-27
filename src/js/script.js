@@ -141,6 +141,16 @@ jQuery(document).ready(function($){
   })
 });
 
+jQuery(document).ready(function($){
+  $('.pagination__list3').paginathing({
+      perPage: 3,
+      firstLast: false,
+      prevText:'<' ,
+      nextText:'>' ,
+      activeClass: 'active',
+  })
+});
+
 //モーダル
 // 変数に要素を入れる
 var trigger = $('.modal__trigger'),

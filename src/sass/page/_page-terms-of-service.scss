@@ -8,8 +8,9 @@
 }
 
 .page-terms-of-service__inner.inner {
-    max-width: rem(345);
-
+ padding-left: rem(25);
+ padding-right: rem(25);
+position: relative;
 @include mq("md") {
     max-width: rem(800);
 }

@@ -141,3 +141,18 @@
         width: rem(301);
     }
   }
+
+  .fish-bg-img.fish-bg-img---position11 {
+    top: -1.5%;
+    left: 3%;
+    width: rem(120);
+    z-index: 1;
+    @include mq("md") {
+  
+        display: flex;
+        left: -12%;
+        position: absolute;
+        top: -7%;
+        width: rem(301);
+    }
+  }

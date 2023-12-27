@@ -167,8 +167,8 @@
 
 }
 
-.card__head-text.card__head-text--size.card__head-text.card__head-text--size {
-
+.card__head-text.card__head-text--size {
+text-align: center;
     @include mq("md") {
         font-size: rem(16);
         padding-top: rem(0);
@@ -176,6 +176,8 @@
         
     }
 }
+
+
 
 .card__head-text.card__head-text {
     font-size: rem(16);
