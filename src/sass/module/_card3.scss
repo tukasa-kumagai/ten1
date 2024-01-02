@@ -62,7 +62,7 @@
     margin-top: auto;
 
     @include mq("md") {
-        margin-top: auto;
+        margin-top: 0;
         padding: rem(0) rem(36) rem(17) rem(30);
     }
 }

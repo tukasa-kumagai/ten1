@@ -26,6 +26,7 @@
   line-height: rem(40);
   text-align: center;
   color: $black2;
+  font-family: $second-font-family;
 
   @include mq("md") {
     font-size: rem(40);
@@ -52,7 +53,7 @@
 }
 
 .section-header__english.section-header--color-white {
-
+font-family: $second-font-family;
   @include mq("md") {
     color: $white;
   }

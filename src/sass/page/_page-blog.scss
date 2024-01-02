@@ -37,14 +37,14 @@ display: block;
       grid-template-columns: repeat(2, 1fr);
       gap: rem(40);
       justify-items: center;
-    align-items: center;
+   
     }
   }
   
 .page-blog__sub {
-  width: rem(300);
+  width: rem(400);
   margin: 0 auto;
-  margin-top: rem(80);
+  margin-top: rem(0);
   @include mq("md") {
     width: 27%;
     margin-left: rem(80);
@@ -161,7 +161,7 @@ margin-top: rem(16);
 margin: 0 auto;
 display: table;
   @include mq("md") {
-
+    display: block;
   }
 }
 .page-blog__sub-campaign__item  {

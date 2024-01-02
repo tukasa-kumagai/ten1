@@ -93,7 +93,7 @@ display: inline;
     color: $green;
     line-height: rem(40);
     margin-top: rem(35);
-
+    font-family: $second-font-family;
     @include mq("md") {
         font-size: rem(80);
         color: $white;

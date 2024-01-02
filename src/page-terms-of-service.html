@@ -29,6 +29,7 @@
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script type="text/javascript" src="./assets/js/paginathing.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <!--メインのJS-->
@@ -40,7 +41,7 @@
 <body>
   <header class="l-header header">
     <div class="header__inner">
-      <a href="#" class="header__logo-link">
+      <a href="./index.html" class="header__logo-link">
         <img src="./assets/images/common/codeupslogo.png" alt="ヘッダーロゴ">
       </a>
       <button class="header__drawer hamburger js-hamburger">
@@ -167,18 +168,19 @@
   <main>
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="./assets/images/common/page-top-bag.png"
           alt="戻るボタン"></a></p>
-          <div class="inner">
-            <nav class="breadcrumb breadcrumb--position">
-              <ol class="breadcrumb__group breadcrumb__group--position2">
-                <li class="breadcrumb__list">
-                  <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">TOP</span></a>
-                </li>
-                <li class="breadcrumb__list">
-                  <a class="breadcrumb__item" href="./page-terms-of-service.html"><span class="breadcrumb__item-link">利用規約</span></a>
-                </li>
-              </ol>
-            </nav>
-          </div>
+    <div class="inner">
+      <nav class="breadcrumb breadcrumb--position">
+        <ol class="breadcrumb__group breadcrumb__group--position2">
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">TOP</span></a>
+          </li>
+          <li class="breadcrumb__list">
+            <a class="breadcrumb__item" href="./page-terms-of-service.html"><span
+                class="breadcrumb__item-link">利用規約</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
     <section class="l-page-terms-of-service page-terms-of-service">
       <div class=" page-terms-of-service__inner inner">
         <div class="fish-bg-img fish-bg-img---position11">
@@ -198,8 +200,10 @@
             <li class="sentence__list">情報の使用 当社は、お客様から収集した個人情報を、以下の目的で使用することがあります。</li>
           </ol>
           <ul>
-            <li class="sentence__list-circle">お客様からのお問い合わせやサポートの提供 ・当社のサービスや製品の提供 ・当社のサイトの改善や新しいサービスの開発 ・法律や規制に基づく義務の履行
-            </li>
+            <ol>
+              <li class="sentence__list-circle">お客様からのお問い合わせやサポートの提供 ・当社のサービスや製品の提供 ・当社のサイトの改善や新しいサービスの開発
+                ・法律や規制に基づく義務の履行
+              </li>
             </ol>
             <ul>
               <li class="sentence__list-circle">お客様の同意がある場合 ・法律や規制に基づく場合 ・当社が信頼できると判断した業務委託先に必要な範囲で提供する場合</li>
@@ -217,6 +221,7 @@
               </li>
             </ol>
             <p class="sentence__sub-title2 ">以下は、Webサイトで使用するための一般的なプライバシーポリシーの例です。</p>
+          </ul>
         </div>
       </div>
     </section>
@@ -224,9 +229,9 @@
   <footer class="l-footer footer">
     <div class="inner">
       <div class="footer__logo">
-        <div class="footer__logo-img">
+        <a href="./index.html" class="footer__logo-img">
           <img src="./assets/images/common/codeupslogo.png" alt="ボタン画像1">
-        </div>
+        </a>
         <div class="footer__sub-logo">
           <div class="footer__sub-logo-img1">
             <img src="./assets/images/common/facebook-logo.png" alt="ボタン画像2">
@@ -242,8 +247,10 @@
             <ul class="footer__nav1">
               <li class="footer__list1"><a class="footer__button" href="./page-campaign.html">キャンペーン</a></li>
               <li class="footer__list2"><a class="footer__button" href="./page-campaign-low-page1.html">ライセンス取得</a></li>
-              <li class="footer__list2"><a class="footer__button" href="./page-campaign-low-page2.html">貸切体験ダイビング</a></li>
-              <li class="footer__list2"><a class="footer__button" href="./page-campaign-low-page3.html">ナイトダイビング</a></li>
+              <li class="footer__list2"><a class="footer__button" href="./page-campaign-low-page2.html">貸切体験ダイビング</a>
+              </li>
+              <li class="footer__list2"><a class="footer__button" href="./page-campaign-low-page3.html">ナイトダイビング</a>
+              </li>
             </ul>
             <ul class="footer__nav2">
               <li class="footer__list1"><a class="footer__button" href="./page-about.html">私たちについて</a></li>
@@ -281,7 +288,8 @@
               <li class="footer__list1"><a class="footer__button" href="./page-site-map.html">サイトマップ</a></li>
             </ul>
             <ul class="footer__nav2">
-              <li class="footer__list1"><a class="footer__button" href="./page-privacy-policy.html">プライバシー<br class="br-one">ポリシー</a></li>
+              <li class="footer__list1"><a class="footer__button" href="./page-privacy-policy.html">プライバシー<br
+                    class="br-one">ポリシー</a></li>
             </ul>
             <ul class="footer__nav2">
               <li class="footer__list1"><a class="footer__button" href="./page-terms-of-service.html">利用規約</a></li>

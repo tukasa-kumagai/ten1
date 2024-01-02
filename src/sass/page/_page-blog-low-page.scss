@@ -188,7 +188,7 @@ margin-top: rem(16);
 margin: 0 auto;
 display: table;
 @include mq("md") {
-
+  display: block;
 }
 }
 .page-blog-low-page__sub-campaign__item  {

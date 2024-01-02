@@ -56,6 +56,14 @@
     }
 }
 
+
+.modal__image-long:nth-child(n+2) {
+    margin-top: rem(8);
+    @include mq("md") {
+       
+    }
+}
+
 .modal__image-long img {
 
 
