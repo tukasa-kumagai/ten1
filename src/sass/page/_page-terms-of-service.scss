@@ -3,17 +3,16 @@
 
 
 
-.page-terms-of-service {
-
-}
+.page-terms-of-service {}
 
 .page-terms-of-service__inner.inner {
- padding-left: rem(25);
- padding-right: rem(25);
-position: relative;
-@include mq("md") {
+  padding-left: rem(25);
+  padding-right: rem(25);
+  position: relative;
+
+  @include mq("md") {
     max-width: rem(800);
-}
+  }
 }
 
 .page-terms-of-service__sentence {
@@ -21,11 +20,11 @@ position: relative;
 
   @include mq("md") {
     margin-top: rem(155);
-}
+  }
 }
 
 .sentence__title {
-font-size: rem(32);
-font-weight: $regular;
-font-family: $base-font-family;
+  font-size: rem(32);
+  font-weight: $regular;
+  font-family: $base-font-family;
 }

@@ -2,56 +2,47 @@
 
 
 .page-campaign__inner .inner {
-  @include mq("md") { 
-
-  }
+  @include mq("md") {}
 }
+
 .page-campaign-button {
   position: relative;
   margin-top: rem(40);
 
 
-  @include mq("md") { 
+  @include mq("md") {
     margin-top: rem(130);
   }
 }
+
 .page-campaign-button__inner {
   padding: 0 rem(15);
   margin: 0 auto;
 
-  @include mq("md") { 
-  
-  }
+  @include mq("md") {}
 }
-
 
 .page-campaign__pagination li {
-  display:inline;
+  display: inline;
 }
-
 
 .page-campaign__items {
 
-  @include mq("md") { 
+  @include mq("md") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(21);
     justify-items: center;
-  align-items: center;
-  
+    align-items: center;
+
   }
 }
 
-.page-campaign__item {
-  
-}
-
-
-
+.page-campaign__item {}
 
 .page-campaign__button-inner {
-margin: 0 auto;
-text-align: center;
-display: flex;
-justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }

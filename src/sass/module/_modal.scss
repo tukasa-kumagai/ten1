@@ -2,12 +2,11 @@
 
 .modal {
     margin-top: rem(40);
+
     @include mq("md") {
         margin-top: rem(75);
     }
 }
-
-
 
 .modal__inner {}
 
@@ -59,9 +58,8 @@
 
 .modal__image-long:nth-child(n+2) {
     margin-top: rem(8);
-    @include mq("md") {
-       
-    }
+
+    @include mq("md") {}
 }
 
 .modal__image-long img {
@@ -122,10 +120,10 @@
 /* モーダルを閉じるボタン */
 .modal__close {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
+    top: rem(20);
+    right: rem(20);
+    width: rem(44);
+    height: rem(44);
     background: rgba(50, 50, 50, 1);
     cursor: pointer;
     transition: opacity .6s;
@@ -140,8 +138,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 20px;
-    height: 1px;
+    width: rem(20);
+    height: rem(1);
     background: #fff;
     content: '';
 }
@@ -156,7 +154,7 @@
 
 .modal__content .modal__image img {
     width: 100%;
-    
+
 }
 
 

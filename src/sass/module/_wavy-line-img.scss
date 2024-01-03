@@ -2,20 +2,19 @@
 
 
 .wavy-line-bg-img {
-    display: flex;
-    position: absolute;
-    top: 45.0%;
-    width: 100%;
-    z-index: 1;
-    left: 0%;
-    @include mq("md") {
-      display: none;
-        display: flex;
-        left: calc(50% - min(48.5vw, 38.75rem));
-        position: absolute;
-        top: -90%;
-        width: rem(301);
-    }
-  }
+  display: flex;
+  position: absolute;
+  top: 45.0%;
+  width: 100%;
+  z-index: 1;
+  left: 0%;
 
-  
+  @include mq("md") {
+    display: none;
+    display: flex;
+    left: calc(50% - min(48.5vw, 38.75rem));
+    position: absolute;
+    top: -90%;
+    width: rem(301);
+  }
+}

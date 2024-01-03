@@ -1,52 +1,55 @@
 @use "global" as *;
 
-.page-price {
-
-}
+.page-price {}
 
 .page-price__inner.inner {
   max-width: rem(400);
   margin: 0 auto;
   position: relative;
+
   @include mq("md") {
-  
+
     max-width: rem(750);
   }
 }
-.page-price__main {
-max-width: rem(345);
-border-right: rem(1) solid $green;
-border-left: rem(1) solid $green;
 
-@include mq("md") {
-  display: flex;
-  max-width: rem(700);
-}
+.page-price__main {
+  max-width: rem(345);
+  border-right: rem(1) solid $green;
+  border-left: rem(1) solid $green;
+
+  @include mq("md") {
+    display: flex;
+    max-width: rem(700);
+  }
 }
 
 .page-price__main:nth-child(n+2) {
- margin-top: rem(40);
+  margin-top: rem(40);
 
- @include mq("md") {
-  margin-top: rem(80);
- }
+  @include mq("md") {
+    margin-top: rem(80);
+  }
 }
+
 .page-price__image {
-background-color: $green;
-max-width: rem(345);
-display: flex;
-flex-direction: row-reverse;
-justify-content: center;
-padding: rem(6) 0;
-width: 100%;
-@include mq("md") {
-  max-width: rem(200);
-  flex-direction:column;
-text-align: center;
- 
-}
+  background-color: $green;
+  max-width: rem(345);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  padding: rem(6) 0;
+  width: 100%;
+
+  @include mq("md") {
+    max-width: rem(200);
+    flex-direction: column;
+    text-align: center;
+
+  }
 
 }
+
 .page-price__image img {
   width: rem(25);
 
@@ -57,59 +60,63 @@ text-align: center;
 
   }
 }
+
 .page-price__text {
-color: $white;
-font-size: rem(16);
+  color: $white;
+  font-size: rem(16);
 }
 
 
-.page-price__table {
+.page-price__table {}
 
-}
 .page-price__tr {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  @include mq("md") {
 
-  }
+  @include mq("md") {}
 }
-.page-price__th  {
- border-bottom: 1px solid $green;
- border-right: 1px solid $green;
-padding: rem(5) rem(6) rem(7) rem(6);
- text-align: center;
- font-size: rem(16);
- width: 70%;
- @include mq("md") {
-  border-top: 1px solid $green;
-  border-bottom: 0px solid $green;
-  padding: rem(23) rem(10) rem(10) rem(24);
-width: rem(345);
-text-align: left;
-padding-left: rem(15);
-line-height: 1;
- }
+
+.page-price__th {
+  border-bottom: 1px solid $green;
+  border-right: 1px solid $green;
+  padding: rem(5) rem(6) rem(7) rem(6);
+  text-align: center;
+  font-size: rem(16);
+  width: 70%;
+
+  @include mq("md") {
+    border-top: 1px solid $green;
+    border-bottom: 0px solid $green;
+    padding: rem(23) rem(10) rem(10) rem(24);
+    width: rem(345);
+    text-align: left;
+    padding-left: rem(15);
+    line-height: 1;
+  }
 
 }
 
 .page-price__th--position {
   padding: rem(20)rem(10) rem(10) rem(10);
+
   @include mq("md") {
     border-bottom: 1px solid $green;
   }
 }
-.page-price__td  {
-padding: rem(17.5)rem(16) rem(17.5) rem(20);
-border-bottom: 1px solid $green;
-width: 30%;
-@include mq("md") {
-  width: rem(162);
-  text-align: right;
-  border-top: 1px solid $green;
-  border-bottom: 0px solid $green;
 
-}
+.page-price__td {
+  padding: rem(17.5)rem(16) rem(17.5) rem(20);
+  border-bottom: 1px solid $green;
+  width: 30%;
+
+  @include mq("md") {
+    width: rem(162);
+    text-align: right;
+    border-top: 1px solid $green;
+    border-bottom: 0px solid $green;
+
+  }
 }
 
 

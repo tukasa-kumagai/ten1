@@ -4,6 +4,7 @@
     box-shadow: 0 0 rem(8) gray;
     display: flex;
     flex-flow: column;
+
     @include mq("md") {}
 }
 
@@ -65,6 +66,7 @@
         padding: rem(0) rem(36) rem(17) rem(30);
     }
 }
+
 .card__foot.card__foot--campaign-under {
     padding: rem(6) rem(36) rem(7) rem(30);
     display: inline-block;
@@ -97,7 +99,7 @@
     }
 }
 
- .card__head--campaign-position {
+.card__head--campaign-position {
     text-align: left;
     padding-left: rem(19);
     padding-top: rem(10);
@@ -121,11 +123,10 @@
 
 .card__head.card__head--width {
     padding-left: rem(0);
-        padding-top: rem(16);
-        padding-right: rem(0);
-    @include mq("md") {
-    
-    }
+    padding-top: rem(16);
+    padding-right: rem(0);
+
+    @include mq("md") {}
 }
 
 
@@ -146,6 +147,7 @@
 
 .card__head-time {
     font-size: rem(12);
+
     @include mq("md") {
         font-size: rem(12);
         line-height: 1.5;
@@ -168,12 +170,13 @@
 }
 
 .card__head-text.card__head-text--size {
-text-align: center;
+    text-align: center;
+
     @include mq("md") {
         font-size: rem(16);
         padding-top: rem(0);
         padding-bottom: rem(8);
-        
+
     }
 }
 
@@ -183,15 +186,16 @@ text-align: center;
     font-size: rem(16);
     color: $black2;
     font-weight: 500;
+
     @include mq("md") {
         font-size: rem(24);
         line-height: 1.5;
-        
+
     }
 }
 
 
-    
+
 
 .card__foot {}
 
@@ -231,6 +235,7 @@ text-align: center;
 
     }
 }
+
 .card__foot-regular {
 
     @include mq("md") {
@@ -245,6 +250,7 @@ text-align: center;
     margin-top: rem(5);
     font-weight: bold;
     line-height: 1.5;
+
     @include mq("md") {
         font-size: rem(30);
         margin-left: rem(13);
@@ -252,11 +258,12 @@ text-align: center;
         letter-spacing: 0em;
     }
 }
+
 .card__foot-discount--size {
     margin-left: rem(16);
 
     @include mq("md") {
-        font-size: rem(40); 
+        font-size: rem(40);
         margin-left: rem(40);
     }
 }
@@ -267,21 +274,22 @@ text-align: center;
 
 .card__foot-text {
     display: none;
+
     @include mq("md") {
         display: inline;
         font-family: $base-font-family;
         font-size: rem(16);
         line-height: 1;
         text-align: left;
-       
-     
+
+
     }
-} 
+}
 
 .card__foot-text.card__foot-text--width {
 
     @include mq("md") {
-    padding: rem(0) rem(16) rem(0) rem(16);
+        padding: rem(0) rem(16) rem(0) rem(16);
     }
 }
 
@@ -292,11 +300,12 @@ text-align: center;
         padding: rem(0) rem(24) rem(0) rem(24);
         line-height: 1.5;
     }
-    }
+}
 
 
 .card__foot-day {
     display: none;
+
     @include mq("md") {
         display: inline;
         font-family: $base-font-family;
@@ -305,12 +314,12 @@ text-align: center;
         margin-top: rem(32);
         font-weight: $bold;
         color: $green;
-     
+
     }
 }
 
 .card__foot-day--position {
-   
+
     @include mq("md") {
         margin-top: rem(30);
     }
@@ -318,6 +327,7 @@ text-align: center;
 
 .card__foot-inquiry {
     display: none;
+
     @include mq("md") {
         display: inline;
         font-family: $base-font-family;
@@ -327,8 +337,6 @@ text-align: center;
         font-weight: $bold;
         color: $green;
         font-weight: $regular;
-     
+
     }
 }
-
-

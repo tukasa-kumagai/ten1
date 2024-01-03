@@ -1,32 +1,33 @@
 @use "global" as *;
 
 
-.page-voice{
+.page-voice {}
 
-}
-.page-voice__inner{
+.page-voice__inner {
   padding: 0 rem(15);
   margin: 0 auto;
-position: relative;
-  @include mq("md") { 
-  
-  }
+  position: relative;
+
+  @include mq("md") {}
 }
+
 .pagination__list.page-vice__list {
   margin: 0;
   padding: 0;
-  @include mq("md") { 
+
+  @include mq("md") {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: rem(21);
     justify-items: center;
-  align-items: center;
+    align-items: center;
   }
 }
 
 .page-vice__items {
   margin-top: rem(42);
   text-align: left;
+
   @include mq("md") {
     margin: 0 auto;
     margin-top: rem(40);
@@ -34,8 +35,6 @@ position: relative;
 }
 
 .page-vice__items:nth-child(n+2) {
- margin-top: rem(80);
+  margin-top: rem(80);
 
-} 
-
-
+}

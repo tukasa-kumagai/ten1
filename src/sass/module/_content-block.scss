@@ -28,17 +28,17 @@
     margin-left: 0;
     width: 100%;
     margin-top: rem(43);
-    @include mq("md") {
 
-    }
+    @include mq("md") {}
 }
+
 .content-block__img2--position {
-display: none;
+    display: none;
+
     @include mq("md") {
-display: inline;
+        display: inline;
     }
 }
-
 
 .content-block__img1 img {
     @include mq("md") {}
@@ -94,6 +94,7 @@ display: inline;
     line-height: rem(40);
     margin-top: rem(35);
     font-family: $second-font-family;
+
     @include mq("md") {
         font-size: rem(80);
         color: $white;
@@ -120,7 +121,6 @@ display: inline;
     margin-top: rem(20);
 
     @include mq("md") {
-    
         width: 100%;
         margin-top: rem(7);
         margin-left: rem(0);
@@ -144,16 +144,16 @@ display: inline;
 }
 
 .content-block__text--position {
-line-height: 1.5;
-margin-top: rem(40);
-margin-bottom: 0;
+    line-height: 1.5;
+    margin-top: rem(40);
+    margin-bottom: 0;
 }
 
 .content-block__button-inner {
     margin-top: rem(40);
     text-align: center;
-  
+
     @include mq("md") {
-      margin-top: rem(40);
+        margin-top: rem(40);
     }
-  }
+}

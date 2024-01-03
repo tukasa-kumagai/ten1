@@ -5,16 +5,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: rem(12);
-    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(rem(150),1fr));
     justify-items: center;
   align-items: center;
     @include mq("md") {
         display: grid;
-        grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
-        gap:32px;
-        padding: 10px;
-       
-
+        grid-template-columns: repeat(auto-fill,minmax(rem(150),1fr));
+        gap: rem(32);
+        padding: rem(10);
     }
    
 }

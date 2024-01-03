@@ -5,9 +5,9 @@
     display: flex;
     flex-flow: column;
     z-index: 99999;
+
     @include mq("md") {}
 }
-
 
 .card3__img {
     width: 100%;
@@ -16,7 +16,6 @@
 
     @include mq("md") {
         width: 100%;
-
     }
 }
 
@@ -66,6 +65,7 @@
         margin: rem(0) rem(36) rem(17) rem(30);
     }
 }
+
 .card3__foot.card3__foot--campaign-under {
     margin: rem(6) rem(36) rem(7) rem(30);
     display: inline-block;
@@ -86,18 +86,14 @@
 }
 
 .card3__head {
-
-
     margin-top: rem(16);
- 
 
     @include mq("md") {
-      
         margin-top: rem(24);
     }
 }
 
- .card3__head--campaign-position {
+.card3__head--campaign-position {
     text-align: left;
     margin-left: rem(19);
     margin-top: rem(10);
@@ -112,9 +108,8 @@
     margin-left: rem(0);
     margin-top: rem(16);
     margin-right: rem(0);
-    @include mq("md") {
-    
-    }
+
+    @include mq("md") {}
 }
 
 .card3__head-title {
@@ -123,7 +118,6 @@
     color: $green;
     border: rem(1) solid $green;
     display: inline-block;
-
     margin: rem(6) rem(13) rem(4) rem(10);
 
     @include mq("md") {
@@ -133,6 +127,7 @@
 
 .card3__head-time {
     font-size: rem(12);
+
     @include mq("md") {
         font-size: rem(12);
         line-height: 1.5;
@@ -151,22 +146,19 @@
         font-size: rem(24);
         padding-bottom: rem(0);
     }
-
 }
 
 .card3__head-text.card3__head-text {
     font-size: rem(16);
     color: $black2;
     font-weight: 500;
+
     @include mq("md") {
         font-size: rem(16);
         line-height: 1.5;
-        
+
     }
 }
-
-
-    
 
 .card3__foot {}
 
@@ -202,7 +194,6 @@
         margin-bottom: rem(0);
         line-height: 3;
         letter-spacing: 0em;
-
     }
 }
 
@@ -213,6 +204,7 @@
     margin-top: rem(5);
     font-weight: bold;
     line-height: 1.5;
+
     @include mq("md") {
         font-size: rem(30);
         margin-left: rem(13);
@@ -226,37 +218,34 @@
 }
 
 .card3__foot-text {
-  
+
     @include mq("md") {
-       
+
         font-family: $base-font-family;
         font-size: rem(16);
         line-height: 1.5;
         text-align: left;
-       
-     
+
+
     }
-} 
+}
 
 .card3__foot-text.car3d__foot-text--width {
-
     @include mq("md") {
-    padding: rem(16) rem(16) rem(24) rem(16);
+        padding: rem(16) rem(16) rem(24) rem(16);
     }
 }
 
 .card3__foot-text--width {
-
-
     @include mq("md") {
         padding: rem(0) rem(24) rem(0) rem(24);
         line-height: 1.5;
     }
-    }
-
+}
 
 .card3__foot-day {
     display: none;
+
     @include mq("md") {
         display: inline;
         font-family: $base-font-family;
@@ -265,12 +254,10 @@
         margin-top: rem(32);
         font-weight: $bold;
         color: $green;
-     
     }
 }
 
 .card3__foot-day--position {
-   
     @include mq("md") {
         margin-top: rem(30);
     }
@@ -278,6 +265,7 @@
 
 .card3__foot-inquiry {
     display: none;
+
     @include mq("md") {
         display: inline;
         font-family: $base-font-family;
@@ -287,12 +275,8 @@
         font-weight: $bold;
         color: $green;
         font-weight: $regular;
-     
     }
 }
-
-
-
 
 .card3__image-box {
     overflow: hidden;
@@ -305,12 +289,9 @@
     transition: transform 0.3s ease-in-out;
 }
 
-
 .card__box {
     padding: 1rem;
 }
-
-
 
 .card3:hover img {
     transform: scale(1.2);

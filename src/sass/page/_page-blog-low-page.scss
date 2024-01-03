@@ -3,168 +3,164 @@
 
 .page-blog-low-page {
   display: flex;
-  
-  } 
 
-  .page-blog-low-page {
-    display: flex;
-position: relative;
 }
-  
-  
+
+.page-blog-low-page {
+  display: flex;
+  position: relative;
+}
+
+
 .page-blog-low-page-main {
   width: 100%;
 
-  @include mq("md")  {
+  @include mq("md") {
     width: 70%;
   }
 }
 
 .page-blog-low-page__content {
   width: 100%;
-display: block;
+  display: block;
   margin-top: rem(45);
-  @include mq("md") { 
+
+  @include mq("md") {
     display: flex;
     margin-top: rem(140);
   }
 }
+
 .page-blog-low-page__container {
 
-  @include mq("md")  {
-
-  }
+  @include mq("md") {}
 }
 
 .page-blog-low-page__time {
-font-size: rem(14);
-line-height: 1.3;
-font-family:$second-font-family;
-  @include mq("md")  {
+  font-size: rem(14);
+  line-height: 1.3;
+  font-family: $second-font-family;
 
-  }
+  @include mq("md") {}
 }
 
 .page-blog-low-page__title {
   font-size: rem(24);
   line-height: 1.3;
-  font-family:$base-font-family;
+  font-family: $base-font-family;
   margin-top: rem(10);
   padding-bottom: rem(4);
   border-bottom: rem(1) solid $green;
-  @include mq("md")  {
+
+  @include mq("md") {
     font-size: rem(32);
   }
 }
 
 .page-blog-low-page__image {
-margin-top: rem(24);
-  @include mq("md")  {
+  margin-top: rem(24);
+
+  @include mq("md") {
     margin-top: rem(56);
   }
 }
 
 .page-blog-low-page__image img {
 
-  @include mq("md")  {
-
-  }
+  @include mq("md") {}
 }
 
 .page-blog-low-page__text {
   font-size: rem(16);
   line-height: 1.5;
-  font-family:$base-font-family;
+  font-family: $base-font-family;
   margin-top: rem(23);
-  @include mq("md")  {
 
-  }
+  @include mq("md") {}
 }
 
 .page-blog-low-page__sub {
   width: rem(300);
   margin: 0 auto;
   margin-top: rem(80);
+
   @include mq("md") {
     width: 27%;
     margin-left: rem(80);
     margin-top: rem(0);
-    
-  }
-}   
 
-.page-blog-low-page__sub-cards {
-  
+  }
 }
 
+.page-blog-low-page__sub-cards {}
+
 .page-blog-low-page__sub-card {
+  display: flex;
+  box-shadow: rem(2) rem(2) rem(4) gray;
+  padding: rem(16);
+  width: 100%;
+  margin-top: rem(24);
+
+  @include mq("md") {
     display: flex;
     box-shadow: rem(2) rem(2) rem(4) gray;
     padding: rem(16);
     width: 100%;
     margin-top: rem(24);
-    @include mq("md") {
-      display: flex;
-      box-shadow: rem(2) rem(2) rem(4) gray;
-      padding: rem(16);
-      width:100%;
-      margin-top: rem(24);
-    }
+  }
 }
+
 .page-blog-low-page__sub-card-text {
-margin-left: rem(16);
+  margin-left: rem(16);
 }
 
 .page-blog-low-page__sub-card-image {
-    width: rem(121);
+  width: rem(121);
 }
 
-.page-blog-low-page__sub-card-image img {
-}
+.page-blog-low-page__sub-card-image img {}
+
 .page-blog-low-page__sub-card-day {
-font-size: rem(12);
-font-family: $second-font-family;
+  font-size: rem(12);
+  font-family: $second-font-family;
 }
 
 .page-blog-low-page__sub-card-title {
-    font-size: rem(16);
-    font-family: $second-font-family;
-    font-weight: 200;
+  font-size: rem(16);
+  font-family: $second-font-family;
+  font-weight: 200;
 }
 
 .page-blog-low-page__sub-reviews {
-    display: block;
-    margin-top: rem(80);
+  display: block;
+  margin-top: rem(80);
 
-    @include mq("md") {
-      margin-top: rem(83);   
-    }
+  @include mq("md") {
+    margin-top: rem(83);
+  }
 }
-.page-blog-low-page__sub-reviews-card {
 
-}
+.page-blog-low-page__sub-reviews-card {}
 
 .page-blog-low-page__sub-reviews-image {
-margin-top: rem(24);
+  margin-top: rem(24);
 }
 
-.page-blog-low-page__sub-reviews-text  {
-
-}
+.page-blog-low-page__sub-reviews-text {}
 
 .page-blog-low-page__sub-reviews-age {
-font-size: rem(12);
-font-family: $base-font-family;
-font-weight: $regular;
-margin-top: rem(16);
+  font-size: rem(12);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  margin-top: rem(16);
 
 }
 
 .page-blog-low-page__sub-reviews-title {
-    font-size: rem(24);
-    font-family: $base-font-family;
-    font-weight: $regular;
-    margin-top: rem(6);
+  font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $regular;
+  margin-top: rem(6);
 }
 
 .page-blog-low-page__sub-reviews-button-inner {
@@ -177,6 +173,7 @@ margin-top: rem(16);
   margin-top: rem(87);
   margin: 0 auto;
   width: rem(300);
+
   @include mq("md") {
     width: 100%;
   }
@@ -185,15 +182,18 @@ margin-top: rem(16);
 
 
 .page-blog-low-page__sub-campaign__items {
-margin: 0 auto;
-display: table;
-@include mq("md") {
-  display: block;
+  margin: 0 auto;
+  display: table;
+
+  @include mq("md") {
+    display: block;
+  }
 }
-}
-.page-blog-low-page__sub-campaign__item  {
+
+.page-blog-low-page__sub-campaign__item {
   max-width: rem(280);
   margin-top: rem(24);
+
   @include mq("md") {
     max-width: rem(333);
 
@@ -208,101 +208,92 @@ display: table;
 .page-blog-low-page__sub-archive {
   margin-top: rem(90);
 
-    @include mq("md") {
-  font-size: rem(24);
+  @include mq("md") {
+    font-size: rem(24);
+    color: $green;
+
+  }
+}
+
+.page-blog-low-page__sub-archive-main {
+  margin-top: rem(24);
   color: $green;
-  
-    }
-  }
-  .page-blog-low-page__sub-archive-main {
-    margin-top: rem(24);
-    color: $green;
-    font-weight: $regular;
-    font-family: $base-font-family;
-    font-size: rem(24);
-      @include mq("md") {
+  font-weight: $regular;
+  font-family: $base-font-family;
+  font-size: rem(24);
+
+  @include mq("md") {
     font-size: rem(24);
     color: $green;
-    
-      }
-    }
-  .page-blog-low-page__sub-archive-items1 {
- 
-    color: $green;
-    font-weight: $regular;
-    font-family: $base-font-family;
-
-      @include mq("md") {
-   
- 
-  }
-}
-  .page-blog-low-page__sub-archive-items2 {
-  
-    color: $green;
-    font-weight: $regular;
-    font-family: $base-font-family;
-   
-      @include mq("md") {
- 
-  }
-}
-  
-  .page-blog-low-page__sub-archive-item1 {
-  
-    color: $green;
-    font-weight: $regular;
-    font-family: $base-font-family;
-    
-      @include mq("md") {
 
   }
 }
-  
-  .page-blog-low-page__sub-archive-item2  {
 
-    color: $green;
-    font-weight: $regular;
-    font-family: $base-font-family;
+.page-blog-low-page__sub-archive-items1 {
 
-      @include mq("md") {
-  
-  
-  }
+  color: $green;
+  font-weight: $regular;
+  font-family: $base-font-family;
+
+  @include mq("md") {}
 }
-     
-  .page-blog-low-page__sub-archive-item3 {
-      display: flex;
-      margin-left: 40px;
-    }
-  
-    .page-blog-low-page__sub-archive-item4 {
-      display: flex;
-    }
-  
-    .page-blog-low-page__sub-archive-item-image {
+
+.page-blog-low-page__sub-archive-items2 {
+
+  color: $green;
+  font-weight: $regular;
+  font-family: $base-font-family;
+
+  @include mq("md") {}
+}
+
+.page-blog-low-page__sub-archive-item1 {
+  color: $green;
+  font-weight: $regular;
+  font-family: $base-font-family;
+
+  @include mq("md") {}
+}
+
+.page-blog-low-page__sub-archive-item2 {
+  color: $green;
+  font-weight: $regular;
+  font-family: $base-font-family;
+
+  @include mq("md") {}
+}
+
+.page-blog-low-page__sub-archive-item3 {
+  display: flex;
+  margin-left: 40px;
+}
+
+.page-blog-low-page__sub-archive-item4 {
+  display: flex;
+}
+
+.page-blog-low-page__sub-archive-item-image {
   width: rem(24);
   height: rem(24);
   margin-right: rem(10);
-    }
+}
 
 
 
 
 
 .page-blog-low-page__nav {
-margin-top: rem(24);
-font-size: rem(16);
-line-height: 1.5;
-font-family:$base-font-family;
-font-weight: $regular;
-  @include mq("md")  {
+  margin-top: rem(24);
+  font-size: rem(16);
+  line-height: 1.5;
+  font-family: $base-font-family;
+  font-weight: $regular;
 
-  }
+  @include mq("md") {}
 
 }
 
-.page-blog-low-page__list  {
+.page-blog-low-page__list {
   padding-left: rem(26);
   line-height: 1.6em;
   background: url(/assets/images/blog/page-blog-low-page-starfish.png) left rem(0) top rem(3) no-repeat;
@@ -316,42 +307,46 @@ font-weight: $regular;
   letter-spacing: 0.01em;
 
   @include mq("md") {
-      width: 100%;
+    width: 100%;
   }
 }
 
 .page-blog-low-page__box {
-display: flex;
-max-width: rem(153);
-justify-content: space-between;
-margin: 0 auto;
-position: relative;
-margin-top: rem(40);
-  @include mq("md") {
-  
-}
-}
-     /* ボタンの基本スタイル */
-     .page-blog-low-page__box-image1 {
-      display: inline-block;
-      padding: 16px 16px;
-      background-color: #FFF; /* 初期のボタンの背景色 */
-      color: $black; /* 初期のボタンの文字色 */
-      text-decoration: none;
-     
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: #408f95 1px solid;
-      position: relative;
-    }
+  display: flex;
+  max-width: rem(153);
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
+  margin-top: rem(40);
 
-    /* ホバー時のスタイル変更と矢印の表示 */
-    .page-blog-low-page__box-image1:hover {
-      background-color: $green; /* ホバー時のボタンの背景色 */
-      color: #fff; /* ホバー時のボタンの文字色 */
-    }
+  @include mq("md") {}
+}
 
-    .page-blog-low-page__box-image1::after {
-      border-right: 1px solid #408f95;
+/* ボタンの基本スタイル */
+.page-blog-low-page__box-image1 {
+  display: inline-block;
+  padding: 16px 16px;
+  background-color: #FFF;
+  /* 初期のボタンの背景色 */
+  color: $black;
+  /* 初期のボタンの文字色 */
+  text-decoration: none;
+
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: #408f95 1px solid;
+  position: relative;
+}
+
+/* ホバー時のスタイル変更と矢印の表示 */
+.page-blog-low-page__box-image1:hover {
+  background-color: $green;
+  /* ホバー時のボタンの背景色 */
+  color: #fff;
+  /* ホバー時のボタンの文字色 */
+}
+
+.page-blog-low-page__box-image1::after {
+  border-right: 1px solid #408f95;
   border-top: 1px solid #408f95;
   bottom: 0;
   content: "";
@@ -362,36 +357,41 @@ margin-top: rem(40);
   vertical-align: middle;
   width: 0.75rem;
   left: rem(15);
-    transform: rotate(220deg);
-    }
+  transform: rotate(220deg);
+}
 
-    /* ホバー時の矢印の色変更 */
-    .page-blog-low-page__box-image1:hover::after {
-      border-color: $white; /* ホバー時の矢印の色 */
-   
-    }
+/* ホバー時の矢印の色変更 */
+.page-blog-low-page__box-image1:hover::after {
+  border-color: $white;
+  /* ホバー時の矢印の色 */
 
-    /* ボタンの基本スタイル */
-    .page-blog-low-page__box-image2 {
-      display: inline-block;
-      padding: 16px 16px;
-      background-color: #FFF; /* 初期のボタンの背景色 */
-      color: $black; /* 初期のボタンの文字色 */
-      text-decoration: none;
+}
 
-      transition: background-color 0.3s ease, color 0.3s ease;
-      border: #408f95 1px solid;
-      position: relative;
-    }
+/* ボタンの基本スタイル */
+.page-blog-low-page__box-image2 {
+  display: inline-block;
+  padding: 16px 16px;
+  background-color: #FFF;
+  /* 初期のボタンの背景色 */
+  color: $black;
+  /* 初期のボタンの文字色 */
+  text-decoration: none;
 
-    /* ホバー時のスタイル変更と矢印の表示 */
-    .page-blog-low-page__box-image2:hover {
-      background-color: $green; /* ホバー時のボタンの背景色 */
-      color: #fff; /* ホバー時のボタンの文字色 */
-    }
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border: #408f95 1px solid;
+  position: relative;
+}
 
-    .page-blog-low-page__box-image2::after {
-      border-right: 1px solid #408f95;
+/* ホバー時のスタイル変更と矢印の表示 */
+.page-blog-low-page__box-image2:hover {
+  background-color: $green;
+  /* ホバー時のボタンの背景色 */
+  color: #fff;
+  /* ホバー時のボタンの文字色 */
+}
+
+.page-blog-low-page__box-image2::after {
+  border-right: 1px solid #408f95;
   border-top: 1px solid #408f95;
   bottom: 0;
   content: "";
@@ -402,11 +402,12 @@ margin-top: rem(40);
   vertical-align: middle;
   width: 0.75rem;
   left: rem(8);
-    transform: rotate(40deg);
-    }
+  transform: rotate(40deg);
+}
 
-    /* ホバー時の矢印の色変更 */
-    .page-blog-low-page__box-image2:hover::after {
-      border-color: $white; /* ホバー時の矢印の色 */
-   
-    }
+/* ホバー時の矢印の色変更 */
+.page-blog-low-page__box-image2:hover::after {
+  border-color: $white;
+  /* ホバー時の矢印の色 */
+
+}

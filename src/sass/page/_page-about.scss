@@ -1,25 +1,17 @@
 @use "global" as *;
 
 
-.page-about {
-
-}
-
-
-
+.page-about {}
 
 .page-about-inner {
   position: relative;
   max-width: rem(600);
   margin: 0 auto;
 
-
-  @include mq("md") {
-    
-  }
+  @include mq("md") {}
 }
 
-.page-about__main   {
+.page-about__main {
   margin-top: rem(0);
 
   @include mq("md") {
@@ -29,4 +21,3 @@
     margin-top: rem(215);
   }
 }
-

@@ -1,96 +1,95 @@
 @use "global" as *;
 
 .pc-nav {
-    height: inherit;
-    display: none;
-  
-    @include mq("md") {
-      display: block;
-    }
+  height: inherit;
+  display: none;
+
+  @include mq("md") {
+    display: block;
   }
-  
-  .pc-nav__items {
-    height: inherit;
-    display: flex;
-    align-items: center;
-    margin: 0 0 rem(50) 0;
-    list-style: none;
-  }
-  
-  //下線
-  .pc-nav__items li a {
-    /*線の基点とするためrelativeを指定*/
-    position: relative;
-    text-align: center;
-  }
-  
-  .pc-nav__items li.current a,
-  .pc-nav__items li a:hover {}
-  
-  .pc-nav__items li a::after {
-    content: '';
-    /*絶対配置で線の位置を決める*/
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    bottom: 25%;
-    /*線の形状*/
-    width: 80%;
-    height: rem(2);
-    background: $white;
-    /*アニメーションの指定*/
-    transition: all .3s;
-    transform: scale(0, 1);
-    /*X方向0、Y方向1*/
-    transform-origin: center top;
-    /*上部中央基点*/
-  }
-  
-  /*現在地とhoverの設定*/
-  .pc-nav__items li.current a::after,
-  .pc-nav__items li a:hover::after {
-    transform: scale(1, 1);
-    /*X方向にスケール拡大*/
-  }
-  
-  .pc-nav__item {
-    height: inherit;
-  
-    @include mq("md") {
-      flex-direction: column;
-      line-height: rem(18);
-  
-    }
-  }
-  
-  .pc-nav__item a {
-    height: inherit;
-    color: #FFF;
-    opacity: 1;
-    display: flex;
-    justify-content: center;
-    padding: 0 min(1.4vw,1.25rem);
-    font-size: rem(10);
+}
+
+.pc-nav__items {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  margin: 0 0 rem(50) 0;
+  list-style: none;
+}
+
+//下線
+.pc-nav__items li a {
+  /*線の基点とするためrelativeを指定*/
+  position: relative;
+  text-align: center;
+}
+
+.pc-nav__items li.current a,
+.pc-nav__items li a:hover {}
+
+.pc-nav__items li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  bottom: 25%;
+  /*線の形状*/
+  width: 80%;
+  height: rem(2);
+  background: $white;
+  /*アニメーションの指定*/
+  transition: all .3s;
+  transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  transform-origin: center top;
+  /*上部中央基点*/
+}
+
+/*現在地とhoverの設定*/
+.pc-nav__items li.current a::after,
+.pc-nav__items li a:hover::after {
+  transform: scale(1, 1);
+  /*X方向にスケール拡大*/
+}
+
+.pc-nav__item {
+  height: inherit;
+
+  @include mq("md") {
     flex-direction: column;
-    font-size: rem(18);
-    height: inherit;
-    opacity: 1;
-    font-family: $second-font-family;
+    line-height: rem(18);
+
   }
+}
+
+.pc-nav__item a {
+  height: inherit;
+  color: #FFF;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  padding: 0 min(1.4vw, 1.25rem);
+  font-size: rem(10);
+  flex-direction: column;
+  font-size: rem(18);
+  height: inherit;
+  opacity: 1;
+  font-family: $second-font-family;
+}
 
 
-  .pc-nav__item-head {
-    font-size: rem(18);
-    opacity: 1;
+.pc-nav__item-head {
+  font-size: rem(18);
+  opacity: 1;
+}
+
+.pc-nav__item-foot {
+  font-size: rem(10);
+  text-align: center;
+  opacity: 1;
+
+  @include mq("md") {
+    line-height: rem(15);
   }
-  
-  .pc-nav__item-foot {
-    font-size: rem(10);
-    text-align: center;
-    opacity: 1;
-  
-    @include mq("md") {
-      line-height: rem(15);
-    }
-  }
-  
+}

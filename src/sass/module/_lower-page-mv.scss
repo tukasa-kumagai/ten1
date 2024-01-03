@@ -1,72 +1,64 @@
 @use "global" as *;
 
 .lower-page-mv {
-    position: relative;
-    overflow: hidden;
-    object-fit: cover;
-  
-    @include mq("md") {}
-  }
-  
-  .lower-page-mv__text {
-    position: absolute;
-    color: $white;
-    top: 50%;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+
+  @include mq("md") {}
+}
+
+.lower-page-mv__text {
+  position: absolute;
+  color: $white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  @include mq("md") {
     left: 50%;
+    top: 50%;
     transform: translate(-50%, 0%);
-  
-    @include mq("md") {
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, 0%);
-    }
   }
-  
-  .lower-page-mv__title {
-    font-size: rem(40);
-    letter-spacing: -0.06em;
-    line-height: 0;
-    text-indent: 0em;
-  
-    @include mq("md") {
-      font-size: rem(80);
+}
 
-       letter-spacing: -0.08em;
-    }
+.lower-page-mv__title {
+  font-size: rem(40);
+  letter-spacing: -0.06em;
+  line-height: 0;
+  text-indent: 0em;
+
+  @include mq("md") {
+    font-size: rem(80);
+    letter-spacing: -0.08em;
   }
+}
 
-  .lower-page-mv__title.lower-page-mv__title--size {
-  
-    letter-spacing: -0.07em;
-  }
+.lower-page-mv__title.lower-page-mv__title--size {
+  letter-spacing: -0.07em;
+}
 
-  
+.lower-page-mv__slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
 
-  .lower-page-mv__slide {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
+.lower-page-mv__slide-image {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
 
-  .lower-page-mv__slide-image {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    opacity: 1;
+}
 
-  }
-
-  .lower-page-mv__slide-image img {
-    height: 100vh;
-    object-fit: cover;
-  }
-  
- 
- 
+.lower-page-mv__slide-image img {
+  height: 100vh;
+  object-fit: cover;
+}

@@ -2,7 +2,6 @@
 
 .page-faq {
 margin-top: rem(45);
-
 @include mq("md") {
   margin-top: rem(142);
 }
@@ -11,7 +10,6 @@ margin-top: rem(45);
 .page-faq__inner {
   position: relative;
 }
-//テスト
 .page-faq__nav {
   margin: 50px auto ;
   max-width: rem(700);
@@ -21,9 +19,8 @@ margin-top: rem(45);
 
   }
 }
-
 .page-faq__list:not(:first-child) {
-  margin-top: 7px;
+  margin-top: rem(7);
 }
 
 .page-faq__title {

@@ -6,12 +6,13 @@
     display: flex;
     justify-content: center;
     padding: rem(5);
- margin-top: rem(47);
+    margin-top: rem(47);
 
- @include mq("md") {
-    margin-top: rem(45);
- }
+    @include mq("md") {
+        margin-top: rem(45);
+    }
 }
+
 .pagination__list {
     display: flex;
     flex-wrap: wrap;
@@ -21,80 +22,76 @@
     padding: rem(30);
     list-style: none;
     text-align: center;
-      
+
     @include mq("md") {
         padding: rem(0);
         margin-top: rem(25);
     }
 }
 
-
-
-
-
 //追加
-.pagination__item {
-
-}
+.pagination__item {}
 
 .pagination__list-item {
 
     width: 100%;
-    @include mq("md")  {
-      padding-bottom: rem(50);
+
+    @include mq("md") {
+        padding-bottom: rem(50);
     }
 }
-.pagination__list-item.pagination__list-item--position {
-  padding: rem(10);
-  padding-bottom: rem(24);
-}
-.pagination__list-item:nth-child(n+2) {
- margin-top: rem(40);
 
- @include mq("md")  {
-    margin-top: rem(0);
- }
+.pagination__list-item.pagination__list-item--position {
+    padding: rem(10);
+    padding-bottom: rem(24);
 }
+
+.pagination__list-item:nth-child(n+2) {
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
 .pagination__list-item:nth-child(n+3) {
     margin-top: rem(40);
-   
-    @include mq("md")  {
-       margin-top: rem(37);
+
+    @include mq("md") {
+        margin-top: rem(37);
     }
-   }
-
-
-
+}
 
 .pagination li {
     margin: 5px;
-    border: rem(1) solid $green;//ページの枠
-    
+    border: rem(1) solid $green; //ページの枠
+
 }
 
-.pagination a{
+.pagination a {
     display: block;
     text-decoration: none;
-    color: $green;//ページの文字色
-    padding: rem(7) rem(14);//ページの文字色内側幅
-    
+    color: $green; //ページの文字色
+    padding: rem(7) rem(14); //ページの文字色内側幅
+
 }
 
-.pagination a:hover{
-    background-color: $green;//ページのクリック時の背景色
-    color: $white;//ページのクリック時の文字色
+.pagination a:hover {
+    background-color: $green; //ページのクリック時の背景色
+    color: $white; //ページのクリック時の文字色
 }
 
 .active a {
-    background-color: $green;//ページの現在のページの背景色
-    color: $white;//ページのクリック時の文字色
-    
+    background-color: $green; //ページの現在のページの背景色
+    color: $white; //ページのクリック時の文字色
+
 }
 
-.page-item.prev.disabled {//戻るリンク
-margin-right: rem(28);
+.page-item.prev.disabled {
+    //戻るリンク
+    margin-right: rem(28);
 }
 
 .page-item.next {
-    margin-left: rem(40);//進むリンク
-    }
+    margin-left: rem(40); //進むリンク
+}

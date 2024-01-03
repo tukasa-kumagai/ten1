@@ -68,7 +68,6 @@
         flex-direction: row-reverse;
         justify-content: center;
         max-width: 100%;
-
         margin-top: rem(40);
     }
 }
@@ -118,7 +117,6 @@
     @include mq("md") {
         margin-top: rem(0);
     }
-
 }
 
 .price__content+.price__content {

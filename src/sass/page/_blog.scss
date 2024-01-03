@@ -1,9 +1,7 @@
 @use "global" as *;
 
 
-.blog {
-  
-}
+.blog {}
 
 .blog__bg {
   display: none;
@@ -87,9 +85,7 @@
   }
 }
 
-.blog__item {
- 
-}
+.blog__item {}
 
 .blog__item+.blog__item {
   margin-top: rem(10);

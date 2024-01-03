@@ -3,23 +3,24 @@
 .section__header {
   text-align: center;
 
-  @include mq("md") {
-  
-  }
+  @include mq("md") {}
 
 }
-.section-header.section-header--color-white{
+
+.section-header.section-header--color-white {
   font-size: rem(32);
   font-weight: 400;
   line-height: rem(40);
   text-align: center;
   color: $black2;
+
   @include mq("md") {
     position: relative;
     font-size: rem(40);
     color: $white;
   }
 }
+
 .section-header__english {
   font-size: rem(32);
   font-weight: 400;
@@ -53,16 +54,19 @@
 }
 
 .section-header__english.section-header--color-white {
-font-family: $second-font-family;
+  font-family: $second-font-family;
+
   @include mq("md") {
     color: $white;
   }
 }
+
 .section-header--color-white::first-letter {
   @include mq("md") {
     color: $white;
   }
 }
+
 .section-header__japanese.section-header--color-white {
 
   @include mq("md") {
