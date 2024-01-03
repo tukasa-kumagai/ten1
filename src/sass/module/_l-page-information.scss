@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.l-page-information {
+
+    margin-top: rem(113);
+	position: relative;
+
+	@include mq(md) {
+		margin-top: rem(145);	
+	}
+}

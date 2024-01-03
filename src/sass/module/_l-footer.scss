@@ -23,6 +23,17 @@
         margin-top: rem(0);
     }
 }
+.l-footer--contact-position {
+    padding-top: rem(47);
+    margin-top: rem(145);
+    padding-bottom: rem(52);
+
+    @include mq("md") {
+        padding-bottom: rem(115);
+        padding-top: rem(84);
+        margin-top: rem(176);
+    }
+}
 
 .l-footer--position1 {
     padding-top: rem(140);

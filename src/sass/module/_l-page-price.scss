@@ -1,0 +1,10 @@
+@use "global" as *;
+
+
+.l-page-price {
+    margin-top: rem(45);
+
+    @include mq("md") {
+        margin-top: rem(140);
+    }
+}
