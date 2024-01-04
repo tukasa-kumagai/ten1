@@ -68,7 +68,7 @@
 }
 
 .card__foot.card__foot--campaign-under {
-    padding: rem(6) rem(36) rem(7) rem(30);
+    padding: rem(11) rem(36) rem(7) rem(30);
     display: inline-block;
     margin-top: auto;
 
@@ -101,8 +101,8 @@
 
 .card__head--campaign-position {
     text-align: left;
-    padding-left: rem(19);
-    padding-top: rem(10);
+    padding-left: rem(16);
+    padding-top: rem(17);
 
     @include mq("md") {
         padding-left: rem(24);
@@ -230,7 +230,7 @@
     @include mq("md") {
         font-size: rem(24);
         padding-bottom: rem(0);
-        line-height: 3;
+        line-height: 0;
         letter-spacing: 0em;
 
     }
@@ -239,7 +239,7 @@
 .card__foot-regular {
 
     @include mq("md") {
-        line-height: 4;
+        line-height: 3;
     }
 }
 
@@ -254,7 +254,7 @@
     @include mq("md") {
         font-size: rem(30);
         margin-left: rem(13);
-        line-height: 1.9;
+        line-height: 1;
         letter-spacing: 0em;
     }
 }
@@ -333,7 +333,7 @@
         font-family: $base-font-family;
         font-size: rem(14);
         line-height: 1;
-        margin-top: rem(7);
+        margin-top: rem(12);
         font-weight: $bold;
         color: $green;
         font-weight: $regular;

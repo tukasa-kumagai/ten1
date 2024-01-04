@@ -2,14 +2,16 @@
 
 
 .pagination {
-    list-style: none;
+    align-items: center;
     display: flex;
+    gap: 0 0;
     justify-content: center;
-    padding: rem(5);
-    margin-top: rem(47);
-
+    list-style-type: none;
+    padding: 0;
+margin-top: rem(60);
     @include mq("md") {
-        margin-top: rem(45);
+        gap: 0 rem(1);
+        margin-top: rem(80);
     }
 }
 
@@ -19,13 +21,13 @@
     justify-content: center;
     width: 100%;
     margin: 10px auto;
-    padding: rem(30);
+    padding: rem(0);
     list-style: none;
     text-align: center;
 
     @include mq("md") {
         padding: rem(0);
-        margin-top: rem(25);
+        margin-top: rem(0);
     }
 }
 
@@ -55,10 +57,10 @@
 }
 
 .pagination__list-item:nth-child(n+3) {
-    margin-top: rem(40);
+   
 
     @include mq("md") {
-        margin-top: rem(37);
+      
     }
 }
 
@@ -89,9 +91,10 @@
 
 .page-item.prev.disabled {
     //戻るリンク
-    margin-right: rem(28);
+    margin-right: rem(40);
 }
 
 .page-item.next {
-    margin-left: rem(40); //進むリンク
+  //進むリンク
+  margin-left: rem(40);
 }

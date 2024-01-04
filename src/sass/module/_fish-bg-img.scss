@@ -3,15 +3,15 @@
 .fish-bg-img {
   display: flex;
   position: absolute;
-  top: -20%;
+  top: 0%;
   width: 7.5rem;
   z-index: 1;
 
   @include mq("md") {
     display: flex;
-    left: calc(50% - min(48.5vw, 38.75rem));
+    left: -5%;
     position: absolute;
-    top: -90%;
+    top: -3%;
     width: rem(301);
   }
 }
