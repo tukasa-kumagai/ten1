@@ -1,4 +1,9 @@
 @use "global" as *;
 
 .l-page-site-map {
+
+    @include mq("md") {
+        margin-top: rem(144);
+    }
+    
 }

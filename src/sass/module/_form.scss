@@ -153,7 +153,7 @@
 
 .form__item-textarea {
     border: rem(1) solid $green;
-    border-radius: rem(6);
+    border-radius: rem(0);
     padding-left: 1em;
     padding-right: 1em;
     flex: 1;
@@ -269,7 +269,7 @@
     display: block;
     width: rem(18);
     height: rem(2);
-    background: $green;
+    background: $red;
     transform-origin: bottom left;
     transform: rotateZ(90deg);
 }
@@ -279,7 +279,7 @@
     display: block;
     width: rem(8);
     height: rem(2);
-    background: $green;
+    background: $red;
     transform-origin: bottom left;
     transform: rotateZ(0deg);
 }

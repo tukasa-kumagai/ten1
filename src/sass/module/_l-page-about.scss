@@ -1,5 +1,11 @@
 @use "global" as *;
 
 .l-page-about {
-    
+    margin-top: rem(0);
+
+    @include mq("md") {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: rem(215);
+    }
 }

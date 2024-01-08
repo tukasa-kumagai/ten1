@@ -30,20 +30,7 @@
 }
 
 .fish-bg-img---position2 {
-  top: -0.6%;
-  width: rem(120);
-
-  @include mq("md") {
-    display: flex;
-    left: -5%;
-    position: absolute;
-    top: -4%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position3 {
-  top: 0.2%;
+  top: -15%;
   width: rem(120);
 
   @include mq("md") {
@@ -51,6 +38,19 @@
     left: 7%;
     position: absolute;
     top: -15%;
+    width: rem(301);
+  }
+}
+
+.fish-bg-img---position3 {
+  top: -0.8%;
+  width: rem(120);
+
+  @include mq("md") {
+    display: flex;
+    left: -5%;
+    position: absolute;
+    top: -4%;
     width: rem(301);
   }
 }

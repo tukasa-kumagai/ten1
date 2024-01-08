@@ -259,3 +259,81 @@
         margin-top: rem(31);
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+ /*ボックス枠のCSS*/
+ .label_test:after {
+    border: 1px solid $green;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: 14px;
+    left: 15px;
+    margin: -8px 0 0 -2px;
+    position: absolute;
+    top: 50%;
+    width: 14px;
+  }
+
+  .label_test {
+    position: relative; 
+    padding: 0 0 0 30px; 
+    width: 104%;
+
+  }
+
+ .label_test:hover:after {
+    border-color: #0171bd; 
+ }
+    .label_test:after, .label_test:before{
+    position: absolute; 
+    content: ""; 
+    display: block; 
+    top: 50%; 
+    }
+  /*チェックマークの追加*/
+    .label_test:before {
+      //border-bottom: 4px solid red; 
+      border-right: 8px solid $green;
+      height: 9px;
+      left: 16px;
+      margin-top: -6px;
+      opacity: 0;
+      /* transform: rotate(45deg); */
+      width: 8px;
+      border-radius: 100%;
+    }
+    /*チェックボックスがチェックされた時に動作する内容*/
+    input[type=checkbox]:checked + .label_test:before {
+    opacity: 1; 
+    }
+
+
+    //試作品
+.contact-item,
+.contact-body {
+display: block;
+
+}
+.er {
+  border-radius: 50%;
+}
+.contact-item {
+  text-align: left; /* テキスト左寄せ */
+  width: 30%; /* 横幅30%指定（グレーの背景色部分） */
+  background-color: #eee; /* グレーの背景色 */
+}
+
+.contact-body {
+  width: 70%; /* 横幅70%指定（白背景色部分） */
+display: grid;
+}

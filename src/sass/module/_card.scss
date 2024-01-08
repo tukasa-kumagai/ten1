@@ -99,6 +99,15 @@
     }
 }
 
+.card__head.card__head--blog-position {
+
+    @include mq("md") {
+        font-size: rem(16);
+        line-height: 1.5;
+        padding-top: rem(10);
+    }
+}
+
 .card__head--campaign-position {
     text-align: left;
     padding-left: rem(16);
@@ -182,17 +191,7 @@
 
 
 
-.card__head-text.card__head-text {
-    font-size: rem(16);
-    color: $black2;
-    font-weight: 500;
 
-    @include mq("md") {
-        font-size: rem(24);
-        line-height: 1.5;
-
-    }
-}
 
 
 
@@ -240,6 +239,14 @@
 
     @include mq("md") {
         line-height: 3;
+   
+    }
+}
+
+.card__foot-regular.card__foot-regular--position {
+
+    @include mq("md") { 
+line-height: 1;
     }
 }
 
@@ -256,6 +263,12 @@
         margin-left: rem(13);
         line-height: 1;
         letter-spacing: 0em;
+    }
+}
+.card__foot-discount.card__foot-discount--position {
+
+    @include mq("md") { 
+line-height: 1;
     }
 }
 
@@ -339,4 +352,8 @@
         font-weight: $regular;
 
     }
+}
+
+.card__foot-inquiry---position {
+    
 }

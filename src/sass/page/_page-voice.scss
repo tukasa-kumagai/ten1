@@ -34,7 +34,12 @@
   }
 }
 
-.page-vice__items:nth-child(n+2) {
-  margin-top: rem(80);
 
+.page-vice__items:nth-child(n+2) {
+ 
+  @include mq("md") {
+    margin: 0 auto;
+    margin-top: rem(90);
+  }
 }
+

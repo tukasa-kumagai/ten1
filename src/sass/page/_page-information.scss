@@ -231,6 +231,12 @@
 	line-height: calc(24 / 24);
 	padding-bottom: rem(7);
 	border-bottom: rem(1) solid $green;
+	@include mq(md) {
+		padding-bottom: rem(10);
+		margin-bottom: rem(6);
+	}
+
+	
 }
 
 .info-content__text {
