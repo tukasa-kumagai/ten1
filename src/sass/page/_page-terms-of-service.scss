@@ -6,8 +6,8 @@
 .page-terms-of-service {}
 
 .page-terms-of-service__inner.inner {
-  padding-left: rem(25);
-  padding-right: rem(25);
+  padding-left: rem(0);
+  padding-right: rem(0);
   position: relative;
 
   @include mq("md") {
@@ -15,11 +15,46 @@
   }
 }
 
+.page-terms-of-service__inner2.inner {
+  padding-left: rem(38);
+  padding-right: rem(17);
+  position: relative;
+
+  @include mq("md") {
+    max-width: rem(800);
+    padding-left: rem(24);
+    padding-right: rem(1);
+  }
+}
+
+.page-terms-of-service__inner3.inner {
+  padding-left: rem(15);
+  padding-right: rem(15);
+  position: relative;
+
+  @include mq("md") {
+    max-width: rem(800);
+    padding-left: rem(0);
+    padding-right: rem(0);
+  }
+}
+
+.page-terms-of-service__inner4.inner {
+  padding-left: rem(32);
+  padding-right: rem(32);
+  position: relative;
+
+  @include mq("md") {
+    max-width: rem(800);
+    padding-left: rem(18);
+    padding-right: rem(9);
+  }
+}
 .page-terms-of-service__sentence {
   margin-top: rem(45);
 
   @include mq("md") {
-    margin-top: rem(155);
+    margin-top: rem(143);
   }
 }
 

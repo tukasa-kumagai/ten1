@@ -90,3 +90,12 @@
         margin-top: rem(210);
     }
 }
+
+
+.l-contact--low-page-position11 {
+    margin-top: rem(23);
+
+    @include mq("md") {
+        margin-top: rem(127);
+    }
+}

@@ -32,10 +32,33 @@
     }
 }
 
+.sentence__list.sentence__list--position1 {
+margin-top: rem(1);
+    @include mq("md") {
+
+    }
+}
+
+
+.sentence__list.sentence__list--position2 {
+
+        @include mq("md") {
+    margin-top: rem(30);
+        }
+    }
+
 .sentence__list-circle {
     list-style-type: disc;
     margin-top: rem(30);
 
+}
+
+.sentence__list-circle.sentence__list-circle--position1 {
+margin-top: rem(10);
+    @include mq("md") {
+margin-top: rem(2);
+line-height: 1.9;
+    }
 }
 
 .sentence__sub-title1 {

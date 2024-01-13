@@ -26,13 +26,7 @@
 
 }
 
-.page-terms-of-service__sentence {
-    margin-top: rem(45);
 
-    @include mq("md") {
-        margin-top: rem(155);
-    }
-}
 
 .sentence__title {
     font-size: rem(32);
