@@ -13,15 +13,14 @@
     @include mq("md") {
         display: grid;
         grid-template-columns: repeat(auto-fill,minmax(rem(150),1fr));
-        gap: rem(32);
-        padding: rem(10);
+        gap: rem(16) rem(32);
     }
    
 }
 
 .button2__item {
   display: inline-block;
-  width: rem(162);//横幅
+  width: 100%;//横幅
   text-align: center;//文字を左に寄せる
   position: relative;
   z-index: 1;

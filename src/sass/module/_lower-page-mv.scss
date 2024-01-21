@@ -4,8 +4,10 @@
   position: relative;
   overflow: hidden;
   object-fit: cover;
-
-  @include mq("md") {}
+height: rem(460);
+  @include mq("md") {
+    height: rem(548);
+  }
 }
 
 .lower-page-mv__text {
@@ -41,8 +43,13 @@
 .lower-page-mv__slide {
   position: relative;
   width: 100%;
-  height: 100vh;
+ height: 100%;
+
   overflow: hidden;
+
+  @include mq("md") {
+    
+  }
 }
 
 .lower-page-mv__slide-image {
@@ -53,16 +60,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: rem(460);
+  height: 100%;
   opacity: 1;
 
   @include mq("md") {
-    height: rem(548);
+   
   }
 
 }
 
 .lower-page-mv__slide-image img {
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
+  @include mq("md") {
+   
+  }
 }

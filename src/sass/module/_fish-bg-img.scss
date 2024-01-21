@@ -1,168 +1,22 @@
 @use "global" as *;
 
-.fish-bg-img {
-  display: flex;
+.fish::before {
+  background-image: url("/assets/images/top/fish1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
   position: absolute;
-  top: 0%;
-  width: 7.5rem;
-  z-index: 1;
-
-  @include mq("md") {
-    display: flex;
-    left: -5%;
-    position: absolute;
-    top: -3%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position1 {
-  top: -5%;
+  height: rem(135);
+  left: rem(17);
+  top: rem(-94);
   width: rem(120);
 
-  @include mq("md") {
-    display: flex;
-    left: -5%;
-    position: absolute;
-    top: -25%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position2 {
-  top: -15%;
-  width: rem(120);
 
   @include mq("md") {
-    display: flex;
-    left: 7%;
-    position: absolute;
-    top: -15%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position3 {
-  top: -0.8%;
-  width: rem(120);
-
-  @include mq("md") {
-    display: flex;
-    left: -5%;
-    position: absolute;
-    top: -4%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position4 {
-  top: -2%;
-  width: rem(120);
-
-  @include mq("md") {
-    display: flex;
-    left: -32%;
-    position: absolute;
-    top: -6%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position5 {
-  top: -1.3%;
-  width: rem(120);
-
-  @include mq("md") {
-    display: flex;
-    left: -32%;
-    position: absolute;
-    top: -6%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position6 {
-  top: -1.2%;
-  width: rem(120);
-
-  @include mq("md") {
-    display: flex;
-    left: -5%;
-    position: absolute;
-    top: -3%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img---position7 {
-  top: -1.3%;
-  width: rem(120);
-  z-index: 1;
-
-  @include mq("md") {
-    display: flex;
-    left: -32%;
-    position: absolute;
-    top: 4%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img.fish-bg-img---position8 {
-  top: 4%;
-  width: rem(120);
-  z-index: 1;
-
-  @include mq("md") {
-    display: none;
-    display: flex;
-    left: -50%;
-    position: absolute;
-    top: 4%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img.fish-bg-img---position9 {
-  top: 0.2%;
-  width: rem(120);
-  z-index: 1;
-
-  @include mq("md") {
-
-    display: flex;
-    left: -4%;
-    position: absolute;
-    top: 2.5%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img.fish-bg-img---position10 {
-  top: 0.5%;
-  width: rem(120);
-  z-index: 1;
-
-  @include mq("md") {
-    display: flex;
-    left: -4%;
-    position: absolute;
-    top: 2.5%;
-    width: rem(301);
-  }
-}
-
-.fish-bg-img.fish-bg-img---position11 {
-  top: -1.5%;
-  left: 3%;
-  width: rem(120);
-  z-index: 1;
-
-  @include mq("md") {
-    display: flex;
-    left: -28%;
-    position: absolute;
-    top: -7%;
-    width: rem(301);
+      height: rem(150);
+      right: rem(46);
+      top: rem(-71);
+      width: rem(301);
+      left: calc(50% - min(48.5vw,  38.875rem));
   }
 }
