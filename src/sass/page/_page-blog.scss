@@ -14,11 +14,12 @@
 .page-blog__content {
   width: 100%;
   display: block;
-  margin-top: rem(52);
+
 
   @include mq("md") {
     display: flex;
-    margin-top: rem(145);
+    gap: 5rem
+    
   }
 }
 
@@ -224,3 +225,8 @@
   height: rem(24);
   margin-right: rem(10);
 }
+
+
+
+
+///テスト

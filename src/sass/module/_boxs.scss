@@ -1,8 +1,23 @@
 @use "global" as *;
 
 .boxes {
+  display: grid;
+  grid-template-columns: rem(333);
+  gap: rem(40);
+  justify-content: center;
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: rem(40);
+    position: relative;
+  }
+}
 
-  @include mq("md") {}
+.boxes--column {
+
+  @include mq("md") {
+    grid-template-columns:  1fr 1fr;
+  }
 }
 
 .boxes__item {

@@ -70,17 +70,11 @@
 
 .blog__items {
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: rem(333);
-  gap: rem(40);
-  justify-content: center;
+ 
   margin-top: rem(30);
 
   @include mq("md") {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: rem(40);
-    position: relative;
+   
     margin-top: rem(80);
   }
 }
