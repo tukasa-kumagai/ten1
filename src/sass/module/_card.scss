@@ -67,6 +67,17 @@
     }
 }
 
+.card__foot.card__foot--under2 {
+    padding: rem(10) rem(36) rem(4) rem(30);
+    display: inline-block;
+    margin-top: auto;
+
+    @include mq("md") {
+        margin-top: auto;
+        padding: rem(0) rem(36) rem(2) rem(30);
+    }
+}
+
 .card__foot.card__foot--campaign-under {
     padding: rem(11) rem(36) rem(7) rem(30);
     display: inline-block;
@@ -96,6 +107,17 @@
     @include mq("md") {
         padding-left: rem(16);
         padding-top: rem(24);
+    }
+}
+
+.card__head.card__head--position {
+
+    padding-top: rem(16);
+
+
+    @include mq("md") {
+     
+        padding-top: rem(0);
     }
 }
 

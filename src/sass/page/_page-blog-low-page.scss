@@ -23,14 +23,11 @@
 .page-blog-low-page__content {
   width: 100%;
   display: block;
-  margin-top: rem(45);
-
   @include mq("md") {
     display: flex;
-    margin-top: rem(140);
-  }
+    gap: rem(70);
 }
-
+}
 .page-blog-low-page__container {
 
   @include mq("md") {}
@@ -86,7 +83,6 @@
 
   @include mq("md") {
     width: 27%;
-    margin-left: rem(80);
     margin-top: rem(0);
 
   }
@@ -131,13 +127,12 @@
   font-weight: 200;
 }
 
+.page-blog-low-page__box {
+
+}
 .page-blog-low-page__sub-reviews {
   display: block;
-  margin-top: rem(80);
-
-  @include mq("md") {
-    margin-top: rem(83);
-  }
+ 
 }
 
 .page-blog-low-page__sub-reviews-card {}
@@ -206,7 +201,7 @@
 
 
 .page-blog-low-page__sub-archive {
-  margin-top: rem(90);
+
 
   @include mq("md") {
     font-size: rem(24);
@@ -216,7 +211,7 @@
 }
 
 .page-blog-low-page__sub-archive-main {
-  margin-top: rem(24);
+
   color: $green;
   font-weight: $regular;
   font-family: $base-font-family;

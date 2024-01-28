@@ -143,7 +143,7 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($){
   $('.pagination__list3').paginathing({
-      perPage: 3,
+      perPage: 6,
       firstLast: false,
       prevText:'<' ,
       nextText:'>' ,

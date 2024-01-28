@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.triangle-block {
+    list-style: none;
+    
+  }
+  
+  .triangle-block > .triangle-block__list {
+    position: relative;
+    padding: 0 0 0 rem(30);
+    margin-left: rem(25);
+  }
+  .triangle-block > .triangle-block__list::before {
+    position: absolute;
+    top: 50%;
+    left: rem(8);
+    transform: translateY(-50%);
+    width: 0px;
+    height: rem(25);
+    border: rem(12) solid transparent;
+    border-left: rem(16) solid $green;
+    content: "";
+
+
+   
+  }

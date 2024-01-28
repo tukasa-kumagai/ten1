@@ -17,3 +17,11 @@
   
 
 }
+
+.cards2.cards2--grid {
+  @include mq("md") {
+
+    gap: rem(92) rem(40);
+
+  }
+}

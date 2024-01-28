@@ -16,7 +16,7 @@
     position: relative;
 
     @include mq("md") {
-        margin-top: rem(123);
+        margin-top: rem(118);
         position: relative;
 
     }
@@ -24,7 +24,11 @@
 }
 
 .l-contact--low-page-position2 {
-    margin-top: rem(105);
+    margin-top: rem(66);
+
+    @include mq("md") {
+        margin-top: rem(100);
+    }
 }
 
 .l-contact.l-contact--low-page-position3 {
@@ -36,7 +40,7 @@
 }
 
 .l-contact--low-page-position4 {
-    margin-top: rem(95);
+    margin-top: rem(107);
 
     @include mq("md") {
         margin-top: rem(123);    
@@ -79,15 +83,15 @@
     margin-top: rem(183);
 
     @include mq("md") {
-        margin-top: rem(95);
+        margin-top: rem(116);
     }
 }
 
 .l-contact--low-page-position10 {
-    margin-top: rem(117);
+    margin-top: rem(100);
 
     @include mq("md") {
-        margin-top: rem(210);
+        margin-top: rem(121);
     }
 }
 

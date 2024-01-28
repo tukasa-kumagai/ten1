@@ -1,0 +1,10 @@
+@use "global" as *;
+
+.l-page-blog-low-page {
+    margin-top: rem(45);
+
+  @include mq("md") {
+
+    margin-top: rem(140);
+  }
+}
