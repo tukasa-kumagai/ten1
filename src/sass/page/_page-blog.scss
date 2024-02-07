@@ -64,6 +64,7 @@
   display: flex;
   box-shadow: rem(2) rem(2) rem(4) gray;
   padding: rem(16);
+  padding: rem(19) rem(20) rem(16) rem(15);
   width: 100%;
   margin-top: rem(24);
 
@@ -74,6 +75,10 @@
     width: 100%;
     margin-top: rem(24);
   }
+}
+
+.page-blog__sub-card+.page-blog__sub-card {
+  margin-top: rem(30);
 }
 
 .page-blog__sub-card-text {
@@ -107,7 +112,7 @@
   margin-top: rem(80);
 
   @include mq("md") {
-    margin-top: rem(100);
+    margin-top: rem(90);
   }
 }
 
@@ -127,7 +132,11 @@
   font-size: rem(12);
   font-family: $base-font-family;
   font-weight: $regular;
-  margin-top: rem(16);
+  margin-top: rem(14);
+
+  @include mq("md") {
+
+  }
 
 }
 
@@ -135,7 +144,11 @@
   font-size: rem(24);
   font-family: $base-font-family;
   font-weight: $regular;
-  margin-top: rem(16);
+  margin-top: rem(7);
+
+  @include mq("md") {
+
+  }
 }
 
 .page-blog__sub-reviews-button-inner {
@@ -179,6 +192,13 @@
 
   @include mq("md") {
     max-width: rem(333);
+  }
+}
+
+.page-blog__sub-campaign__item+.page-blog__sub-campaign__item {
+margin-top: rem(45);
+  @include mq("md") {
+    margin-top: rem(29);
   }
 }
 
@@ -239,6 +259,16 @@
 }
 
 
+.summary-items {
+color: $green;
+font-size: rem(24);
+font-weight: $regular;
+font-family: $base-font-family;
+}
+
+.summary-item {
+
+}
 summary::marker {
   color: $green;
   font-size: rem(34);

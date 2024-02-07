@@ -3,7 +3,7 @@
 .card2 {
   box-shadow: 0 0 rem(8) gray;
   margin: 0 auto;
-  padding: rem(15) rem(16) rem(24) rem(16);
+  padding: rem(15) rem(25) rem(24) rem(25);
   margin-top: rem(0);
   max-width: 100%;
 
@@ -27,7 +27,8 @@
   margin-top: rem(0);
 
   @include mq("md") {
-    margin-top: rem(41);
+    margin-top: rem(35);
+    width: 58%;
   }
 }
 
@@ -72,7 +73,9 @@
   @include mq("md") {
     font-size: rem(24);
     font-weight: 500;
-    margin-top: rem(8);
+    margin-top: rem(7);
+    letter-spacing: 0.05em;
+
   }
 }
 

@@ -29,7 +29,7 @@
 }
 
 .blog::before {
-  background-image: url(/assets/images/top/fish3.png);
+  background-image: url(/assets/images/top/fish4.png);
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -37,10 +37,10 @@
   position: absolute;
 
   @include mq("md") {
-    height: rem(185);
+    height: rem(300);
     left: rem(105);
     top: rem(30);
-    width: rem(371);
+    width: rem(434);
     z-index: 100;
     left: calc(50% - min(48.5vw, 38.75rem));
   }

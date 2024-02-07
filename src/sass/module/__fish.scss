@@ -8,7 +8,7 @@
   position: absolute;
   height: rem(135);
   left: rem(17);
-  top: rem(-94);
+  top: rem(-24);
   width: rem(120);
 
 
@@ -21,14 +21,18 @@
   }
 }
 
-
 .fish--blog::before {
  top: rem(-32);
  @include mq("md") {
   top: rem(-71);
  }
 }
-
+.fish--information::before {
+  top: rem(-92);
+  @include mq("md") {
+   top: rem(-71);
+  }
+ }
 .fish--contact::before {
   top: rem(-21);
   @include mq("md") {
