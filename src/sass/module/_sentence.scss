@@ -18,20 +18,112 @@
 .sentence__ol {
 
     @include mq("md") {
-        margin-top: rem(40);
+        margin-top: rem(37);
     }
 }
-
-.sentence__list {
-    list-style-type: decimal;
-    line-height: 2;
-    margin-top: rem(30);
+.sentence__ol1 {
 
     @include mq("md") {
         margin-top: rem(0);
     }
 }
 
+.sentence__list {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(32);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
+.sentence__list1 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
+.sentence__list2 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
+.sentence__list3 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+.sentence__list4 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
+.sentence__list5 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(38);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
+.sentence__list6 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
+.sentence__list7 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+.sentence__list8 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+.sentence__list9 {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(0);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
 .sentence__list.sentence__list--position1 {
 margin-top: rem(1);
     @include mq("md") {
@@ -43,16 +135,40 @@ margin-top: rem(1);
 .sentence__list.sentence__list--position2 {
 
         @include mq("md") {
-    margin-top: rem(30);
+    margin-top: rem(35);
         }
     }
 
 .sentence__list-circle {
     list-style-type: disc;
-    margin-top: rem(30);
+    margin-top: rem(37);
 
 }
 
+.sentence__list-circle1 {
+    list-style-type: disc;
+    margin-top: rem(7);
+    letter-spacing: 0.01em;
+    line-height: 1.9;
+
+}
+.sentence__list-circle2 {
+    list-style-type: disc;
+    margin-top: rem(35);
+    letter-spacing: 0.01em;
+    line-height: 1.9;
+
+}
+
+.sentence__list-circle3 {
+    margin-top: rem(3);
+    list-style-type: disc;
+    letter-spacing: 0.2em;
+        @include mq("md") {
+    margin-top: rem(2);
+    line-height: 1.9;
+        }
+    }
 .sentence__list-circle.sentence__list-circle--position1 {
 margin-top: rem(10);
     @include mq("md") {
@@ -62,16 +178,27 @@ line-height: 1.9;
 }
 
 .sentence__sub-title1 {
-    margin-top: rem(40);
+    margin-top: rem(36);
     line-height: 2;
-
+    letter-spacing: 0.01em;
     @include mq("md") {}
-
-    margin-top: rem(40);
-    letter-spacing: -0.05em;
+   
+   
 }
 
 .sentence__sub-title2 {
-    margin-top: rem(29);
+    margin-top: rem(31);
     line-height: 2;
+    @include mq("md") {}
+}
+
+.sentence__sub-title3 {
+    margin-top: rem(35);
+    line-height: 2;
+    @include mq("md") {}
+}
+.sentence__sub-title4 {
+    margin-top: rem(30);
+    line-height: 2;
+    @include mq("md") {}
 }

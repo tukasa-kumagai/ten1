@@ -57,7 +57,7 @@
 .information__main {
     max-width: rem(600);
     margin: 0 auto;
-    margin-top: rem(30);
+    margin-top: rem(26);
 
     @include mq("md") {
         display: flex;
@@ -92,9 +92,11 @@
 }
 
 .information__group {
+    margin-top: rem(40);
     @include mq("md") {
         max-width: rem(492);
-        margin-top: rem(40);
+        margin-top: rem(34);
+     
     }
 }
 
@@ -108,7 +110,7 @@
 
     @include mq("md") {
         font-size: rem(24);
-        padding-bottom: rem(4);
+        padding-bottom: rem(9);
         line-height: 1em;
     }
 }
@@ -122,8 +124,7 @@
    
 
     @include mq("md") {
-       
-        margin-top: rem(10);
+        margin-top: rem(7);
     }
 }
 

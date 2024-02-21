@@ -1,13 +1,13 @@
 @use "global" as *;
 
 .l-information {
-    padding-top: rem(75);
-    padding-bottom: rem(80);
-    margin-top: rem(85);
+    padding-top: rem(78);
+    padding-bottom: rem(86);
+    margin-top: rem(76);
 
     @include mq("md") {
-        padding-bottom: rem(93);
-        margin-top: rem(140);
+        padding-bottom: rem(74);
+        margin-top: rem(165);
         padding-top: rem(100);
     }
 }

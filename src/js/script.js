@@ -152,35 +152,20 @@ jQuery(document).ready(function($){
 });
 
 //モーダル
-// 変数に要素を入れる
-var trigger = $('.modal__trigger'),
-    wrapper = $('.modal__wrapper'),
-    layer = $('.modal__layer'),
-    container = $('.modal__container'),
-    close = $('.modal__close'),
-    content = $('.modal__content');
-
-// 『モーダルを開くボタン』をクリックしたら、『モーダル本体』を表示
-$(trigger).click(function() {
-  $(wrapper).fadeIn(400);
-
+$(".js-modal-img").click(function () {
   // クリックした画像のHTML要素を取得して、置き換える
-  $(content).html($(this).prop('outerHTML'));
+  $(".js-modal-content").html($(this).prop("outerHTML"));
 
-  // スクロール位置を戻す
-  $(container).scrollTop(0);
-
-  // サイトのスクロールを禁止にする
-  $('html, body').css('overflow', 'hidden');
+  $(".js-modal").fadeIn(200);
+  return false;
 });
 
-// 『背景』と『モーダルを閉じるボタン』をクリックしたら、『モーダル本体』を非表示
-$(layer).add(close).click(function() {
-  $(wrapper).fadeOut(400);
-
-  // サイトのスクロール禁止を解除する
-  $('html, body').removeAttr('style');
+$(".js-modal").click(function () {
+  // 非表示にする
+  $(".js-modal").fadeOut(200);
+  return false;
 });
+
 
 //タブ
 //任意のタブにURLからリンクするための設定

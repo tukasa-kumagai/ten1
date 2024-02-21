@@ -70,12 +70,9 @@
 
 .blog__items {
   margin: 0 auto;
- 
   margin-top: rem(30);
-
   @include mq("md") {
-   
-    margin-top: rem(80);
+    margin-top: rem(75);
   }
 }
 

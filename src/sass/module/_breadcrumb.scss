@@ -27,6 +27,14 @@
     padding: rem(6) rem(5) rem(6) rem(0);
   }
 }
+
+.breadcrumb--position1 {
+  padding: rem(6) rem(5) rem(6) rem(0);
+
+  @include mq("md") { 
+    padding: rem(6) rem(5) rem(6) rem(0);
+  }
+}
   .breadcrumb__group {
     display: flex;
   } 

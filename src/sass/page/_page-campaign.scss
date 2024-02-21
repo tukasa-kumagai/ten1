@@ -31,6 +31,10 @@
 
 }
 
+.page-campaign__item+.page-campaign__item {
+margin-top: rem(33);
+
+}
 .page-campaign__button-inner {
   margin: 0 auto;
   text-align: center;

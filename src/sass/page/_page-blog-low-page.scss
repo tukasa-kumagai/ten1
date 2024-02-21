@@ -58,7 +58,7 @@
   margin-top: rem(24);
 
   @include mq("md") {
-    margin-top: rem(56);
+    margin-top: rem(37);
   }
 }
 
@@ -73,7 +73,10 @@
   font-family: $base-font-family;
   margin-top: rem(23);
 
-  @include mq("md") {}
+  @include mq("md") {
+    margin-top: rem(30);
+    letter-spacing: 0.01em;
+  }
 }
 
 .page-blog-low-page__sub {
@@ -284,7 +287,9 @@
   font-family: $base-font-family;
   font-weight: $regular;
 
-  @include mq("md") {}
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 
 }
 
@@ -303,6 +308,7 @@
 
   @include mq("md") {
     width: 100%;
+    margin-left: rem(32);
   }
 }
 

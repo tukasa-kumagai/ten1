@@ -3,14 +3,14 @@
 .card2 {
   box-shadow: 0 0 rem(8) gray;
   margin: 0 auto;
-  padding: rem(15) rem(25) rem(24) rem(25);
+  padding: rem(14) rem(17) rem(20) rem(15);
   margin-top: rem(0);
   max-width: 100%;
 
 }
 
 .card2:nth-child(n + 2) {
-  margin-top: rem(16);
+  margin-top: rem(22);
 
   @include mq("md") {
     margin-left: rem(0);
@@ -103,7 +103,7 @@
 .card2__text--position {
 
   @include mq("md") {
-    margin-top: rem(21);
+    margin-top: rem(41);
     -webkit-line-clamp: 7;
 
   }

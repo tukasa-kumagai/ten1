@@ -5,8 +5,8 @@
 
 .page-privacy-policy__inner.inner {
     position: relative;
-    padding-right: rem(25);
-    padding-left: rem(25);
+    padding-right: rem(15);
+    padding-left: rem(15);
 
     @include mq("md") {
         max-width: rem(1000);
@@ -21,10 +21,36 @@
 }
 
 .page-privacy-policy__inner2 {
-    max-width: rem(750);
+   padding: rem(0) rem(0) rem(0) rem(24);
     margin: 0 auto;
-
+    @include mq("md") {
+        padding: rem(0) rem(77) rem(0) rem(107);
+    }
 }
+
+.page-privacy-policy__inner3 {
+    padding: rem(0) rem(0) rem(0) rem(13);
+     margin: 0 auto;
+     @include mq("md") {
+        padding: rem(0) rem(69) rem(0) rem(105); 
+     }
+ }
+
+ .page-privacy-policy__inner4 {
+    padding: rem(0) rem(0) rem(0) rem(24);
+     margin: 0 auto;
+     @include mq("md") {
+        padding: rem(0) rem(10) rem(0) rem(106);  
+     }
+ }
+
+ .page-privacy-policy__inner5 {
+    padding: rem(0) rem(0) rem(0) rem(15);
+     margin: 0 auto;
+     @include mq("md") {
+        padding: rem(0) rem(0) rem(0) rem(85);
+     }
+ }
 
 
 

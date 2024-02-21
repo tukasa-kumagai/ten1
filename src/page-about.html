@@ -183,7 +183,7 @@
       </div>
     </nav>
     <section class="l-page-about page-about">
-      <div class="page-about-inner inner fish">
+      <div class="page-about-inner inner fish fish--about">
         <div class="page-about__main content-block">
           <div class="content-block__img1 content-block__img1--position">
             <img src="./assets/images/top/ocean2.png" alt="セクションタイトル2">
@@ -211,49 +211,52 @@
           <h2 class="section-header__english"> Gallery</h2>
           <p class="section-header__japanese">フォト</p>
         </div>
-
-        <div class="modal">
-          <div class="modal__inner ">
-            <!-- モーダルを開くボタン -->
-            <div class="modal__images">
-              <div class="gallery__block">
-                <figure class="gallery__image ten modal__image-long modal__trigger modal__active" data-micromodal-trigger="js-modal1">
-                  <img src="./assets/images/about/page-about-gallery1.png" alt="" />
-                </figure>
-                <figure class="gallery__image ten modal__image-long modal__trigger modal__active" data-micromodal-trigger="js-modal2">
-                  <img src="./assets/images/about/page-about-gallery5.png" alt="" />
-                </figure>
-                <figure class="gallery__image ten modal__image-long modal__trigger modal__active" data-micromodal-trigger="js-modal3">
-                  <img src="./assets/images/about/page-about-gallery6.png" alt="" />
-                </figure>
-                <figure class="gallery__image ten modal__image-long modal__trigger modal__active" data-micromodal-trigger="js-modal4">
-                  <img src="./assets/images/about/page-about-gallery4.png" alt="" />
-                </figure>
-                <figure class="gallery__image ten modal__image-long modal__trigger modal__active" data-micromodal-trigger="js-modal5">
-                  <img src="./assets/images/about/page-about-gallery5.png" alt="" />
-                </figure>
-                <figure class="gallery__image ten modal__image-long modal__trigger modal__active" data-micromodal-trigger="js-modal6">
-                  <img src="./assets/images/about/page-about-gallery6.png" alt="" />
-                </figure>
+            <div class="gallery__content">
+              <div class="gallery__image js-modal-img">
+                <img
+                  src="./assets/images/about/page-about-gallery1.png"
+                  alt="サンゴ礁の中を赤い魚の群れが泳ぐ様子"
+                />
+              </div>
+              <div class="gallery__image js-modal-img">
+                <img
+                  src="./assets/images/about/page-about-gallery2.png"
+                  alt="島の間の静かな海の上に船が2隻停まっている様子"
+                />
+              </div>
+              <div class="gallery__image js-modal-img">
+                <img
+                  src="./assets/images/about/page-about-gallery3.png"
+                  alt="白色の尾が黄色の魚"
+                />
+              </div>
+              <div class="gallery__image js-modal-img">
+                <img
+                  src="./assets/images/about/page-about-gallery4.png"
+                  alt="黄色い魚"
+                />
+              </div>
+              <div class="gallery__image js-modal-img">
+                <img
+                  src="./assets/images/about/page-about-gallery5.png"
+                  alt="銀色の魚の群れ"
+                />
+              </div>
+              <div class="gallery__image js-modal-img">
+                <img
+                  src="./assets/images/about/page-about-gallery6.png"
+                  alt="黄色い魚がサンゴ礁の横を泳ぐ様子"
+                />
               </div>
             </div>
-          </div>
-          <!-- / モーダルを開くボタン -->
-          <!-- モーダル本体 -->
-          <div class="modal__wrapper">
-            <div class="modal__layer"></div>
-            <div class="modal__container">
-              <!-- モーダルを閉じるボタン -->
-              <div class="modal__close"></div>
-              <!-- / モーダルを閉じるボタン -->
-
-              <!-- モーダル内のコンテンツ -->
-              <div class="modal__content"></div>
-              <!-- / モーダル内のコンテンツ -->
+            <div class="gallery__modal js-modal">
+              <div class="gallery__modal-content js-modal-content"></div>
             </div>
           </div>
-          <!-- / モーダル本体 -->
-        </div>
+        </section>
+
+
+    
 
 
 

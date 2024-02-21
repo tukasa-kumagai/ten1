@@ -281,6 +281,14 @@
     }
 }
 
+.card__foot-regular.card__foot-regular--campaign-position {
+    line-height: 2.6;
+ 
+ @include mq("md") { 
+
+ }
+}
+
 .card__foot-discount {
     font-size: rem(32);
     color: $green;
@@ -288,7 +296,7 @@
     letter-spacing: 0em;
     font-weight: bold;
     line-height: 1.5;
-
+    letter-spacing: -0.1em;
     @include mq("md") {
         font-size: rem(40);
         margin-left: rem(0);

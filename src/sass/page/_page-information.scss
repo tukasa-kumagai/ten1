@@ -71,6 +71,12 @@
 	}
 }
 
+.info-tab__text:hover {
+	color: $white;
+	background-color: $green;
+	
+}
+
 .info-tab__text--md-show {
 	display: block;
 
@@ -101,7 +107,16 @@
 
 	@include mq(md) {
 		display: block;
-		background-image: url(/assets/images/information/page-information-ocean_sea_icon2.png);
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon1.png);
+	}
+}
+
+.info-tab__text:nth-child(1):hover::before {
+	display: none;
+
+	@include mq(md) {
+		display: block;
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon4.png);
 	}
 }
 
@@ -114,12 +129,34 @@
 	}
 }
 
+.info-tab__text:nth-child(2):hover::before {
+	display: none;
+
+	@include mq(md) {
+		display: block;
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon5.png);
+	}
+}
+
+
+
+
+
 .info-tab__text:nth-child(3)::before {
 	display: none;
 
 	@include mq(md) {
 		display: block;
-		background-image: url(/assets/images/information/page-information-ocean_sea_icon2.png);
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon3.png);
+	}
+}
+
+.info-tab__text:nth-child(3):hover::before {
+	display: none;
+
+	@include mq(md) {
+		display: block;
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon6.png);
 	}
 }
 
@@ -128,7 +165,7 @@
 
 	@include mq(md) {
 		display: block;
-		background-image: url(/assets/images/information/page-information-ocean_sea_icon1.png);
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon4.png);
 	}
 }
 
@@ -137,7 +174,7 @@
 
 	@include mq(md) {
 		display: block;
-		background-image: url(/assets/images/information/page-information-ocean_sea_icon1.png);
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon5.png);
 	}
 }
 
@@ -146,9 +183,10 @@
 
 	@include mq(md) {
 		display: block;
-		background-image: url(/assets/images/information/page-information-ocean_sea_icon1.png);
+		background-image: url(/assets/images/information/page-information-ocean_sea_icon6.png);
 	}
 }
+
 
 .info-content__item {
 	display: none;

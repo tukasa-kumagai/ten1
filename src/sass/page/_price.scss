@@ -68,7 +68,7 @@
         flex-direction: row-reverse;
         justify-content: center;
         max-width: 100%;
-        margin-top: rem(40);
+        margin-top: rem(34);
     }
 }
 
@@ -121,6 +121,7 @@
 
 .price__content+.price__content {
     margin-top: rem(41);
+
     @include mq("md") {
         margin-top: rem(40);
     }
@@ -212,20 +213,23 @@ div.pc-price__img img {
 dl.price__list {
     display: flex;
     justify-content: space-between;
-    margin-top: rem(8);
-    @include mq("md") {
+    margin-top: rem(12);
 
+    @include mq("md") {
+        margin-top: rem(9);
     }
-    
+
 }
 
 .price__list+.price__list {
-    margin-top: rem(12);
+    margin-top: rem(11);
+
     @include mq("md") {
         margin-top: rem(8);
     }
-    
+
 }
+
 .price__name {
     font-size: rem(14);
 
@@ -237,7 +241,7 @@ dl.price__list {
 
 .price__money {
     font-size: rem(14);
- 
+
 
     @include mq("md") {
         font-size: rem(16);
