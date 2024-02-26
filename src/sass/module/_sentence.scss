@@ -77,13 +77,23 @@
     }
 }
 
+.sentence__list4--position {
+    list-style-type: decimal;
+    line-height: 2;
+    margin-top: rem(37);
+
+    @include mq("md") {
+        margin-top: rem(0);
+    }
+}
+
 .sentence__list5 {
     list-style-type: decimal;
     line-height: 2;
     margin-top: rem(38);
 
     @include mq("md") {
-        margin-top: rem(0);
+        margin-top: rem(30);
     }
 }
 
@@ -144,6 +154,12 @@ margin-top: rem(1);
     margin-top: rem(37);
 
 }
+.sentence__list-circle---point {
+    list-style-type: none;
+    margin-top: rem(37);
+    line-height: 1.9;
+
+}
 
 .sentence__list-circle1 {
     list-style-type: disc;
@@ -169,6 +185,17 @@ margin-top: rem(1);
     line-height: 1.9;
         }
     }
+
+    .sentence__list-circle3--point {
+        margin-top: rem(3);
+        list-style-type: none;
+        letter-spacing: 0.01em;
+        line-height: 1.9;
+            @include mq("md") {
+        margin-top: rem(2);
+        line-height: 1.9;
+            }
+        }
 .sentence__list-circle.sentence__list-circle--position1 {
 margin-top: rem(10);
     @include mq("md") {
@@ -195,7 +222,9 @@ line-height: 1.9;
 .sentence__sub-title3 {
     margin-top: rem(35);
     line-height: 2;
-    @include mq("md") {}
+    @include mq("md") {
+        text-align: center;
+    }
 }
 .sentence__sub-title4 {
     margin-top: rem(30);

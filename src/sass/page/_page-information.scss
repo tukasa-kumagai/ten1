@@ -279,7 +279,11 @@
 
 .info-content__text {
 	margin-top: rem(8);
-
+	font-weight: $normal;
+	font-size: rem(16);
+	font-family: $base-font-family;
+	line-height: 1.5;
+	letter-spacing: 0.016em;
 	@include mq(md) {
 		margin-top: rem(0);
 	}

@@ -1,10 +1,6 @@
 @use "global" as *;
 
-.l-page-about {
-  margin-top: rem(0);
 
-  @include mq("md") {}
-}
 
 .about {
   @include mq("md") {

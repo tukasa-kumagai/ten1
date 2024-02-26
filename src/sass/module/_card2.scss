@@ -63,7 +63,7 @@
 
 .card2__title {
   font-size: rem(16);
-  font-weight: 500;
+  font-weight: $semibold;
   margin-top: rem(4);
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -88,7 +88,7 @@
 }
 
 .card2__text {
-  margin-top: rem(15);
+  margin-top: rem(10);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 10;

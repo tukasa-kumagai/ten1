@@ -94,6 +94,7 @@
 .page-blog__sub-card-day {
   font-size: rem(12);
   font-family: $second-font-family;
+  line-height: 1.5;
   @include mq("md") {
     font-size: rem(12);
     line-height: 1.5;
@@ -104,7 +105,7 @@
 .page-blog__sub-card-title {
   font-size: rem(16);
   font-family: $second-font-family;
-  font-weight: 200;
+  font-weight: 500;
 }
 
 .page-blog__sub-reviews {
@@ -131,8 +132,9 @@
 .page-blog__sub-reviews-age {
   font-size: rem(12);
   font-family: $base-font-family;
-  font-weight: $regular;
+  font-weight: $normal;
   margin-top: rem(14);
+  line-height: 1.5;
 
   @include mq("md") {
 
@@ -143,7 +145,7 @@
 .page-blog__sub-reviews-title {
   font-size: rem(24);
   font-family: $base-font-family;
-  font-weight: $regular;
+  font-weight: $normal;
   margin-top: rem(7);
 
   @include mq("md") {
@@ -262,7 +264,7 @@ margin-top: rem(45);
 .summary-items {
 color: $green;
 font-size: rem(24);
-font-weight: $regular;
+font-weight: $normal;
 font-family: $base-font-family;
 }
 
@@ -273,3 +275,50 @@ summary::marker {
   color: $green;
   font-size: rem(34);
 }
+
+///テスト//
+details {
+
+  max-width: 300px;
+}
+ 
+/* JavaScriptで開閉する要素（.details-content）には上下のpaddingを指定せずこちらに指定 */
+details .details-content-wrapper {
+
+}
+ 
+details .details-content {
+  overflow: hidden;  /* コンテンツがアニメーションで徐々に表示されるように */
+}
+ 
+details summary {
+  display: block; /* 矢印アイコンを非表示に */
+  cursor: pointer; /* カーソルの形状をポインターに */
+  position: relative; /* 絶対配置する疑似要素のアイコンの基準に */
+  padding: 0.5rem 0.5rem 0.5rem 36px; /* padding-left にアイコンのスペースを確保 */
+}
+ 
+details summary::-webkit-details-marker {
+  display: none; /* Safari で三角形のアイコンを非表示に */
+}
+ 
+/* 独自のアイコンを擬似要素で作成 */
+details summary::before {
+  border-bottom: 13px solid transparent;
+  border-left: 22px solid #408F95;
+  border-top: 11px solid transparent;
+  bottom: 0;
+  content: "";
+  height: 11px;
+  left: 6px;
+  position: absolute;
+  top: 15px;
+  transform: rotate(120deg);
+  transition: transform 0.3s;
+  width: 0;
+}
+ 
+details[open] summary {
+ 
+}
+

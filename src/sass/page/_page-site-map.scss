@@ -13,7 +13,7 @@
 
     @include mq("md") {
         display: flex;
-        justify-content: space-around;
+        justify-content: start;
        
     }
 }
@@ -32,11 +32,21 @@
 }
 
 .page-site-map__group2 {
-    margin-left: 40px;
+    
+    @include mq("md") {
+        margin-left: rem(0);
+    }
+}
+
+.page-site-map__group2-2 {
+    
+    @include mq("md") {
+        margin-left: rem(120);
+    }
 }
 
 .page-site-map__wrapper2 {
-    margin-left: rem(15);
+   
 
     @include mq("md") {
         display: flex;
@@ -45,7 +55,7 @@
 
 .page-site-map__wrapper2:nth-child(2) {
     @include mq("md") {
-        margin-left: rem(0);
+        margin-left: rem(107);
 
     }
 }
@@ -53,12 +63,13 @@
 .page-site-map__group1 {
     @include mq("md") {
         width: rem(168);
+        margin-left: 0;
     }
 }
 
 .page-site-map__group1:nth-child(2) {
     @include mq("md") {
-        margin-left: rem(120);
+        margin-left: rem(144);
     }
 }
 
@@ -78,7 +89,7 @@
 
 .page-site-map__nav1 {
     color: $black;
-    margin-top: rem(38);
+    margin-top: rem(43);
 
     @include mq("md") {
         margin-top: rem(0);
@@ -86,6 +97,35 @@
     }
 }
 
+.page-site-map__nav1-2 {
+    color: $black;
+    margin-top: rem(36);
+
+    @include mq("md") {
+        margin-top: rem(0);
+
+    }
+}
+
+.page-site-map__nav1-3 {
+    color: $black;
+    margin-top: rem(40);
+
+    @include mq("md") {
+        margin-top: rem(40);
+
+    }
+}
+
+.page-site-map__nav1-4 {
+    color: $black;
+    margin-top: rem(36);
+
+    @include mq("md") {
+        margin-top: rem(0);
+
+    }
+}
 .page-site-map__nav2 {
     color: $black;
     margin-top: rem(38);
@@ -96,7 +136,7 @@
 }
 
 .page-site-map__list1 a {
-    padding-left: rem(22);
+    padding-left: rem(18);
     line-height: 1.6em;
     background: url(/assets/images/site-map/starfish-black.png) left rem(0) top rem(3) no-repeat;
     background-size: rem(15) auto;
@@ -112,6 +152,23 @@
     }
 }
 
+.page-site-map__list1-2 a {
+    padding-left: rem(18);
+    line-height: 1.6em;
+    background: url(/assets/images/site-map/starfish-black.png) left rem(0) top rem(3) no-repeat;
+    background-size: rem(15) auto;
+    font-size: rem(16);
+    font-weight: bold;
+    line-height: rem(18);
+    padding-top: rem(1);
+    display: block;
+    width: 100%;
+    padding-left: rem(21);
+    margin-left: rem(19);
+    @include mq("md") {
+        width: 100%;
+    }
+}
 
 .page-site-map__list2 a {
     padding-left: rem(20);
@@ -125,11 +182,29 @@
     width: 100%;
 
     @include mq("md") {
-        padding-left: rem(20);
+        padding-left: rem(0);
         letter-spacing: 0.01em;
         margin-left: rem(0);
     }
 }
+.page-site-map__list2-2 a {
+    padding-left: rem(39);
+    margin-top: rem(25);
+    font-size: rem(16);
+    line-height: rem(18);
+    margin-left: rem(5);
+    letter-spacing: 0em;
+    display: block;
+    width: 100%;
+
+    @include mq("md") {
+        padding-left: rem(0);
+        letter-spacing: 0.01em;
+        margin-left: rem(0);
+    }
+}
+
+
 
 .page-site-map__ist3 a {
     padding-left: rem(20);
@@ -152,6 +227,33 @@
 
 .page-site-map__button:hover {
     opacity: 0.6;
+}
+
+.page-site-map__button.footer__button {
+    margin-left: 0;
+
+    @include mq("md") {
+        margin-left: rem(21);  
+    }
+}
+
+.page-site-map__button.footer__button2 {
+    margin-left: 0;
+
+    @include mq("md") {
+        margin-left: rem(40); 
+    }
+}
+
+.page-site-map__button.footer__button3 {
+    margin-left: rem(23);
+}
+
+.page-site-map__button.footer__button4 {
+    margin-left: rem(0);
+    @include mq("md") {
+        margin-left: rem(23);
+    }
 }
 
 .br-one {

@@ -169,6 +169,7 @@
     border: rem(1) solid $green;
     display: inline-block;
     padding: rem(6) rem(13) rem(4) rem(10);
+    font-weight: $normal;
     @include mq("md") {
         padding: rem(6) rem(15) rem(9) rem(15);
     }
@@ -231,7 +232,7 @@
     font-size: rem(14);
     text-align: center;
     margin-top: rem(0);
-
+    font-weight: $normal;
     @include mq("md") {
         font-size: rem(16);
         margin-top: rem(0);
@@ -283,7 +284,7 @@
 
 .card__foot-regular.card__foot-regular--campaign-position {
     line-height: 2.6;
- 
+    font-weight: bold;
  @include mq("md") { 
 
  }

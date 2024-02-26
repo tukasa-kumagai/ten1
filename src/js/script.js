@@ -260,8 +260,8 @@ $(function () {
 	$(".page-faq__list .page-faq__box").css("display", "block"); //.page-faq__list:first-of-typeを.page-faq__listに代入一番目開いておく//
 	$(".page-faq__list .page-faq__title").addClass("open");//.page-faq__list:first-of-typeを.page-faq__listに代入
 	$(".page-faq__title").on("click", function () {
-		$(".page-faq__title").not(this).removeClass("open");
-		$(".page-faq__title").not(this).next().slideUp(200);
+		//$(".page-faq__title").not(this).removeClass("open");//ひとつ開いたら他のアコディオンが閉じる
+		//$(".page-faq__title").not(this).next().slideUp(200);//ひとつ開いたら他のアコディオンが閉じる
 		$(this).toggleClass("open");
 		$(this).next().slideToggle(200);
 	});
@@ -286,8 +286,81 @@ function OnLinkClick(a_name) {
 } 
 
 
-
-
-
-
-
+// DOM ツリーの構築が完了したら定義した関数を呼び出す
+document.addEventListener('DOMContentLoaded', () => {
+  setupToggleDetailsAnimation();
+});
+ 
+// アニメーションの処理を定義した関数
+function setupToggleDetailsAnimation() {
+  // js-animation クラスを指定したすべての details 要素
+  const details = document.querySelectorAll('details.js-animation');
+ 
+  // 上記で取得したそれぞれの要素に対して以下を実行（elem は各 details 要素）
+  details.forEach(elem => {
+    // summary 要素（この要素の疑似要素で作成したアイコンをアニメーション）
+    const summary = elem.querySelector('summary');
+    // details-content クラスを指定した要素（この要素をアニメーション）
+    const content = elem.querySelector('.details-content');
+ 
+    // summary 要素にクリックイベントのリスナを設定
+    summary.addEventListener('click', (e) => {
+      // デフォルトの動作（open 属性の着脱）をキャンセル
+      e.preventDefault();
+      // open 属性が指定されていれば（開いていれば）
+      if (elem.open) {
+        //閉じるアニメーションを実行（contentはdetails-contentクラスを指定した要素）
+        const closeDetails = content.animate(
+          {
+            opacity: [1, 0],
+            height: [content.offsetHeight + 'px', 0],
+          },
+          {
+            duration: 300,
+            easing: 'ease-in',
+          }
+        );
+        //アイコンを回転させるアニメーションを実行（summary 要素）
+        const rotateIcon = summary.animate(
+          { rotate: ["90deg", "0deg"] },
+          {
+            duration: 300,
+            // summary 要素の疑似要素にアニメーションを適用
+            pseudoElement: "::before",
+            easing: 'ease-in',
+            fill: 'forwards',
+          }
+        );
+        // 閉じるアニメーションが終了したら open 属性を削除
+        closeDetails.onfinish = () => {
+          elem.removeAttribute('open');
+        }
+      } else {
+        // open 属性を details 要素に追加
+        elem.setAttribute('open', 'true');
+        // 開くアニメーションを実行
+        const openDetails = content.animate(
+          {
+            opacity: [0, 1],
+            height: [0, content.offsetHeight + 'px'],
+          },
+          {
+            duration: 300,
+            easing: 'ease-in',
+          }
+        );
+        // アイコンを回転させるアニメーションを実行（summary 要素）
+        const rotateIcon = summary.animate(
+          { rotate: ["0deg", "90deg"] },
+          {
+            duration: 300,
+            // summary 要素の疑似要素にアニメーションを適用
+            pseudoElement: "::before",
+            easing: 'ease-in',
+            fill: 'forwards',
+          }
+        );
+      }
+    });
+  });
+}
