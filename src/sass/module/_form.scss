@@ -187,14 +187,38 @@
     margin-top: rem(18);
     
     @include mq("md") {
-        font-size: rem(18);
+        font-size: rem(16);
         height: rem(38);
         margin-left: rem(0);
         max-width: rem(480);
     }
 }
 
-.form__item-input:nth-child(n+3) {}
+.form__item-input2 {
+
+    border: rem(1) solid $green;
+    border-radius: 0;
+    margin-left: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    height: rem(40);
+    flex: 1;
+    width: 100%;
+    max-width: rem(410);
+    background: $white;
+    font-size: rem(12);
+    font-weight: $normal;
+    color: $black;
+    flex: inherit;
+    margin-top: rem(18);
+    
+    @include mq("md") {
+        font-size: rem(12);
+        height: rem(38);
+        margin-left: rem(0);
+        max-width: rem(480);
+    }
+}
 
 .form__item-textarea {
     border: rem(1) solid $green;
@@ -338,3 +362,7 @@
         transform: translate(rem(12), rem(7)) rotateZ(-135deg) scale(1.5);
     }
 }
+
+::placeholder {
+    color: $green2;
+  }

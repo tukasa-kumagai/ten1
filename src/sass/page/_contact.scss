@@ -5,7 +5,7 @@
 }
 
 .contact::before {
-    background-image: url(/assets/images/top/sea-bream.png);
+    background-image: url(/assets/images/common/fish-image.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     content: "";
@@ -275,7 +275,7 @@
  /*ボックス枠のCSS*/
  .label_test:after {
     border: 1px solid $green;
-    border-radius: 50%;
+    border-radius: 0%;
     content: "";
     display: block;
     height: 14px;
@@ -294,7 +294,7 @@
   }
 
  .label_test:hover:after {
-    border-color: #0171bd; 
+    
  }
     .label_test:after, .label_test:before{
     position: absolute; 
@@ -304,15 +304,15 @@
     }
   /*チェックマークの追加*/
     .label_test:before {
-      //border-bottom: 4px solid red; 
-      border-right: 8px solid $green;
-      height: 9px;
-      left: 16px;
-      margin-top: -6px;
-      opacity: 0;
-      /* transform: rotate(45deg); */
-      width: 8px;
-      border-radius: 100%;
+        border-bottom: 2px solid red;
+        border-right: 2px solid red;
+        height: 9px;
+        left: 18px;
+        margin-top: -7px;
+        opacity: 0;
+        transform: rotate(45deg);
+        width: 5px;
+      
     }
     /*チェックボックスがチェックされた時に動作する内容*/
     input[type=checkbox]:checked + .label_test:before {
