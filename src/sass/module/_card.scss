@@ -295,10 +295,11 @@
     color: $green;
     font-family: $sub-english-font-family;
     letter-spacing: 0em;
-    font-weight: bold;
+    font-weight: $normal;
     line-height: 1.5;
     letter-spacing: -0.1em;
     @include mq("md") {
+        font-weight: $normal;
         font-size: rem(40);
         margin-left: rem(0);
         letter-spacing: -0.12em;
