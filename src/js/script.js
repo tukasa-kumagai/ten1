@@ -169,45 +169,31 @@ $(".js-modal").click(function () {
 
 //タブ
 //任意のタブにURLからリンクするための設定
-function GethashID (hashIDName){
-	if(hashIDName){
-		//タブ設定
-		$('.tab li').find('a').each(function() { //タブ内のaタグ全てを取得
-			var idName = $(this).attr('href'); //タブ内のaタグのリンク名（例）#lunchの値を取得	
-			if(idName == hashIDName){ //リンク元の指定されたURLのハッシュタグ（例）http://example.com/#lunch←この#の値とタブ内のリンク名（例）#lunchが同じかをチェック
-				var parentElm = $(this).parent(); //タブ内のaタグの親要素（li）を取得
-				$('.tab li').removeClass("active"); //タブ内のliについているactiveクラスを取り除き
-				$(parentElm).addClass("active"); //リンク元の指定されたURLのハッシュタグとタブ内のリンク名が同じであれば、liにactiveクラスを追加
-				//表示させるエリア設定
-				$(".area").removeClass("is-active"); //もともとついているis-activeクラスを取り除き
-				$(hashIDName).addClass("is-active"); //表示させたいエリアのタブリンク名をクリックしたら、表示エリアにis-activeクラスを追加	
-			}
-		});
-	}
+// ハッシュ値を取得する関数
+function getHash() {
+  return window.location.hash; // 現在のURLのハッシュ値を取得
 }
 
-//タブをクリックしたら
-$('.tab__box a').on('click', function() {
-	var idName = $(this).attr('href'); //タブ内のリンク名を取得	
-	GethashID (idName);//設定したタブの読み込みと
-	return false;//aタグを無効にする
-});
+// ハッシュ値に基づいてタブをアクティブにする関数
+function activateTab(hash) {
+  $('.tab__box li').removeClass("active"); // すべてのタブから active クラスを削除
+  $(`[href="${hash}"]`).parent().addClass("active"); // ハッシュ値に対応するタブに active クラスを追加
+  $('.area').removeClass("is-active"); // すべてのエリアから is-active クラスを削除
+  $(hash).addClass("is-active"); // ハッシュ値に対応するエリアに is-active クラスを追加
+}
 
-
-// 上記の動きをページが読み込まれたらすぐに動かす
+// ページが読み込まれたときの処理
 $(window).on('load', function () {
-    $('.tab__box li:first-of-type').addClass("active"); //最初のliにactiveクラスを追加
-    $('.area:first-of-type').addClass("is-active"); //最初の.areaにis-activeクラスを追加
-	var hashName = location.hash; //リンク元の指定されたURLのハッシュタグを取得
-	GethashID (hashName);//設定したタブの読み込み
+  var hash = getHash(); // URLのハッシュ値を取得
+  if (hash) { // ハッシュ値が存在する場合
+      activateTab(hash); // タブをアクティブにする
+  }
 });
 
-
-
-$(function(){
-	$("a").on('click',function(){
-		$(this).toggleClass("active");
-	});
+// タブをクリックしたときの処理
+$('.tab__box a').on('click', function() {
+  var hash = $(this).attr('href'); // クリックされたリンクのハッシュ値を取得
+  activateTab(hash); // タブをアクティブにする
 });
 
 
@@ -256,16 +242,11 @@ const $js_tab = $(".js-infoTab-trigger");
     });
 
   //アコーディオン
-$(function () {
-	$(".page-faq__list .page-faq__box").css("display", "block"); //.page-faq__list:first-of-typeを.page-faq__listに代入一番目開いておく//
-	$(".page-faq__list .page-faq__title").addClass("open");//.page-faq__list:first-of-typeを.page-faq__listに代入
-	$(".page-faq__title").on("click", function () {
-		//$(".page-faq__title").not(this).removeClass("open");//ひとつ開いたら他のアコディオンが閉じる
-		//$(".page-faq__title").not(this).next().slideUp(200);//ひとつ開いたら他のアコディオンが閉じる
-		$(this).toggleClass("open");
-		$(this).next().slideToggle(200);
-	});
-});
+  $(".js-accordion-title").on("click", function () {
+    $(this).toggleClass("is-open");
+    $(this).next().slideToggle(300);
+  });
+
 
 
 
@@ -364,3 +345,6 @@ function setupToggleDetailsAnimation() {
     });
   });
 }
+
+
+//タブの変更

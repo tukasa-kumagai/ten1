@@ -90,7 +90,7 @@
   box-shadow: 0 0 rem(8) gray;
   display: flex;
   flex-flow: column;
-  z-index: 99999;
+  z-index: 99;
 
   @include mq("md") {}
 }
