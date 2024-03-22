@@ -347,4 +347,13 @@ function setupToggleDetailsAnimation() {
 }
 
 
-//タブの変更
+//テスト
+/* SELECTの結果、画像を変える */
+function selectChange(id) {
+  var select = document.getElementById(id); // select object
+  var option = select.options[select.selectedIndex];  // option object
+  select.style.backgroundImage = "url(" + option.value+ ")";
+}
+
+/* 実行部 */
+selectChange("sel1"); // 画像表示

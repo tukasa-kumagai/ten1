@@ -223,15 +223,15 @@ position: relative;
     padding: 0.34375rem 0.5rem;
     border: rem(1) solid $green;
     border-radius: 0;
-    margin-left: 0;
+   
     padding-left: 1em;
     padding-right: 1em;
     height: rem(40);
     flex: 1;
+    max-width: 100%;
     width: 100%;
-    max-width: rem(375);
     background: $white;
-    font-size: rem(12);
+    font-size: rem(14);
     font-weight: $normal;
     color: $black;
     flex: inherit;
@@ -240,8 +240,8 @@ position: relative;
     @include mq("md") {
         font-size: rem(12);
         height: rem(30);
-        margin-left: rem(10);
-        max-width: rem(470);
+ 
+        max-width: rem(490);
     }
 }
 
@@ -405,7 +405,7 @@ position: relative;
   .form__item-img img {
     position: absolute;
     top: rem(-20);
-    left: 95%;
+    left: 90%;
     width: rem(10); /* 画像の幅 */
     height: auto;
     pointer-events: none; /* 画像がクリックされるのを防止 */
@@ -417,3 +417,61 @@ position: relative;
  
     }
   }
+
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+
+
+
+    @include mq("md") {
+        width: 100%;
+    }
+  }
+
+
+
+    
+      /* プルダウンメニューのスタイル */
+      .form__item-input2 {
+        -webkit-appearance: none; /* Safari/Chrome用 */
+        -moz-appearance: none; /* Firefox用 */
+        appearance: none;
+        padding-right: 30px; /* 矢印画像の幅 + 余白分 */
+      
+        @include mq("md") {
+         
+        }
+
+        
+      }
+    
+      /* 矢印画像のスタイル */
+      .arrow-icon {
+        position: absolute;
+        top: 50%;
+        right: 5px; /* 矢印画像とプルダウンメニューの間隔 */
+        transform: translateY(-50%);
+        width: 15px; /* 矢印画像の幅 */
+        height: auto; /* 高さは自動 */
+        
+      }
+  
+      .arrow-icon-img {
+     
+        top: 50%;
+        right: 5px; /* 矢印画像とプルダウンメニューの間隔 */
+        transform: translateY(30%);
+        width: 10px; /* 矢印画像の幅 */
+        height: auto; /* 高さは自動 */
+
+        @include mq("md") {
+            top: 50%;
+            right: 5px; /* 矢印画像とプルダウンメニューの間隔 */
+            transform: translateY(90%);
+            width: 10px; /* 矢印画像の幅 */
+            height: auto; /* 高さは自動 */
+        }
+        
+      }
+  
