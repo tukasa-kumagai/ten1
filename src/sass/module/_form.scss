@@ -10,8 +10,9 @@
         margin-top: rem(80);
     }
 }
+
 .form__item {
-    border-bottom: 1px dotted $green;
+    border-bottom: rem(1) dotted $green;
     width: 100%;
     display: flex;
     align-items: center;
@@ -38,8 +39,19 @@
     }
 }
 
+
+.form__item:nth-child(n+2).form__item--width {
+    padding-left: rem(15);
+    padding-right: rem(15);
+
+    @include mq("md") {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
 .form__item:nth-child(n+2) {
-    border-bottom: 1px dotted $green;
+    border-bottom: rem(1) dotted $green;
     width: 100%;
     display: flex;
     align-items: center;
@@ -65,8 +77,9 @@
         flex-wrap: nowrap;
     }
 }
+
 .form__item:nth-child(n+3) {
-    border-bottom: 1px dotted $green;
+    border-bottom: rem(1) dotted $green;
     width: 100%;
     display: flex;
     align-items: center;
@@ -90,11 +103,12 @@
         max-width: rem(700);
         margin: 0 auto;
         flex-wrap: nowrap;
-        
+
     }
 }
+
 .form__item:nth-child(n+4) {
-    border-bottom: 1px dotted $green;
+    border-bottom: rem(1) dotted $green;
     width: 100%;
     display: flex;
     align-items: center;
@@ -152,7 +166,8 @@
     display: flex;
     align-items: center;
     font-size: rem(16);
-position: relative;
+    position: relative;
+
     @include mq("md") {
         font-size: rem(16);
         max-width: rem(170);
@@ -186,6 +201,7 @@ position: relative;
     margin-left: rem(5);
     font-weight: $normal;
     margin-top: rem(5);
+
     @include mq("md") {
         margin-left: rem(1);
         padding-top: rem(0);
@@ -210,7 +226,7 @@ position: relative;
     color: $black;
     flex: inherit;
     margin-top: rem(18);
-    
+
     @include mq("md") {
         font-size: rem(16);
         height: rem(38);
@@ -223,7 +239,7 @@ position: relative;
     padding: 0.34375rem 0.5rem;
     border: rem(1) solid $green;
     border-radius: 0;
-   
+
     padding-left: 1em;
     padding-right: 1em;
     height: rem(40);
@@ -240,12 +256,10 @@ position: relative;
     @include mq("md") {
         font-size: rem(12);
         height: rem(30);
- 
+
         max-width: rem(490);
     }
 }
-
-
 
 .form__item-textarea {
     border: rem(1) solid $green;
@@ -267,6 +281,7 @@ position: relative;
         height: rem(200);
         max-width: rem(480);
         margin-top: rem(10);
+        padding-left: rem(10);
     }
 }
 
@@ -288,6 +303,7 @@ position: relative;
     cursor: pointer;
     width: rem(337);
     letter-spacing: 0.01em;
+
     @include mq("md") {
         margin-top: rem(66);
         width: 100%;
@@ -315,7 +331,7 @@ position: relative;
 .form__check-item-label-text {
     font-size: 3.6vw;
     margin-top: rem(16);
-  
+
     @include mq("md") {
         padding-left: 0;
         font-size: rem(14);
@@ -350,8 +366,6 @@ position: relative;
         font-size: rem(20);
     }
 }
-
-
 
 .form__btn.button__text {}
 
@@ -392,33 +406,36 @@ position: relative;
 
 ::placeholder {
     color: $green2;
-  }
+}
 
-
-
-  .form__item-img  {
+.form__item-img {
     position: relative;
     width: 100%;
     margin: 0 auto;
 
-  }
-  .form__item-img img {
+}
+
+.form__item-img img {
     position: absolute;
     top: rem(-20);
     left: 90%;
-    width: rem(10); /* 画像の幅 */
+    width: rem(10);
+    /* 画像の幅 */
     height: auto;
-    pointer-events: none; /* 画像がクリックされるのを防止 */
+    pointer-events: none;
+
+    /* 画像がクリックされるのを防止 */
     @include mq("md") {
         top: rem(-20);
         left: 95%;
-        width: rem(10); /* 画像の幅 */
+        width: rem(10);
+        /* 画像の幅 */
 
- 
+
     }
-  }
+}
 
-  .select-wrapper {
+.select-wrapper {
     position: relative;
     display: inline-block;
 
@@ -427,51 +444,54 @@ position: relative;
     @include mq("md") {
         width: 100%;
     }
-  }
+}
 
+/* プルダウンメニューのスタイル */
+.form__item-input2 {
+    -webkit-appearance: none;
+    /* Safari/Chrome用 */
+    -moz-appearance: none;
+    /* Firefox用 */
+    appearance: none;
+    padding-right: rem(30);
+    /* 矢印画像の幅 + 余白分 */
 
+    @include mq("md") {}
+}
 
-    
-      /* プルダウンメニューのスタイル */
-      .form__item-input2 {
-        -webkit-appearance: none; /* Safari/Chrome用 */
-        -moz-appearance: none; /* Firefox用 */
-        appearance: none;
-        padding-right: 30px; /* 矢印画像の幅 + 余白分 */
-      
-        @include mq("md") {
-         
-        }
+/* 矢印画像のスタイル */
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    right: rem(5);
+    /* 矢印画像とプルダウンメニューの間隔 */
+    transform: translateY(-50%);
+    width: rem(15);
+    /* 矢印画像の幅 */
+    height: auto;
+    /* 高さは自動 */
 
-        
-      }
-    
-      /* 矢印画像のスタイル */
-      .arrow-icon {
-        position: absolute;
+}
+
+.arrow-icon-img {
+
+    top: 50%;
+    right: rem(5);
+    /* 矢印画像とプルダウンメニューの間隔 */
+    transform: translateY(30%);
+    width: rem(10);
+    /* 矢印画像の幅 */
+    height: auto;
+    /* 高さは自動 */
+
+    @include mq("md") {
         top: 50%;
-        right: 5px; /* 矢印画像とプルダウンメニューの間隔 */
-        transform: translateY(-50%);
-        width: 15px; /* 矢印画像の幅 */
-        height: auto; /* 高さは自動 */
-        
-      }
-  
-      .arrow-icon-img {
-     
-        top: 50%;
-        right: 5px; /* 矢印画像とプルダウンメニューの間隔 */
-        transform: translateY(30%);
-        width: 10px; /* 矢印画像の幅 */
-        height: auto; /* 高さは自動 */
-
-        @include mq("md") {
-            top: 50%;
-            right: 5px; /* 矢印画像とプルダウンメニューの間隔 */
-            transform: translateY(90%);
-            width: 10px; /* 矢印画像の幅 */
-            height: auto; /* 高さは自動 */
-        }
-        
-      }
-  
+        right: rem(5);
+        /* 矢印画像とプルダウンメニューの間隔 */
+        transform: translateY(90%);
+        width: rem(10);
+        /* 矢印画像の幅 */
+        height: auto;
+        /* 高さは自動 */
+    }
+}

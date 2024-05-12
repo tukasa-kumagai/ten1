@@ -274,21 +274,21 @@
 
  /*ボックス枠のCSS*/
  .label_test:after {
-    border: 1px solid $green;
+    border: rem(1) solid $green;
     border-radius: 0%;
     content: "";
     display: block;
-    height: 14px;
-    left: 15px;
-    margin: -8px 0 0 -2px;
+    height: rem(14);
+    left: rem(15);
+    margin: rem(-8) 0 0 rem(-2);
     position: absolute;
     top: 50%;
-    width: 14px;
+    width: rem(14);
   }
 
   .label_test {
     position: relative; 
-    padding: 0 0 0 30px; 
+    padding: 0 0 0 rem(30); 
     width: 104%;
 
   }
@@ -304,14 +304,14 @@
     }
   /*チェックマークの追加*/
     .label_test:before {
-        border-bottom: 2px solid red;
-        border-right: 2px solid red;
-        height: 9px;
-        left: 18px;
-        margin-top: -7px;
+        border-bottom: rem(2) solid red;
+        border-right: rem(2) solid red;
+        height: rem(9);
+        left: rem(18);
+        margin-top: rem(-7);
         opacity: 0;
         transform: rotate(45deg);
-        width: 5px;
+        width: rem(5);
       
     }
     /*チェックボックスがチェックされた時に動作する内容*/

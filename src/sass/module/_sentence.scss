@@ -10,6 +10,7 @@
     font-size: rem(24);
     margin-top: rem(47);
     font-weight: $normal;
+
     @include mq("md") {
         font-size: rem(32);
     }
@@ -21,6 +22,7 @@
         margin-top: rem(37);
     }
 }
+
 .sentence__ol1 {
 
     @include mq("md") {
@@ -67,6 +69,7 @@
         margin-top: rem(0);
     }
 }
+
 .sentence__list4 {
     list-style-type: decimal;
     line-height: 2;
@@ -116,6 +119,7 @@
         margin-top: rem(0);
     }
 }
+
 .sentence__list8 {
     list-style-type: decimal;
     line-height: 2;
@@ -125,6 +129,7 @@
         margin-top: rem(0);
     }
 }
+
 .sentence__list9 {
     list-style-type: decimal;
     line-height: 2;
@@ -134,26 +139,27 @@
         margin-top: rem(0);
     }
 }
-.sentence__list.sentence__list--position1 {
-margin-top: rem(1);
-    @include mq("md") {
 
-    }
+.sentence__list.sentence__list--position1 {
+    margin-top: rem(1);
+
+    @include mq("md") {}
 }
 
 
 .sentence__list.sentence__list--position2 {
 
-        @include mq("md") {
-    margin-top: rem(35);
-        }
+    @include mq("md") {
+        margin-top: rem(35);
     }
+}
 
 .sentence__list-circle {
     list-style-type: disc;
     margin-top: rem(37);
 
 }
+
 .sentence__list-circle---point {
     list-style-type: none;
     margin-top: rem(37);
@@ -168,6 +174,7 @@ margin-top: rem(1);
     line-height: 1.9;
 
 }
+
 .sentence__list-circle2 {
     list-style-type: disc;
     margin-top: rem(35);
@@ -180,27 +187,31 @@ margin-top: rem(1);
     margin-top: rem(3);
     list-style-type: disc;
     letter-spacing: 0.2em;
-        @include mq("md") {
-    margin-top: rem(2);
-    line-height: 1.9;
-        }
-    }
 
-    .sentence__list-circle3--point {
-        margin-top: rem(3);
-        list-style-type: none;
-        letter-spacing: 0.01em;
-        line-height: 1.9;
-            @include mq("md") {
+    @include mq("md") {
         margin-top: rem(2);
         line-height: 1.9;
-            }
-        }
-.sentence__list-circle.sentence__list-circle--position1 {
-margin-top: rem(10);
+    }
+}
+
+.sentence__list-circle3--point {
+    margin-top: rem(3);
+    list-style-type: none;
+    letter-spacing: 0.01em;
+    line-height: 1.9;
+
     @include mq("md") {
-margin-top: rem(2);
-line-height: 1.9;
+        margin-top: rem(2);
+        line-height: 1.9;
+    }
+}
+
+.sentence__list-circle.sentence__list-circle--position1 {
+    margin-top: rem(10);
+
+    @include mq("md") {
+        margin-top: rem(2);
+        line-height: 1.9;
     }
 }
 
@@ -208,26 +219,31 @@ line-height: 1.9;
     margin-top: rem(36);
     line-height: 2;
     letter-spacing: 0.01em;
+
     @include mq("md") {}
-   
-   
+
+
 }
 
 .sentence__sub-title2 {
     margin-top: rem(31);
     line-height: 2;
+
     @include mq("md") {}
 }
 
 .sentence__sub-title3 {
     margin-top: rem(35);
     line-height: 2;
+
     @include mq("md") {
         text-align: center;
     }
 }
+
 .sentence__sub-title4 {
     margin-top: rem(30);
     line-height: 2;
+
     @include mq("md") {}
 }

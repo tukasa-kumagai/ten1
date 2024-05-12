@@ -8,7 +8,6 @@
     @include mq("md") {}
 }
 
-
 .card__img {
     width: 100%;
     padding-top: 66.971429%; //比率の計算式 横233/縦350*100%=画像の比率
@@ -67,8 +66,6 @@
     }
 }
 
-
-
 .card__foot.card__foot--under2 {
     padding: rem(10) rem(36) rem(4) rem(30);
     display: inline-block;
@@ -104,6 +101,7 @@
     padding-left: rem(10);
     padding-top: rem(16);
     padding-right: rem(13);
+
     @include mq("md") {
         padding-left: rem(10);
         padding-top: rem(24);
@@ -111,12 +109,10 @@
 }
 
 .card__head.card__head--position {
-
     padding-top: rem(16);
 
-
     @include mq("md") {
-     
+
         padding-top: rem(0);
     }
 }
@@ -160,8 +156,6 @@
     @include mq("md") {}
 }
 
-
-
 .card__head-title {
     font-family: $base-font-family;
     font-size: rem(12);
@@ -170,6 +164,7 @@
     display: inline-block;
     padding: rem(6) rem(13) rem(4) rem(10);
     font-weight: $normal;
+
     @include mq("md") {
         padding: rem(6) rem(15) rem(9) rem(15);
     }
@@ -198,6 +193,7 @@
     }
 
 }
+
 .card__head-text--campaign-size {
 
     @include mq("md") {
@@ -219,13 +215,6 @@
     }
 }
 
-
-
-
-
-
-
-
 .card__foot {}
 
 .card__foot-title {
@@ -233,6 +222,7 @@
     text-align: center;
     margin-top: rem(0);
     font-weight: $normal;
+
     @include mq("md") {
         font-size: rem(16);
         margin-top: rem(0);
@@ -244,23 +234,21 @@
     display: flex;
     justify-content: space-between;
 
-    @include mq("md") {
-        
-    }
+    @include mq("md") {}
 }
 
 .card__foot-price--campaign-position {
 
     @include mq("md") {
-        justify-content: center;  
+        justify-content: center;
     }
 }
+
 .card__foot-regular {
     font-size: rem(20);
     text-decoration: line-through $red;
     line-height: 3;
     letter-spacing: 0em;
-   
 
     @include mq("md") {
         font-size: rem(24);
@@ -275,19 +263,16 @@
 
 
 .card__foot-regular.card__foot-regular--position {
-       line-height: 3.0;
-    
-    @include mq("md") { 
+    line-height: 3.0;
 
-    }
+    @include mq("md") {}
 }
 
 .card__foot-regular.card__foot-regular--campaign-position {
     line-height: 2.6;
     font-weight: bold;
- @include mq("md") { 
 
- }
+    @include mq("md") {}
 }
 
 .card__foot-discount {
@@ -298,6 +283,7 @@
     font-weight: $normal;
     line-height: 1.5;
     letter-spacing: -0.1em;
+
     @include mq("md") {
         font-weight: $normal;
         font-size: rem(40);
@@ -309,17 +295,19 @@
 
 
 .card__foot-discount.card__foot-discount--position {
-font-size: rem(32);
-letter-spacing: -0.09em;
+    font-size: rem(32);
+    letter-spacing: -0.09em;
     line-height: 1.8;
-    margin-left: 20px;
-    @include mq("md") { 
-line-height: 2.2;
+    margin-left: rem(20);
+
+    @include mq("md") {
+        line-height: 2.2;
     }
 }
 
 .card__foot-discount--size {
     letter-spacing: -0.12em;
+
     @include mq("md") {
         font-size: rem(40);
         margin-left: rem(40);
@@ -339,8 +327,6 @@ line-height: 2.2;
         font-size: rem(16);
         line-height: 1;
         text-align: left;
-
-
     }
 }
 
@@ -352,9 +338,6 @@ line-height: 2.2;
         line-height: 1.5;
     }
 }
-
-
-
 
 .card__foot-day {
     display: none;
@@ -394,6 +377,4 @@ line-height: 2.2;
     }
 }
 
-.card__foot-inquiry---position {
-    
-}
+.card__foot-inquiry---position {}

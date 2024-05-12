@@ -7,44 +7,43 @@
   @include mq("md") {}
 }
 
-
-
 .box__img {
-    width: 100%;
-    padding-top: 66.971429%; //比率の計算式 横233/縦350*100%=画像の比率
-    position: relative;
+  width: 100%;
+  padding-top: 66.971429%; //比率の計算式 横233/縦350*100%=画像の比率
+  position: relative;
 
-    @include mq("md") {
-        width: 100%;
-    }
+  @include mq("md") {
+    width: 100%;
+  }
 }
 
 .box__img--size {
-    padding-top: 75.071429%;
+  padding-top: 75.071429%;
 }
 
 .box__img img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 
-    @include mq("md") {
-        top: 50%;
-    }
+  @include mq("md") {
+    top: 50%;
+  }
 }
 
 .box--hover:hover img {
-    transform: scale(1.2);
-   
+  transform: scale(1.2);
 }
-.box__body  {
+
+.box__body {
   margin: rem(20) rem(0) rem(0) rem(0);
+
   @include mq("md") {
-      margin: rem(25) rem(0) rem(0) rem(0);
+    margin: rem(25) rem(0) rem(0) rem(0);
   }
 }
 
@@ -53,11 +52,10 @@
   bottom: rem(20);
 
   @include mq("md") {
-      bottom: rem(20);
-      margin: rem(0) rem(0) rem(0) rem(0);
+    bottom: rem(20);
+    margin: rem(0) rem(0) rem(0) rem(0);
   }
 }
-
 
 .box__day {
   font-size: rem(12);
@@ -101,7 +99,7 @@
   position: relative;
 
   @include mq("md") {
-      width: 100%;
+    width: 100%;
   }
 }
 
@@ -119,7 +117,7 @@
   object-fit: cover;
 
   @include mq("md") {
-      top: 50%;
+    top: 50%;
   }
 }
 
@@ -129,8 +127,8 @@
   bottom: rem(20);
 
   @include mq("md") {
-      bottom: rem(20);
-      margin: rem(0) rem(0) rem(0) rem(0);
+    bottom: rem(20);
+    margin: rem(0) rem(0) rem(0) rem(0);
   }
 }
 
@@ -140,9 +138,9 @@
   margin-top: auto;
 
   @include mq("md") {
-      margin-top: 0;
-      padding: rem(0) rem(0) rem(10) rem(0);
-     
+    margin-top: 0;
+    padding: rem(0) rem(0) rem(10) rem(0);
+
   }
 }
 
@@ -152,8 +150,8 @@
   margin-top: auto;
 
   @include mq("md") {
-      margin-top: auto;
-      padding: rem(23) rem(24) rem(5) rem(24);
+    margin-top: auto;
+    padding: rem(23) rem(24) rem(5) rem(24);
   }
 }
 
@@ -161,7 +159,7 @@
   padding: 0 rem(16) rem(6) rem(16);
 
   @include mq("md") {
-      padding: 0 rem(16) rem(10) rem(0);
+    padding: 0 rem(16) rem(10) rem(0);
   }
 }
 
@@ -169,7 +167,7 @@
   margin-top: rem(16);
 
   @include mq("md") {
-      margin-top: rem(24);
+    margin-top: rem(24);
   }
 }
 
@@ -179,8 +177,8 @@
   margin-top: rem(10);
 
   @include mq("md") {
-      margin-left: rem(24);
-      margin-top: rem(17);
+    margin-left: rem(24);
+    margin-top: rem(17);
   }
 }
 
@@ -201,7 +199,7 @@
   margin: rem(6) rem(13) rem(4) rem(10);
 
   @include mq("md") {
-      margin: rem(6) rem(20) rem(9) rem(10);
+    margin: rem(6) rem(20) rem(9) rem(10);
   }
 }
 
@@ -209,8 +207,8 @@
   font-size: rem(12);
 
   @include mq("md") {
-      font-size: rem(12);
-      line-height: 1.5;
+    font-size: rem(12);
+    line-height: 1.5;
   }
 }
 
@@ -223,16 +221,15 @@
   border-bottom: rem(1) solid $green;
 
   @include mq("md") {
-      font-size: rem(24);
-      padding-bottom: rem(0);
+    font-size: rem(24);
+    padding-bottom: rem(0);
   }
 }
 
 .box__head-text--blog-position {
   margin-bottom: rem(0);
-  @include mq("md") {
 
-  }
+  @include mq("md") {}
 }
 
 .box__head-text.box__head-text {
@@ -241,9 +238,8 @@
   font-weight: 500;
 
   @include mq("md") {
-      font-size: rem(16);
-      line-height: 1.5;
-
+    font-size: rem(16);
+    line-height: 1.5;
   }
 }
 
@@ -255,9 +251,9 @@
   margin-top: rem(0);
 
   @include mq("md") {
-      font-size: rem(16);
-      margin-top: rem(0);
-      letter-spacing: 0.07em;
+    font-size: rem(16);
+    margin-top: rem(0);
+    letter-spacing: 0.07em;
   }
 }
 
@@ -266,7 +262,7 @@
   justify-content: space-between;
 
   @include mq("md") {
-      justify-content: center;
+    justify-content: center;
   }
 }
 
@@ -277,10 +273,10 @@
   letter-spacing: 0em;
 
   @include mq("md") {
-      font-size: rem(24);
-      margin-bottom: rem(0);
-      line-height: 3;
-      letter-spacing: 0em;
+    font-size: rem(24);
+    margin-bottom: rem(0);
+    line-height: 3;
+    letter-spacing: 0em;
   }
 }
 
@@ -293,10 +289,10 @@
   line-height: 1.5;
 
   @include mq("md") {
-      font-size: rem(30);
-      margin-left: rem(13);
-      line-height: 1.9;
-      letter-spacing: 0em;
+    font-size: rem(30);
+    margin-left: rem(13);
+    line-height: 1.9;
+    letter-spacing: 0em;
   }
 }
 
@@ -305,28 +301,24 @@
 }
 
 .box__foot-text {
-
   @include mq("md") {
-
-      font-family: $base-font-family;
-      font-size: rem(16);
-      line-height: 1.5;
-      text-align: left;
-
-
+    font-family: $base-font-family;
+    font-size: rem(16);
+    line-height: 1.5;
+    text-align: left;
   }
 }
 
 .box__foot-text.box__foot-text--width {
   @include mq("md") {
-      padding: rem(16) rem(16) rem(24) rem(16);
+    padding: rem(16) rem(16) rem(24) rem(16);
   }
 }
 
 .box__foot-text--width {
   @include mq("md") {
-      padding: rem(0) rem(24) rem(0) rem(24);
-      line-height: 1.5;
+    padding: rem(0) rem(24) rem(0) rem(24);
+    line-height: 1.5;
   }
 }
 
@@ -334,19 +326,19 @@
   display: none;
 
   @include mq("md") {
-      display: inline;
-      font-family: $base-font-family;
-      font-size: rem(16);
-      line-height: 1;
-      margin-top: rem(32);
-      font-weight: $bold;
-      color: $green;
+    display: inline;
+    font-family: $base-font-family;
+    font-size: rem(16);
+    line-height: 1;
+    margin-top: rem(32);
+    font-weight: $bold;
+    color: $green;
   }
 }
 
 .box__foot-day--position {
   @include mq("md") {
-      margin-top: rem(30);
+    margin-top: rem(30);
   }
 }
 
@@ -354,14 +346,14 @@
   display: none;
 
   @include mq("md") {
-      display: inline;
-      font-family: $base-font-family;
-      font-size: rem(14);
-      line-height: 1;
-      margin-top: rem(7);
-      font-weight: $bold;
-      color: $green;
-      font-weight: $regular;
+    display: inline;
+    font-family: $base-font-family;
+    font-size: rem(14);
+    line-height: 1;
+    margin-top: rem(7);
+    font-weight: $bold;
+    color: $green;
+    font-weight: $regular;
   }
 }
 
@@ -371,7 +363,7 @@
 
 .box__image {
   width: 100%;
-  height: 200px;
+  height: rem(200);
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
 }
@@ -379,4 +371,3 @@
 .card__box {
   padding: 1rem;
 }
-

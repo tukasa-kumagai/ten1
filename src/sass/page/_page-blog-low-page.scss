@@ -230,7 +230,6 @@
 }
 
 .page-blog-low-page__sub-archive-items1 {
-
   color: $green;
   font-weight: $regular;
   font-family: $base-font-family;
@@ -265,7 +264,7 @@
 
 .page-blog-low-page__sub-archive-item3 {
   display: flex;
-  margin-left: 40px;
+  margin-left: rem(40);
 }
 
 .page-blog-low-page__sub-archive-item4 {
@@ -328,7 +327,7 @@
 /* ボタンの基本スタイル */
 .page-blog-low-page__box-image1 {
   display: inline-block;
-  padding: 16px 16px;
+  padding: rem(16) rem(16);
   background-color: #FFF;
   /* 初期のボタンの背景色 */
   color: $black;
@@ -336,7 +335,7 @@
   text-decoration: none;
 
   transition: background-color 0.3s ease, color 0.3s ease;
-  border: #408f95 1px solid;
+  border: $green rem(1) solid;
   position: relative;
 }
 
@@ -344,13 +343,13 @@
 .page-blog-low-page__box-image1:hover {
   background-color: $green;
   /* ホバー時のボタンの背景色 */
-  color: #fff;
+  color: $white;
   /* ホバー時のボタンの文字色 */
 }
 
 .page-blog-low-page__box-image1::after {
-  border-right: 1px solid #408f95;
-  border-top: 1px solid #408f95;
+  border-right: rem(1) solid $green;
+  border-top: rem(1) solid $green;
   bottom: 0;
   content: "";
   height: 0.75rem;
@@ -373,15 +372,15 @@
 /* ボタンの基本スタイル */
 .page-blog-low-page__box-image2 {
   display: inline-block;
-  padding: 16px 16px;
-  background-color: #FFF;
+  padding: rem(16) rem(16);
+  background-color: $white;
   /* 初期のボタンの背景色 */
   color: $black;
   /* 初期のボタンの文字色 */
   text-decoration: none;
 
   transition: background-color 0.3s ease, color 0.3s ease;
-  border: #408f95 1px solid;
+  border: $green rem(1) solid;
   position: relative;
 }
 
@@ -389,13 +388,13 @@
 .page-blog-low-page__box-image2:hover {
   background-color: $green;
   /* ホバー時のボタンの背景色 */
-  color: #fff;
+  color: $white;
   /* ホバー時のボタンの文字色 */
 }
 
 .page-blog-low-page__box-image2::after {
-  border-right: 1px solid #408f95;
-  border-top: 1px solid #408f95;
+  border-right: rem(1) solid $green;
+  border-top: rem(1) solid $green;
   bottom: 0;
   content: "";
   height: 0.75rem;

@@ -8,7 +8,6 @@
         margin-top: rem(136);
         position: relative;
     }
-
 }
 
 .l-contact--low-page-position {
@@ -18,9 +17,7 @@
     @include mq("md") {
         margin-top: rem(131);
         position: relative;
-
     }
-
 }
 
 .l-contact--low-page-position2 {
@@ -43,7 +40,7 @@
     margin-top: rem(126);
 
     @include mq("md") {
-        margin-top: rem(132);    
+        margin-top: rem(132);
     }
 }
 

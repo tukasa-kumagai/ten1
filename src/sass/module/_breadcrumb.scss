@@ -1,29 +1,31 @@
 @use "global" as *;
 
 .breadcrumb {
-    padding: rem(16);
+  padding: rem(16);
 
-    @include mq("md") { 
-      padding: rem(7) rem(10) rem(10) rem(0);
-    }
+  @include mq("md") {
+    padding: rem(7) rem(10) rem(10) rem(0);
   }
+}
 
 .breadcrumb__inner.inner {
   padding-left: 0;
   padding-right: 0;
-  
-  @include mq("md") { 
+
+  @include mq("md") {
     padding-left: rem(25);
     padding-right: rem(25);
   }
 }
-  .breadcrumb--white {
-    color: $white;
-  }
+
+.breadcrumb--white {
+  color: $white;
+}
+
 .breadcrumb--position {
   padding: rem(6) rem(5) rem(6) rem(20);
 
-  @include mq("md") { 
+  @include mq("md") {
     padding: rem(6) rem(5) rem(6) rem(0);
   }
 }
@@ -31,65 +33,67 @@
 .breadcrumb--position1 {
   padding: rem(6) rem(5) rem(6) rem(0);
 
-  @include mq("md") { 
+  @include mq("md") {
     padding: rem(6) rem(5) rem(6) rem(0);
   }
 }
-  .breadcrumb__group {
-    display: flex;
-  } 
+
+.breadcrumb__group {
+  display: flex;
+}
 
 
 
-  .breadcrumb__item[href]:hover {
-    opacity: 0.5;
-   
+.breadcrumb__item[href]:hover {
+  opacity: 0.5;
+
+}
+
+.breadcrumb__item-link {
+  font-size: rem(14);
+  font-family: $base-font-family;
+  font-weight: $normal;
+
+  @include mq("md") {}
+
+}
+
+.breadcrumb__group>*+* {
+  margin-left: 0;
+}
+
+.breadcrumb__group>*+*::before {
+  content: ">";
+  margin-left: rem(5);
+  margin-right: 0;
+}
+
+.breadcrumb__group--position {
+  margin-top: rem(70);
+
+  @include mq("md") {
+    margin-top: rem(80);
   }
+}
 
-  .breadcrumb__item-link {
-    font-size: rem(14);
-font-family: $base-font-family;
-font-weight: $normal;
-    @include mq("md") { 
-      
-    }
-  
-  }
-  .breadcrumb__group > * + * {
-    margin-left: 0;
-  }
-  .breadcrumb__group > * + *::before {
-    content: ">";
-    margin-left: rem(5);
-    margin-right: 0;
-  }
+.breadcrumb__group--position2 {
+  margin-top: rem(0);
 
-  .breadcrumb__group--position {
-    margin-top: rem(70);
-
-    @include mq("md") { 
-      margin-top: rem(80);   
-    }
-  }
-
- 
-  .breadcrumb__group--position2 {
+  @include mq("md") {
     margin-top: rem(0);
-
-    @include mq("md") { 
-      margin-top: rem(0);   
-    }
   }
+}
 
-  .breadcrumb__group--position2  > * + * {
-    margin-left: 0;
-  }
-  .breadcrumb__group--position2  > * + *::before {
-    content: ">";
-    margin-left: rem(3);
-    margin-right: 0;
+.breadcrumb__group--position2>*+* {
+  margin-left: 0;
+}
 
-    @include mq("md") { 
-      margin-left: rem(8);
-    }
+.breadcrumb__group--position2>*+*::before {
+  content: ">";
+  margin-left: rem(3);
+  margin-right: 0;
+
+  @include mq("md") {
+    margin-left: rem(8);
   }
+}

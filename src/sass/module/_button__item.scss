@@ -1,70 +1,75 @@
 @use "global" as *;
 
 .button__item {
-    display: inline-block;
-    width: rem(162);//横幅
-    text-align: center;//文字を左に寄せる
-    position: relative;
-    z-index: 1;
-    background-color: $white;//背景色
-    padding-top: rem(7);//ボタン内範囲
-    padding-left: rem(12);//ボタン内範囲
-    padding-right: rem(12);//ボタン内範囲
-    padding-bottom: rem(7);//ボタン内範囲
-    border: rem(1) solid $green;//ボタン縁色
-    transition: background-color .3s;
-  }
-  
+  display: inline-block;
+  width: rem(162); //横幅
+  text-align: center; //文字を左に寄せる
+  position: relative;
+  z-index: 1;
+  background-color: $white; //背景色
+  padding-top: rem(7); //ボタン内範囲
+  padding-left: rem(12); //ボタン内範囲
+  padding-right: rem(12); //ボタン内範囲
+  padding-bottom: rem(7); //ボタン内範囲
+  border: rem(1) solid $green; //ボタン縁色
+  transition: background-color .3s;
+}
+
 .button__item--green {
-  background-color: $green;//背景色
+  background-color: $green; //背景色
 }
+
 .button__item--white {
-  background-color: $white;//背景色
+  background-color: $white; //背景色
 }
-  .button__item-link {
-    font-size: rem(14);///文字サイズ
-    line-height: 1.5714;//文字の高さ
-    color: $green;//文字の色
-    font-family: $base-font-family;
-    font-weight: $regular;//文字太さ
-    transition: color .3s;//文字色の変化速度
-  
-  }
-  .button__item-link--white {
-    color: $white;//文字の色
-  }
 
-  .button__item-link--green {
-    color: $green;//文字の色
-    
-  }
-  
-  .button__item::before {//.buttonの前方
-    background: $green;//アニメーション時の色
-    position: absolute;//親要素の左上にピッタリとつける
-    top: 0;//親要素の左上にピッタリとつける//上方向
-    left: 0;//親要素の左上にピッタリとつける//左方向
-    content: '';//擬似要素
-    width: 100%;//水平(X軸)方向の大きさがそのままの大きさになる
-    height: 100%;//水平(X軸)方向の大きさがそのままの大きさになる
-    transform: scale(0, 1);//水平(X軸)方向の大きさがそのままの大きさになるwith,height,transform: scale(0, 1);はセット
-    transform-origin: left top;//背景が変わる向き
-    transition: .2s cubic-bezier(0.45, 0, 0.55, 1);//transition：変化速度 cubic-bezier:変化速度に緩急をつける
-    z-index: -1;
-  }
-  .button__item--white::before {
-    background-color: $white;//背景色
-  }
-  
-  .button__item:hover .button__item-link {//アニメーション・左文字色を変える
-    color: $white;//左文字色を変える
-  }
+.button__item-link {
+  font-size: rem(14); ///文字サイズ
+  line-height: 1.5714; //文字の高さ
+  color: $green; //文字の色
+  font-family: $base-font-family;
+  font-weight: $regular; //文字太さ
+  transition: color .3s; //文字色の変化速度
 
-  .button__item--white:hover .button__item-link--green {
-    color: $green;//左文字色を変える
-  }
-  
-  .button__item:hover::before {
-    transform: scale(1, 1);//buttonのアニメーションをX軸方向にそのままのサイズに変化させる
-  }
+}
 
+.button__item-link--white {
+  color: $white; //文字の色
+}
+
+.button__item-link--green {
+  color: $green; //文字の色
+
+}
+
+.button__item::before {
+  //.buttonの前方
+  background: $green; //アニメーション時の色
+  position: absolute; //親要素の左上にピッタリとつける
+  top: 0; //親要素の左上にピッタリとつける//上方向
+  left: 0; //親要素の左上にピッタリとつける//左方向
+  content: ''; //擬似要素
+  width: 100%; //水平(X軸)方向の大きさがそのままの大きさになる
+  height: 100%; //水平(X軸)方向の大きさがそのままの大きさになる
+  transform: scale(0, 1); //水平(X軸)方向の大きさがそのままの大きさになるwith,height,transform: scale(0, 1);はセット
+  transform-origin: left top; //背景が変わる向き
+  transition: .2s cubic-bezier(0.45, 0, 0.55, 1); //transition：変化速度 cubic-bezier:変化速度に緩急をつける
+  z-index: -1;
+}
+
+.button__item--white::before {
+  background-color: $white; //背景色
+}
+
+.button__item:hover .button__item-link {
+  //アニメーション・左文字色を変える
+  color: $white; //左文字色を変える
+}
+
+.button__item--white:hover .button__item-link--green {
+  color: $green; //左文字色を変える
+}
+
+.button__item:hover::before {
+  transform: scale(1, 1); //buttonのアニメーションをX軸方向にそのままのサイズに変化させる
+}

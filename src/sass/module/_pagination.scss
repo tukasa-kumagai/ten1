@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    margin: 10px auto;
+    margin: rem(10) auto;
     padding: rem(0);
     list-style: none;
     text-align: center;
@@ -72,7 +72,7 @@
 }
 
 .pagination li {
-    margin: 5px;
+    margin: rem(5);
     border: rem(1) solid $green; //ページの枠
 
 }

@@ -92,16 +92,16 @@
 }
 
 .page-price__th {
-  border-bottom: 1px solid $green;
-  border-right: 1px solid $green;
+  border-bottom: rem(1) solid $green;
+  border-right: rem(1) solid $green;
   padding: rem(10) rem(6) rem(7) rem(6);
   text-align: center;
   font-size: rem(16);
   width: 70%;
 
   @include mq("md") {
-    border-top: 1px solid $green;
-    border-bottom: 0px solid $green;
+    border-top:  rem(1) solid $green;
+    border-bottom: rem(0) solid $green;
     padding: rem(23) rem(10) rem(20) rem(24);
     width: rem(338);
     text-align: left;
@@ -112,115 +112,115 @@
 }
 .page-price__th--position1 {
   padding: rem(0)rem(10) rem(9) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: rem(0) solid $green;
   }
 }
 .page-price__th--position2 {
   padding: rem(20)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   @include mq("md") {
-    border-bottom: 1px solid $green;
+    border-bottom: rem(1) solid $green;
   }
 }
 
 .page-price__th--position3 {
   padding: rem(5)rem(10) rem(11) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: rem(0) solid $green;
   }
 }
 
 .page-price__th--position4 {
   padding: rem(0) rem(10) rem(11) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: rem(0) solid $green;
   }
 }
 
 .page-price__th--position5 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: rem(0) solid $green;
   }
 }
 .page-price__th--position6 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 1px solid $green;
+    border-bottom: rem(1) solid $green;
   }
 }
 .page-price__th--position7 {
   padding: rem(0)rem(10) rem(15) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: rem(0) solid $green;
   }
 }
 .page-price__th--position8 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 0px solid $green;
+  border-bottom: 0 solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: 0 solid $green;
   }
 }
 .page-price__th--position9 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: 0 solid $green;
   }
 }
 .page-price__th--position10 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 1px solid $green;
+    border-bottom: rem(1) solid $green;
   }
 }
 .page-price__th--position11 {
   padding: rem(8)rem(10) rem(8) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: 0 solid $green;
   }
 }
 .page-price__th--position12 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 0px solid $green;
+    border-bottom: 0 solid $green;
   }
 }
 
 .page-price__th--position13 {
   padding: rem(0)rem(10) rem(10) rem(10);
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   height: 0%;
   @include mq("md") {
-    border-bottom: 1px solid $green;
+    border-bottom: rem(1) solid $green;
   }
 }
 
 .page-price__td {
 text-align: center;
-  border-bottom: 1px solid $green;
+  border-bottom: rem(1) solid $green;
   width: 30%;
   padding: rem(17) rem(30);
 
@@ -228,8 +228,8 @@ text-align: center;
     width: rem(162);
     padding: rem(17) rem(17);
     text-align: right;
-    border-top: 1px solid $green;
-    border-bottom: 0px solid $green;
+    border-top: rem(1) solid $green;
+    border-bottom: 0 solid $green;
 
   }
 }
@@ -238,6 +238,6 @@ text-align: center;
 .page-price__td--position {
 
   @include mq("md") {
-    border-bottom: 1px solid $green;
+    border-bottom: rem(1) solid $green;
   }
 }

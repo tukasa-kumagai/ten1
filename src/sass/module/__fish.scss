@@ -11,45 +11,51 @@
   top: rem(-24);
   width: rem(120);
 
-
   @include mq("md") {
-      height: rem(150);
-      right: rem(46);
-      top: rem(-71);
-      width: rem(301);
-      left: calc(50% - min(48.5vw,  38.875rem));
+    height: rem(150);
+    right: rem(46);
+    top: rem(-71);
+    width: rem(301);
+    left: calc(50% - min(48.5vw, 38.875rem));
   }
 }
 
 .fish--about::before {
   top: rem(-23);
+
   @include mq("md") {
-   top: rem(-143);
+    top: rem(-143);
   }
- }
+}
 
 .fish--blog::before {
- top: rem(-32);
- @include mq("md") {
-  top: rem(-71);
- }
+  top: rem(-32);
+
+  @include mq("md") {
+    top: rem(-71);
+  }
 }
+
 .fish--information::before {
   top: rem(-92);
+
   @include mq("md") {
-   top: rem(-71);
+    top: rem(-71);
   }
- }
+}
+
 .fish--contact::before {
   top: rem(-21);
-  @include mq("md") {
-   top: rem(-9);
-  }
- }
 
- .fish--site-map::before {
-  top: rem(19);
   @include mq("md") {
-   top: rem(-9);
+    top: rem(-9);
   }
- }
+}
+
+.fish--site-map::before {
+  top: rem(19);
+
+  @include mq("md") {
+    top: rem(-9);
+  }
+}

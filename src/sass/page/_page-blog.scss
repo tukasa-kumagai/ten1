@@ -241,7 +241,7 @@ margin-top: rem(45);
 
 .page-blog__sub-archive-item3 {
   display: flex;
-  margin-left: 40px;
+  margin-left: rem(40);
 }
 
 .page-blog__sub-archive-item4 {
@@ -279,7 +279,7 @@ summary::marker {
 ///テスト//
 details {
 
-  max-width: 300px;
+  max-width: rem(300);
 }
  
 /* JavaScriptで開閉する要素（.details-content）には上下のpaddingを指定せずこちらに指定 */
@@ -295,7 +295,7 @@ details summary {
   display: block; /* 矢印アイコンを非表示に */
   cursor: pointer; /* カーソルの形状をポインターに */
   position: relative; /* 絶対配置する疑似要素のアイコンの基準に */
-  padding: 0.5rem 0.5rem 0.5rem 36px; /* padding-left にアイコンのスペースを確保 */
+  padding: 0.5rem 0.5rem 0.5rem rem(36); /* padding-left にアイコンのスペースを確保 */
 }
  
 details summary::-webkit-details-marker {
@@ -304,15 +304,15 @@ details summary::-webkit-details-marker {
  
 /* 独自のアイコンを擬似要素で作成 */
 details summary::before {
-  border-bottom: 13px solid transparent;
-  border-left: 22px solid #408F95;
-  border-top: 11px solid transparent;
+  border-bottom: rem(13) solid transparent;
+  border-left: rem(22) solid $green;
+  border-top: rem(11) solid transparent;
   bottom: 0;
   content: "";
-  height: 11px;
-  left: 6px;
+  height: rem(11);
+  left: rem(6);
   position: absolute;
-  top: 15px;
+  top: rem(15);
   transform: rotate(120deg);
   transition: transform 0.3s;
   width: 0;
