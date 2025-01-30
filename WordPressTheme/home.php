@@ -5,8 +5,8 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -14,7 +14,7 @@
     </div>
   </div>
   <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     <nav class="breadcrumb breadcrumb--position">
       <div class="breadcrumb__inner inner ">
         <?php if (!is_front_page()) { ?>
@@ -39,7 +39,7 @@
                                                     if (has_post_thumbnail()) {
                                                       echo get_the_post_thumbnail_url();
                                                     } else {
-                                                      echo esc_url(get_theme_file_uri('dist/assets/images/common/no_image.png'));
+                                                      echo esc_url(get_theme_file_uri('../dist/assets/images/common/no_image.png'));
                                                     }
                                                     ?>" alt="<?php the_title_attribute(); ?>">
                     </div>
@@ -57,12 +57,11 @@
                         <p class="box__foot-discount"></p>
                       </div>
                     </div>
-                    <p class="box__foot-text "><?php echo wp_trim_words(get_the_content(), 100, '...'); ?> 
+                    <p class="box__foot-text "><?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
                     </p>
                   </a>
                 <?php endwhile; ?>
               <?php endif; ?>
-
             </div>
             <?php
             if (function_exists('wp_pagenavi')) {

@@ -26,7 +26,7 @@
       <div class="contact__maim">
         <div class="contact__head">
           <div class="contact__logo">
-            <h2><img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
+            <h2><img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
           </div>
           <div class="contact__head-under">
             <div class="contact__information">
@@ -66,14 +66,14 @@
   <div class="inner">
     <div class="footer__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__logo-img">
-        <img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-footer.jpg')); ?>" alt="ボタン画像1">
+        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/codeups-logo-footer.jpg')); ?>" alt="ボタン画像1">
       </a>
       <div class="footer__sub-logo">
         <a href="https://www.facebook.com/yourusername" target="_blank" class="footer__sub-logo-img1">
-          <img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/facebook-logo-image.jpg')); ?>" alt="ボタン画像2">
+          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/facebook-logo-image.jpg')); ?>" alt="ボタン画像2">
         </a>
         <a href="https://www.instagram.com/yourusername" target="_blank" class="footer__sub-logo-img2">
-          <img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/instagram-logo-image.jpg')); ?>" alt="ボタン画像3">
+          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/instagram-logo-image.jpg')); ?>" alt="ボタン画像3">
         </a>
       </div>
     </div>

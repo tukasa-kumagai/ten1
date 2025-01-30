@@ -101,6 +101,7 @@ img:not([alt]) {
 
 /* フォームリセット */
 
+input,
 button,
 select,
 textarea {
@@ -114,21 +115,13 @@ textarea {
 	outline: none;
 }
 
-input {
-	background: transparent;
-	border: none;
-	border-radius: 0;
-	font: inherit;
-	outline: none;
-}
-
 textarea {
 	resize: vertical;
 }
 
 input[type=checkbox],
 input[type=radio] {
-	display: inline;
+	display: none;
 }
 
 input[type=submit],
@@ -153,7 +146,7 @@ a {
 }
 
 .about::before {
-	background-image: url(../images/top/top-aboutus-coralreef-image.jpg);
+	background-image: url(../../assets/images/top/top-aboutus-coralreef-image.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -175,31 +168,6 @@ a {
 	margin-top: 0rem;
 }
 
-.archive {
-	padding: 0px;
-}
-
-.archive__title {
-	font-size: 24px;
-	font-weight: bold;
-}
-
-.archive__post {
-	border-bottom: 1px solid #ddd;
-	margin-bottom: 20px;
-	padding-bottom: 10px;
-}
-
-.archive__post-title {
-	color: #333;
-	font-size: 20px;
-}
-
-.archive__pagination {
-	margin-top: 20px;
-	text-align: center;
-}
-
 .blog__bg {
 	display: none;
 }
@@ -209,7 +177,7 @@ a {
 }
 
 .blog::before {
-	background-image: url(../images/top/top-blog-seabream-image1.png);
+	background-image: url(../../assets/images/top/top-blog-seabream-image1.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -252,9 +220,6 @@ a {
 }
 
 .campaign__button-inner {
-	display: flex;
-	justify-content: center;
-	margin: 0 auto;
 	margin-top: 2.5rem;
 	text-align: center;
 }
@@ -264,7 +229,7 @@ a {
 }
 
 .contact::before {
-	background-image: url(../images/common/fish-image.jpg);
+	background-image: url(../../assets/images/common/fish-image.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -274,38 +239,6 @@ a {
 	right: 0.875rem;
 	top: -1.8125rem;
 	width: 6.8125rem;
-}
-
-.select-wrapper {
-	max-width: 100%;
-	position: relative;
-}
-
-.select-wrapper select {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none; /* ブラウザデフォルトの矢印を非表示 */
-	background: url("../images/common/arrow-t.jpg") no-repeat right 10px center; /* 右端に画像を設定 */
-	background-size: 20px; /* 画像サイズを指定 */
-	border: 1px solid #ccc; /* ボーダー */
-	border-radius: 4px; /* 角丸 */
-	font-size: 16px;
-	height: 40px; /* 高さを調整 */
-	padding-right: 40px; /* 画像分の余白を追加 */
-	width: 100%;
-}
-
-.select-wrapper::after {
-	background: url("path-to-your-image/icon.png") no-repeat center;
-	background-size: contain;
-	content: "";
-	height: 20px;
-	pointer-events: none; /* 画像をクリック不可にする */
-	position: absolute;
-	right: 10px;
-	top: 50%;
-	transform: translateY(-50%);
-	width: 20px;
 }
 
 .contact__title-name {
@@ -489,7 +422,7 @@ input[type=checkbox]:checked + .label_test:before {
 
 .contact-body {
 	display: grid;
-	width: 80%; /* 横幅70%指定（白背景色部分） */
+	width: 70%; /* 横幅70%指定（白背景色部分） */
 }
 
 .footer {
@@ -548,7 +481,7 @@ input[type=checkbox]:checked + .label_test:before {
 }
 
 .footer__list1 a {
-	background: url("../images/common/starfish.jpg") left 0rem top 0.1875rem no-repeat;
+	background: url(../../assets/images/common/starfish.jpg) left 0rem top 0.1875rem no-repeat;
 	background-size: 0.9375rem auto;
 	display: block;
 	font-size: 1rem;
@@ -715,7 +648,7 @@ body.active {
 }
 
 .sp-nav__left-item:first-child a::before {
-	background-image: url("../images/common/starfish.jpg");
+	background-image: url("../../assets/images/common/starfish.jpg");
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -739,7 +672,7 @@ body.active {
 }
 
 .sp-nav__right-item:first-child a::before {
-	background-image: url("../images/common/starfish.jpg");
+	background-image: url("../../assets/images/common/starfish.jpg");
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -945,7 +878,7 @@ div.information__img img {
 }
 
 .page-404::before {
-	background-image: url("../images/404/page-ocean-sea-icon.jpg");
+	background-image: url(/assets/images/404/page-ocean-sea-icon.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -955,7 +888,7 @@ div.information__img img {
 	position: absolute;
 	top: -2.9375rem;
 	width: 21.5625rem;
-	z-index: 1;
+	z-index: 100;
 }
 
 .page-404__title {
@@ -1388,10 +1321,7 @@ div.information__img img {
 }
 
 .page-blog__sub-campaign__items {
-	box-shadow: 0 0 0.5rem gray;
 	display: table;
-	display: flex;
-	flex-flow: column;
 	margin: 0 auto;
 }
 
@@ -1496,6 +1426,13 @@ details summary::before {
 	margin-top: 2.0625rem;
 }
 
+.page-campaign__button-inner {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	text-align: center;
+}
+
 .page-campaign__main {
 	margin: 0 auto;
 	margin-top: 2.5rem;
@@ -1523,48 +1460,6 @@ details summary::before {
 .page-contact__button-inner {
 	margin-top: 2.5rem;
 	text-align: center;
-}
-
-/* チェックボックスのカスタマイズ */
-
-input[type=checkbox] {
-	-webkit-appearance: none; /* Webkitブラウザでのデフォルトのスタイルを無効化 */
-	-moz-appearance: none; /* Firefoxでのデフォルトのスタイルを無効化 */
-	appearance: none; /* 標準ブラウザでのデフォルトのスタイルを無効化 */
-	background-color: #fff; /* 背景色 */
-	border: 0.0625rem solid #408F95; /* チェックボックスの枠線 */
-	border-radius: 0; /* 角を丸める */
-	cursor: pointer; /* チェックボックスをクリックできることを示す */
-	height: 1.25rem; /* チェックボックスの高さ */
-	position: relative; /* チェックマークの位置を調整するため */
-	top: 0.3125rem;
-	width: 1.25rem; /* チェックボックスの幅 */
-}
-
-/* チェックされた状態 */
-
-input[type=checkbox]:checked {
-	background-color: #fff; /* チェックされたときの背景色 */
-	border-color: #408F95; /* 枠線の色 */
-}
-
-/* チェックボックスの中にチェックマークを表示 */
-
-input[type=checkbox]:checked::after {
-	background-color: transparent;
-	border-bottom: 0.125rem solid #C94800; /* 線の太さを変更 */
-	border-right: 0.125rem solid #C94800; /* 線の太さを変更 */
-	content: "";
-	height: 1rem;
-	left: 0.4375rem;
-	position: absolute;
-	top: 0;
-	transform: rotate(55deg);
-	width: 0.3125rem;
-}
-
-.wpcf7 {
-	max-width: 1666px !important;
 }
 
 .page-faq__inner.inner {
@@ -1847,10 +1742,6 @@ input[type=checkbox]:checked::after {
 	width: 70%;
 }
 
-.page-price__tr:last-child {
-	border-bottom: 0rem solid #408F95;
-}
-
 .page-price__th--position1 {
 	border-bottom: 0.0625rem solid #408F95;
 	height: 0%;
@@ -1943,7 +1834,7 @@ input[type=checkbox]:checked::after {
 
 .page-privacy-policy__inner1 {
 	margin: 0 auto;
-	max-width: 59.375rem;
+	max-width: 50rem;
 }
 
 .page-privacy-policy__inner2 {
@@ -1984,7 +1875,6 @@ input[type=checkbox]:checked::after {
 .page-site-map__content {
 	display: flex;
 	justify-content: center;
-	z-index: 3;
 }
 
 .page-site-map__nav1 {
@@ -2013,7 +1903,7 @@ input[type=checkbox]:checked::after {
 }
 
 .page-site-map__list1 a {
-	background: url("../images/site-map/starfish-black.jpg") left 0rem top 0.1875rem no-repeat;
+	background: url("../../assets/images/site-map/starfish-black.jpg") left 0rem top 0.1875rem no-repeat;
 	background-size: 0.9375rem auto;
 	display: block;
 	font-size: 1rem;
@@ -2023,11 +1913,10 @@ input[type=checkbox]:checked::after {
 	padding-left: 1.125rem;
 	padding-top: 0.0625rem;
 	width: 100%;
-	z-index: 144;
 }
 
 .page-site-map__list1-2 a {
-	background: url(../images/site-map/starfish-black.png) left 0rem top 0.1875rem no-repeat;
+	background: url("../../assets/images/site-map/starfish-black.jpg") left 0rem top 0.1875rem no-repeat;
 	background-size: 0.9375rem auto;
 	display: block;
 	font-size: 1rem;
@@ -2138,10 +2027,6 @@ input[type=checkbox]:checked::after {
 	position: relative;
 }
 
-.page-voice__main {
-	margin-top: 2.5rem;
-}
-
 .pagination__list.page-vice__list {
 	margin: 0;
 	padding: 0;
@@ -2157,7 +2042,7 @@ input[type=checkbox]:checked::after {
 }
 
 .price::before {
-	background-image: url(../images/top/top-price-fish-image.jpg);
+	background-image: url(../../assets/images/top/top-price-fish-image.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -2214,7 +2099,6 @@ input[type=checkbox]:checked::after {
 .price__information {
 	font-size: 0.875rem;
 	justify-content: space-between;
-	margin-bottom: 2.5rem;
 }
 
 .price__course-title {
@@ -2316,7 +2200,7 @@ dl.price__list {
 }
 
 .vice::before {
-	background-image: url(../images/top/top-voice-seahorse-image.png);
+	background-image: url("../../assets/images/top/top-voice-seahorse-image.png");
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -2359,7 +2243,7 @@ dl.price__list {
 }
 
 .vice__button-inner {
-	margin-top: 5rem;
+	margin-top: 3rem;
 	text-align: center;
 }
 
@@ -2753,8 +2637,6 @@ dl.price__list {
 	font-size: 0.875rem;
 	font-weight: 300;
 	line-height: 1.5714;
-	position: relative; /* 位置調整を可能にする */
-	top: -3px; /* 上方向に移動する（必要に応じて値を調整） */
 	transition: color 0.3s;
 }
 
@@ -2786,10 +2668,8 @@ dl.price__list {
 	content: "";
 	left: 0.25rem;
 	position: absolute;
-	position: absolute;
 	right: -0.25rem;
 	top: 0.25rem;
-	top: 55%; /* 上方向の位置を調整（デフォルト40%を減らす） */
 	z-index: -2;
 }
 
@@ -2833,12 +2713,10 @@ dl.price__list {
 }
 
 .button2__items {
-	align-items: center;
-	display: block;
-	gap: 1rem;
-	grid-template-columns: repeat(2, 1fr);
-	grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* 200px以上で自動的にサイズ調整 */
-	justify-items: center;
+	display: flex;
+	font-size: 0.875rem;
+	justify-content: center;
+	max-width: 46.5625rem;
 }
 
 .button2__item {
@@ -3269,7 +3147,7 @@ div.card2__img img {
 }
 
 .content-block__button-inner {
-	margin-top: 3.75rem;
+	margin-top: 3.125rem;
 	text-align: center;
 }
 
@@ -3279,7 +3157,7 @@ div.card2__img img {
 }
 
 .fish::before {
-	background-image: url(../images/common/fish-image2.jpg);
+	background-image: url("../../assets/images/common/fish-image2.jpg");
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -3320,7 +3198,7 @@ div.card2__img img {
 .form__item {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: block;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
@@ -3340,11 +3218,11 @@ div.card2__img img {
 .form__item:nth-child(n+2) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: block;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 1.3125rem;
 	padding-left: 0;
 	padding-right: 0;
@@ -3355,11 +3233,11 @@ div.card2__img img {
 .form__item:nth-child(n+3) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: block;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 1.3125rem;
 	padding-left: 0;
 	padding-right: 0;
@@ -3370,7 +3248,7 @@ div.card2__img img {
 .form__item:nth-child(n+4) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: block;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
@@ -3468,8 +3346,8 @@ div.card2__img img {
 	height: 12.5rem;
 	margin-top: 1.125rem;
 	max-width: 25.625rem;
-	padding-left: 0px;
-	padding-right: 0px;
+	padding-left: 1em;
+	padding-right: 1em;
 	width: 100%;
 }
 
@@ -3611,27 +3489,6 @@ div.card2__img img {
 	width: 0.625rem; /* 高さは自動 */
 }
 
-/* 入力フォーム全体の幅を調整 */
-
-.wpcf7 input[type=text],
-.wpcf7 input[type=email] {
-	box-sizing: border-box; /* パディングを含めて幅を計算 */
-	font-size: 16px; /* フォントサイズを調整 */
-	max-width: 600px; /* 最大幅を指定（必要に応じて調整） */
-	padding: 10px; /* 内側の余白を追加して見やすく */
-	width: 100%; /* フォーム全体の幅に広げる */
-}
-
-/* 入力フォームのデフォルト設定以外を調整したい場合（例: 特定のフォーム） */
-
-.wpcf7 input[name=your-name] {
-	max-width: 800px; /* お名前入力フォームの最大幅 */
-}
-
-.wpcf7 input[name=your-email] {
-	max-width: 700px; /* メールアドレス入力フォームの最大幅 */
-}
-
 .gallery__content {
 	display: flex;
 	flex-direction: column;
@@ -3730,7 +3587,7 @@ div.card2__img img {
 }
 
 .l-campaign {
-	margin-top: 0rem;
+	margin-top: 2.5rem;
 }
 
 .l-contact {
@@ -4112,7 +3969,7 @@ div.card2__img img {
 	flex-wrap: wrap;
 	justify-content: center;
 	list-style: none;
-	margin: 10px auto;
+	margin: 0.625rem auto;
 	padding: 0rem;
 	text-align: center;
 	width: 100%;
@@ -4137,7 +3994,7 @@ div.card2__img img {
 
 .pagination li {
 	border: 0.0625rem solid #408F95;
-	margin: 5px;
+	margin: 0.3125rem;
 }
 
 .pagination a {
@@ -4165,78 +4022,6 @@ div.card2__img img {
 
 .page-item.next {
 	margin-left: 2.5rem;
-}
-
-/* 全体のスタイル */
-
-.wp-pagenavi {
-	align-items: center;
-	display: flex;
-	font-size: 1rem;
-	gap: 0.5rem;
-	justify-content: center;
-	margin: 2rem 0;
-}
-
-/* 各ボタンのスタイル */
-
-.wp-pagenavi a,
-.wp-pagenavi span {
-	-webkit-text-decoration: none;
-	background-color: #fff;
-	border: 1px solid #408F95;
-	border-radius: 0px;
-	color: #408F95;
-	display: inline-block;
-	padding: 0.625rem 0.875rem;
-	text-decoration: none;
-	transition: all 0.3s ease;
-}
-
-/* 現在のページ */
-
-.wp-pagenavi .current {
-	background-color: #408F95;
-	border: 0.0625rem solid #408F95;
-	color: #fff;
-	padding: 0.625rem 0.875rem;
-}
-
-/* ホバースタイル */
-
-.wp-pagenavi a:hover {
-	background-color: #408F95;
-	border-color: #408F95;
-	color: #fff;
-}
-
-/* 「前へ」「次へ」ボタンのスタイル */
-
-.wp-pagenavi .prev,
-.wp-pagenavi .next {
-	border: 0.0625rem solid #408F95;
-	font-weight: bold;
-	padding: 0.625rem 0.875rem;
-}
-
-/* サイズ調整（レスポンシブ対応） */
-
-.wp-pagenavi a.page {
-	border: 0.0625rem solid #408F95;
-	padding: 0.625rem 0.875rem;
-}
-
-.nextpostslink {
-	padding: 0.625rem 0.875rem;
-}
-
-.previouspostslink {
-	padding: 0.625rem 0.875rem;
-}
-
-.wp-pagenavi .previouspostslink,
-.wp-pagenavi .nextpostslink {
-	padding: 0.6875rem 0.9375rem;
 }
 
 .pc-nav {
@@ -4543,35 +4328,33 @@ div.card2__img img {
 /* 前への矢印カスタマイズ */
 
 .swiper-button-prev {
-	background-image: url(../images/common/left-arrow-image.jpg);
+	background-image: url("../../assets/images/common/left-arrow-image.jpg");
 	width: 1.8125rem;
 }
 
 /* 次への矢印カスタマイズ */
 
 .swiper-button-next {
-	background-image: url(../images/common/right-arrow-image.jpg);
+	background-image: url("../..//assets/images/common/right-arrow-image.jpg");
 }
 
 /* 画像サイズ調整 */
 
 .swiper-slide img {
+	height: auto;
 	width: 100%;
 }
 
-ul.tabs {
-	grid-gap: 2rem;
-	display: grid; /* グリッドレイアウトを適用 */
-	font-size: 0.875rem;
-	gap: 2rem; /* アイテム間の間隔を10pxに設定 */
-	grid-template-columns: repeat(2fr, 1fr); /* 3列のグリッドを作成（1frは1つの分けられた単位） */
-	text-align: center;
+.tabs {
+	grid-gap: 1.3125rem;
+	display: grid;
+	gap: 1.3125rem;
+	grid-template-columns: repeat(2, 1fr);
 }
 
 .tabs__all {
 	border: 0.0625rem solid #408F95;
 	font-size: 0.875rem;
-	margin-right: 2rem;
 	max-width: 162px;
 	padding: 0.375rem 4.3125rem;
 }
@@ -4579,8 +4362,7 @@ ul.tabs {
 .tabs__text {
 	border: 0.0625rem solid #408F95;
 	color: #408F95;
-	font-size: 0.875rem;
-	margin-right: 2rem;
+	font-size: 0.8125rem;
 	max-width: 11rem;
 	padding: 0.375rem 1.5625rem;
 }
@@ -4650,6 +4432,118 @@ ul.tabs {
 	top: 43.3%;
 	width: 100%;
 	z-index: 999999;
+}
+
+.wp-pagenavi {
+	color: #408F95;
+	display: flex;
+	gap: 5px; /* 各ボタン間の間隔 */
+	justify-content: center; /* ページネーションを中央寄せ */
+	margin: 20px 0;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi a {
+	border: 1px solid #408F95 !important;
+	border: 1px solid #408F95 !important;
+	color: #408F95 !important;
+	margin: 0 6px !important;
+	padding: 9px 14px !important;
+}
+
+.wp-pagenavi a {
+	-webkit-text-decoration: none;
+	background-color: #fff;
+	border-radius: 0;
+	font-size: 16px;
+	padding: 50px 40px;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.wp-pagenavi a:hover {
+	color: #fff !important;
+}
+
+.wp-pagenavi a:hover {
+	background-color: #408F95;
+	border-color: #408F95;
+}
+
+.wp-pagenavi .current {
+	border: 1px solid #408F95 !important;
+	padding: 9px 14px !important;
+}
+
+.wp-pagenavi .current {
+	background-color: #408F95;
+	color: #fff;
+	font-weight: bold;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+	margin: 0 24px !important;
+}
+
+.wp-pagenavi .previouspostslink,
+.wp-pagenavi .nextpostslink {
+	background-color: #fff;
+	border: 1px solid #408F95;
+	color: #408F95;
+	font-weight: bold;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi .previouspostslink:hover,
+.wp-pagenavi .nextpostslink:hover {
+	background-color: #408F95;
+	color: white;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi .extend {
+	color: #999;
+	font-weight: bold;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi .first,
+.wp-pagenavi .last {
+	background-color: #fff;
+	border: 1px solid #408F95;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi .first:hover,
+.wp-pagenavi .last:hover {
+	background-color: #408F95;
+	color: #408F95;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi a {
+	padding: 9px 14px;
+}
+
+.wp-pagenavi a,
+.wp-pagenavi span {
+	color: #666;
+	font-size: 16px;
+	padding: 9px 14px;
+}
+
+.wp-pagenavi a {
+	-webkit-text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #408F95;
+	border-radius: 0px;
+	color: #333;
+	display: inline-block;
+	font-size: 16px;
+	padding: 30px 12px;
+	text-decoration: none;
+	transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 768px) {
@@ -4765,7 +4659,7 @@ html {
 }
 
 .campaign__button-inner {
-	margin-top: 5.625rem;
+	margin-top: 4.75rem;
 	text-align: center;
 }
 
@@ -4779,10 +4673,6 @@ html {
 	right: calc(50% - min(48.5vw, 41.875rem));
 	top: -2.25rem;
 	width: 18.8125rem;
-}
-
-.select-wrapper select {
-	width: 85%;
 }
 
 .contact__ba-img {
@@ -4877,11 +4767,6 @@ html {
 
 .contact__button-inner {
 	margin-top: 2.375rem;
-}
-
-.contact-body {
-	display: grid;
-	width: 60%; /* 横幅70%指定（白背景色部分） */
 }
 
 .footer {
@@ -5343,47 +5228,47 @@ div.information__img {
 }
 
 .info-tab__text:nth-child(1)::before {
-	background-image: url(../images/information/information-tab-image1.jpg);
+	background-image: url(../../assets/images/information/information-tab-image1.jpg);
 	display: block;
 }
 
 .info-tab__text:nth-child(1):hover::before {
-	background-image: url(../images/information/information-tab-image4.jpg);
+	background-image: url(../../assets/images/information/information-tab-image4.jpg);
 	display: block;
 }
 
 .info-tab__text:nth-child(2)::before {
-	background-image: url(../images/information/information-tab-image2.jpg);
+	background-image: url(../../assets/images/information/information-tab-image2.jpg);
 	display: block;
 }
 
 .info-tab__text:nth-child(2):hover::before {
-	background-image: url(../images/information/information-tab-image5.jpg);
+	background-image: url(../../assets/images/information/information-tab-image5.jpg);
 	display: block;
 }
 
 .info-tab__text:nth-child(3)::before {
-	background-image: url(../images/information/information-tab-image3.jpg);
+	background-image: url(../../assets/images/information/information-tab-image3.jpg);
 	display: block;
 }
 
 .info-tab__text:nth-child(3):hover::before {
-	background-image: url(../images/information/information-tab-image6.jpg);
+	background-image: url(../../assets/images/information/information-tab-image6.jpg);
 	display: block;
 }
 
 .info-tab__text.is-active:nth-child(1)::before {
-	background-image: url(../images/information/information-tab-image4.jpg);
+	background-image: url(../../assets/images/information/information-tab-image4.jpg);
 	display: block;
 }
 
 .info-tab__text.is-active:nth-child(2)::before {
-	background-image: url(../images/information/information-tab-image5.jpg);
+	background-image: url(../../assets/images/information/information-tab-image5.jpg);
 	display: block;
 }
 
 .info-tab__text.is-active:nth-child(3)::before {
-	background-image: url(../images/information/information-tab-image6.jpg);
+	background-image: url(/assets/images/information/information-tab-image6.jpg);
 	display: block;
 }
 
@@ -5455,10 +5340,6 @@ div.information__img {
 	padding-left: 0.9375rem;
 	text-align: left;
 	width: 21.125rem;
-}
-
-.page-price__tr:last-child {
-	border-bottom: 0.0625rem solid #408F95;
 }
 
 .page-price__th--position1 {
@@ -5581,7 +5462,6 @@ div.information__img {
 .page-site-map__group1 {
 	margin-left: 0;
 	width: 10.5rem;
-	z-index: 100;
 }
 
 .page-site-map__group1:nth-child(2) {
@@ -5671,7 +5551,6 @@ div.information__img {
 }
 
 .page-terms-of-service__inner3.inner {
-	line-height: 2;
 	max-width: 50rem;
 	padding-left: 0rem;
 	padding-right: 0rem;
@@ -5685,10 +5564,6 @@ div.information__img {
 
 .page-terms-of-service__sentence {
 	margin-top: 8.9375rem;
-}
-
-.page-voice__main {
-	margin-top: 2.5rem;
 }
 
 .pagination__list.page-vice__list {
@@ -5720,7 +5595,7 @@ div.information__img {
 	left: calc(50% - min(48.5vw, 38.75rem));
 	top: 58rem;
 	width: 27.4375rem;
-	z-index: 100;
+	z-index: 10000;
 }
 
 .price__title-inner {
@@ -6079,12 +5954,8 @@ dl.price__list {
 }
 
 .button2__items {
-	grid-gap: 1rem 2rem;
-	display: grid;
-	display: inline;
-	gap: 1rem 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(62.5rem, 1fr));
-	grid-template-columns: repeat(4, 1fr);
+	justify-content: start;
+	max-width: 46.5rem;
 }
 
 .card__img {
@@ -6344,6 +6215,7 @@ div.card2__img {
 	justify-content: space-between;
 	left: 18%;
 	max-width: 75rem;
+	padding-right: 4.375rem;
 	position: absolute;
 	top: 21%;
 }
@@ -6395,7 +6267,6 @@ div.card2__img {
 	right: 2.875rem;
 	top: -4.4375rem;
 	width: 18.8125rem;
-	z-index: 1;
 }
 
 .fish--about::before {
@@ -6429,9 +6300,9 @@ div.card2__img {
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	margin: 0 auto;
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
-	padding-top: 0.0625rem;
+	padding-top: 2.5625rem;
 	width: 100%;
 }
 
@@ -6445,11 +6316,11 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: flex;
 	flex-wrap: nowrap;
+	justify-content: center;
 	margin: 0 auto;
-	margin-left: 0rem;
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
-	padding-top: 3.125rem;
+	padding-top: 1.625rem;
 	width: 100%;
 }
 
@@ -6458,8 +6329,9 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: flex;
 	flex-wrap: nowrap;
+	justify-content: space-between;
 	margin: 0 auto;
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
 	padding-top: 1.4375rem;
 	width: 100%;
@@ -6471,29 +6343,28 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: initial;
+	justify-content: space-between;
 	margin: 0 auto;
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 1.625rem;
 	padding-top: 2.4375rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+5) {
-	max-width: 66.625rem;
+	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
 	padding-top: 1.125rem;
 }
 
 .form__item:nth-child(n+6) {
-	max-width: 66.625rem;
-	padding-top: 3.75rem;
+	max-width: 43.75rem;
+	padding-top: 1.4375rem;
 }
 
 .form__item-label {
 	font-size: 1rem;
 	margin-left: 0rem;
-	margin-right: 0.625rem;
 	max-width: 10.625rem;
 	max-width: 13.125rem;
 }
@@ -6620,7 +6491,7 @@ div.card2__img {
 }
 
 .l-campaign {
-	margin-top: 5.625rem;
+	margin-top: 7.5rem;
 }
 
 .l-contact {
@@ -6734,7 +6605,7 @@ div.card2__img {
 }
 
 .l-page-contact {
-	max-width: 43.75rem;
+	max-width: 46.875rem;
 }
 
 .l-page-faq {
@@ -6770,7 +6641,7 @@ div.card2__img {
 }
 
 .l-vice {
-	margin-top: 9.375rem;
+	margin-top: 8.75rem;
 }
 
 .lower-page-mv {
@@ -7021,25 +6892,21 @@ div.card2__img {
 	top: 3%;
 }
 
-ul.tabs {
-	font-size: 0.875rem;
-	gap: 2rem; /* アイテム間の間隔を10pxに設定 */
-	grid-template-columns: repeat(4, 1fr); /* 3列のグリッドを作成（1frは1つの分けられた単位） */
-	max-width: 54.625rem;
+.tabs {
+	gap: 2rem;
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .tabs__all {
 	border: 0.0625rem solid #408F95;
 	font-size: 0.875rem;
-	margin-right: 2rem;
 	padding: 0.375rem 4.3125rem;
 }
 
 .tabs__text {
 	border: 0.0625rem solid #408F95;
 	color: #408F95;
-	font-size: 0.875rem;
-	margin-right: 2rem;
+	font-size: 0.8125rem;
 	padding: 0.375rem 1.5625rem;
 }
 
@@ -7052,22 +6919,17 @@ ul.tabs {
 	width: 18.8125rem;
 }
 
+.wp-pagenavi {
+	flex-wrap: wrap;
+	gap: 3px;
+}
+
 }
 
 @media (min-width: 1080px) {
 
 html {
 	font-size: 16px;
-}
-
-}
-
-@media (max-width: 768px) {
-
-.wp-pagenavi a,
-.wp-pagenavi span {
-	font-size: 0.9rem;
-	padding: 3.125rem 3.375rem;
 }
 
 }

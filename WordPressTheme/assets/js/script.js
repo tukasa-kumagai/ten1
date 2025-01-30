@@ -3,8 +3,7 @@
 jQuery(function ($) {// この中であればWordpressでも「$」が使用可能になる
 });
 
-//ハンバーグメニュー.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+//ハンバーグメニュー
 jQuery(function ($) {
   //ナビバートグル
   $('.js-hamburger').on('click', function () {
@@ -22,7 +21,8 @@ jQuery(function ($) {
     }
   });
 });
-//ヘッダーの高さによるカラーチェンジ.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//ヘッダーの高さによるカラーチェンジ
 $(function () {
   $(window).on('scroll', function () {
     if ($('.header').height() < $(this).scrollTop()) {
@@ -34,11 +34,11 @@ $(function () {
 });
 
 //informationの画像出現
-//要素の取得とスピードの設定.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//要素の取得とスピードの設定
 var box = $('.information__img,.card2__img,.pc-price__img'),
   speed = 700;
 
-//.colorboxの付いた全ての要素に対して下記の処理を行う.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//.colorboxの付いた全ての要素に対して下記の処理を行う
 box.each(function () {
   $(this).append('<div class="color"></div>');
   var color = $(this).find($('.color')),
@@ -46,8 +46,7 @@ box.each(function () {
   var counter = 0;
   image.css('opacity', '0');
   color.css('width', '0%');
-
-  //inviewを使って背景色が画面に現れたら処理をする.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  //inviewを使って背景色が画面に現れたら処理をする
   color.on('inview', function () {
     if (counter == 0) {
       $(this).delay(200).animate({
@@ -67,7 +66,7 @@ box.each(function () {
   });
 });
 
-//ページtop戻るボタン.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//top戻るボタン
 $(document).ready(function () {
   var pagetop = $('.pagetop');
   $(window).scroll(function () {
@@ -85,7 +84,7 @@ $(document).ready(function () {
   });
 });
 
-//swiper.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//swiper
 var mySwiper = new Swiper('.swiper,.js-campaign-swiper', {
   slidesPerView: "auto",
   spaceBetween: 24,
@@ -108,7 +107,35 @@ var mySwiper = new Swiper('.swiper,.js-campaign-swiper', {
   }
 });
 
-//モーダル.-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+jQuery(document).ready(function ($) {
+  $('.pagination__list').paginathing({
+    perPage: 4,
+    firstLast: false,
+    prevText: '<',
+    nextText: '>',
+    activeClass: 'active'
+  });
+});
+jQuery(document).ready(function ($) {
+  $('.pagination__list2').paginathing({
+    perPage: 10,
+    firstLast: false,
+    prevText: '<',
+    nextText: '>',
+    activeClass: 'active'
+  });
+});
+jQuery(document).ready(function ($) {
+  $('.pagination__list3').paginathing({
+    perPage: 6,
+    firstLast: false,
+    prevText: '<',
+    nextText: '>',
+    activeClass: 'active'
+  });
+});
+
+//モーダル
 $(".js-modal-img").click(function () {
   // クリックした画像のHTML要素を取得して、置き換える
   $(".js-modal-content").html($(this).prop("outerHTML"));
@@ -187,19 +214,6 @@ $(function () {
   $(".js-infoContent-target").eq(tabNo).addClass("is-active");
   //タブのアクティブ化
   $(".js-infoTab-trigger").eq(tabNo).addClass("is-active");
-});
-$(function () {
-  //タブへダイレクトリンクの実装
-  //リンクからハッシュを取得
-  var hash = location.hash;
-  hash = (hash.match(/^#tab_panel-\d+$/) || [])[0];
-
-  //リンクにハッシュが入っていればtabnameに格納
-  if ($(hash).length) {
-    var tabname = hash.slice(1);
-  } else {
-    var tabname = "tab_panel-1";
-  }
 });
 
 //アコーディオン
@@ -304,62 +318,3 @@ function selectChange(id) {
 
 /* 実行部 */
 selectChange("sel1"); // 画像表示
-
-$(function () {
-  //タブの実装
-  $(".tab_box .tab_btn").click(function () {
-    var index = $(".tab_box .tab_btn").index(this);
-    $(".tab_box .tab_btn, .tab_box .tab_panel").removeClass("active");
-    $(this).addClass("active");
-    $(".tab_box .tab_panel").eq(index).addClass("active");
-  });
-});
-$(function () {
-  //タブへダイレクトリンクの実装
-  //リンクからハッシュを取得
-  var hash = location.hash;
-  hash = (hash.match(/^#tab_panel-\d+$/) || [])[0];
-
-  //リンクにハッシュが入っていればtabnameに格納
-  if ($(hash).length) {
-    var tabname = hash.slice(1);
-  } else {
-    var tabname = "tab_panel-1";
-  }
-
-  //コンテンツ非表示・タブを非アクティブ
-  $(".tab_box .tab_btn").removeClass("active");
-  $(".tab_box .tab_panel").removeClass("active");
-
-  //何番目のタブかを格納
-  var tabno = $(".tab_box .tab_panel#" + tabname).index();
-
-  //コンテンツ表示
-  $(".tab_box .tab_panel").eq(tabno).addClass("active");
-
-  //タブのアクティブ化
-  $(".tab_box .tab_btn").eq(tabno).addClass("active");
-});
-document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-  });
-});
-document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    var target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      var headerHeight = document.querySelector('.header').offsetHeight || 0; // ヘッダーがあれば高さを取得
-      var offset = 20; // 任意の余白を追加
-      var targetPosition = target.offsetTop - headerHeight - offset;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: 'smooth'
-      });
-    }
-  });
-});

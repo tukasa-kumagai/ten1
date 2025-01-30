@@ -5,8 +5,8 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets/images/campaign/pc-campign-mv-image.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/campaign/sp-campign-mv-image.jpg')); ?>" alt="キャンペーンメイン画像">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/campaign/pc-campign-mv-image.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/campaign/sp-campign-mv-image.jpg')); ?>" alt="キャンペーンメイン画像">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -14,7 +14,7 @@
     </div>
   </div>
   <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     <nav class="breadcrumb breadcrumb--position">
       <div class="breadcrumb__inner inner">
         <?php if (!is_front_page()) { ?>
@@ -33,30 +33,30 @@
             <div class="container">
               <div class="tab-main">
                 <div class="tab-menu">
-                <?php
-$terms = get_terms(array(
-    'taxonomy' => 'campaign_category',
-    'hide_empty' => false,
-));
+                  <?php
+                  $terms = get_terms(array(
+                    'taxonomy' => 'campaign_category',
+                    'hide_empty' => false,
+                  ));
 
-if ($terms && !is_wp_error($terms)) {
-    echo '<ul class="tabs">';
-    
-    // 「ALL」タブをアクティブにする条件
-    $current_url = home_url(add_query_arg(array(), $wp->request));
-    $all_class = (get_post_type() === 'campaign' && !is_tax('campaign_category')) ? 'active' : '';
-    echo '<li class="' . esc_attr($all_class) . '"><a class="tabs__text button2__item" href="' . esc_url(get_post_type_archive_link('campaign')) . '">ALL</a></li>';
+                  if ($terms && !is_wp_error($terms)) {
+                    echo '<ul class="tabs">';
 
-    foreach ($terms as $term) {
-        $is_active = (is_tax('campaign_category', $term->slug)) ? 'active' : '';
-        echo '<li class="' . esc_attr($is_active) . '"><a class="tabs__text button2__item" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
-    }
-    echo '</ul>';
-}
-?>
+                    // 「ALL」タブをアクティブにする条件
+                    $current_url = home_url(add_query_arg(array(), $wp->request));
+                    $all_class = (get_post_type() === 'campaign' && !is_tax('campaign_category')) ? 'active' : '';
+                    echo '<li class="' . esc_attr($all_class) . '"><a class="tabs__text button2__item" href="' . esc_url(get_post_type_archive_link('campaign')) . '">ALL</a></li>';
 
-                </div>
+                    foreach ($terms as $term) {
+                      $is_active = (is_tax('campaign_category', $term->slug)) ? 'active' : '';
+                      echo '<li class="' . esc_attr($is_active) . '"><a class="tabs__text button2__item" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                    }
+                    echo '</ul>';
+                  }
+                  ?>
+       </div>
               </div>
+            </div>
             </div>
             <div class="page-campaign__main">
               <div class="pagination__list page-campaign__items">
@@ -112,7 +112,7 @@ if ($terms && !is_wp_error($terms)) {
             </div>
           </div>
     </section>
-  
+
   </main>
 </body>
 <?php get_footer();  ?>

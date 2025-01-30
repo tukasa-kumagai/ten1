@@ -1,13 +1,12 @@
 <?php get_header();  ?>
 
 <body>
-
   <?php wp_body_open();  ?>
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -15,8 +14,8 @@
     </div>
   </div>
   <main>
-  <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-  <nav class="breadcrumb breadcrumb--position">
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <nav class="breadcrumb breadcrumb--position">
       <div class="breadcrumb__inner inner">
         <?php if (!is_front_page()) { ?>
           <?php if (function_exists('bcn_display')) { ?>
@@ -55,14 +54,12 @@
                         '<span>%link</span>', // 矢印を削除
                         '<span class="page-blog-low-page__box-image1"></span>'
                       ); ?>
-                        <?php previous_post_link(
+                      <?php previous_post_link(
                         '<span>%link</span>', // 矢印を削除
                         '<span class="page-blog-low-page__box-image2"></span>'
                       ); ?>
                     </div>
-                   
                   </div>
-                  
                 </div>
               <?php endwhile; ?>
             <?php endif; ?>

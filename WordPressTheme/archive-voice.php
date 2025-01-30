@@ -2,8 +2,8 @@
 <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
         <picture class="lower-page-mv__slide-image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
-            <img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
+            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
         </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -13,7 +13,7 @@
 
 <main>
     <p class="pagetop">
-        <a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a>
+        <a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a>
     </p>
 
     <nav class="breadcrumb breadcrumb--position">
@@ -90,7 +90,7 @@
                                             </div>
                                         </div>
                                         <p class="card2__text card2__text--position ">
-                                        <?php echo wp_trim_words(get_the_content(), 100, '...'); ?> 
+                                            <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
                                         </p>
                                     </div>
                                 </div>
@@ -98,7 +98,6 @@
                         <?php else : ?>
                             <p>現在、投稿はありません。</p>
                         <?php endif; ?>
-
                     </div>
                     <?php
                     if (function_exists('wp_pagenavi')) {
@@ -110,5 +109,4 @@
         </div>
     </section>
 </main>
-
 <?php get_footer(); ?>
