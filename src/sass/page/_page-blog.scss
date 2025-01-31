@@ -121,7 +121,8 @@
   margin-top: rem(100);
 }
 
-.page-blog__sub-reviews-card {}
+.page-blog__sub-reviews-card {
+}
 
 .page-blog__sub-reviews-image {
   margin-top: rem(24);
@@ -182,7 +183,7 @@
 .page-blog__sub-campaign__items {
   margin: 0 auto;
   display: table;
-
+  box-shadow: 5px 5px 10px gray;
   @include mq("md") {
     display: block;
   }

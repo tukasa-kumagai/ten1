@@ -67,12 +67,11 @@
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
         padding-bottom: rem(40);
-        padding-top: rem(26);
+        padding-top: rem(40);
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: rem(700);
+        display: grid;
+        grid-template-columns: 200px 400px; /* 3列（幅: 100px, 200px, 100px） */
+        max-width: rem(800);
         margin: 0 auto;
         flex-wrap: nowrap;
     }
@@ -97,10 +96,9 @@
         padding-bottom: rem(40);
         padding-top: rem(23);
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: rem(700);
+        display: grid;
+        grid-template-columns: 200px 400px; /* 3列（幅: 100px, 200px, 100px） */
+        max-width: rem(800);
         margin: 0 auto;
         flex-wrap: nowrap;
 
@@ -113,7 +111,7 @@
     display: flex;
     align-items: center;
     justify-content: left;
-    max-width: rem(700);
+    max-width: rem(900);
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
@@ -123,13 +121,12 @@
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
-        padding-bottom: rem(26);
-        padding-top: rem(39);
+        padding-bottom: rem(45);
+        padding-top: rem(20);
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        max-width: rem(700);
+        display: grid;
+        
+        max-width: rem(800);
         margin: 0 auto;
         flex-wrap: nowrap;
         align-items: baseline;
@@ -139,23 +136,39 @@
 
 .form__item:nth-child(n+5) {
     padding-top: rem(0);
-
+  
     @include mq("md") {
         max-width: rem(700);
-        padding-top: rem(18);
-        padding-bottom: rem(40);
+        padding-top: rem(40);
+        padding-bottom: rem(50);
+        width: 100%;
+   
+   
+       
     }
 }
 
 .form__item:nth-child(n+6) {
-    padding-top: rem(22);
+    padding-top: rem(15);
 
     @include mq("md") {
         max-width: rem(700);
-        padding-top: rem(23);
+        padding-top: rem(15);
+        padding-bottom: rem(40);
+        
     }
 }
 
+.form__item:nth-child(n+7) {
+    padding-top: rem(15);
+
+    @include mq("md") {
+        max-width: rem(10000);
+        padding-top: rem(30);
+        padding-bottom: rem(40);
+        
+    }
+}
 
 
 .form__item-label {
@@ -210,14 +223,15 @@
     }
 }
 
+
 .form__item-input {
     border: rem(1) solid $green;
     border-radius: 0;
     margin-left: 0;
-    padding-left: 1em;
+    padding-left: rem(20);
     padding-right: 1em;
     height: rem(40);
-    flex: 1;
+
     width: 100%;
     max-width: rem(410);
     background: $white;
@@ -276,7 +290,7 @@
     font-size: rem(15);
 
     @include mq("md") {
-        margin-left: 0;
+        margin-left: 20px;
         font-size: rem(18);
         height: rem(200);
         max-width: rem(480);
@@ -305,7 +319,7 @@
     letter-spacing: 0.01em;
 
     @include mq("md") {
-        margin-top: rem(66);
+        margin-top: rem(0);
         width: 100%;
     }
 }
@@ -438,7 +452,8 @@
 .select-wrapper {
     position: relative;
     display: inline-block;
-
+max-width: 100%;
+width: 400px;
 
 
     @include mq("md") {
@@ -494,4 +509,155 @@
         height: auto;
         /* 高さは自動 */
     }
+}
+
+
+////////cntactform7
+.wpcf7 {
+    /* フォーム全体のスタイル */
+    max-width: 700px; /* フォームの最大幅 */
+    margin: 0 auto; /* 中央配置 */
+  }
+
+
+
+  .wpcf7 textarea,
+  .wpcf7 select {
+    width: 100%; /* フル幅 */
+    padding: 0px; /* 内側余白 */
+    border: rem(1) solid $green;
+    border-radius: 0px; /* 角丸 */
+    font-size: 16px;
+  }
+  .wpcf7 input {
+    width: 100%; /* フル幅 */
+    padding: 0px; /* 内側余白 */
+    border: rem(1) solid $green;
+    border-radius: 0px; /* 角丸 */
+    font-size: 16px;
+    margin-left: rem(20);
+
+  }
+
+  .wpcf7-list-item {
+    display: flex;
+   
+}
+
+.wpcf7 input {
+    border: 1px solid $green; 
+    border-radius: 0px; 
+    font-size: 16px; 
+    margin-left: rem(0); 
+    padding: 0px;
+    width: 100%;
+    @include mq("md") {
+        border: 1px solid $green; 
+        border-radius: 0px; 
+        font-size: 16px; 
+        margin-left: 1.25rem; 
+        padding: 0px;
+        width: 100%;
+    }
+}
+
+.wpcf7-list-item {
+
+    display: grid;
+  
+  justify-content: left;
+  margin-left: 0;
+}
+
+span.wpcf7-list-item {
+
+    display: grid;
+    grid-template-columns: 40px 200px 0px;
+  justify-content: left;
+  margin-left: 0;
+
+  @include mq("md") {
+     display: grid;
+    grid-template-columns: 40px 400px 0px;
+  justify-content: center;
+  margin-left: 0;
+  }
+}
+
+.your-checkbox {
+    display: flex;
+justify-content: left;
+}
+
+.wpcf7-checkbox input[type="checkbox"] {
+  width: 16px; /* サイズ */
+  height: 16px;
+  cursor: pointer; /* クリック可能に */
+  accent-color: #0073e6; /* チェックマークの色（モダンブラウザ対応） */
+}
+
+.wpcf7-checkbox input[type="checkbox"] {
+    accent-color: white; /* レ点と背景の色を赤に */
+  }
+
+  .wpcf7-checkbox input[type="checkbox"] {
+    appearance: none; /* デフォルトデザインを削除 */
+    width: 15px;
+    height: 15px;
+    border: 1px solid $green; /* 枠線の色（後述） */
+  
+    background-color: white; /* 未選択時の背景色 */
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .wpcf7-checkbox input[type="checkbox"]:checked {
+    background-color: $white; /* クリック時（チェック時）の背景色 */
+  }
+  .wpcf7-checkbox input[type="checkbox"] {
+    appearance: none; /* デフォルトのチェックボックスを削除 */
+    width: 15px;
+    height: 15px;
+    border: 2px solid #0073e6; /* 枠線の色 */
+    border-radius: 0px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid $green;
+  }
+  
+  .wpcf7-checkbox input[type="checkbox"]:checked::after {
+    content: "✔"; /* チェックマーク */
+    font-size: 16px;
+    color: red; /* レ点（✔）の色を赤に */
+    position: absolute;
+    left: 2px;
+    top: -2px;
+  }
+
+
+  .wpcf7-list-item-label {
+    width: 100%;
+
+    @include mq("md") {
+        width: 100%;
+    }
+  }
+
+  .wpcf7 select {
+  
+
+    @include mq("md") {
+        border: 1px solid $green;
+
+    font-size: 16px;
+    padding: 0px;
+    width: 100%;
+    margin-left: 16px;
+    }
+}
+
+
+.wpcf7-form-control-wrap {
+    width: 90%;
 }

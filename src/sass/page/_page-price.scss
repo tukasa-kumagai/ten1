@@ -91,6 +91,14 @@
   @include mq("md") {}
 }
 
+.page-price__tr:last-child {
+  border-bottom: rem(0) solid $green;
+
+  @include mq("md") {
+    border-bottom: rem(1) solid $green;
+  }
+}
+
 .page-price__th {
   border-bottom: rem(1) solid $green;
   border-right: rem(1) solid $green;
@@ -110,6 +118,10 @@
   }
 
 }
+
+
+
+
 .page-price__th--position1 {
   padding: rem(0)rem(10) rem(9) rem(10);
   border-bottom: rem(1) solid $green;

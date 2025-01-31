@@ -8,13 +8,17 @@
 
   @include mq("md") {
     max-width: rem(700);
+    
   }
 }
 
 .page-contact__inner {
   position: relative;
-
+margin: 0 auto;
   @include mq("md") {}
+}
+.page-contact__inner.inner {
+  max-width: 1500px;
 }
 
 .page-contact__bg-img {
@@ -32,12 +36,91 @@
 
 .page-contact__button-inner {
   text-align: center;
-  margin-top: rem(40);
-
-  @include mq("md") {
-    margin-top: rem(30);
-    text-align: center;
+  margin-top: rem(40);.page-contact {
+    max-width: rem(500);
+    margin: 0 auto;
+    margin-top: rem(28);
+  
+    @include mq("md") {
+      max-width: rem(700);
+    }
   }
+  
+  .page-contact__inner {
+    position: relative;
+  
+    @include mq("md") {}
+  }
+  
+  .page-contact__bg-img {
+    width: rem(120);
+    display: flex;
+    left: calc(50% - min(48.5vw, 38.75rem));
+    position: absolute;
+    top: -18%;
+  
+    @include mq("md") {
+  
+      width: rem(302);
+    }
+  }
+  
+  .page-contact__button-inner {
+    text-align: center;
+    margin-top: rem(40);
+  
+    @include mq("md") {
+      margin-top: rem(30);
+      text-align: center;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* チェックボックスのカスタマイズ */
+  input[type="checkbox"] {
+    -webkit-appearance: none;  /* Webkitブラウザでのデフォルトのスタイルを無効化 */
+    -moz-appearance: none;     /* Firefoxでのデフォルトのスタイルを無効化 */
+    appearance: none;          /* 標準ブラウザでのデフォルトのスタイルを無効化 */
+    width: rem(20);               /* チェックボックスの幅 */
+    height: rem(20);              /* チェックボックスの高さ */
+    border: rem(1) solid $green;    /* チェックボックスの枠線 */
+    border-radius: 0;        /* 角を丸める */
+    position: relative;        /* チェックマークの位置を調整するため */
+    cursor: pointer;          /* チェックボックスをクリックできることを示す */
+    background-color: $white;   /* 背景色 */
+    top: rem(5);
+  }
+  
+  /* チェックされた状態 */
+  input[type="checkbox"]:checked {
+    background-color:$white;  /* チェックされたときの背景色 */
+    border-color: $green;      /* 枠線の色 */
+  }
+  
+  /* チェックボックスの中にチェックマークを表示 */
+  input[type="checkbox"]:checked::after {
+    background-color: transparent;
+  border-bottom: 0.125rem solid #C94800; /* 線の太さを変更 */
+  border-right: 0.125rem solid #C94800; /* 線の太さを変更 */
+  content: "";
+  height: 1rem;
+  left: 0.4375rem;
+  position: absolute;
+  top: 0;
+  transform: rotate(55deg);
+  width: 0.3125rem;
+  }
+  
+  
+
+
+  
 }
 
 
