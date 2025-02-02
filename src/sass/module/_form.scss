@@ -39,6 +39,18 @@
     }
 }
 
+input[type=checkbox]:checked::after {
+    background-color: transparent;
+    border-bottom: rem(0) solid #C94800;
+    border-right: rem(0) solid #C94800;
+    content: "";
+    height: rem(1);
+    left: rem(7);
+    position: absolute;
+    top: 0;
+    transform: rotate(5deg);
+    width: rem(5);
+}
 
 .form__item:nth-child(n+2).form__item--width {
     padding-left: rem(15);
@@ -70,7 +82,7 @@
         padding-top: rem(40);
         width: 100%;
         display: grid;
-        grid-template-columns: 200px 400px; /* 3列（幅: 100px, 200px, 100px） */
+        grid-template-columns: rem(200) rem(400);
         max-width: rem(800);
         margin: 0 auto;
         flex-wrap: nowrap;
@@ -97,11 +109,10 @@
         padding-top: rem(23);
         width: 100%;
         display: grid;
-        grid-template-columns: 200px 400px; /* 3列（幅: 100px, 200px, 100px） */
+        grid-template-columns: rem(200) rem(400);
         max-width: rem(800);
         margin: 0 auto;
         flex-wrap: nowrap;
-
     }
 }
 
@@ -125,7 +136,6 @@
         padding-top: rem(20);
         width: 100%;
         display: grid;
-        
         max-width: rem(800);
         margin: 0 auto;
         flex-wrap: nowrap;
@@ -133,18 +143,14 @@
     }
 }
 
-
 .form__item:nth-child(n+5) {
     padding-top: rem(0);
-  
+    
     @include mq("md") {
         max-width: rem(700);
         padding-top: rem(40);
         padding-bottom: rem(50);
         width: 100%;
-   
-   
-       
     }
 }
 
@@ -155,7 +161,6 @@
         max-width: rem(700);
         padding-top: rem(15);
         padding-bottom: rem(40);
-        
     }
 }
 
@@ -166,7 +171,6 @@
         max-width: rem(10000);
         padding-top: rem(30);
         padding-bottom: rem(40);
-        
     }
 }
 
@@ -290,7 +294,7 @@
     font-size: rem(15);
 
     @include mq("md") {
-        margin-left: 20px;
+        margin-left: rem(20);
         font-size: rem(18);
         height: rem(200);
         max-width: rem(480);
@@ -515,7 +519,7 @@ width: 400px;
 ////////cntactform7
 .wpcf7 {
     /* フォーム全体のスタイル */
-    max-width: 700px; /* フォームの最大幅 */
+    max-width: rem(700); /* フォームの最大幅 */
     margin: 0 auto; /* 中央配置 */
   }
 
@@ -524,140 +528,138 @@ width: 400px;
   .wpcf7 textarea,
   .wpcf7 select {
     width: 100%; /* フル幅 */
-    padding: 0px; /* 内側余白 */
+    padding: rem(0); /* 内側余白 */
     border: rem(1) solid $green;
-    border-radius: 0px; /* 角丸 */
-    font-size: 16px;
+    border-radius: rem(0); /* 角丸 */
+    font-size: rem(16);
   }
   .wpcf7 input {
     width: 100%; /* フル幅 */
-    padding: 0px; /* 内側余白 */
+    padding: rem(0); /* 内側余白 */
     border: rem(1) solid $green;
-    border-radius: 0px; /* 角丸 */
-    font-size: 16px;
+    border-radius: rem(0); /* 角丸 */
+    font-size: rem(16);
     margin-left: rem(20);
-
   }
 
   .wpcf7-list-item {
     display: flex;
-   
 }
 
 .wpcf7 input {
-    border: 1px solid $green; 
-    border-radius: 0px; 
-    font-size: 16px; 
+    border: rem(1) solid $green; 
+    border-radius: rem(0); 
+    font-size: rem(16); 
     margin-left: rem(0); 
-    padding: 0px;
+    padding: rem(0);
     width: 100%;
     @include mq("md") {
-        border: 1px solid $green; 
-        border-radius: 0px; 
-        font-size: 16px; 
-        margin-left: 1.25rem; 
-        padding: 0px;
+        border: rem(1) solid $green; 
+        border-radius: rem(0); 
+        font-size: rem(16); 
+        margin-left: rem(20); 
+        padding: rem(0);
         width: 100%;
     }
 }
 
 .wpcf7-list-item {
-
     display: grid;
-  
-  justify-content: left;
-  margin-left: 0;
+    justify-content: left;
+    margin-left: rem(0);
 }
 
 span.wpcf7-list-item {
-
     display: grid;
-    grid-template-columns: 40px 200px 0px;
-  justify-content: left;
-  margin-left: 0;
+    grid-template-columns: rem(40) rem(200) rem(0);
+    justify-content: left;
+    margin-left: rem(0);
 
-  @include mq("md") {
-     display: grid;
-    grid-template-columns: 40px 400px 0px;
-  justify-content: center;
-  margin-left: 0;
-  }
+    @include mq("md") {
+        display: grid;
+        grid-template-columns: rem(40) rem(400) rem(0);
+        justify-content: center;
+        margin-left: rem(0);
+    }
 }
 
 .your-checkbox {
     display: flex;
-justify-content: left;
+    justify-content: left;
 }
 
 .wpcf7-checkbox input[type="checkbox"] {
-  width: 16px; /* サイズ */
-  height: 16px;
-  cursor: pointer; /* クリック可能に */
-  accent-color: #0073e6; /* チェックマークの色（モダンブラウザ対応） */
+    width: rem(16); /* サイズ */
+    height: rem(16);
+    cursor: pointer; /* クリック可能に */
+    accent-color: #0073e6; /* チェックマークの色（モダンブラウザ対応） */
 }
 
 .wpcf7-checkbox input[type="checkbox"] {
     accent-color: white; /* レ点と背景の色を赤に */
-  }
+}
 
-  .wpcf7-checkbox input[type="checkbox"] {
+.wpcf7-checkbox input[type="checkbox"] {
     appearance: none; /* デフォルトデザインを削除 */
-    width: 15px;
-    height: 15px;
-    border: 1px solid $green; /* 枠線の色（後述） */
-  
+    width: rem(15);
+    height: rem(15);
+    border: rem(1) solid $green; /* 枠線の色（後述） */
     background-color: white; /* 未選択時の背景色 */
     cursor: pointer;
     position: relative;
-  }
-  
-  .wpcf7-checkbox input[type="checkbox"]:checked {
+}
+
+.wpcf7-checkbox input[type="checkbox"]:checked {
     background-color: $white; /* クリック時（チェック時）の背景色 */
-  }
-  .wpcf7-checkbox input[type="checkbox"] {
+}
+
+.wpcf7-checkbox input[type="checkbox"] {
     appearance: none; /* デフォルトのチェックボックスを削除 */
-    width: 15px;
-    height: 15px;
-    border: 2px solid #0073e6; /* 枠線の色 */
-    border-radius: 0px;
+    width: rem(15);
+    height: rem(15);
+    border: rem(2) solid #0073e6; /* 枠線の色 */
+    border-radius: rem(0);
     background-color: white;
     cursor: pointer;
     position: relative;
-    border: 1px solid $green;
-  }
-  
-  .wpcf7-checkbox input[type="checkbox"]:checked::after {
+    border: rem(1) solid $green;
+}
+
+.wpcf7-checkbox input[type="checkbox"]:checked::after {
     content: "✔"; /* チェックマーク */
-    font-size: 16px;
+    font-size: rem(16);
     color: red; /* レ点（✔）の色を赤に */
     position: absolute;
-    left: 2px;
-    top: -2px;
-  }
+    left: rem(2);
+    top: rem(-2);
+}
 
-
-  .wpcf7-list-item-label {
+.wpcf7-list-item-label {
     width: 100%;
-
     @include mq("md") {
         width: 100%;
     }
-  }
+}
 
-  .wpcf7 select {
-  
-
+.wpcf7 select {
     @include mq("md") {
-        border: 1px solid $green;
-
-    font-size: 16px;
-    padding: 0px;
-    width: 100%;
-    margin-left: 16px;
+        border: rem(1) solid $green;
+        font-size: rem(16);
+        padding: rem(0);
+        width: 100%;
+        margin-left: rem(16);
     }
 }
 
-
 .wpcf7-form-control-wrap {
     width: 90%;
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+    margin-top: rem(0);
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked::after {
+    left: rem(3);
+    top: rem(-8);
 }

@@ -23,7 +23,7 @@
 
 .cards2.cards2--grid {
   @include mq("md") {
-    margin-top: 60px;
+    margin-top: rem(60);
     gap: rem(81) rem(40);
 
   }

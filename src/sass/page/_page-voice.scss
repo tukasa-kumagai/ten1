@@ -44,9 +44,9 @@
 }
 
 .page-voice__items.cards2.cards2--grid {
-  margin-top: 40px;
+  margin-top: rem(40);
 
   @include mq("md") {
-      margin-top: 40px;
+      margin-top: rem(40);
   }
 }

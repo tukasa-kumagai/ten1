@@ -875,7 +875,7 @@ div.information__img img {
 }
 
 .page-404::before {
-	background-image: url(/assets/images/404/page-ocean-sea-icon.png);
+	background-image: url(../../assets/images/404/page-ocean-sea-icon.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -913,7 +913,7 @@ div.information__img img {
 }
 
 .price::before {
-	background-image: url(/assets/images/top/fish2.png);
+	background-image: url(../../assets/images/top/fish2.png);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -1449,7 +1449,7 @@ details summary::before {
 }
 
 .page-contact__inner.inner {
-	max-width: 1500px;
+	max-width: 93.75rem;
 }
 
 .page-contact__bg-img {
@@ -1462,55 +1462,34 @@ details summary::before {
 
 .page-contact__button-inner {
 	margin-top: 2.5rem;
-	text-align: center; /* チェックボックスのカスタマイズ */ /* チェックされた状態 */ /* チェックボックスの中にチェックマークを表示 */
-}
-
-.page-contact__button-inner .page-contact {
-	margin: 0 auto;
-	margin-top: 1.75rem;
-	max-width: 31.25rem;
-}
-
-.page-contact__button-inner .page-contact__inner {
-	position: relative;
-}
-
-.page-contact__button-inner .page-contact__bg-img {
-	display: flex;
-	left: calc(50% - min(48.5vw, 38.75rem));
-	position: absolute;
-	top: -18%;
-	width: 7.5rem;
-}
-
-.page-contact__button-inner .page-contact__button-inner {
-	margin-top: 2.5rem;
 	text-align: center;
 }
 
-.page-contact__button-inner input[type=checkbox] {
-	-webkit-appearance: none; /* Webkitブラウザでのデフォルトのスタイルを無効化 */
-	-moz-appearance: none; /* Firefoxでのデフォルトのスタイルを無効化 */
-	appearance: none; /* 標準ブラウザでのデフォルトのスタイルを無効化 */
-	background-color: #fff; /* 背景色 */
-	border: 0.0625rem solid #408F95; /* チェックボックスの枠線 */
-	border-radius: 0; /* 角を丸める */
-	cursor: pointer; /* チェックボックスをクリックできることを示す */
-	height: 1.25rem; /* チェックボックスの高さ */
-	position: relative; /* チェックマークの位置を調整するため */
+/* ✅ チェックボックスのカスタマイズ */
+
+input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border: 0.0625rem solid #408F95;
+	border-radius: 0;
+	cursor: pointer;
+	height: 1.25rem;
+	position: relative;
 	top: 0.3125rem;
-	width: 1.25rem; /* チェックボックスの幅 */
+	width: 1.25rem;
 }
 
-.page-contact__button-inner input[type=checkbox]:checked {
-	background-color: #fff; /* チェックされたときの背景色 */
-	border-color: #408F95; /* 枠線の色 */
+input[type=checkbox]:checked {
+	background-color: #fff;
+	border-color: #408F95;
 }
 
-.page-contact__button-inner input[type=checkbox]:checked::after {
+input[type=checkbox]:checked::after {
 	background-color: transparent;
-	border-bottom: 0.125rem solid #C94800; /* 線の太さを変更 */
-	border-right: 0.125rem solid #C94800; /* 線の太さを変更 */
+	border-bottom: 0.125rem solid #C94800;
+	border-right: 0.125rem solid #C94800;
 	content: "";
 	height: 1rem;
 	left: 0.4375rem;
@@ -1518,6 +1497,64 @@ details summary::before {
 	top: 0;
 	transform: rotate(55deg);
 	width: 0.3125rem;
+}
+
+/* ✅ セレクトボックス */
+
+.select-wrapper {
+	display: block;
+	margin: 0 auto;
+	max-width: 25rem;
+	position: relative;
+	width: 100%;
+}
+
+.form__item-input2 {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border: 0.0625rem solid #ccc;
+	border-radius: 0.3125rem;
+	box-sizing: border-box;
+	font-size: 1rem;
+	line-height: 1.5;
+	padding: 0.75rem 2.5rem 0.75rem 0.75rem;
+	width: 100%;
+}
+
+/* ✅ 背景画像で矢印を表示 */
+
+.select-wrapper::after {
+	background-image: url("../../assets/images/common/arrow-t.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 0.75rem;
+	pointer-events: none;
+	position: absolute;
+	right: 0.75rem;
+	top: 70%;
+	transform: translateY(-50%);
+	width: 0.75rem;
+}
+
+/* ✅ レスポンシブ対応 */
+
+.select-wrapper {
+	max-width: 100%;
+}
+
+.form__item-input2 {
+	font-size: 0.875rem;
+	padding: 0.625rem 2.25rem 0.625rem 0.625rem;
+}
+
+.select-wrapper::after {
+	height: 0.75rem;
+	right: 0.625rem;
+	width: 0.75rem;
 }
 
 .page-faq__inner.inner {
@@ -1939,6 +1976,10 @@ details summary::before {
 	justify-content: center;
 }
 
+.page-site-map__group1 {
+	z-index: 100;
+}
+
 .page-site-map__nav1 {
 	color: #111;
 	margin-top: 2.6875rem;
@@ -2100,7 +2141,7 @@ details summary::before {
 }
 
 .page-voice__items.cards2.cards2--grid {
-	margin-top: 40px;
+	margin-top: 2.5rem;
 }
 
 .price {
@@ -3350,6 +3391,19 @@ div.card2__img img {
 	width: 100%;
 }
 
+input[type=checkbox]:checked::after {
+	background-color: transparent;
+	border-bottom: 0rem solid #C94800;
+	border-right: 0rem solid #C94800;
+	content: "";
+	height: 0.0625rem;
+	left: 0.4375rem;
+	position: absolute;
+	top: 0;
+	transform: rotate(5deg);
+	width: 0.3125rem;
+}
+
 .form__item:nth-child(n+2).form__item--width {
 	padding-left: 0.9375rem;
 	padding-right: 0.9375rem;
@@ -3636,24 +3690,24 @@ div.card2__img img {
 
 .wpcf7 {
 	margin: 0 auto; /* 中央配置 */ /* フォーム全体のスタイル */
-	max-width: 700px; /* フォームの最大幅 */
+	max-width: 43.75rem; /* フォームの最大幅 */
 }
 
 .wpcf7 textarea,
 .wpcf7 select {
 	border: 0.0625rem solid #408F95;
-	border-radius: 0px; /* 角丸 */
-	font-size: 16px;
-	padding: 0px; /* 内側余白 */
+	border-radius: 0rem; /* 角丸 */
+	font-size: 1rem;
+	padding: 0rem; /* 内側余白 */
 	width: 100%; /* フル幅 */
 }
 
 .wpcf7 input {
 	border: 0.0625rem solid #408F95;
-	border-radius: 0px; /* 角丸 */
-	font-size: 16px;
+	border-radius: 0rem; /* 角丸 */
+	font-size: 1rem;
 	margin-left: 1.25rem;
-	padding: 0px; /* 内側余白 */
+	padding: 0rem; /* 内側余白 */
 	width: 100%; /* フル幅 */
 }
 
@@ -3662,25 +3716,25 @@ div.card2__img img {
 }
 
 .wpcf7 input {
-	border: 1px solid #408F95;
-	border-radius: 0px;
-	font-size: 16px;
+	border: 0.0625rem solid #408F95;
+	border-radius: 0rem;
+	font-size: 1rem;
 	margin-left: 0rem;
-	padding: 0px;
+	padding: 0rem;
 	width: 100%;
 }
 
 .wpcf7-list-item {
 	display: grid;
 	justify-content: left;
-	margin-left: 0;
+	margin-left: 0rem;
 }
 
 span.wpcf7-list-item {
 	display: grid;
-	grid-template-columns: 40px 200px 0px;
+	grid-template-columns: 2.5rem 12.5rem 0rem;
 	justify-content: left;
-	margin-left: 0;
+	margin-left: 0rem;
 }
 
 .your-checkbox {
@@ -3691,8 +3745,8 @@ span.wpcf7-list-item {
 .wpcf7-checkbox input[type=checkbox] {
 	accent-color: #0073e6; /* チェックマークの色（モダンブラウザ対応） */
 	cursor: pointer; /* クリック可能に */
-	height: 16px;
-	width: 16px; /* サイズ */
+	height: 1rem;
+	width: 1rem; /* サイズ */
 }
 
 .wpcf7-checkbox input[type=checkbox] {
@@ -3704,11 +3758,11 @@ span.wpcf7-list-item {
 	-moz-appearance: none;
 	appearance: none; /* デフォルトデザインを削除 */
 	background-color: white; /* 未選択時の背景色 */
-	border: 1px solid #408F95; /* 枠線の色（後述） */
+	border: 0.0625rem solid #408F95; /* 枠線の色（後述） */
 	cursor: pointer;
-	height: 15px;
+	height: 0.9375rem;
 	position: relative;
-	width: 15px;
+	width: 0.9375rem;
 }
 
 .wpcf7-checkbox input[type=checkbox]:checked {
@@ -3720,22 +3774,22 @@ span.wpcf7-list-item {
 	-moz-appearance: none;
 	appearance: none; /* デフォルトのチェックボックスを削除 */
 	background-color: white;
-	border: 2px solid #0073e6; /* 枠線の色 */
-	border: 1px solid #408F95;
-	border-radius: 0px;
+	border: 0.125rem solid #0073e6; /* 枠線の色 */
+	border: 0.0625rem solid #408F95;
+	border-radius: 0rem;
 	cursor: pointer;
-	height: 15px;
+	height: 0.9375rem;
 	position: relative;
-	width: 15px;
+	width: 0.9375rem;
 }
 
 .wpcf7-checkbox input[type=checkbox]:checked::after {
 	color: red; /* レ点（✔）の色を赤に */
 	content: "✔"; /* チェックマーク */
-	font-size: 16px;
-	left: 2px;
+	font-size: 1rem;
+	left: 0.125rem;
 	position: absolute;
-	top: -2px;
+	top: -0.125rem;
 }
 
 .wpcf7-list-item-label {
@@ -3744,6 +3798,15 @@ span.wpcf7-list-item {
 
 .wpcf7-form-control-wrap {
 	width: 90%;
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+	margin-top: 0rem;
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked::after {
+	left: 0.1875rem;
+	top: -0.5rem;
 }
 
 .gallery__content {
@@ -4154,7 +4217,7 @@ span.wpcf7-list-item {
 }
 
 .page-about__gallery::before {
-	background-image: url(/assets/images/common/fish-image.jpg);
+	background-image: url(../../assets/images/common/fish-image.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -4612,7 +4675,7 @@ span.wpcf7-list-item {
 .tabs__all {
 	border: 0.0625rem solid #408F95;
 	font-size: 0.875rem;
-	max-width: 162px;
+	max-width: 10.125rem;
 	padding: 0.375rem 4.3125rem;
 }
 
@@ -4694,26 +4757,26 @@ span.wpcf7-list-item {
 .wp-pagenavi {
 	color: #408F95;
 	display: flex;
-	gap: 5px; /* 各ボタン間の間隔 */
+	gap: 0.3125rem; /* 各ボタン間の間隔 */
 	justify-content: center; /* ページネーションを中央寄せ */
-	margin: 20px 0;
-	padding: 9px 14px;
+	margin: 1.25rem 0;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi a {
-	border: 1px solid #408F95 !important;
-	border: 1px solid #408F95 !important;
+	border: 0.0625rem solid #408F95 !important;
+	border: 0.0625rem solid #408F95 !important;
 	color: #408F95 !important;
-	margin: 0 6px !important;
-	padding: 9px 14px !important;
+	margin: 0 0.375rem !important;
+	padding: 0.5625rem 0.875rem !important;
 }
 
 .wp-pagenavi a {
 	-webkit-text-decoration: none;
 	background-color: #fff;
 	border-radius: 0;
-	font-size: 16px;
-	padding: 50px 40px;
+	font-size: 1rem;
+	padding: 3.125rem 2.5rem;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
@@ -4728,8 +4791,8 @@ span.wpcf7-list-item {
 }
 
 .wp-pagenavi .current {
-	border: 1px solid #408F95 !important;
-	padding: 9px 14px !important;
+	border: 0.0625rem solid #408F95 !important;
+	padding: 0.5625rem 0.875rem !important;
 }
 
 .wp-pagenavi .current {
@@ -4740,65 +4803,65 @@ span.wpcf7-list-item {
 
 .wp-pagenavi .previouspostslink,
 .wp-pagenavi .nextpostslink {
-	margin: 0 24px !important;
+	margin: 0 1.5rem !important;
 }
 
 .wp-pagenavi .previouspostslink,
 .wp-pagenavi .nextpostslink {
 	background-color: #fff;
-	border: 1px solid #408F95;
+	border: 0.0625rem solid #408F95;
 	color: #408F95;
 	font-weight: bold;
-	padding: 9px 14px;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi .previouspostslink:hover,
 .wp-pagenavi .nextpostslink:hover {
 	background-color: #408F95;
-	color: white;
-	padding: 9px 14px;
+	color: #fff;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi .extend {
 	color: #999;
 	font-weight: bold;
-	padding: 9px 14px;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi .first,
 .wp-pagenavi .last {
 	background-color: #fff;
-	border: 1px solid #408F95;
-	padding: 9px 14px;
+	border: 0.0625rem solid #408F95;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi .first:hover,
 .wp-pagenavi .last:hover {
 	background-color: #408F95;
 	color: #408F95;
-	padding: 9px 14px;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi a {
-	padding: 9px 14px;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi a,
 .wp-pagenavi span {
 	color: #666;
-	font-size: 16px;
-	padding: 9px 14px;
+	font-size: 1rem;
+	padding: 0.5625rem 0.875rem;
 }
 
 .wp-pagenavi a {
 	-webkit-text-decoration: none;
 	background-color: #fff;
-	border: 1px solid #408F95;
-	border-radius: 0px;
+	border: 0.0625rem solid #408F95;
+	border-radius: 0;
 	color: #333;
 	display: inline-block;
-	font-size: 16px;
-	padding: 30px 12px;
+	font-size: 1rem;
+	padding: 1.875rem 0.75rem;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
@@ -5427,17 +5490,14 @@ div.information__img {
 	width: 18.875rem;
 }
 
-.page-contact__button-inner .page-contact {
-	max-width: 43.75rem;
-}
-
-.page-contact__button-inner .page-contact__bg-img {
-	width: 18.875rem;
-}
-
-.page-contact__button-inner .page-contact__button-inner {
+.page-contact__button-inner {
 	margin-top: 1.875rem;
-	text-align: center;
+}
+
+.select-wrapper::after {
+	height: 1rem;
+	right: 0;
+	width: 1rem;
 }
 
 .page-faq__inner.inner {
@@ -5855,7 +5915,7 @@ div.information__img {
 }
 
 .page-voice__items.cards2.cards2--grid {
-	margin-top: 40px;
+	margin-top: 2.5rem;
 }
 
 .price {
@@ -6453,7 +6513,7 @@ div.card2__img {
 
 .cards2.cards2--grid {
 	gap: 5.0625rem 2.5rem;
-	margin-top: 60px;
+	margin-top: 3.75rem;
 }
 
 .content-block {
@@ -6589,7 +6649,7 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: grid;
 	flex-wrap: nowrap;
-	grid-template-columns: 200px 400px; /* 3列（幅: 100px, 200px, 100px） */
+	grid-template-columns: 12.5rem 25rem;
 	margin: 0 auto;
 	max-width: 50rem;
 	padding-bottom: 2.5rem;
@@ -6601,7 +6661,7 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: grid;
 	flex-wrap: nowrap;
-	grid-template-columns: 200px 400px; /* 3列（幅: 100px, 200px, 100px） */
+	grid-template-columns: 12.5rem 25rem;
 	margin: 0 auto;
 	max-width: 50rem;
 	padding-bottom: 2.5rem;
@@ -6674,7 +6734,7 @@ div.card2__img {
 .form__item-textarea {
 	font-size: 1.125rem;
 	height: 12.5rem;
-	margin-left: 20px;
+	margin-left: 1.25rem;
 	margin-top: 0.625rem;
 	max-width: 30rem;
 	padding-left: 0.625rem;
@@ -6730,19 +6790,19 @@ div.card2__img {
 }
 
 .wpcf7 input {
-	border: 1px solid #408F95;
-	border-radius: 0px;
-	font-size: 16px;
+	border: 0.0625rem solid #408F95;
+	border-radius: 0rem;
+	font-size: 1rem;
 	margin-left: 1.25rem;
-	padding: 0px;
+	padding: 0rem;
 	width: 100%;
 }
 
 span.wpcf7-list-item {
 	display: grid;
-	grid-template-columns: 40px 400px 0px;
+	grid-template-columns: 2.5rem 25rem 0rem;
 	justify-content: center;
-	margin-left: 0;
+	margin-left: 0rem;
 }
 
 .wpcf7-list-item-label {
@@ -6750,10 +6810,10 @@ span.wpcf7-list-item {
 }
 
 .wpcf7 select {
-	border: 1px solid #408F95;
-	font-size: 16px;
-	margin-left: 16px;
-	padding: 0px;
+	border: 0.0625rem solid #408F95;
+	font-size: 1rem;
+	margin-left: 1rem;
+	padding: 0rem;
 	width: 100%;
 }
 
@@ -7228,7 +7288,7 @@ span.wpcf7-list-item {
 
 .wp-pagenavi {
 	flex-wrap: wrap;
-	gap: 3px;
+	gap: 0.1875rem;
 }
 
 }
