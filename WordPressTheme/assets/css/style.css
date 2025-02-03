@@ -690,6 +690,7 @@ body.active {
 }
 
 .hamburger {
+	background-color: Transparent;
 	z-index: 9999;
 }
 

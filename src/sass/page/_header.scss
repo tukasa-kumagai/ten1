@@ -63,7 +63,6 @@ body.active {
   height: 100%;
   overflow: hidden;
 }
-
 .sp-nav {
   //display: none;
   position: absolute;
@@ -120,7 +119,7 @@ body.active {
   color: $white;
   display: flex;
   flex-direction: column;
-
+ 
 }
 
 .sp-nav__left-item:first-child a,
@@ -187,10 +186,14 @@ body.active {
   opacity: 0.6;
 }
 
+
+
+
+
 //c-hamburger
 .hamburger {
   z-index: 9999;
-
+background-color: Transparent;
   @include mq("md") {
     display: none;
   }
@@ -202,7 +205,7 @@ body.active {
   display: block;
   height: rem(1);
   width: rem(32);
-  background: $white;
+  background:$white;
   transition: ease .3s;
 
   @include mq("md") {
