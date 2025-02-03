@@ -27,7 +27,7 @@
     </nav>
     <section class="l-page-information page-information">
       <div class="tab__inner inner fish fish--information">
-      
+
         <ul class="sub-information__tab info-tab">
           <li class="info-tab__text js-infoTab-trigger is-active" id="tab_panel-1" data-category="license">ライセンス<br class="info-tab__text--md-show">講習</li>
           <li class="info-tab__text js-infoTab-trigger" id="tab_panel-2" data-category="fanDiving">ファン<br class="info-tab__text--md-show">ダイビング</li>

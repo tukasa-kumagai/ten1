@@ -36,7 +36,7 @@
 
 
 .page-vice__items:nth-child(n+2) {
- 
+
   @include mq("md") {
     margin: 0 auto;
     margin-top: rem(90);
@@ -47,6 +47,6 @@
   margin-top: rem(40);
 
   @include mq("md") {
-      margin-top: rem(40);
+    margin-top: rem(40);
   }
 }

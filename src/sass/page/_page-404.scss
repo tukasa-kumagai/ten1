@@ -2,16 +2,16 @@
 
 
 .page-404 {
-position: relative;
+  position: relative;
 
-@include mq("md") {
-  margin-top: rem(65);
-}
+  @include mq("md") {
+    margin-top: rem(65);
+  }
 }
 
 .page-404__inner {
-max-width: rem(600);
-margin: 0 auto;
+  max-width: rem(600);
+  margin: 0 auto;
 }
 
 .page-404::before {
@@ -33,24 +33,25 @@ margin: 0 auto;
     top: -24%;
     width: rem(698);
     z-index: 100;
-   
+
   }
 }
 
 .page-404__title {
-font-size: rem(80);
-font-weight: $regular;
-font-family: $second-font-family;
-color: $white;
-margin: 0 auto;
-letter-spacing: 0.5em;
-width: rem(220);
-line-height: 1.6;
-@include mq("md") {
-  font-size: rem(160);
-  width: rem(440);
-  
-}
+  font-size: rem(80);
+  font-weight: $regular;
+  font-family: $second-font-family;
+  color: $white;
+  margin: 0 auto;
+  letter-spacing: 0.5em;
+  width: rem(220);
+  line-height: 1.6;
+
+  @include mq("md") {
+    font-size: rem(160);
+    width: rem(440);
+
+  }
 }
 
 .page-404__text {
@@ -79,11 +80,11 @@ line-height: 1.6;
   position: absolute;
 
   @include mq("md") {
-      height: rem(300);
-      left: rem(100);
-      top: rem(928);
-      width: rem(439);
-      z-index: 10000;
-      left: calc(50% - min(48.5vw, 38.75rem));
+    height: rem(300);
+    left: rem(100);
+    top: rem(928);
+    width: rem(439);
+    z-index: 10000;
+    left: calc(50% - min(48.5vw, 38.75rem));
   }
 }

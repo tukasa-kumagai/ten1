@@ -19,7 +19,6 @@
   $privacy_policy = esc_url(home_url('/privacy_policy'));
   $terms_of_service = esc_url(home_url('/terms-of-service'));
   $contact = esc_url(home_url('/contact'));
-
   ?>
   <div class="contact__bg">
     <div class="inner">
@@ -102,7 +101,7 @@
               echo '</li>';
             }
             ?>
-               <?php
+            <?php
             // 用語IDとタクソノミー名を指定
             $term_id = 6; // 用語ID
             $taxonomy = 'campaign_category'; // タクソノミー名
@@ -142,14 +141,14 @@
               echo '</li>';
             }
             ?>
-           
+
           </ul>
           <ul class="footer__nav2">
             <li class="footer__list1"><a class="footer__button" href="<?php echo $about_us ?>">私たちについて</a></li>
           </ul>
         </div>
-        
-        
+
+
         <div class="footer__group1">
           <ul class="footer__nav1">
             <li class="footer__list1"><a class="footer__button" href="<?php echo $information ?>">ダイビング情報</a></li>
@@ -171,7 +170,7 @@
             <li class="footer__list1"><a class="footer__button" href="<?php echo $voice ?>">お客様の声</a></li>
           </ul>
           <ul class="footer__nav1">
-            
+
             <li class="footer__list3"><a class="footer__button" href="<?php echo $price ?>">料金一覧</a></li>
             <li class="footer__list2"><a class="footer__button" href="<?php echo $price1 ?>">ライセンス講習</a></li>
             <li class="footer__list2"><a class="footer__button" href="<?php echo $price2 ?>">体験ダイビング</a></li>

@@ -31,7 +31,6 @@
         <?php if (have_posts()) : ?>
           <?php while (have_posts()) : the_post(); ?>
             <h2 class="sentence__title"><?php the_title(); ?></h2>
-
       </div>
       <div class="page-privacy-policy__inner inner ">
         <div class="page-privacy-policy__inner6">

@@ -3,26 +3,26 @@
 .tabs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    
     gap: rem(21);
+
     @include mq("md") {
         grid-template-columns: repeat(4, 1fr);
         gap: rem(32);
-         }
-    
+    }
+
 }
 
 .tabs__all {
     font-size: rem(14);
     border: rem(1) solid $green;
     padding: rem(6) rem(69);
-
     max-width: rem(162);
+
     @include mq("md") {
         font-size: rem(14);
         border: rem(1) solid $green;
         padding: rem(6) rem(69);
-   
+
     }
 }
 
@@ -31,28 +31,31 @@
     border: rem(1) solid $green;
     color: $green;
     padding: rem(6) rem(25);
+    max-width: rem(176);
 
-max-width: rem(176);
-@include mq("md") {
-    font-size: rem(13);
-    border: rem(1) solid $green;
-    color: $green;
-    padding: rem(6) rem(25);
-
-}
+    @include mq("md") {
+        font-size: rem(13);
+        border: rem(1) solid $green;
+        color: $green;
+        padding: rem(6) rem(25);
+    }
 }
 
 .tabs__text:hover {
-
     color: $white;
 
 }
+
 .tabs .active .button2__item {
-    background-color: $green; /* ボタン背景色 */
-    color: $white;           /* ボタン文字色 */
-    border: rem(1) solid $green; /* ボーダーも変える場合 */
+    background-color: $green;
+    /* ボタン背景色 */
+    color: $white;
+    /* ボタン文字色 */
+    border: rem(1) solid $green;
+    /* ボーダーも変える場合 */
 }
 
 .tabs .active .button2__item:hover {
-    background-color: darken($green, 10%); /* ホバー時の色を少し濃く */
+    background-color: darken($green, 10%);
+    /* ホバー時の色を少し濃く */
 }

@@ -1,11 +1,10 @@
 @use "global" as *;
 
 
-.page-campaign__inner  {
+.page-campaign__inner {
   position: relative;
-  @include mq("md") {
 
-  }
+  @include mq("md") {}
 }
 
 
@@ -27,14 +26,13 @@
 
 
 
-.page-campaign__item {
-
-}
+.page-campaign__item {}
 
 .page-campaign__item+.page-campaign__item {
-margin-top: rem(33);
+  margin-top: rem(33);
 
 }
+
 .page-campaign__button-inner {
   margin: 0 auto;
   text-align: center;
@@ -54,10 +52,6 @@ margin-top: rem(33);
 }
 
 
-.page-campaign__categories {
+.page-campaign__categories {}
 
-}
-
-.page-campaign__category {
-  
-}
+.page-campaign__category {}

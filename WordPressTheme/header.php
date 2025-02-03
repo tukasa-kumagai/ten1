@@ -17,8 +17,8 @@
   <meta property="og:description" content="私のポートフォリオサイトでは、これまでのプロジェクトやスキルを紹介しています。" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
-  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>"  id="favicon">
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/common/apple-touch-icon.png">
+  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/codeups-logo-contact.png')); ?>" id="favicon">
+  <link rel="apple-touch-icon" sizes="180x180" href="../dist/assets/images/common/apple-touch-icon.png">
   <!-- googleフォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,25 +32,29 @@
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script type="text/javascript" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/js/jquery.inview.min.js')); ?>"></script>
- 
+
 
   <!--メインのJS-->
 
   <!-- JavaScript -->
-   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SZP6NEWWYY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZP6NEWWYY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-SZP6NEWWYY');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SZP6NEWWYY');
+  </script>
   <?php wp_head(); ?>
 </head>
 <?php wp_body_open();  ?>
+
 <body>
-<?php
+  <?php
   $home = esc_url(home_url('/home'));
   $campaign = esc_url(home_url('/campaign'));
   $about_us = esc_url(home_url('/about_us'));
@@ -88,65 +92,65 @@
             <ul class="sp-nav__left-items">
               <li class="sp-nav__left-item"><a href="<?php echo $campaign ?>">キャンペーン</a></li>
               <?php
-            // 用語IDとタクソノミー名を指定
-            $term_id = 5; // 用語ID
-            $taxonomy = 'campaign_category'; // タクソノミー名
+              // 用語IDとタクソノミー名を指定
+              $term_id = 5; // 用語ID
+              $taxonomy = 'campaign_category'; // タクソノミー名
 
-            // タクソノミーページリンクを取得
-            $term_link = get_term_link($term_id, $taxonomy);
+              // タクソノミーページリンクを取得
+              $term_link = get_term_link($term_id, $taxonomy);
 
-            // リンクを表示（li タグを含める）
-            if (!is_wp_error($term_link)) {
-              echo '<li class="sp-nav__left-item">';
-              echo '<a class="footer__button" href="' . esc_url($term_link) . '">ライセンス取得</a>';
-              echo '</li>';
-            } else {
-              // エラーハンドリング（リンクが取得できない場合）
-              echo '<li class="sp-nav__left-item">';
-              echo '<a class="footer__button" href="#">リンクが無効です</a>';
-              echo '</li>';
-            }
-            ?>
-               <?php
-            // 用語IDとタクソノミー名を指定
-            $term_id = 6; // 用語ID
-            $taxonomy = 'campaign_category'; // タクソノミー名
+              // リンクを表示（li タグを含める）
+              if (!is_wp_error($term_link)) {
+                echo '<li class="sp-nav__left-item">';
+                echo '<a class="footer__button" href="' . esc_url($term_link) . '">ライセンス取得</a>';
+                echo '</li>';
+              } else {
+                // エラーハンドリング（リンクが取得できない場合）
+                echo '<li class="sp-nav__left-item">';
+                echo '<a class="footer__button" href="#">リンクが無効です</a>';
+                echo '</li>';
+              }
+              ?>
+              <?php
+              // 用語IDとタクソノミー名を指定
+              $term_id = 6; // 用語ID
+              $taxonomy = 'campaign_category'; // タクソノミー名
 
-            // タクソノミーページリンクを取得
-            $term_link = get_term_link($term_id, $taxonomy);
+              // タクソノミーページリンクを取得
+              $term_link = get_term_link($term_id, $taxonomy);
 
-            // リンクを表示（li タグを含める）
-            if (!is_wp_error($term_link)) {
-              echo '<li class="sp-nav__left-item">';
-              echo '<a class="footer__button" href="' . esc_url($term_link) . '">貸切体験ダイビング</a>';
-              echo '</li>';
-            } else {
-              // エラーハンドリング（リンクが取得できない場合）
-              echo '<li class="sp-nav__left-item">';
-              echo '<a class="footer__button" href="#">リンクが無効です</a>';
-              echo '</li>';
-            }
-            ?>
-            <?php
-            // 用語IDとタクソノミー名を指定
-            $term_id = 7; // 用語ID
-            $taxonomy = 'campaign_category'; // タクソノミー名
+              // リンクを表示（li タグを含める）
+              if (!is_wp_error($term_link)) {
+                echo '<li class="sp-nav__left-item">';
+                echo '<a class="footer__button" href="' . esc_url($term_link) . '">貸切体験ダイビング</a>';
+                echo '</li>';
+              } else {
+                // エラーハンドリング（リンクが取得できない場合）
+                echo '<li class="sp-nav__left-item">';
+                echo '<a class="footer__button" href="#">リンクが無効です</a>';
+                echo '</li>';
+              }
+              ?>
+              <?php
+              // 用語IDとタクソノミー名を指定
+              $term_id = 7; // 用語ID
+              $taxonomy = 'campaign_category'; // タクソノミー名
 
-            // タクソノミーページリンクを取得
-            $term_link = get_term_link($term_id, $taxonomy);
+              // タクソノミーページリンクを取得
+              $term_link = get_term_link($term_id, $taxonomy);
 
-            // リンクを表示（li タグを含める）
-            if (!is_wp_error($term_link)) {
-              echo '<li class="sp-nav__left-item">';
-              echo '<a class="footer__button" href="' . esc_url($term_link) . '">ファンダイビング</a>';
-              echo '</li>';
-            } else {
-              // エラーハンドリング（リンクが取得できない場合）
-              echo '<li class="sp-nav__left-item">';
-              echo '<a class="footer__button" href="#">リンクが無効です</a>';
-              echo '</li>';
-            }
-            ?>
+              // リンクを表示（li タグを含める）
+              if (!is_wp_error($term_link)) {
+                echo '<li class="sp-nav__left-item">';
+                echo '<a class="footer__button" href="' . esc_url($term_link) . '">ファンダイビング</a>';
+                echo '</li>';
+              } else {
+                // エラーハンドリング（リンクが取得できない場合）
+                echo '<li class="sp-nav__left-item">';
+                echo '<a class="footer__button" href="#">リンクが無効です</a>';
+                echo '</li>';
+              }
+              ?>
             </ul>
             <ul class="sp-nav__left-items">
               <li class="sp-nav__left-item"><a href="<?php echo $about_us ?>">私たちについて</a></li>
@@ -244,4 +248,3 @@
       </div>
     </div>
   </header>
-

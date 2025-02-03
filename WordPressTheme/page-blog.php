@@ -2,12 +2,11 @@
 
 <body>
   <?php wp_body_open();  ?>
-
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-      <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
-      <img src="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -674,7 +673,7 @@
           <div class="contact__maim">
             <div class="contact__head">
               <div class="contact__logo">
-              <h2><img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
+                <h2><img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
               </div>
               <div class="contact__head-under">
                 <div class="contact__information">

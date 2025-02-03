@@ -1,8 +1,5 @@
 <?php get_header();  ?>
-
-
   <main class="main__content">
-
   <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     <nav class="breadcrumb breadcrumb--white">
       <div class="inner">
@@ -19,7 +16,6 @@
     </nav>
     <?php
   $home = esc_url(home_url('/home'));
-
   ?>
     <section class="page-404">
       <div class="page-404__inner inner">
@@ -118,5 +114,4 @@
   </footer>
   <?php wp_footer();  ?>
 </body>
-
 </html>

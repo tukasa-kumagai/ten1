@@ -89,7 +89,7 @@
 .footer__wrapper1 {
     @include mq("md") {
         display: flex;
-       
+
     }
 }
 
@@ -170,7 +170,7 @@
     padding-top: rem(1);
     display: block;
     width: 100%;
-   
+
 
     @include mq("md") {
         width: 100%;

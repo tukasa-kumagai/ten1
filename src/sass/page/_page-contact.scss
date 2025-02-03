@@ -62,8 +62,8 @@ input[type="checkbox"]:checked {
 
 input[type="checkbox"]:checked::after {
   background-color: transparent;
-  border-bottom: rem(2) solid #C94800;
-  border-right: rem(2) solid #C94800;
+  border-bottom: rem(2) solid $red;
+  border-right: rem(2) solid $red;
   content: "";
   height: rem(16);
   left: rem(7);
@@ -88,8 +88,8 @@ input[type="checkbox"]:checked::after {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-color: #fff;
-  border: rem(1) solid #ccc;
+  background-color: $white;
+  border: rem(1) solid $gray;
   border-radius: rem(5);
   font-size: rem(16);
   line-height: 1.5;
@@ -116,16 +116,14 @@ input[type="checkbox"]:checked::after {
 .select-wrapper {
   max-width: 100%;
 
-  @include mq("md") {
-  }
+  @include mq("md") {}
 }
 
 .form__item-input2 {
   font-size: rem(14);
   padding: rem(10) rem(36) rem(10) rem(10);
 
-  @include mq("md") {
-  }
+  @include mq("md") {}
 }
 
 .select-wrapper::after {

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .card2 {
-  box-shadow: 0 0 rem(8) gray;
+  box-shadow: 0 0 rem(8) $gray;
   margin: 0 auto;
   padding: rem(14) rem(17) rem(20) rem(15);
   margin-top: rem(0);

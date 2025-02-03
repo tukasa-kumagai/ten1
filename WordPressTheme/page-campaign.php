@@ -13,9 +13,7 @@
       <p class="lower-page-mv__title">Campaign</p>
     </div>
   </div>
-
   <main>
-
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     <nav class="breadcrumb breadcrumb--position">
       <div class="breadcrumb__inner inner">
@@ -274,7 +272,7 @@
           <div class="contact__maim">
             <div class="contact__head">
               <div class="contact__logo">
-              <h2><img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
+                <h2><img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
               </div>
               <div class="contact__head-under">
                 <div class="contact__information">

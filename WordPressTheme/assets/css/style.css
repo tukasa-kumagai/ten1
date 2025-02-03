@@ -411,15 +411,15 @@ input[type=checkbox]:checked + .label_test:before {
 	border-radius: 50%;
 }
 
-.contact-item {
-	background-color: #eee; /* グレーの背景色 */
+.contact-item { /* 横幅30%指定（グレーの背景色部分） */
+	background-color: #eee;
 	text-align: left; /* テキスト左寄せ */
-	width: 30%; /* 横幅30%指定（グレーの背景色部分） */
+	width: 30%; /* グレーの背景色 */
 }
 
-.contact-body {
+.contact-body { /* 横幅70%指定（白背景色部分） */
 	display: grid;
-	width: 70%; /* 横幅70%指定（白背景色部分） */
+	width: 70%;
 }
 
 .footer {
@@ -978,7 +978,7 @@ div.information__img img {
 }
 
 .page-blog-low-page__sub-card {
-	box-shadow: 0.125rem 0.125rem 0.25rem gray;
+	box-shadow: 0.125rem 0.125rem 0.25rem #D9D9D9;
 	display: flex;
 	margin-top: 1.5rem;
 	padding: 1rem;
@@ -1106,7 +1106,7 @@ div.information__img img {
 }
 
 .page-blog-low-page__list {
-	background: url(/assets/images/blog/starfish2.jpg) left 0rem top 0.1875rem no-repeat;
+	background: url(../../assets/images/blog/starfish2.jpg) left 0rem top 0.1875rem no-repeat;
 	background-size: 0.9375rem auto;
 	display: block;
 	font-size: 1rem;
@@ -1132,7 +1132,7 @@ div.information__img img {
 
 .page-blog-low-page__box-image1 { /* 初期のボタンの文字色 */
 	-webkit-text-decoration: none;
-	background-color: #FFF;
+	background-color: #fff;
 	border: #408F95 0.0625rem solid; /* 初期のボタンの背景色 */
 	color: #111;
 	display: inline-block;
@@ -1318,7 +1318,7 @@ div.information__img img {
 }
 
 .page-blog__sub-campaign__items {
-	box-shadow: 5px 5px 10px gray;
+	box-shadow: 0.3125rem 0.3125rem 0.625rem #D9D9D9;
 	display: table;
 	margin: 0 auto;
 }
@@ -1384,11 +1384,11 @@ details .details-content {
 	overflow: hidden; /* コンテンツがアニメーションで徐々に表示されるように */
 }
 
-details summary {
-	cursor: pointer; /* カーソルの形状をポインターに */
-	display: block; /* 矢印アイコンを非表示に */
-	padding: 0.5rem 0.5rem 0.5rem 2.25rem; /* padding-left にアイコンのスペースを確保 */
-	position: relative; /* 絶対配置する疑似要素のアイコンの基準に */
+details summary { /* 矢印アイコンを非表示に */
+	cursor: pointer;
+	display: block; /* 絶対配置する疑似要素のアイコンの基準に */
+	padding: 0.5rem 0.5rem 0.5rem 2.25rem; /* カーソルの形状をポインターに */
+	position: relative; /* padding-left にアイコンのスペースを確保 */
 }
 
 details summary::-webkit-details-marker {
@@ -1514,7 +1514,7 @@ input[type=checkbox]:checked::after {
 	-moz-appearance: none;
 	appearance: none;
 	background-color: #fff;
-	border: 0.0625rem solid #ccc;
+	border: 0.0625rem solid #D9D9D9;
 	border-radius: 0.3125rem;
 	box-sizing: border-box;
 	font-size: 1rem;
@@ -2356,7 +2356,7 @@ dl.price__list {
 
 .box {
 	background-color: #fff;
-	box-shadow: 0 0 0.5rem gray;
+	box-shadow: 0 0 0.5rem #D9D9D9;
 }
 
 .box__img {
@@ -2417,7 +2417,7 @@ dl.price__list {
 }
 
 .box {
-	box-shadow: 0 0 0.5rem gray;
+	box-shadow: 0 0 0.5rem #D9D9D9;
 	display: flex;
 	flex-flow: column;
 	z-index: 99;
@@ -2983,7 +2983,7 @@ dl.price__list {
 }
 
 .card {
-	box-shadow: 0 0 0.5rem gray;
+	box-shadow: 0 0 0.5rem #D9D9D9;
 	display: flex;
 	flex-flow: column;
 }
@@ -3164,7 +3164,7 @@ dl.price__list {
 }
 
 .card2 {
-	box-shadow: 0 0 0.5rem gray;
+	box-shadow: 0 0 0.5rem #D9D9D9;
 	margin: 0 auto;
 	margin-top: 0rem;
 	max-width: 100%;
@@ -3657,7 +3657,7 @@ input[type=checkbox]:checked::after {
 	display: inline-block;
 	max-width: 100%;
 	position: relative;
-	width: 400px;
+	width: 2500rem;
 }
 
 /* プルダウンメニューのスタイル */
@@ -3688,27 +3688,27 @@ input[type=checkbox]:checked::after {
 	width: 0.625rem; /* 高さは自動 */
 }
 
-.wpcf7 {
-	margin: 0 auto; /* 中央配置 */ /* フォーム全体のスタイル */
-	max-width: 43.75rem; /* フォームの最大幅 */
+.wpcf7 { /* フォームの最大幅 */
+	margin: 0 auto; /* フォーム全体のスタイル */
+	max-width: 43.75rem; /* 中央配置 */
 }
 
 .wpcf7 textarea,
-.wpcf7 select {
+.wpcf7 select { /* 内側余白 */
 	border: 0.0625rem solid #408F95;
 	border-radius: 0rem; /* 角丸 */
-	font-size: 1rem;
-	padding: 0rem; /* 内側余白 */
-	width: 100%; /* フル幅 */
+	font-size: 1rem; /* フル幅 */
+	padding: 0rem;
+	width: 100%;
 }
 
-.wpcf7 input {
+.wpcf7 input { /* 内側余白 */
 	border: 0.0625rem solid #408F95;
 	border-radius: 0rem; /* 角丸 */
 	font-size: 1rem;
-	margin-left: 1.25rem;
-	padding: 0rem; /* 内側余白 */
-	width: 100%; /* フル幅 */
+	margin-left: 1.25rem; /* フル幅 */
+	padding: 0rem;
+	width: 100%;
 }
 
 .wpcf7-list-item {
@@ -3743,25 +3743,24 @@ span.wpcf7-list-item {
 }
 
 .wpcf7-checkbox input[type=checkbox] {
-	accent-color: #0073e6; /* チェックマークの色（モダンブラウザ対応） */
-	cursor: pointer; /* クリック可能に */
+	cursor: pointer; /* サイズ */
 	height: 1rem;
-	width: 1rem; /* サイズ */
+	width: 1rem; /* クリック可能に */
 }
 
 .wpcf7-checkbox input[type=checkbox] {
-	accent-color: white; /* レ点と背景の色を赤に */
+	accent-color: #fff; /* レ点と背景の色を赤に */
 }
 
 .wpcf7-checkbox input[type=checkbox] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	appearance: none; /* デフォルトデザインを削除 */
-	background-color: white; /* 未選択時の背景色 */
-	border: 0.0625rem solid #408F95; /* 枠線の色（後述） */
+	appearance: none; /* 枠線の色（後述） */
+	background-color: #fff;
+	border: 0.0625rem solid #408F95; /* 未選択時の背景色 */
 	cursor: pointer;
 	height: 0.9375rem;
-	position: relative;
+	position: relative; /* デフォルトデザインを削除 */
 	width: 0.9375rem;
 }
 
@@ -3772,22 +3771,21 @@ span.wpcf7-list-item {
 .wpcf7-checkbox input[type=checkbox] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	appearance: none; /* デフォルトのチェックボックスを削除 */
-	background-color: white;
-	border: 0.125rem solid #0073e6; /* 枠線の色 */
+	appearance: none;
+	background-color: #fff;
 	border: 0.0625rem solid #408F95;
 	border-radius: 0rem;
 	cursor: pointer;
 	height: 0.9375rem;
-	position: relative;
+	position: relative; /* デフォルトのチェックボックスを削除 */
 	width: 0.9375rem;
 }
 
 .wpcf7-checkbox input[type=checkbox]:checked::after {
-	color: red; /* レ点（✔）の色を赤に */
+	color: #C94800;
 	content: "✔"; /* チェックマーク */
 	font-size: 1rem;
-	left: 0.125rem;
+	left: 0.125rem; /* レ点（✔）の色を赤に */
 	position: absolute;
 	top: -0.125rem;
 }
@@ -4247,7 +4245,7 @@ span.wpcf7-list-item {
 .pagetop a {
 	-webkit-text-decoration: none;
 	-moz-opacity: 0.5;
-	color: #222;
+	color: #111;
 	display: block;
 	filter: alpha(opacity=50);
 	text-align: center;
@@ -4388,7 +4386,7 @@ span.wpcf7-list-item {
 }
 
 .pc-nav__item a {
-	color: #FFF;
+	color: #fff;
 	display: flex;
 	flex-direction: column;
 	font-family: "Gotu", sans-serif;
@@ -4692,9 +4690,9 @@ span.wpcf7-list-item {
 }
 
 .tabs .active .button2__item {
-	background-color: #408F95; /* ボタン背景色 */
-	border: 0.0625rem solid #408F95; /* ボーダーも変える場合 */
-	color: #fff; /* ボタン文字色 */
+	background-color: #408F95; /* ボタン文字色 */
+	border: 0.0625rem solid #408F95; /* ボタン背景色 */
+	color: #fff; /* ボーダーも変える場合 */
 }
 
 .tabs .active .button2__item:hover {
@@ -4858,7 +4856,7 @@ span.wpcf7-list-item {
 	background-color: #fff;
 	border: 0.0625rem solid #408F95;
 	border-radius: 0;
-	color: #333;
+	color: #111;
 	display: inline-block;
 	font-size: 1rem;
 	padding: 1.875rem 0.75rem;
@@ -5004,7 +5002,7 @@ html {
 }
 
 .contact__maim {
-	box-shadow: 0 0 0.5rem gray;
+	box-shadow: 0 0 0.5rem #D9D9D9;
 	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
@@ -5366,7 +5364,7 @@ div.information__img {
 }
 
 .page-blog-low-page__sub-card {
-	box-shadow: 0.125rem 0.125rem 0.25rem gray;
+	box-shadow: 0.125rem 0.125rem 0.25rem #D9D9D9;
 	display: flex;
 	margin-top: 1.5rem;
 	padding: 1rem;

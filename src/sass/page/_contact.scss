@@ -74,7 +74,7 @@
         position: relative;
         display: flex;
         justify-content: space-between;
-        box-shadow: 0 0 rem(8) gray;
+        box-shadow: 0 0 rem(8) $gray;
         max-width: rem(1080);
         width: 100%;
         margin: 0 auto;
@@ -133,7 +133,7 @@
 
 .contact__head {
     @include mq("md") {
-        border-right: 0.0625rem solid #408F95;
+        border-right: 0.0625rem solid $green;
         padding-right: rem(87);
     }
 }
@@ -272,8 +272,8 @@
 
 
 
- /*ボックス枠のCSS*/
- .label_test:after {
+/*ボックス枠のCSS*/
+.label_test:after {
     border: rem(1) solid $green;
     border-radius: 0%;
     content: "";
@@ -284,58 +284,66 @@
     position: absolute;
     top: 50%;
     width: rem(14);
-  }
+}
 
-  .label_test {
-    position: relative; 
-    padding: 0 0 0 rem(30); 
+.label_test {
+    position: relative;
+    padding: 0 0 0 rem(30);
     width: 104%;
 
-  }
+}
 
- .label_test:hover:after {
-    
- }
-    .label_test:after, .label_test:before{
-    position: absolute; 
-    content: ""; 
-    display: block; 
-    top: 50%; 
-    }
-  /*チェックマークの追加*/
-    .label_test:before {
-        border-bottom: rem(2) solid red;
-        border-right: rem(2) solid red;
-        height: rem(9);
-        left: rem(18);
-        margin-top: rem(-7);
-        opacity: 0;
-        transform: rotate(45deg);
-        width: rem(5);
-      
-    }
-    /*チェックボックスがチェックされた時に動作する内容*/
-    input[type=checkbox]:checked + .label_test:before {
-    opacity: 1; 
-    }
+.label_test:hover:after {}
+
+.label_test:after,
+.label_test:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 50%;
+}
+
+/*チェックマークの追加*/
+.label_test:before {
+    border-bottom: rem(2) solid red;
+    border-right: rem(2) solid red;
+    height: rem(9);
+    left: rem(18);
+    margin-top: rem(-7);
+    opacity: 0;
+    transform: rotate(45deg);
+    width: rem(5);
+
+}
+
+/*チェックボックスがチェックされた時に動作する内容*/
+input[type=checkbox]:checked+.label_test:before {
+    opacity: 1;
+}
 
 
-    //試作品
+//試作品
 .contact-item,
 .contact-body {
-display: block;
+    display: block;
 
 }
+
 .er {
-  border-radius: 50%;
+    border-radius: 50%;
 }
+
 .contact-item {
-  text-align: left; /* テキスト左寄せ */
-  width: 30%; /* 横幅30%指定（グレーの背景色部分） */
-  background-color: #eee; /* グレーの背景色 */
+    text-align: left;
+    /* テキスト左寄せ */
+    width: 30%;
+    /* 横幅30%指定（グレーの背景色部分） */
+    background-color: #eee;
+    /* グレーの背景色 */
 }
 
 .contact-body {
-  width: 70%; /* 横幅70%指定（白背景色部分） */
-display: grid;
+    width: 70%;
+    /* 横幅70%指定（白背景色部分） */
+    display: grid;
 }

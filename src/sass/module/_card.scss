@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .card {
-    box-shadow: 0 0 rem(8) gray;
+    box-shadow: 0 0 rem(8) $gray;
     display: flex;
     flex-flow: column;
 
@@ -260,8 +260,6 @@
     }
 }
 
-
-
 .card__foot-regular.card__foot-regular--position {
     line-height: 3.0;
 
@@ -376,4 +374,3 @@
 
     }
 }
-

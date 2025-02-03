@@ -10,6 +10,7 @@
     <p class="lower-page-mv__title">About&nbsp;us</p>
   </div>
 </div>
+
 <body>
   <main>
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>"

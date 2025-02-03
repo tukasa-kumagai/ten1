@@ -54,63 +54,63 @@
                     echo '</ul>';
                   }
                   ?>
-       </div>
+                </div>
               </div>
-            </div>
-            </div>
-            <div class="page-campaign__main">
-              <div class="pagination__list page-campaign__items">
-                <?php if (have_posts()) : ?>
-                  <?php while (have_posts()) : the_post(); ?>
-                    <div class="pagination__list-item page-campaign__item  swiper-slide card">
-                      <div class="card__img">
-                        <?php if (has_post_thumbnail()) : ?>
-                          <div class="campaign-item-thumbnail">
-                            <?php the_post_thumbnail('full'); ?>
-                          </div>
-                        <?php endif; ?>
-                      </div>
-                      <div class="card__body card__body--under">
-                        <div class="card__head card__head--campaign-position">
-                          <div class="card__head-title"><?php
-                                                        $terms = get_the_terms(get_the_ID(), 'campaign_category');
-                                                        if (!empty($terms) && !is_wp_error($terms)) {
-                                                          foreach ($terms as $term) {
-                                                            echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
-                                                          }
-                                                        } else {
-                                                          echo '<li>No categories assigned.</li>';
-                                                        }
-                                                        ?></div>
-                          <p class="card__head-text card__head-text--campaign-size"><?php the_title(); ?></p>
-                        </div>
-                      </div>
-                      <div class="card__foot card__foot--campaign-under">
-                        <p class="card__foot-title">全部コミコミ(お一人様)</p>
-                        <div class="card__foot-price card__foot-price--campaign-position">
-                          <p class="card__foot-regular card__foot-regular--campaign-position"><?php the_field('left_price'); ?></p>
-                          <p class="card__foot-discount card__foot-discount--size"><?php the_field('right_price'); ?></p>
-                        </div>
-                      </div>
-                      <div class="card__foot-text card__foot-text--campaign-width">
-                        <?php the_content(); ?>
-                      </div>
-                      <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
-                      <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
-                      <a href="./page-contact.html" class="button button--position1">
-                        <span class="button__text">Contact us</span>
-                      </a>
-                    </div>
-                  <?php endwhile; ?>
-                <?php endif; ?>
-              </div>
-              <?php
-              if (function_exists('wp_pagenavi')) {
-                wp_pagenavi();
-              }
-              ?>
             </div>
           </div>
+          <div class="page-campaign__main">
+            <div class="pagination__list page-campaign__items">
+              <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : the_post(); ?>
+                  <div class="pagination__list-item page-campaign__item  swiper-slide card">
+                    <div class="card__img">
+                      <?php if (has_post_thumbnail()) : ?>
+                        <div class="campaign-item-thumbnail">
+                          <?php the_post_thumbnail('full'); ?>
+                        </div>
+                      <?php endif; ?>
+                    </div>
+                    <div class="card__body card__body--under">
+                      <div class="card__head card__head--campaign-position">
+                        <div class="card__head-title"><?php
+                                                      $terms = get_the_terms(get_the_ID(), 'campaign_category');
+                                                      if (!empty($terms) && !is_wp_error($terms)) {
+                                                        foreach ($terms as $term) {
+                                                          echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                                                        }
+                                                      } else {
+                                                        echo '<li>No categories assigned.</li>';
+                                                      }
+                                                      ?></div>
+                        <p class="card__head-text card__head-text--campaign-size"><?php the_title(); ?></p>
+                      </div>
+                    </div>
+                    <div class="card__foot card__foot--campaign-under">
+                      <p class="card__foot-title">全部コミコミ(お一人様)</p>
+                      <div class="card__foot-price card__foot-price--campaign-position">
+                        <p class="card__foot-regular card__foot-regular--campaign-position"><?php the_field('left_price'); ?></p>
+                        <p class="card__foot-discount card__foot-discount--size"><?php the_field('right_price'); ?></p>
+                      </div>
+                    </div>
+                    <div class="card__foot-text card__foot-text--campaign-width">
+                      <?php the_content(); ?>
+                    </div>
+                    <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+                    <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
+                    <a href="./page-contact.html" class="button button--position1">
+                      <span class="button__text">Contact us</span>
+                    </a>
+                  </div>
+                <?php endwhile; ?>
+              <?php endif; ?>
+            </div>
+            <?php
+            if (function_exists('wp_pagenavi')) {
+              wp_pagenavi();
+            }
+            ?>
+          </div>
+        </div>
     </section>
 
   </main>
