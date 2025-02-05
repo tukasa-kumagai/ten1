@@ -1466,50 +1466,6 @@ details summary::before {
 	text-align: center;
 }
 
-/* ✅ チェックボックスのカスタマイズ */
-
-input[type=checkbox] {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-	background-color: #fff;
-	border: 0.0625rem solid #408F95;
-	border-radius: 0;
-	cursor: pointer;
-	height: 1.25rem;
-	position: relative;
-	top: 0.3125rem;
-	width: 1.25rem;
-}
-
-input[type=checkbox]:checked {
-	background-color: #fff;
-	border-color: #408F95;
-}
-
-input[type=checkbox]:checked::after {
-	background-color: transparent;
-	border-bottom: 0.125rem solid #C94800;
-	border-right: 0.125rem solid #C94800;
-	content: "";
-	height: 1rem;
-	left: 0.4375rem;
-	position: absolute;
-	top: 0;
-	transform: rotate(55deg);
-	width: 0.3125rem;
-}
-
-/* ✅ セレクトボックス */
-
-.select-wrapper {
-	display: block;
-	margin: 0 auto;
-	max-width: 25rem;
-	position: relative;
-	width: 100%;
-}
-
 .form__item-input2 {
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -1601,7 +1557,7 @@ input[type=checkbox]:checked::after {
 .accordion__title-text {
 	color: #fff;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1;
 }
 
@@ -2294,7 +2250,7 @@ dl.price__list {
 .send-completely__title {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 400;
 	margin-top: 3.25rem;
 	text-align: center;
 }
@@ -2302,7 +2258,7 @@ dl.price__list {
 .send-completely__text {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 400;
 	margin-top: 2.5rem;
 	text-align: center;
 }
@@ -2835,11 +2791,15 @@ dl.price__list {
 }
 
 .button__text--contact {
+	align-items: center; /* 上下中央揃え */
 	color: #fff;
+	display: flex;
 	font-family: "Gotu", sans-serif;
 	font-size: 0.875rem;
 	font-weight: 300;
+	justify-content: flex-start; /* 左右中央揃え */
 	line-height: 1.5714;
+	position: relative; /* 必要に応じて */
 	transition: color 0.3s;
 }
 
@@ -2874,6 +2834,7 @@ dl.price__list {
 	content: "";
 	display: inline-block;
 	height: 0.5rem;
+	left: 40;
 	margin-left: 0.3125rem;
 	position: absolute;
 	top: 40%;
@@ -3104,6 +3065,10 @@ dl.price__list {
 	text-align: center;
 }
 
+.card__foot-title.card__foot-title--font-size {
+	font-size: 0.875rem;
+}
+
 .card__foot-price {
 	display: flex;
 	justify-content: space-between;
@@ -3119,10 +3084,16 @@ dl.price__list {
 }
 
 .card__foot-regular.card__foot-regular--position {
+	font-size: 1.25rem;
 	line-height: 3;
 }
 
+.card__foot-regular--position {
+	font-size: 1.25rem;
+}
+
 .card__foot-regular.card__foot-regular--campaign-position {
+	font-size: 1.5rem;
 	font-weight: bold;
 	line-height: 2.6;
 }
@@ -3131,7 +3102,7 @@ dl.price__list {
 	color: #408F95;
 	font-family: "Lato", sans-serif;
 	font-size: 2rem;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 0em;
 	letter-spacing: -0.1em;
 	line-height: 1.5;
@@ -3144,7 +3115,7 @@ dl.price__list {
 	margin-left: 1.25rem;
 }
 
-.card__foot-discount--size {
+.card__foot-discount.card__foot-discount--size {
 	letter-spacing: -0.12em;
 }
 
@@ -3384,8 +3355,9 @@ div.card2__img img {
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
+	margin-bottom: 1.3125rem;
 	max-width: 43.75rem;
-	padding-bottom: 1.3125rem;
+	padding-bottom: 2.5rem;
 	padding-left: 0;
 	padding-right: 0;
 	padding-top: 0rem;
@@ -3411,60 +3383,53 @@ input[type=checkbox]:checked::after {
 }
 
 .form__item:nth-child(n+2) {
-	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: left;
+	display: block;
+	grid-template-columns: 12.5rem 31.25rem;
 	margin: 0 auto;
+	margin-bottom: 1.3125rem;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 1.25rem;
 	max-width: 43.75rem;
-	padding-bottom: 1.3125rem;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 1.25rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+3) {
-	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
-	justify-content: left;
 	margin: 0 auto;
+	margin-bottom: 1.3125rem;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 1.375rem;
 	max-width: 43.75rem;
-	padding-bottom: 1.3125rem;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 1.375rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+4) {
-	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
-	justify-content: left;
 	margin: 0 auto;
-	max-width: 56.25rem;
-	padding-bottom: 1.3125rem;
-	padding-left: 0;
-	padding-right: 0;
-	padding-top: 1.375rem;
+	margin-bottom: 1.3125rem;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 1.375rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+5) {
-	padding-top: 0rem;
+	margin-top: 0rem;
 }
 
 .form__item:nth-child(n+6) {
-	padding-top: 0.9375rem;
+	margin-top: 0.9375rem;
 }
 
 .form__item:nth-child(n+7) {
-	padding-top: 0.9375rem;
+	margin-top: 0.9375rem;
 }
 
 .form__item-label {
@@ -3516,6 +3481,14 @@ input[type=checkbox]:checked::after {
 	width: 100%;
 }
 
+.form__item-input::-moz-placeholder {
+	text-indent: 1rem; /* 左に10px移動 */
+}
+
+.form__item-input::placeholder {
+	text-indent: 1rem; /* 左に10px移動 */
+}
+
 .form__item-input2 {
 	background: #fff;
 	border: 0.0625rem solid #408F95;
@@ -3547,6 +3520,16 @@ input[type=checkbox]:checked::after {
 	padding-left: 1em;
 	padding-right: 1em;
 	width: 100%;
+}
+
+.form__item-textarea::-moz-placeholder {
+	padding-top: 0.3125rem;
+	text-indent: 1rem; /* 左に10px移動 */
+}
+
+.form__item-textarea::placeholder {
+	padding-top: 0.3125rem;
+	text-indent: 1rem; /* 左に10px移動 */
 }
 
 .form__check-item {
@@ -3698,7 +3681,7 @@ input[type=checkbox]:checked::after {
 .wpcf7 select { /* 内側余白 */
 	border: 0.0625rem solid #408F95;
 	border-radius: 0rem; /* 角丸 */
-	font-size: 1rem; /* フル幅 */
+	font-size: 0.75rem; /* フル幅 */
 	padding: 0rem;
 	width: 100%;
 }
@@ -3707,7 +3690,8 @@ input[type=checkbox]:checked::after {
 	border: 0.0625rem solid #408F95;
 	border-radius: 0rem; /* 角丸 */
 	font-size: 1rem;
-	margin-left: 1.25rem; /* フル幅 */
+	margin-left: 1.25rem;
+	max-width: 43.75rem; /* フル幅 */
 	padding: 0rem;
 	width: 100%;
 }
@@ -3735,6 +3719,11 @@ span.wpcf7-list-item {
 	display: grid;
 	grid-template-columns: 2.5rem 12.5rem 0rem;
 	justify-content: left;
+	margin-left: 0rem;
+}
+
+.choice {
+	justify-content: center;
 	margin-left: 0rem;
 }
 
@@ -3806,6 +3795,31 @@ span.wpcf7-list-item {
 .wpcf7-checkbox input[type=checkbox]:checked::after {
 	left: 0.1875rem;
 	top: -0.5rem;
+}
+
+.wpcf7-list-item-label {
+	font-size: 0.875rem;
+}
+
+.wpcf7-checkbox:nth-of-type(2) input[type=checkbox] {
+	padding: 20px;
+}
+
+/* お問い合わせ項目のチェックボックス */
+
+.form-checkbox input[type=checkbox] {
+	accent-color: blue; /* チェックボックスの色を青に */
+	height: 14px;
+	width: 14px; /* チェックボックスのサイズを調整 */
+}
+
+/* 個人情報の同意チェックボックス */
+
+.form__check-item-label-input input[type=checkbox] {
+	height: 22px;
+	right: 16;
+	top: 0;
+	width: 22px; /* チェックボックスのサイズを調整 */
 }
 
 .gallery__content {
@@ -4452,7 +4466,7 @@ span.wpcf7-list-item {
 
 .sentence__title {
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 2.9375rem;
 }
 
@@ -5343,7 +5357,7 @@ div.information__img {
 }
 
 .page-blog-low-page__time {
-	font-size: 0.875rem;
+	font-size: 1rem;
 }
 
 .page-blog-low-page__title {
@@ -5494,6 +5508,17 @@ div.information__img {
 }
 
 .select-wrapper::after {
+	height: 0.75rem;
+	right: 0.75rem;
+	top: 70%;
+	width: 0.75rem;
+}
+
+.select-wrapper {
+	max-width: 100%;
+}
+
+.select-wrapper::after {
 	height: 1rem;
 	right: 0;
 	width: 1rem;
@@ -5592,7 +5617,7 @@ div.information__img {
 }
 
 .info-tab__text.is-active:nth-child(3)::before {
-	background-image: url(/assets/images/information/information-tab-image6.jpg);
+	background-image: url(../../assets/images/information/information-tab-image6.jpg);
 	display: block;
 }
 
@@ -6250,6 +6275,7 @@ dl.price__list {
 }
 
 .breadcrumb {
+	font-size: 0.875rem;
 	padding: 0.4375rem 0.625rem 0.625rem 0rem;
 }
 
@@ -6368,7 +6394,7 @@ dl.price__list {
 .card__head-text--campaign-size {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 500;
 	padding-bottom: 0rem;
 }
 
@@ -6396,9 +6422,13 @@ dl.price__list {
 	padding-bottom: 0rem;
 }
 
+.card__foot-regular.card__foot-regular--position {
+	font-size: 1.25rem;
+}
+
 .card__foot-discount {
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: -0.12em;
 	margin-left: 0rem;
 	margin-right: 0.4375rem;
@@ -6408,7 +6438,7 @@ dl.price__list {
 	line-height: 2.2;
 }
 
-.card__foot-discount--size {
+.card__foot-discount.card__foot-discount--size {
 	font-size: 2.5rem;
 	margin-left: 2.5rem;
 }
@@ -6446,8 +6476,7 @@ dl.price__list {
 	display: inline;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
-	font-weight: 700;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1;
 	margin-top: 0.75rem;
 }
@@ -6591,7 +6620,7 @@ div.card2__img {
 }
 
 .content-block__button-inner--position {
-	margin-top: 2.5rem;
+	margin-top: 2.125rem;
 }
 
 .fish::before {
@@ -6633,9 +6662,9 @@ div.card2__img {
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	margin: 0 auto;
+	margin-bottom: 2.5rem;
+	margin-top: 2.5625rem;
 	max-width: 43.75rem;
-	padding-bottom: 2.5rem;
-	padding-top: 2.5625rem;
 	width: 100%;
 }
 
@@ -6648,11 +6677,10 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: grid;
 	flex-wrap: nowrap;
-	grid-template-columns: 12.5rem 25rem;
 	margin: 0 auto;
+	margin-top: 6.0625rem;
 	max-width: 50rem;
 	padding-bottom: 2.5rem;
-	padding-top: 2.5rem;
 	width: 100%;
 }
 
@@ -6660,11 +6688,10 @@ div.card2__img {
 	border-bottom: 0.0625rem dotted #408F95;
 	display: grid;
 	flex-wrap: nowrap;
-	grid-template-columns: 12.5rem 25rem;
+	grid-template-columns: 12.5rem 43.75rem;
 	margin: 0 auto;
+	margin-top: 1.4375rem;
 	max-width: 50rem;
-	padding-bottom: 2.5rem;
-	padding-top: 1.4375rem;
 	width: 100%;
 }
 
@@ -6674,29 +6701,25 @@ div.card2__img {
 	display: grid;
 	flex-wrap: nowrap;
 	margin: 0 auto;
+	margin-top: 1.25rem;
 	max-width: 50rem;
-	padding-bottom: 2.8125rem;
-	padding-top: 1.25rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+5) {
+	margin-top: 2.5rem;
 	max-width: 43.75rem;
-	padding-bottom: 3.125rem;
-	padding-top: 2.5rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+6) {
+	margin-top: 1.875rem;
 	max-width: 43.75rem;
-	padding-bottom: 2.5rem;
-	padding-top: 0.9375rem;
 }
 
 .form__item:nth-child(n+7) {
+	margin-top: 1.875rem;
 	max-width: 625rem;
-	padding-bottom: 2.5rem;
-	padding-top: 1.875rem;
 }
 
 .form__item-label {
@@ -6740,7 +6763,7 @@ div.card2__img {
 }
 
 .form__check-item {
-	margin-top: 1.5rem;
+	margin-top: 5rem;
 }
 
 .form__check-item-label {
@@ -6777,7 +6800,7 @@ div.card2__img {
 }
 
 .select-wrapper {
-	width: 100%;
+	width: 70%;
 }
 
 .arrow-icon-img { /* 矢印画像の幅 */
@@ -6786,6 +6809,16 @@ div.card2__img {
 	top: 50%; /* 矢印画像とプルダウンメニューの間隔 */
 	transform: translateY(90%);
 	width: 0.625rem; /* 高さは自動 */
+}
+
+.wpcf7 input { /* 内側余白 */
+	border: 0.0625rem solid #408F95;
+	border-radius: 0rem; /* 角丸 */
+	font-size: 1rem;
+	margin-left: 1.25rem;
+	max-width: 30rem; /* フル幅 */
+	padding: 0rem;
+	width: 100%;
 }
 
 .wpcf7 input {
@@ -6810,7 +6843,7 @@ span.wpcf7-list-item {
 
 .wpcf7 select {
 	border: 0.0625rem solid #408F95;
-	font-size: 1rem;
+	font-size: 0.75rem;
 	margin-left: 1rem;
 	padding: 0rem;
 	width: 100%;
@@ -7272,7 +7305,7 @@ span.wpcf7-list-item {
 .tabs__text {
 	border: 0.0625rem solid #408F95;
 	color: #408F95;
-	font-size: 0.8125rem;
+	font-size: 0.84375rem;
 	padding: 0.375rem 1.5625rem;
 }
 

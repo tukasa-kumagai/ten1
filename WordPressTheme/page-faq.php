@@ -24,9 +24,9 @@
     </div>
   </nav>
   <section class="l-page-faq page-faq">
-    <div class="page-faq__inner inner fish">
-      <nav class="page-faq__nav">
-        <ul class="accordion__items">
+      <div class="page-faq__inner inner fish">
+        <nav class="page-faq__nav">
+          <ul class="accordion__items">
           <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
               <?php
@@ -37,23 +37,25 @@
                   $question = $faq['fq_problem']; // 繰り返しグループ内の「質問」
                   $answer = $faq['fq_answer'];   // 繰り返しグループ内の「答え」
               ?>
-                  <li class="accordion__item js-accordion-item">
-                    <div class="accordion__title js-accordion-title">
-                      <h3 class="accordion__title-text"><?php echo esc_html($question); ?></h3>
-                    </div>
-                    <div class="accordion__content js-accordion-content">
-                      <p class="accordion__text"><?php echo esc_html($answer); ?></p>
-                    </div>
-                  </li>
-                <?php endforeach; ?>
+            <li class="accordion__item js-accordion-item">
+              <div class="accordion__title js-accordion-title is-open">
+                <h3 class="accordion__title-text"><?php echo esc_html($question); ?></h3>
+              </div>
+              <div class="accordion__content js-accordion-content">
+                <p class="accordion__text">
+                <?php echo esc_html($answer); ?>
+                </p>
+              </div>
+            </li>
+            <?php endforeach; ?>
               <?php else : ?>
                 <p>FAQがありません。</p>
               <?php endif; ?>
             <?php endwhile; ?>
           <?php endif; ?>
-        </ul>
-      </nav>
-    </div>
-  </section>
+          </ul>
+        </nav>
+      </div>
+    </section>
 </main>
 <?php get_footer();  ?>

@@ -37,7 +37,7 @@
                             <div class="tab-menu">
                                 <?php
                                 $terms = get_terms(array(
-                                    'taxonomy' => 'campaign_category',
+                                    'taxonomy' => 'voice_category',
                                     'hide_empty' => false,
                                 ));
 

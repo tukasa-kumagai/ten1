@@ -46,6 +46,27 @@
                   </p>
                 </div>
 
+                <div class="page-blog-low-page__container">
+                 
+                  <div class="page-blog-low-page__image">
+                    <?php if (has_post_thumbnail()) : ?>
+                      <?php the_post_thumbnail(); ?>
+                    <?php endif; ?>
+                  </div>
+                  <p class="page-blog-low-page__text">
+                    <?php the_content(); ?>
+                  </p>
+                </div>
+                <div class="page-blog-low-page__container">
+                  <ul class="page-blog-low-page__nav">
+                    <li class="page-blog-low-page__list">リスト1</li>
+                    <li class="page-blog-low-page__list">リスト2</li>
+                    <li class="page-blog-low-page__list">リスト3</li>
+                  </ul>
+                  <p class="page-blog-low-page__text">
+                    <?php the_content(); ?>
+                  </p>
+                </div>
                 <!-- 次の投稿・前の投稿リンク -->
                 <div class="page-blog-low-page__nav">
                   <div class="page-blog-low-page__nav-item">
@@ -54,12 +75,14 @@
                         '<span>%link</span>', // 矢印を削除
                         '<span class="page-blog-low-page__box-image1"></span>'
                       ); ?>
-                      <?php previous_post_link(
+                        <?php previous_post_link(
                         '<span>%link</span>', // 矢印を削除
                         '<span class="page-blog-low-page__box-image2"></span>'
                       ); ?>
                     </div>
+                   
                   </div>
+                  
                 </div>
               <?php endwhile; ?>
             <?php endif; ?>

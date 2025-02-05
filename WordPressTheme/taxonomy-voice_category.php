@@ -2,8 +2,8 @@
 <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
         <picture class="lower-page-mv__slide-image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri('dist/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
-            <img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
+            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
         </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -25,30 +25,30 @@
     </nav>
     <section class="l-page-voice page-voice">
         <div class="inner page-voice__inner fish fish--blog">
-            <div class="container">
-                <div class="tab-main">
-                    <div class="tab-menu">
-                        <?php
-                        $terms = get_terms(array(
-                            'taxonomy' => 'voice_category',
-                            'hide_empty' => false,
-                        ));
+        <div class="page-campaign__category button2__items">
+                    <div class="container">
+                        <div class="tab-main">
+                            <div class="tab-menu">
+                                <?php
+                                $terms = get_terms(array(
+                                    'taxonomy' => 'voice_category',
+                                    'hide_empty' => false,
+                                ));
 
-                        if ($terms && !is_wp_error($terms)) {
-                            echo '<ul class="tabs">';
+                                if ($terms && !is_wp_error($terms)) {
+                                    echo '<ul class="tabs category-grid">';
 
-                            // 「すべての投稿を表示」タブを追加
-                            $is_all_active = !is_tax('voice_category');
-                            echo '<li' . ($is_all_active ? ' class="active"' : '') . '><a class="tabs__text button2__item" href="' . esc_url(get_post_type_archive_link('voice')) . '">ALL</a></li>';
+                                    // 「すべての投稿を表示」タブをアクティブに設定
+                                    echo '<li class="category-grid__item active"><a class="tabs__all button2__item" href="' . esc_url(get_post_type_archive_link('voice')) . '">ALL</a></li>';
 
-
-                            foreach ($terms as $term) {
-                                $is_term_active = (get_queried_object_id() == $term->term_id);
-                                echo '<li' . ($is_term_active ? ' class="active"' : '') . '><a class="tabs__text button2__item" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
-                            }
-                            echo '</ul>';
-                        }
-                        ?>
+                                    foreach ($terms as $term) {
+                                        echo '<li class="category-grid__item"><a class="tabs__text button2__item" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                                    }
+                                    echo '</ul>';
+                                }
+                                ?>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="page-vice__list">
@@ -74,7 +74,7 @@
                                             </div>
                                         </div>
                                         <p class="card2__text card2__text--position ">
-                                            <?php the_content(); ?>
+                                        <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
                                         </p>
                                     </div>
                                 </div>

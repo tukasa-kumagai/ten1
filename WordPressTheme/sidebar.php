@@ -149,7 +149,7 @@ $contact = esc_url(home_url('/contact'));
                 </div>
               </div>
               <div class="card__foot card__foot--under2">
-                <p class="card__foot-title">全部コミコミ(お一人様)</p>
+                <p class="card__foot-title card__foot-title--font-size ">全部コミコミ(お一人様)</p>
                 <div class="card__foot-price">
                   <?php
                   // カスタムフィールド「price」の値を取得して表示

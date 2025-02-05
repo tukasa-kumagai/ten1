@@ -198,7 +198,7 @@
 
     @include mq("md") {
         font-size: rem(24);
-        font-weight: $normal;
+        font-weight: $semibold;
         font-family: $base-font-family;
         padding-bottom: rem(0);
     }
@@ -230,6 +230,9 @@
     }
 }
 
+.card__foot-title.card__foot-title--font-size {
+    font-size: rem(14);
+}
 .card__foot-price {
     display: flex;
     justify-content: space-between;
@@ -262,15 +265,24 @@
 
 .card__foot-regular.card__foot-regular--position {
     line-height: 3.0;
+    font-size: rem(20);
+    @include mq("md") {
+      font-size: rem(20);
+    }
+}
 
-    @include mq("md") {}
+.card__foot-regular--position {
+    font-size: rem(20);
+
 }
 
 .card__foot-regular.card__foot-regular--campaign-position {
     line-height: 2.6;
     font-weight: bold;
+    font-size: rem(24);
+    @include mq("md") {
 
-    @include mq("md") {}
+    }
 }
 
 .card__foot-discount {
@@ -278,12 +290,12 @@
     color: $green;
     font-family: $sub-english-font-family;
     letter-spacing: 0em;
-    font-weight: $normal;
+    font-weight: $bold;
     line-height: 1.5;
     letter-spacing: -0.1em;
 
     @include mq("md") {
-        font-weight: $normal;
+        font-weight: $bold;
         font-size: rem(40);
         margin-left: rem(0);
         letter-spacing: -0.12em;
@@ -300,15 +312,17 @@
 
     @include mq("md") {
         line-height: 2.2;
+       
     }
 }
 
-.card__foot-discount--size {
+.card__foot-discount.card__foot-discount--size {
     letter-spacing: -0.12em;
-
+  
     @include mq("md") {
         font-size: rem(40);
         margin-left: rem(40);
+      
     }
 }
 
@@ -368,9 +382,8 @@
         font-size: rem(14);
         line-height: 1;
         margin-top: rem(12);
-        font-weight: $bold;
         color: $green;
-        font-weight: $regular;
+        font-weight: $normal;
 
     }
 }

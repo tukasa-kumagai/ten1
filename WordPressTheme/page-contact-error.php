@@ -41,7 +41,7 @@ $contact = esc_url(home_url('/contact'));
       <div class="breadcrumb__inner inner">
         <?php if (!is_front_page()) { ?>
           <?php if (function_exists('bcn_display')) { ?>
-            <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <div id="breadcrumb" class="w_inner w_inner--font" vocab="http://schema.org/" typeof="BreadcrumbList">
               <?php bcn_display(); ?>
             </div>
           <?php } ?>

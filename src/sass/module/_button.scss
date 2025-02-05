@@ -140,7 +140,11 @@
   font-family: $second-font-family;
   font-weight: $regular; //文字太さ
   transition: color .3s; //文字色の変化速度
-
+  display: flex;
+  align-items: center; /* 上下中央揃え */
+  justify-content: flex-start; /* 左右中央揃え */
+  position: relative; /* 必要に応じて */
+  
 }
 
 
@@ -188,6 +192,7 @@
   transform: skew(45deg); //縦線を曲げる
   margin-left: rem(5); //左文字との間
   transition: border .3s;
+  left: 40;
 }
 
 
