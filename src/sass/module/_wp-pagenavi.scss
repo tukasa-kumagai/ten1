@@ -23,7 +23,6 @@
   color: $green !important;
   border-radius: 0;
   transition: all 0.3s ease;
-  padding: rem(50) rem(40);
   font-size: rem(16);
   margin: 0 rem(6) !important;
 }
@@ -41,6 +40,17 @@
   border: rem(1) solid $green !important;
   font-weight: bold;
   padding: rem(9) rem(14) !important;
+  font-size: rem(16);
+  color: $white;
+  text-decoration: none;
+  border: rem(1) solid $green !important;
+  background-color: $green;
+  border: rem(1) solid $green !important;
+  border-radius: 0;
+  font-size: rem(16);
+  margin: 0 rem(6) !important;
+
+ 
 }
 
 //（前後のページリンク）

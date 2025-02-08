@@ -52,7 +52,7 @@
   margin-top: rem(10);
   padding-bottom: rem(4);
   border-bottom: rem(1) solid $green;
-
+ font-weight: $semibold;
   @include mq("md") {
     font-size: rem(32);
   }

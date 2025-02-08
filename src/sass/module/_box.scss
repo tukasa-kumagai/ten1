@@ -68,6 +68,7 @@
   border-bottom: rem(1) solid $green;
   line-height: rem(18);
   margin-top: rem(6);
+  font-weight: $semibold;
 
   @include mq("md") {
     margin-top: rem(4);
@@ -205,7 +206,7 @@
 
 .box__head-time {
   font-size: rem(12);
-
+  font-family: $second-font-family;
   @include mq("md") {
     font-size: rem(12);
     line-height: 1.5;

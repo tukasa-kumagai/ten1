@@ -350,7 +350,7 @@ a {
 }
 
 .contact__button-inner {
-	margin-top: 2.3125rem;
+	margin-top: 2.5rem;
 	text-align: center;
 }
 
@@ -956,6 +956,7 @@ div.information__img img {
 	border-bottom: 0.0625rem solid #408F95;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
+	font-weight: 500;
 	line-height: 1.3;
 	margin-top: 0.625rem;
 	padding-bottom: 0.25rem;
@@ -1388,7 +1389,7 @@ details .details-content {
 details summary { /* 矢印アイコンを非表示に */
 	cursor: pointer;
 	display: block; /* 絶対配置する疑似要素のアイコンの基準に */
-	padding: 0.5rem 0.5rem 0.5rem 2.25rem; /* カーソルの形状をポインターに */
+	padding: 0.5rem 0.5rem 0.5rem 2.8125rem; /* カーソルの形状をポインターに */
 	position: relative; /* padding-left にアイコンのスペースを確保 */
 }
 
@@ -1777,6 +1778,7 @@ details summary::before {
 .page-price__text {
 	color: #fff;
 	font-size: 1rem;
+	font-weight: 700;
 }
 
 .page-price__tr {
@@ -2307,7 +2309,7 @@ dl.price__list {
 }
 
 .vice__button-inner {
-	margin-top: 3rem;
+	margin-top: 4.6875rem;
 	text-align: center;
 }
 
@@ -2358,6 +2360,7 @@ dl.price__list {
 .box__title {
 	border-bottom: 0.0625rem solid #408F95;
 	font-size: 1rem;
+	font-weight: 500;
 	line-height: 1.125rem;
 	margin-top: 0.375rem;
 	padding-bottom: 0.25rem;
@@ -2448,6 +2451,7 @@ dl.price__list {
 }
 
 .box__head-time {
+	font-family: "Gotu", sans-serif;
 	font-size: 0.75rem;
 }
 
@@ -2545,6 +2549,7 @@ dl.price__list {
 }
 
 .breadcrumb {
+	font-size: 0.875rem;
 	padding: 1rem;
 }
 
@@ -2983,7 +2988,7 @@ dl.price__list {
 .card__foot.card__foot--under {
 	display: inline-block;
 	margin-top: auto;
-	padding: 0.625rem 2.25rem 0.25rem 1.875rem;
+	padding: 0.625rem 2.25rem 0.625rem 1.875rem;
 }
 
 .card__foot.card__foot--under2 {
@@ -3084,6 +3089,7 @@ dl.price__list {
 }
 
 .card__foot-regular.card__foot-regular--position {
+	font-family: "Lato", sans-serif;
 	font-size: 1.25rem;
 	line-height: 3;
 }
@@ -3093,7 +3099,7 @@ dl.price__list {
 }
 
 .card__foot-regular.card__foot-regular--campaign-position {
-	font-size: 1.5rem;
+	font-size: 1.25rem;
 	font-weight: bold;
 	line-height: 2.6;
 }
@@ -3104,7 +3110,7 @@ dl.price__list {
 	font-size: 2rem;
 	font-weight: 700;
 	letter-spacing: 0em;
-	letter-spacing: -0.1em;
+	letter-spacing: 1;
 	line-height: 1.5;
 }
 
@@ -3116,7 +3122,7 @@ dl.price__list {
 }
 
 .card__foot-discount.card__foot-discount--size {
-	letter-spacing: -0.12em;
+	letter-spacing: 1;
 }
 
 .card__bg {
@@ -3482,11 +3488,13 @@ input[type=checkbox]:checked::after {
 }
 
 .form__item-input::-moz-placeholder {
-	text-indent: 1rem; /* 左に10px移動 */
+	font-size: 1rem;
+	text-indent: 0.3125rem; /* 左に10px移動 */
 }
 
 .form__item-input::placeholder {
-	text-indent: 1rem; /* 左に10px移動 */
+	font-size: 1rem;
+	text-indent: 0.3125rem; /* 左に10px移動 */
 }
 
 .form__item-input2 {
@@ -3505,6 +3513,10 @@ input[type=checkbox]:checked::after {
 	padding-left: 1em;
 	padding-right: 1em;
 	width: 100%;
+}
+
+.contact-body {
+	justify-content: flex-start;
 }
 
 .form__item-textarea {
@@ -3682,8 +3694,15 @@ input[type=checkbox]:checked::after {
 	border: 0.0625rem solid #408F95;
 	border-radius: 0rem; /* 角丸 */
 	font-size: 0.75rem; /* フル幅 */
-	padding: 0rem;
+	padding: 0.3125rem;
 	width: 100%;
+}
+
+.wpcf7 input[type=text],
+.wpcf7 input[type=url],
+.wpcf7 input[type=email],
+.wpcf7 input[type=tel] {
+	padding: 0.3125rem;
 }
 
 .wpcf7 input { /* 内側余白 */
@@ -3692,7 +3711,7 @@ input[type=checkbox]:checked::after {
 	font-size: 1rem;
 	margin-left: 1.25rem;
 	max-width: 43.75rem; /* フル幅 */
-	padding: 0rem;
+	padding: 0.3125rem;
 	width: 100%;
 }
 
@@ -3912,7 +3931,7 @@ span.wpcf7-list-item {
 }
 
 .l-about {
-	margin-top: 5.125rem;
+	margin-top: 5.625rem;
 }
 
 .l-blog {
@@ -3920,11 +3939,11 @@ span.wpcf7-list-item {
 }
 
 .l-campaign {
-	margin-top: 2.5rem;
+	margin-top: 2.8125rem;
 }
 
 .l-contact {
-	margin-top: 5rem;
+	margin-top: 5.9375rem;
 	position: relative;
 }
 
@@ -3998,7 +4017,7 @@ span.wpcf7-list-item {
 }
 
 .l-information {
-	margin-top: 4.75rem;
+	margin-top: 5rem;
 	padding-bottom: 5.375rem;
 	padding-top: 4.875rem;
 }
@@ -4074,7 +4093,7 @@ span.wpcf7-list-item {
 }
 
 .l-vice {
-	margin-top: 5.3125rem;
+	margin-top: 5.625rem;
 	position: relative;
 }
 
@@ -4146,6 +4165,7 @@ span.wpcf7-list-item {
 }
 
 .main-mv__title {
+	font-family: "Lato", sans-serif;
 	font-size: 2.5rem;
 	letter-spacing: 0.54em;
 	line-height: 1;
@@ -4789,7 +4809,6 @@ span.wpcf7-list-item {
 	background-color: #fff;
 	border-radius: 0;
 	font-size: 1rem;
-	padding: 3.125rem 2.5rem;
 	text-decoration: none;
 	transition: all 0.3s ease;
 }
@@ -4805,13 +4824,23 @@ span.wpcf7-list-item {
 
 .wp-pagenavi .current {
 	border: 0.0625rem solid #408F95 !important;
+	border: 0.0625rem solid #408F95 !important;
+	border: 0.0625rem solid #408F95 !important;
+	margin: 0 0.375rem !important;
 	padding: 0.5625rem 0.875rem !important;
 }
 
 .wp-pagenavi .current {
+	-webkit-text-decoration: none;
 	background-color: #408F95;
+	background-color: #408F95;
+	border-radius: 0;
 	color: #fff;
+	color: #fff;
+	font-size: 1rem;
+	font-size: 1rem;
 	font-weight: bold;
+	text-decoration: none;
 }
 
 .wp-pagenavi .previouspostslink,
@@ -4992,7 +5021,7 @@ html {
 }
 
 .campaign__button-inner {
-	margin-top: 4.75rem;
+	margin-top: 5.3125rem;
 	text-align: center;
 }
 
@@ -5099,7 +5128,7 @@ html {
 }
 
 .contact__button-inner {
-	margin-top: 2.375rem;
+	margin-top: 2.9375rem;
 }
 
 .footer {
@@ -5310,7 +5339,7 @@ div.information__img {
 }
 
 .information__button-inner {
-	margin-top: 2.375rem;
+	margin-top: 2.8125rem;
 }
 
 .l-page-blog-low-page__sub-reviews {
@@ -6429,18 +6458,19 @@ dl.price__list {
 .card__foot-discount {
 	font-size: 2.5rem;
 	font-weight: 700;
-	letter-spacing: -0.12em;
+	letter-spacing: 1;
 	margin-left: 0rem;
-	margin-right: 0.4375rem;
+	margin-right: 0;
 }
 
 .card__foot-discount.card__foot-discount--position {
 	line-height: 2.2;
+	margin-left: 0;
 }
 
 .card__foot-discount.card__foot-discount--size {
 	font-size: 2.5rem;
-	margin-left: 2.5rem;
+	margin-left: 0rem;
 }
 
 .card__foot-text {
@@ -6602,7 +6632,7 @@ div.card2__img {
 
 .content-block__texts {
 	margin-left: 0rem;
-	margin-top: 0.4375rem;
+	margin-top: 0rem;
 	width: 100%;
 }
 
@@ -6616,7 +6646,8 @@ div.card2__img {
 }
 
 .content-block__button-inner {
-	margin-top: 3.4375rem;
+	margin-left: 3.75rem;
+	margin-top: 2.5rem;
 }
 
 .content-block__button-inner--position {
@@ -6753,6 +6784,11 @@ div.card2__img {
 	max-width: 30.625rem;
 }
 
+.custom-checkbox1 {
+	display: flex;
+	justify-content: left;
+}
+
 .form__item-textarea {
 	font-size: 1.125rem;
 	height: 12.5rem;
@@ -6817,7 +6853,7 @@ div.card2__img {
 	font-size: 1rem;
 	margin-left: 1.25rem;
 	max-width: 30rem; /* フル幅 */
-	padding: 0rem;
+	padding: 0.3125rem;
 	width: 100%;
 }
 
@@ -6845,7 +6881,7 @@ span.wpcf7-list-item {
 	border: 0.0625rem solid #408F95;
 	font-size: 0.75rem;
 	margin-left: 1rem;
-	padding: 0rem;
+	padding: 0.3125rem;
 	width: 100%;
 }
 
@@ -6889,7 +6925,7 @@ span.wpcf7-list-item {
 }
 
 .l-campaign {
-	margin-top: 7.5rem;
+	margin-top: 5.625rem;
 }
 
 .l-contact {
@@ -7040,7 +7076,7 @@ span.wpcf7-list-item {
 }
 
 .l-vice {
-	margin-top: 8.75rem;
+	margin-top: 9.375rem;
 }
 
 .lower-page-mv {

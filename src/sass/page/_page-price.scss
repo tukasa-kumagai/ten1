@@ -80,6 +80,10 @@
 .page-price__text {
   color: $white;
   font-size: rem(16);
+  font-weight: $bold;
+  @include mq("md") {
+
+  }
 }
 
 
