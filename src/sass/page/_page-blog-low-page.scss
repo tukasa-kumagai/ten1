@@ -60,15 +60,25 @@
 
 .page-blog-low-page__image {
   margin-top: rem(24);
-
+  overflow: hidden;
   @include mq("md") {
     margin-top: rem(37);
   }
 }
 
-.page-blog-low-page__image img {
 
-  @include mq("md") {}
+
+
+.page-blog-low-page__image img {
+  width: 100%;
+  height: rem(230);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  @include mq("md") {
+    height: rem(468);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 .page-blog-low-page__text {

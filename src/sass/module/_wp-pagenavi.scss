@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center; /* ページネーションを中央寄せ */
   gap: rem(5); /* 各ボタン間の間隔 */
-  margin: rem(20) 0;
+  margin-top: rem(62);
   color: $green;
   padding: rem(9) rem(14);
   @include mq("md") {
@@ -59,7 +59,7 @@
   font-weight: bold;
   background-color: $white;
   border: rem(1) solid $green;
-  padding: rem(9) rem(14);
+  padding: rem(11) rem(15);
   color: $green;
   margin: 0 rem(24) !important;
 }
@@ -114,3 +114,28 @@
   font-size: rem(16);
   transition: all 0.3s ease;
 }
+
+
+.home-pagination {
+
+  @include mq("md") {
+
+  }
+}
+
+.campaign-pagination{
+margin-top: rem(80);
+  @include mq("md") {
+    margin-top: rem(80);  
+  }
+}
+
+.single-pagination {
+
+  @include mq("md") {
+    
+  }
+}
+
+
+

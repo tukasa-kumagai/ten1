@@ -47,3 +47,14 @@
         margin-top: rem(0);
     }
 }
+
+
+
+.footer--with {
+    padding-top: rem(228);
+
+    @include mq("md") {
+        padding-top: rem(228);
+        padding-bottom: rem(80);
+    }
+}

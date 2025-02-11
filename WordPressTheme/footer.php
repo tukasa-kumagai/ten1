@@ -61,7 +61,7 @@
 </main>
 
 
-<footer class="l-footer footer">
+<footer class="l-footer footer ">
   <div class="inner">
     <div class="footer__logo">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="footer__logo-img">

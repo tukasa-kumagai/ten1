@@ -15,7 +15,7 @@
 }
 
 .page-404::before {
-  background-image: url(../../assets/images/404/page-ocean-sea-icon.png);
+  background-image: url(../../assets/images/404/page-ocean-sea-icon.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -25,7 +25,7 @@
   left: 3%;
   top: rem(-47);
   width: rem(345);
-  z-index: 100;
+  z-index: 1;
 
   @include mq("md") {
     height: rem(698);

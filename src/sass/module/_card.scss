@@ -19,6 +19,10 @@
     }
 }
 
+.card__box {
+    padding: 1rem;
+  }
+  
 .card__img--size {
     padding-top: 75.071429%;
 }
@@ -319,10 +323,10 @@
 
 .card__foot-discount.card__foot-discount--size {
     letter-spacing: 1;
-   
+    margin-left: rem(16);
     @include mq("md") {
         font-size: rem(40);
-        margin-left: rem(0);
+        margin-left: rem(40);
       
     }
 }

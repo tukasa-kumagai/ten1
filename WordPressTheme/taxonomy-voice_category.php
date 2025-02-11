@@ -26,30 +26,33 @@
     <section class="l-page-voice page-voice">
         <div class="inner page-voice__inner fish fish--blog">
         <div class="page-campaign__category button2__items">
-                    <div class="container">
-                        <div class="tab-main">
-                            <div class="tab-menu">
-                                <?php
-                                $terms = get_terms(array(
-                                    'taxonomy' => 'voice_category',
-                                    'hide_empty' => false,
-                                ));
+        <div class="container">
+              <div class="tab-main">
+                <div class="tab-menu">
+                  <?php
+                  $terms = get_terms(array(
+                    'taxonomy' => 'voice_category',
+                    'hide_empty' => false,
+                  ));
 
-                                if ($terms && !is_wp_error($terms)) {
-                                    echo '<ul class="tabs category-grid">';
+                  if ($terms && !is_wp_error($terms)) {
+                    echo '<ul class="tabs">';
 
-                                    // 「すべての投稿を表示」タブをアクティブに設定
-                                    echo '<li class="category-grid__item active"><a class="tabs__all button2__item" href="' . esc_url(get_post_type_archive_link('voice')) . '">ALL</a></li>';
+                    // 「ALL」タブをアクティブにする条件
+                    $current_url = home_url(add_query_arg(array(), $wp->request));
+                    $all_class = (get_post_type() === 'voice' && !is_tax('voice_category')) ? 'active' : '';
+                    echo '<li class="' . esc_attr($all_class) . '"><a class="tabs__text button2__item" href="' . esc_url(get_post_type_archive_link('voice')) . '">ALL</a></li>';
 
-                                    foreach ($terms as $term) {
-                                        echo '<li class="category-grid__item"><a class="tabs__text button2__item" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
-                                    }
-                                    echo '</ul>';
-                                }
-                                ?>
-                            </div>
-                        </div>
-                    </div>
+                    foreach ($terms as $term) {
+                      $is_active = (is_tax('voice_category', $term->slug)) ? 'active' : '';
+                      echo '<li class="' . esc_attr($is_active) . '"><a class="tabs__text button2__item" href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
+                    }
+                    echo '</ul>';
+                  }
+                  ?>
+                </div>
+              </div>
+            </div>
                 </div>
                 <div class="page-vice__list">
                     <div class="pagination__list3 page-vice__items cards2 cards2--grid">

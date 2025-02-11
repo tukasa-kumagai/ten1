@@ -357,3 +357,7 @@ function selectChange(id) {
 
 /* 実行部 */
 selectChange("sel1"); // 画像表示
+
+
+
+

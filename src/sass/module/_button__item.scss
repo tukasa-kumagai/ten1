@@ -73,3 +73,23 @@
 .button__item:hover::before {
   transform: scale(1, 1); //buttonのアニメーションをX軸方向にそのままのサイズに変化させる
 }
+
+
+
+.button__item.button--contact {
+  display: inline-block;
+  width: rem(162); //横幅
+  text-align: center; //文字を左に寄せる
+  position: relative;
+  z-index: 1;
+  background-color: $white; //背景色
+  padding-top: rem(7); //ボタン内範囲
+  padding-left: rem(12); //ボタン内範囲
+  padding-right: rem(12); //ボタン内範囲
+  padding-bottom: rem(7); //ボタン内範囲
+  border: rem(1) solid $green; //ボタン縁色
+  transition: background-color .3s;
+  top: -10px;
+    left: 10px;
+    height: 0px;
+}

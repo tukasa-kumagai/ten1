@@ -216,6 +216,7 @@
   @include mq("md") {
     font-size: rem(24);
     color: $green;
+    margin-top: rem(10);
   }
 }
 
@@ -296,7 +297,7 @@ details summary {
   /* カーソルの形状をポインターに */
   position: relative;
   /* 絶対配置する疑似要素のアイコンの基準に */
-  padding: 0.5rem 0.5rem 0.5rem rem(45);
+  padding: 0.5rem 0.5rem 0.5rem rem(35);
   /* padding-left にアイコンのスペースを確保 */
 }
 
@@ -313,7 +314,7 @@ details summary::before {
   bottom: 0;
   content: "";
   height: rem(11);
-  left: rem(6);
+  left: rem(1);
   position: absolute;
   top: rem(15);
   transform: rotate(120deg);

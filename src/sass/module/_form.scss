@@ -21,9 +21,9 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: rem(40);
+    padding-bottom: rem(25);
     padding-top: rem(0);
-    margin-bottom: rem(21);
+    margin-bottom: rem(0);
     flex-wrap: wrap;
 
     @include mq("md") {
@@ -72,13 +72,14 @@ input[type=checkbox]:checked::after {
     margin-left: 0;
     margin-right: 0;
     margin-top: rem(20);
-    margin-bottom: rem(21);
+    margin-bottom: rem(0);
     grid-template-columns: rem(200) rem(500);
+    padding-bottom: rem(25);
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
         padding-bottom: rem(40);
-        margin-top: rem(97);
+        margin-top: rem(125);
         width: 100%;
         display: grid;
         max-width: rem(800);
@@ -96,8 +97,9 @@ input[type=checkbox]:checked::after {
     margin-left: 0;
     margin-right: 0;
     margin-top: rem(22);
-    margin-bottom: rem(21);
+    margin-bottom: rem(0);
     flex-wrap: wrap;
+    padding-bottom: rem(20);
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
@@ -119,7 +121,7 @@ input[type=checkbox]:checked::after {
     margin-left: 0;
     margin-right: 0;
     margin-top: rem(22);
-    margin-bottom: rem(21);
+    margin-bottom: rem(0);
     flex-wrap: wrap;
 
     @include mq("md") {
@@ -135,32 +137,32 @@ input[type=checkbox]:checked::after {
 }
 
 .form__item:nth-child(n+5) {
-    margin-top: rem(0);
+    margin-top: rem(23);
 
     @include mq("md") {
         max-width: rem(700);
-        margin-top: rem(40);
+        margin-top: rem(30);
         width: 100%;
     }
 }
 
 .form__item:nth-child(n+6) {
-    margin-top: rem(15);
+    margin-top: rem(25);
 
     @include mq("md") {
         max-width: rem(700);
         margin-top: rem(30);
-    
+
     }
 }
 
 .form__item:nth-child(n+7) {
-    margin-top: rem(15);
+    margin-top: rem(21);
 
     @include mq("md") {
         max-width: rem(10000);
-        margin-top: rem(30);
-  
+        margin-top: rem(20);
+
     }
 }
 
@@ -244,9 +246,11 @@ input[type=checkbox]:checked::after {
 }
 
 .form__item-input::placeholder {
-    text-indent: rem(5); /* 左に10px移動 */
+    text-indent: rem(5);
+    /* 左に10px移動 */
     font-size: rem(16);
 }
+
 .form__item-input2 {
     padding: 0.34375rem 0.5rem;
     border: rem(1) solid $green;
@@ -283,6 +287,11 @@ input[type=checkbox]:checked::after {
 }
 
 .custom-checkbox2 {
+    display: grid;
+        grid-template-columns: 10px 260px 0rem;
+    justify-content: right;
+    letter-spacing: 0.9rem;
+    margin-left: 0rem;
     @include mq("md") {}
 }
 
@@ -290,6 +299,7 @@ input[type=checkbox]:checked::after {
 .contact-body {
     justify-content: flex-start;
 }
+
 .form__item-textarea {
     border: rem(1) solid $green;
     border-radius: rem(0);
@@ -313,8 +323,10 @@ input[type=checkbox]:checked::after {
         padding-left: rem(10);
     }
 }
+
 .form__item-textarea::placeholder {
-    text-indent: rem(16); /* 左に10px移動 */
+    text-indent: rem(16);
+    /* 左に10px移動 */
     padding-top: rem(5);
 }
 
@@ -331,12 +343,11 @@ input[type=checkbox]:checked::after {
     position: relative;
     left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     cursor: pointer;
     width: rem(337);
     letter-spacing: 0.01em;
-
     @include mq("md") {
         margin-top: rem(0);
         width: 100%;
@@ -530,223 +541,20 @@ input[type=checkbox]:checked::after {
     }
 }
 
-
-////////cntactform7
-.wpcf7 {
-    /* フォーム全体のスタイル */
-    max-width: rem(700);
-    /* フォームの最大幅 */
-    margin: 0 auto;
-    /* 中央配置 */
-}
-
-
-
-.wpcf7 textarea,
-.wpcf7 select {
-    width: 100%;
-    /* フル幅 */
-    padding: rem(5);
-    /* 内側余白 */
-    border: rem(1) solid $green;
-    border-radius: rem(0);
-    /* 角丸 */
-    font-size: rem(12);
-}
-
-.wpcf7 input[type="text"],.wpcf7 input[type="url"], .wpcf7 input[type="email"], .wpcf7 input[type="tel"]{
-    padding: rem(5);
-}
-
-.wpcf7 input {
-    width: 100%;
-    /* フル幅 */
-    padding: rem(5);
-    /* 内側余白 */
-    border: rem(1) solid $green;
-    border-radius: rem(0);
-    /* 角丸 */
-    font-size: rem(16);
-    margin-left: rem(20);
-    max-width: rem(700);
-
-    @include mq("md") {
-        width: 100%;
-        /* フル幅 */
-        padding: rem(5);
-        /* 内側余白 */
-        border: rem(1) solid $green;
-        border-radius: rem(0);
-        /* 角丸 */
-        font-size: rem(16);
-        margin-left: rem(20);
-        max-width: rem(480);
-    }
-}
-
-.wpcf7-list-item {
-    display: flex;
-}
-
-.wpcf7 input {
-    border: rem(1) solid $green;
-    border-radius: rem(0);
-    font-size: rem(16);
-    margin-left: rem(0);
-    padding: rem(0);
-    width: 100%;
-
-    @include mq("md") {
-        border: rem(1) solid $green;
-        border-radius: rem(0);
-        font-size: rem(16);
-        margin-left: rem(20);
-        padding: rem(0);
-        width: 100%;
-    }
-}
-
-.wpcf7-list-item {
-    display: grid;
-    justify-content: left;
-    margin-left: rem(0);
-}
-
-span.wpcf7-list-item {
-    display: grid;
-    grid-template-columns: rem(40) rem(200) rem(0);
-    justify-content: left;
-    margin-left: rem(0);
-
-    @include mq("md") {
-        display: grid;
-        grid-template-columns: rem(40) rem(400) rem(0);
-        justify-content: center;
-        margin-left: rem(0);
-    }
-}
-
-
-.choice {
-    justify-content: center;
-    margin-left: rem(0);
-}
-
-.your-checkbox {
-    display: flex;
-    justify-content: left;
-}
-
-.wpcf7-checkbox input[type="checkbox"] {
-    width: rem(16);
-    /* サイズ */
-    height: rem(16);
-    cursor: pointer;
-    /* クリック可能に */
-
-}
-
-.wpcf7-checkbox input[type="checkbox"] {
-    accent-color: $white;
-    /* レ点と背景の色を赤に */
-}
-
-.wpcf7-checkbox input[type="checkbox"] {
-    appearance: none;
-    /* デフォルトデザインを削除 */
-    width: rem(15);
-    height: rem(15);
-    border: rem(1) solid $green;
-    /* 枠線の色（後述） */
-    background-color: $white;
-    /* 未選択時の背景色 */
-    cursor: pointer;
-    position: relative;
-}
-
-.wpcf7-checkbox input[type="checkbox"]:checked {
-    background-color: $white;
-    /* クリック時（チェック時）の背景色 */
-}
-
-.wpcf7-checkbox input[type="checkbox"] {
-    appearance: none;
-    /* デフォルトのチェックボックスを削除 */
-    width: rem(15);
-    height: rem(15);
-
-    border-radius: rem(0);
-    background-color: $white;
-    cursor: pointer;
-    position: relative;
-    border: rem(1) solid $green;
-}
-
-.wpcf7-checkbox input[type="checkbox"]:checked::after {
-    content: "✔";
-    /* チェックマーク */
-    font-size: rem(16);
-    color: $red;
-    /* レ点（✔）の色を赤に */
-    position: absolute;
-    left: rem(2);
-    top: rem(-2);
-}
-
-.wpcf7-list-item-label {
-    width: 100%;
-
-    @include mq("md") {
-        width: 100%;
-    }
-}
-
-.wpcf7 select {
-    @include mq("md") {
-        border: rem(1) solid $green;
-        font-size: rem(12);
-        padding: rem(5);
-        width: 100%;
-        margin-left: rem(16);
-    }
-}
-
-.wpcf7-form-control-wrap {
-    width: 90%;
-}
-
-.wpcf7-checkbox input[type=checkbox] {
-    margin-top: rem(0);
-}
-
-.wpcf7-checkbox input[type=checkbox]:checked::after {
-    left: rem(3);
-    top: rem(-8);
-}
-
-
-   .wpcf7-list-item-label  {
-    font-size: rem(14);
-}
-
-.wpcf7-checkbox:nth-of-type(2) input[type=checkbox] {
-    padding: 20px;
-  }
-
 /* お問い合わせ項目のチェックボックス */
 .form-checkbox input[type="checkbox"] {
-    accent-color: blue; /* チェックボックスの色を青に */
-    width: 14px; /* チェックボックスのサイズを調整 */
+    accent-color: blue;
+    /* チェックボックスの色を青に */
+    width: 14px;
+    /* チェックボックスのサイズを調整 */
     height: 14px;
 }
 
 /* 個人情報の同意チェックボックス */
 .form__check-item-label-input input[type="checkbox"] {
-    width: 22px; /* チェックボックスのサイズを調整 */
+    width: 22px;
+    /* チェックボックスのサイズを調整 */
     height: 22px;
-   right: 16;
-   top: 0;
+    right: 16;
+    top: 0;
 }
-
-
-

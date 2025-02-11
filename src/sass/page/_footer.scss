@@ -225,7 +225,7 @@
     margin-top: rem(43);
 
     @include mq("md") {
-        margin-top: rem(72);
+        margin-top: rem(29);
     }
 }
 
@@ -237,7 +237,7 @@
     @include mq("md") {
         text-align: center;
         font-size: rem(14);
-        letter-spacing: -0.02em;
+        letter-spacing: 0.1em;
         line-height: rem(18);
     }
 }

@@ -13,7 +13,7 @@
 
 <main>
     <p class="pagetop">
-        <a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a>
+    <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     </p>
     <nav class="breadcrumb breadcrumb--position">
         <div class="breadcrumb__inner inner">
@@ -91,7 +91,7 @@
                                                 </div>
                                             </div>
                                             <p class="card2__text card2__text--position ">
-                                                <?php echo wp_trim_words(get_the_content(), 100, '...'); ?>
+                                                <?php echo wp_trim_words(get_the_content(), 200, '...'); ?>
                                             </p>
                                         </div>
                                     </div>

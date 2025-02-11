@@ -16,8 +16,12 @@
 
 .button--white {
   background-color: $white; //背景色
+
 }
 
+.button.button--white {
+  z-index: 100;
+}
 .button__text {
   font-size: rem(14); ///文字サイズ
   line-height: 1.5714; //文字の高さ
@@ -129,6 +133,10 @@
   padding-bottom: rem(0); //ボタン内範囲
   border: rem(1) solid $green; //ボタン縁色
   transition: background-color .3s;
+height: rem(50);
+  @include mq("md") {
+
+  }
 }
 
 
@@ -144,7 +152,11 @@
   align-items: center; /* 上下中央揃え */
   justify-content: flex-start; /* 左右中央揃え */
   position: relative; /* 必要に応じて */
-  
+  top: rem(-10);
+    left: rem(10);
+  @include mq("md") {
+
+  }
 }
 
 
@@ -188,11 +200,11 @@
   border-bottom: rem(1) solid $white; //縦線
   border-right: rem(1) solid $white; //横線
   position: absolute;
-  top: 40%; //上下の位置
+  top: 9%; //上下の位置
   transform: skew(45deg); //縦線を曲げる
   margin-left: rem(5); //左文字との間
   transition: border .3s;
-  left: 40;
+  left: 50;
 }
 
 

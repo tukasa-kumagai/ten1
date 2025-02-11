@@ -295,7 +295,7 @@
                 <p class="pc-contact__text">お問い合わせ</p>
                 <p class="contact__subtext">ご予約・お問い合わせはコチラ</p>
               </div>
-              <div class="contact__button-inner">
+              <div class="contact__button-inner contact__button-inner--campaign">
                 <a href="./page-contact.html" class="button">
                   <span class="button__text">Contact us</span>
                 </a>

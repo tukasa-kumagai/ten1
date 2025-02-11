@@ -80,9 +80,7 @@
                         '<span class="page-blog-low-page__box-image2"></span>'
                       ); ?>
                     </div>
-                   
                   </div>
-                  
                 </div>
               <?php endwhile; ?>
             <?php endif; ?>

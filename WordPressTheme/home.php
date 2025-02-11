@@ -46,7 +46,7 @@
 
                     <div class="box__body box__body--under">
                       <div class="box__head box__head--blog-position">
-                        <p class="box__head-time "><?php the_date('Y.m.d') ?></p>
+                      <p class="box__head-time "><?php echo get_the_date('Y.m.d'); ?></p>
                         <p class="box__head-text box__head-text--blog-position"><?php the_title(); ?></p>
                       </div>
                     </div>
