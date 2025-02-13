@@ -22,9 +22,8 @@
 }
 
 .cards2.cards2--grid {
-  gap: rem(45);
   @include mq("md") {
-    margin-top: rem(60);
+
     gap: rem(81) rem(40);
 
   }

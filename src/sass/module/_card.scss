@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .card {
-    box-shadow: 0 0 rem(8) $gray;
+    box-shadow: 0 0 rem(8) gray;
     display: flex;
     flex-flow: column;
 
@@ -19,10 +19,6 @@
     }
 }
 
-.card__box {
-    padding: 1rem;
-  }
-  
 .card__img--size {
     padding-top: 75.071429%;
 }
@@ -60,7 +56,7 @@
 }
 
 .card__foot.card__foot--under {
-    padding: rem(10) rem(36) rem(10) rem(30);
+    padding: rem(10) rem(36) rem(4) rem(30);
     display: inline-block;
     margin-top: auto;
 
@@ -202,7 +198,7 @@
 
     @include mq("md") {
         font-size: rem(24);
-        font-weight: $semibold;
+        font-weight: $normal;
         font-family: $base-font-family;
         padding-bottom: rem(0);
     }
@@ -234,9 +230,6 @@
     }
 }
 
-.card__foot-title.card__foot-title--font-size {
-    font-size: rem(14);
-}
 .card__foot-price {
     display: flex;
     justify-content: space-between;
@@ -267,27 +260,19 @@
     }
 }
 
+
+
 .card__foot-regular.card__foot-regular--position {
     line-height: 3.0;
-    font-size: rem(20);
-    font-family: $sub-english-font-family;
-    @include mq("md") {
-      font-size: rem(20);
-    }
-}
 
-.card__foot-regular--position {
-    font-size: rem(20);
-
+    @include mq("md") {}
 }
 
 .card__foot-regular.card__foot-regular--campaign-position {
     line-height: 2.6;
     font-weight: bold;
-    font-size: rem(20);
-    @include mq("md") {
 
-    }
+    @include mq("md") {}
 }
 
 .card__foot-discount {
@@ -295,16 +280,16 @@
     color: $green;
     font-family: $sub-english-font-family;
     letter-spacing: 0em;
-    font-weight: $bold;
+    font-weight: $normal;
     line-height: 1.5;
-    letter-spacing: 1;
+    letter-spacing: -0.1em;
 
     @include mq("md") {
-        font-weight: $bold;
+        font-weight: $normal;
         font-size: rem(40);
         margin-left: rem(0);
-        letter-spacing: 1;
-        margin-right: 0;
+        letter-spacing: -0.12em;
+        margin-right: rem(7);
     }
 }
 
@@ -317,17 +302,15 @@
 
     @include mq("md") {
         line-height: 2.2;
-        margin-left: 0;
     }
 }
 
-.card__foot-discount.card__foot-discount--size {
-    letter-spacing: 1;
-    margin-left: rem(16);
+.card__foot-discount--size {
+    letter-spacing: -0.12em;
+
     @include mq("md") {
         font-size: rem(40);
         margin-left: rem(40);
-      
     }
 }
 
@@ -387,8 +370,11 @@
         font-size: rem(14);
         line-height: 1;
         margin-top: rem(12);
+        font-weight: $bold;
         color: $green;
-        font-weight: $normal;
+        font-weight: $regular;
 
     }
 }
+
+.card__foot-inquiry---position {}

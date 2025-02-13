@@ -9,7 +9,7 @@
 .sentence__title {
     font-size: rem(24);
     margin-top: rem(47);
-    font-weight:$semibold;
+    font-weight: $normal;
 
     @include mq("md") {
         font-size: rem(32);

@@ -100,12 +100,10 @@
 }
 
 .vice__button-inner {
-  margin-top: rem(75);
+  margin-top: rem(48);
   text-align: center;
 
   @include mq("md") {
     margin-top: rem(83);
   }
 }
-
-

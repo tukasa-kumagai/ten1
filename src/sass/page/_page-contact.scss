@@ -1,5 +1,6 @@
 @use "global" as *;
 
+
 .page-contact {
   max-width: rem(500);
   margin: 0 auto;
@@ -12,21 +13,19 @@
 
 .page-contact__inner {
   position: relative;
-  margin: 0 auto;
-}
 
-.page-contact__inner.inner {
-  max-width: rem(1500);
+  @include mq("md") {}
 }
 
 .page-contact__bg-img {
   width: rem(120);
   display: flex;
-  left: calc(50% - min(48.5vw, rem(620)));
+  left: calc(50% - min(48.5vw, 38.75rem));
   position: absolute;
   top: -18%;
 
   @include mq("md") {
+
     width: rem(302);
   }
 }
@@ -37,75 +36,12 @@
 
   @include mq("md") {
     margin-top: rem(30);
+    text-align: center;
   }
 }
 
 
 
-.form__item-input2 {
-  width: 100%;
-  padding: rem(12) rem(40) rem(12) rem(12);
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-color: $white;
-  border: rem(1) solid $gray;
-  border-radius: rem(5);
-  font-size: rem(16);
-  line-height: 1.5;
-  box-sizing: border-box;
-}
-
-/* ✅ 背景画像で矢印を表示 */
-.select-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 70%;
-  right: rem(12);
-  width: rem(12);
-  height: rem(12);
-  background-image: url("../../assets/images/common/arrow-t.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: translateY(-50%);
-  pointer-events: none;
-
-  @include mq("md") {
-    top: 70%;
-    right: rem(12);
-    width: rem(12);
-    height: rem(12);
-  }
-}
-
-/* ✅ レスポンシブ対応 */
-.select-wrapper {
-  max-width: 100%;
-
-  @include mq("md") {
-    max-width: 100%;
-  }
-}
-
-.form__item-input2 {
-  font-size: rem(14);
-  padding: rem(10) rem(36) rem(10) rem(10);
-
-  @include mq("md") {}
-}
-
-.select-wrapper::after {
-  width: rem(12);
-  height: rem(12);
-  right: rem(10);
-
-  @include mq("md") {
-    width: rem(16);
-    height: rem(16);
-    right: 0;
-  }
-}
 
 
 

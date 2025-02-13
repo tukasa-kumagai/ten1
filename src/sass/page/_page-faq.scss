@@ -10,7 +10,7 @@
   }
 }
 
-.accordion__item+.accordion__item {
+.accordion__item + .accordion__item {
   margin-top: rem(40);
 }
 
@@ -19,7 +19,6 @@
   padding: rem(19) rem(45) rem(19) rem(16);
   cursor: pointer;
   background-color: $green;
-
   @include mq("md") {
     padding: rem(30) rem(68) rem(30) rem(40);
     font-size: rem(20);
@@ -59,7 +58,7 @@
   color: $white;
   line-height: 1;
   font-size: rem(16);
-  font-weight: $normal;
+  font-weight: $regular;
 
   @include mq("md") {
     font-size: rem(20);
@@ -69,9 +68,15 @@
 .accordion__content {
   padding: rem(20) rem(16);
   border: rem(1) solid $green;
-
+  
   @include mq("md") {
     padding: rem(37) rem(40);
     margin-top: rem(16);
   }
 }
+
+
+
+
+
+

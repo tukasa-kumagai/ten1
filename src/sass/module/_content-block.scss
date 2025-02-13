@@ -122,7 +122,7 @@
 
     @include mq("md") {
         width: 100%;
-        margin-top: rem(0);
+        margin-top: rem(7);
         margin-left: rem(0);
     }
 }
@@ -154,8 +154,7 @@
     text-align: center;
 
     @include mq("md") {
-        margin-top: rem(40);
-        margin-left: rem(0);
+        margin-top: rem(55);
     }
 }
 
@@ -164,6 +163,6 @@
     text-align: center;
 
     @include mq("md") {
-        margin-top: rem(34);
+        margin-top: rem(40);
     }
 }

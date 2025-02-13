@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-contact {
-    margin-top: rem(109);
+    margin-top: rem(80);
     position: relative;
 
     @include mq("md") {

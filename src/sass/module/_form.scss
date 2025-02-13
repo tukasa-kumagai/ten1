@@ -21,15 +21,14 @@
     margin: 0 auto;
     padding-left: 0;
     padding-right: 0;
-    padding-bottom: rem(25);
     padding-top: rem(0);
-    margin-bottom: rem(0);
+    padding-bottom: rem(21);
     flex-wrap: wrap;
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
-        margin-bottom: rem(40);
-        margin-top: rem(41);
+        padding-bottom: rem(40);
+        padding-top: rem(41);
         width: 100%;
         display: flex;
         align-items: center;
@@ -40,18 +39,6 @@
     }
 }
 
-input[type=checkbox]:checked::after {
-    background-color: transparent;
-    border-bottom: rem(0) solid $red;
-    border-right: rem(0) solid $red;
-    content: "";
-    height: rem(1);
-    left: rem(7);
-    position: absolute;
-    top: 0;
-    transform: rotate(5deg);
-    width: rem(5);
-}
 
 .form__item:nth-child(n+2).form__item--width {
     padding-left: rem(15);
@@ -66,23 +53,26 @@ input[type=checkbox]:checked::after {
 .form__item:nth-child(n+2) {
     border-bottom: rem(1) dotted $green;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: left;
     max-width: rem(700);
     margin: 0 auto;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: rem(20);
-    margin-bottom: rem(0);
-    grid-template-columns: rem(200) rem(500);
-    padding-bottom: rem(25);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: rem(20);
+    padding-bottom: rem(21);
+    flex-wrap: wrap;
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
         padding-bottom: rem(40);
-        margin-top: rem(125);
+        padding-top: rem(26);
         width: 100%;
-        display: grid;
-        max-width: rem(800);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: rem(700);
         margin: 0 auto;
         flex-wrap: nowrap;
     }
@@ -91,78 +81,78 @@ input[type=checkbox]:checked::after {
 .form__item:nth-child(n+3) {
     border-bottom: rem(1) dotted $green;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: left;
     max-width: rem(700);
     margin: 0 auto;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: rem(22);
-    margin-bottom: rem(0);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: rem(22);
+    padding-bottom: rem(21);
     flex-wrap: wrap;
-    padding-bottom: rem(20);
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
-        margin-top: rem(23);
+        padding-bottom: rem(40);
+        padding-top: rem(23);
         width: 100%;
-        display: grid;
-        grid-template-columns: rem(200) rem(700);
-        max-width: rem(800);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: rem(700);
         margin: 0 auto;
         flex-wrap: nowrap;
+
     }
 }
 
 .form__item:nth-child(n+4) {
     border-bottom: rem(1) dotted $green;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: rem(700);
     margin: 0 auto;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: rem(22);
-    margin-bottom: rem(0);
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: rem(22);
+    padding-bottom: rem(21);
     flex-wrap: wrap;
 
     @include mq("md") {
         border-bottom: rem(1) dotted $green;
-        margin-top: rem(20);
+        padding-bottom: rem(26);
+        padding-top: rem(39);
         width: 100%;
-        display: grid;
-        max-width: rem(800);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: rem(700);
         margin: 0 auto;
         flex-wrap: nowrap;
         align-items: baseline;
     }
 }
 
+
 .form__item:nth-child(n+5) {
-    margin-top: rem(23);
+    padding-top: rem(0);
 
     @include mq("md") {
         max-width: rem(700);
-        margin-top: rem(30);
-        width: 100%;
+        padding-top: rem(18);
+        padding-bottom: rem(40);
     }
 }
 
 .form__item:nth-child(n+6) {
-    margin-top: rem(25);
+    padding-top: rem(22);
 
     @include mq("md") {
         max-width: rem(700);
-        margin-top: rem(30);
-
-    }
-}
-
-.form__item:nth-child(n+7) {
-    margin-top: rem(21);
-
-    @include mq("md") {
-        max-width: rem(10000);
-        margin-top: rem(20);
-
+        padding-top: rem(23);
     }
 }
 
@@ -220,14 +210,14 @@ input[type=checkbox]:checked::after {
     }
 }
 
-
 .form__item-input {
     border: rem(1) solid $green;
     border-radius: 0;
     margin-left: 0;
-    padding-left: rem(20);
+    padding-left: 1em;
     padding-right: 1em;
     height: rem(40);
+    flex: 1;
     width: 100%;
     max-width: rem(410);
     background: $white;
@@ -243,12 +233,6 @@ input[type=checkbox]:checked::after {
         margin-left: rem(0);
         max-width: rem(480);
     }
-}
-
-.form__item-input::placeholder {
-    text-indent: rem(5);
-    /* 左に10px移動 */
-    font-size: rem(16);
 }
 
 .form__item-input2 {
@@ -277,29 +261,6 @@ input[type=checkbox]:checked::after {
     }
 }
 
-
-.custom-checkbox1 {
-
-    @include mq("md") {
-        justify-content: left;
-        display: flex;
-    }
-}
-
-.custom-checkbox2 {
-    display: grid;
-        grid-template-columns: 10px 260px 0rem;
-    justify-content: right;
-    letter-spacing: 0.9rem;
-    margin-left: 0rem;
-    @include mq("md") {}
-}
-
-
-.contact-body {
-    justify-content: flex-start;
-}
-
 .form__item-textarea {
     border: rem(1) solid $green;
     border-radius: rem(0);
@@ -315,7 +276,7 @@ input[type=checkbox]:checked::after {
     font-size: rem(15);
 
     @include mq("md") {
-        margin-left: rem(20);
+        margin-left: 0;
         font-size: rem(18);
         height: rem(200);
         max-width: rem(480);
@@ -324,17 +285,11 @@ input[type=checkbox]:checked::after {
     }
 }
 
-.form__item-textarea::placeholder {
-    text-indent: rem(16);
-    /* 左に10px移動 */
-    padding-top: rem(5);
-}
-
 .form__check-item {
     margin-top: rem(18);
 
     @include mq("md") {
-        margin-top: rem(80);
+        margin-top: rem(24);
     }
 }
 
@@ -343,13 +298,14 @@ input[type=checkbox]:checked::after {
     position: relative;
     left: 0;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     width: rem(337);
     letter-spacing: 0.01em;
+
     @include mq("md") {
-        margin-top: rem(0);
+        margin-top: rem(66);
         width: 100%;
     }
 }
@@ -482,12 +438,11 @@ input[type=checkbox]:checked::after {
 .select-wrapper {
     position: relative;
     display: inline-block;
-    max-width: 100%;
-    width: rem(40000);
+
 
 
     @include mq("md") {
-        width: 70%;
+        width: 100%;
     }
 }
 
@@ -539,22 +494,4 @@ input[type=checkbox]:checked::after {
         height: auto;
         /* 高さは自動 */
     }
-}
-
-/* お問い合わせ項目のチェックボックス */
-.form-checkbox input[type="checkbox"] {
-    accent-color: blue;
-    /* チェックボックスの色を青に */
-    width: 14px;
-    /* チェックボックスのサイズを調整 */
-    height: 14px;
-}
-
-/* 個人情報の同意チェックボックス */
-.form__check-item-label-input input[type="checkbox"] {
-    width: 22px;
-    /* チェックボックスのサイズを調整 */
-    height: 22px;
-    right: 16;
-    top: 0;
 }

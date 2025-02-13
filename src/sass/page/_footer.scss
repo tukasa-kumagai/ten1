@@ -89,7 +89,7 @@
 .footer__wrapper1 {
     @include mq("md") {
         display: flex;
-
+       
     }
 }
 
@@ -162,7 +162,7 @@
 .footer__list1 a {
     padding-left: rem(22);
     line-height: 1.6em;
-    background: url(../../assets/images/common/starfish.jpg) left rem(0) top rem(3) no-repeat;
+    background: url(/assets/images/common/starfish.jpg) left rem(0) top rem(3) no-repeat;
     background-size: rem(15) auto;
     font-size: rem(16);
     font-weight: bold;
@@ -170,7 +170,7 @@
     padding-top: rem(1);
     display: block;
     width: 100%;
-
+   
 
     @include mq("md") {
         width: 100%;
@@ -225,7 +225,7 @@
     margin-top: rem(43);
 
     @include mq("md") {
-        margin-top: rem(29);
+        margin-top: rem(72);
     }
 }
 
@@ -237,7 +237,7 @@
     @include mq("md") {
         text-align: center;
         font-size: rem(14);
-        letter-spacing: 0.1em;
+        letter-spacing: -0.02em;
         line-height: rem(18);
     }
 }

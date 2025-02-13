@@ -19,7 +19,7 @@
   @include mq("md") {
     display: flex;
     gap: rem(70);
-
+    
   }
 }
 
@@ -53,7 +53,7 @@
 
   @include mq("md") {
     width: 27%;
-
+  
 
   }
 }
@@ -95,7 +95,6 @@
   font-size: rem(12);
   font-family: $second-font-family;
   line-height: 1.5;
-
   @include mq("md") {
     font-size: rem(12);
     line-height: 1.5;
@@ -106,7 +105,7 @@
 .page-blog__sub-card-title {
   font-size: rem(16);
   font-family: $second-font-family;
-  font-weight: $semibold;
+  font-weight: 500;
 }
 
 .page-blog__sub-reviews {
@@ -137,7 +136,9 @@
   margin-top: rem(14);
   line-height: 1.5;
 
-  @include mq("md") {}
+  @include mq("md") {
+
+  }
 
 }
 
@@ -147,7 +148,9 @@
   font-weight: $normal;
   margin-top: rem(7);
 
-  @include mq("md") {}
+  @include mq("md") {
+
+  }
 }
 
 .page-blog__sub-reviews-button-inner {
@@ -179,8 +182,7 @@
 .page-blog__sub-campaign__items {
   margin: 0 auto;
   display: table;
-  box-shadow: rem(5) rem(5) rem(10) $gray;
-
+  box-shadow: rem(5) rem(5) rem(10) rgba(0, 0, 0, 0.3);
   @include mq("md") {
     display: block;
   }
@@ -196,8 +198,7 @@
 }
 
 .page-blog__sub-campaign__item+.page-blog__sub-campaign__item {
-  margin-top: rem(45);
-
+margin-top: rem(45);
   @include mq("md") {
     margin-top: rem(29);
   }
@@ -209,14 +210,12 @@
   font-family: $regular;
 
 }
-
 .page-blog__sub-archive {
   margin-top: rem(24);
 
   @include mq("md") {
     font-size: rem(24);
     color: $green;
-    margin-top: rem(10);
   }
 }
 
@@ -263,49 +262,46 @@
 
 
 .summary-items {
-  color: $green;
-  font-size: rem(24);
-  font-weight: $normal;
-  font-family: $base-font-family;
+color: $green;
+font-size: rem(24);
+font-weight: $normal;
+font-family: $base-font-family;
 }
 
-.summary-item {}
+.summary-item {
 
+}
 summary::marker {
   color: $green;
   font-size: rem(34);
 }
 
-
+///テスト//
 details {
 
   max-width: rem(300);
 }
-
+ 
 /* JavaScriptで開閉する要素（.details-content）には上下のpaddingを指定せずこちらに指定 */
-details .details-content-wrapper {}
+details .details-content-wrapper {
 
+}
+ 
 details .details-content {
-  overflow: hidden;
-  /* コンテンツがアニメーションで徐々に表示されるように */
+  overflow: hidden;  /* コンテンツがアニメーションで徐々に表示されるように */
 }
-
+ 
 details summary {
-  display: block;
-  /* 矢印アイコンを非表示に */
-  cursor: pointer;
-  /* カーソルの形状をポインターに */
-  position: relative;
-  /* 絶対配置する疑似要素のアイコンの基準に */
-  padding: 0.5rem 0.5rem 0.5rem rem(35);
-  /* padding-left にアイコンのスペースを確保 */
+  display: block; /* 矢印アイコンを非表示に */
+  cursor: pointer; /* カーソルの形状をポインターに */
+  position: relative; /* 絶対配置する疑似要素のアイコンの基準に */
+  padding: 0.5rem 0.5rem 0.5rem rem(36); /* padding-left にアイコンのスペースを確保 */
 }
-
+ 
 details summary::-webkit-details-marker {
-  display: none;
-  /* Safari で三角形のアイコンを非表示に */
+  display: none; /* Safari で三角形のアイコンを非表示に */
 }
-
+ 
 /* 独自のアイコンを擬似要素で作成 */
 details summary::before {
   border-bottom: rem(13) solid transparent;
@@ -314,12 +310,15 @@ details summary::before {
   bottom: 0;
   content: "";
   height: rem(11);
-  left: rem(1);
+  left: rem(6);
   position: absolute;
   top: rem(15);
   transform: rotate(120deg);
   transition: transform 0.3s;
   width: 0;
 }
+ 
+details[open] summary {
+ 
+}
 
-details[open] summary {}

@@ -14,7 +14,7 @@
     @include mq("md") {
         display: flex;
         justify-content: start;
-
+       
     }
 }
 
@@ -32,21 +32,21 @@
 }
 
 .page-site-map__group2 {
-
+    
     @include mq("md") {
         margin-left: rem(0);
     }
 }
 
 .page-site-map__group2-2 {
-
+    
     @include mq("md") {
         margin-left: rem(120);
     }
 }
 
 .page-site-map__wrapper2 {
-
+   
 
     @include mq("md") {
         display: flex;
@@ -61,8 +61,6 @@
 }
 
 .page-site-map__group1 {
-    z-index: 100;
-
     @include mq("md") {
         width: rem(168);
         margin-left: 0;
@@ -128,7 +126,6 @@
 
     }
 }
-
 .page-site-map__nav2 {
     color: $black;
     margin-top: rem(38);
@@ -141,7 +138,7 @@
 .page-site-map__list1 a {
     padding-left: rem(18);
     line-height: 1.6em;
-    background: url("../../assets/images/site-map/starfish-black.jpg") left rem(0) top rem(3) no-repeat;
+    background: url(/assets/images/site-map/starfish-black.png) left rem(0) top rem(3) no-repeat;
     background-size: rem(15) auto;
     font-size: rem(16);
     font-weight: bold;
@@ -158,7 +155,7 @@
 .page-site-map__list1-2 a {
     padding-left: rem(18);
     line-height: 1.6em;
-    background: url("../../assets/images/site-map/starfish-black.jpg") left rem(0) top rem(3) no-repeat;
+    background: url(/assets/images/site-map/starfish-black.png) left rem(0) top rem(3) no-repeat;
     background-size: rem(15) auto;
     font-size: rem(16);
     font-weight: bold;
@@ -168,7 +165,6 @@
     width: 100%;
     padding-left: rem(21);
     margin-left: rem(19);
-
     @include mq("md") {
         width: 100%;
     }
@@ -191,7 +187,6 @@
         margin-left: rem(0);
     }
 }
-
 .page-site-map__list2-2 a {
     padding-left: rem(39);
     margin-top: rem(25);
@@ -238,7 +233,7 @@
     margin-left: 0;
 
     @include mq("md") {
-        margin-left: rem(21);
+        margin-left: rem(21);  
     }
 }
 
@@ -246,7 +241,7 @@
     margin-left: 0;
 
     @include mq("md") {
-        margin-left: rem(40);
+        margin-left: rem(40); 
     }
 }
 
@@ -256,7 +251,6 @@
 
 .page-site-map__button.footer__button4 {
     margin-left: rem(0);
-
     @include mq("md") {
         margin-left: rem(23);
     }

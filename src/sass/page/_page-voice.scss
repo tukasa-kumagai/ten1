@@ -24,6 +24,13 @@
   }
 }
 
+.page-voice__list {
+  margin-top: rem(40);
+  @include mq("md") {
+  
+  }
+}
+
 .page-vice__items {
   margin-top: rem(42);
   text-align: left;
@@ -36,17 +43,10 @@
 
 
 .page-vice__items:nth-child(n+2) {
-
+ 
   @include mq("md") {
     margin: 0 auto;
     margin-top: rem(90);
   }
 }
 
-.page-voice__items.cards2.cards2--grid {
-  margin-top: rem(40);
-
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}

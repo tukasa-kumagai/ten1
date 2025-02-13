@@ -130,7 +130,7 @@ body.active {
 }
 
 .sp-nav__left-item a {
-  color: $white;
+  color: #fff;
   display: block;
   font-weight: 400;
   line-height: 1.125;
@@ -141,7 +141,7 @@ body.active {
 }
 
 .sp-nav__left-item:first-child a::before {
-  background-image: url("../../assets/images/common/starfish.jpg");
+  background-image: url("/assets/images/common/starfish.jpg");
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -155,7 +155,7 @@ body.active {
 
 
 .sp-nav__right-item a {
-  color: $white;
+  color: #fff;
   display: block;
   font-weight: 400;
   line-height: 1.125;
@@ -193,7 +193,7 @@ body.active {
 //c-hamburger
 .hamburger {
   z-index: 9999;
-background-color: Transparent;
+
   @include mq("md") {
     display: none;
   }
@@ -205,7 +205,7 @@ background-color: Transparent;
   display: block;
   height: rem(1);
   width: rem(32);
-  background:$white;
+  background: $white;
   transition: ease .3s;
 
   @include mq("md") {

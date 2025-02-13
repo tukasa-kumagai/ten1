@@ -31,7 +31,6 @@
     margin-top: rem(78);
   }
 }
-
 .page-price__main:nth-child(n+3) {
   margin-top: rem(42);
 
@@ -39,7 +38,6 @@
     margin-top: rem(75);
   }
 }
-
 .page-price__main:nth-child(n+4) {
   margin-top: rem(40);
 
@@ -80,14 +78,18 @@
 .page-price__text {
   color: $white;
   font-size: rem(16);
-  font-weight: $bold;
-  @include mq("md") {
-
-  }
 }
 
 
-.page-price__table {}
+.page-price__table {
+  border-bottom: rem(0) solid $green;
+
+  @include mq("md") {
+    border-bottom: rem(1) solid $green;
+  }
+
+  
+}
 
 .page-price__tr {
   display: flex;
@@ -95,14 +97,6 @@
   width: 100%;
 
   @include mq("md") {}
-}
-
-.page-price__tr:last-child {
-  border-bottom: rem(0) solid $green;
-
-  @include mq("md") {
-    border-bottom: rem(1) solid $green;
-  }
 }
 
 .page-price__th {
@@ -114,7 +108,7 @@
   width: 70%;
 
   @include mq("md") {
-    border-top: rem(1) solid $green;
+    border-top:  rem(1) solid $green;
     border-bottom: rem(0) solid $green;
     padding: rem(23) rem(10) rem(20) rem(24);
     width: rem(338);
@@ -124,24 +118,17 @@
   }
 
 }
-
-
-
-
 .page-price__th--position1 {
   padding: rem(0)rem(10) rem(9) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(0) solid $green;
   }
 }
-
 .page-price__th--position2 {
   padding: rem(20)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
-
   @include mq("md") {
     border-bottom: rem(1) solid $green;
   }
@@ -151,7 +138,6 @@
   padding: rem(5)rem(10) rem(11) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(0) solid $green;
   }
@@ -161,7 +147,6 @@
   padding: rem(0) rem(10) rem(11) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(0) solid $green;
   }
@@ -171,77 +156,62 @@
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(0) solid $green;
   }
 }
-
 .page-price__th--position6 {
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(1) solid $green;
   }
 }
-
 .page-price__th--position7 {
   padding: rem(0)rem(10) rem(15) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(0) solid $green;
   }
 }
-
 .page-price__th--position8 {
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: 0 solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: 0 solid $green;
   }
 }
-
 .page-price__th--position9 {
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: 0 solid $green;
   }
 }
-
 .page-price__th--position10 {
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(1) solid $green;
   }
 }
-
 .page-price__th--position11 {
   padding: rem(8)rem(10) rem(8) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: 0 solid $green;
   }
 }
-
 .page-price__th--position12 {
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: 0 solid $green;
   }
@@ -251,14 +221,13 @@
   padding: rem(0)rem(10) rem(10) rem(10);
   border-bottom: rem(1) solid $green;
   height: 0%;
-
   @include mq("md") {
     border-bottom: rem(1) solid $green;
   }
 }
 
 .page-price__td {
-  text-align: center;
+text-align: center;
   border-bottom: rem(1) solid $green;
   width: 30%;
   padding: rem(17) rem(30);

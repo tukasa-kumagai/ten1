@@ -2,7 +2,7 @@
 
 .box {
   background-color: $white;
-  box-shadow: 0 0 rem(8) $gray;
+  box-shadow: 0 0 rem(8) gray;
 
   @include mq("md") {}
 }
@@ -68,7 +68,6 @@
   border-bottom: rem(1) solid $green;
   line-height: rem(18);
   margin-top: rem(6);
-  font-weight: $semibold;
 
   @include mq("md") {
     margin-top: rem(4);
@@ -86,7 +85,7 @@
 }
 
 .box {
-  box-shadow: 0 0 rem(8) $gray;
+  box-shadow: 0 0 rem(8) gray;
   display: flex;
   flex-flow: column;
   z-index: 99;
@@ -206,7 +205,7 @@
 
 .box__head-time {
   font-size: rem(12);
-  font-family: $second-font-family;
+
   @include mq("md") {
     font-size: rem(12);
     line-height: 1.5;
@@ -369,3 +368,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
+.card__box {
+  padding: 1rem;
+}
