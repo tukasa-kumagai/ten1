@@ -529,6 +529,7 @@ input[type=checkbox]:checked + .label_test:before {
 
 .footer__Copywriter {
 	color: #fff;
+	font-family: "Gotu", sans-serif;
 	font-size: 0.75rem;
 	text-align: center;
 }
@@ -1301,7 +1302,7 @@ div.information__img img {
 .page-blog__sub-reviews-title {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 500;
 	margin-top: 0.4375rem;
 }
 
@@ -1508,7 +1509,7 @@ details summary::before {
 .accordion__title-text {
 	color: #fff;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1;
 }
 
@@ -2337,6 +2338,7 @@ dl.price__list {
 .box__title {
 	border-bottom: 0.0625rem solid #408F95;
 	font-size: 1rem;
+	font-weight: 500;
 	line-height: 1.125rem;
 	margin-top: 0.375rem;
 	padding-bottom: 0.25rem;
@@ -3070,6 +3072,7 @@ dl.price__list {
 }
 
 .card__foot-regular.card__foot-regular--campaign-position {
+	font-family: "Lato", sans-serif;
 	font-weight: bold;
 	line-height: 2.6;
 }
@@ -3078,7 +3081,7 @@ dl.price__list {
 	color: #408F95;
 	font-family: "Lato", sans-serif;
 	font-size: 2rem;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: 0em;
 	letter-spacing: -0.1em;
 	line-height: 1.5;
@@ -3105,6 +3108,10 @@ dl.price__list {
 
 .card__foot-day {
 	display: none;
+}
+
+.card__foot-day--position {
+	font-family: "Lato", sans-serif;
 }
 
 .card__foot-inquiry {
@@ -3611,6 +3618,7 @@ div.card2__img img {
 .form-checkbox {
 	align-items: center;
 	display: flex;
+	font-size: 1rem;
 	gap: 1px; /* チェックボックスとテキストの間隔 */
 	margin-bottom: -20px; /* 各チェックボックスの下の余白 */
 }
@@ -3944,6 +3952,7 @@ div.card2__img img {
 }
 
 .main-mv__title {
+	font-family: "Lato", sans-serif;
 	font-size: 2.5rem;
 	letter-spacing: 0.54em;
 	line-height: 1;
@@ -4779,13 +4788,17 @@ div.card2__img img {
 }
 
 .wpcf7-list-item-label {
-	font-size: 0.875rem;
+	font-size: 1rem;
 	max-width: 600px;
 	width: 100%;
 }
 
 .wpcf7-form-control-wrap {
 	width: 90%;
+}
+
+.wpcf7-list-item input[type=checkbox][value=個人情報の取り扱いについて同意のうえ送信します。] + .wpcf7-list-item-label {
+	font-size: 0.875rem;
 }
 
 .wpcf7-checkbox input[type=checkbox]:checked::after {
@@ -5308,10 +5321,6 @@ div.information__img {
 	gap: 4.375rem;
 }
 
-.page-blog-low-page__time {
-	font-size: 0.875rem;
-}
-
 .page-blog-low-page__title {
 	font-size: 2rem;
 }
@@ -5407,6 +5416,10 @@ div.information__img {
 
 .page-blog__sub-reviews {
 	margin-top: 5.625rem;
+}
+
+.page-blog__sub-reviews-title {
+	font-weight: 500;
 }
 
 .page-blog__sub-campaign {
@@ -6353,7 +6366,7 @@ dl.price__list {
 .card__head-text--campaign-size {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 500;
 	padding-bottom: 0rem;
 }
 
@@ -6383,7 +6396,7 @@ dl.price__list {
 
 .card__foot-discount {
 	font-size: 2.5rem;
-	font-weight: 400;
+	font-weight: 700;
 	letter-spacing: -0.12em;
 	margin-left: 0rem;
 	margin-right: 0.4375rem;
@@ -6415,7 +6428,7 @@ dl.price__list {
 .card__foot-day {
 	color: #408F95;
 	display: inline;
-	font-family: "Noto Sans JP", sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 1rem;
 	font-weight: 700;
 	line-height: 1;
@@ -6431,8 +6444,7 @@ dl.price__list {
 	display: inline;
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.875rem;
-	font-weight: 700;
-	font-weight: 300;
+	font-weight: 400;
 	line-height: 1;
 	margin-top: 0.75rem;
 }

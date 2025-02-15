@@ -233,7 +233,8 @@
     font-size: rem(12);
     color: $white;
     text-align: center;
-
+    font-family: $second-font-family;
+    
     @include mq("md") {
         text-align: center;
         font-size: rem(14);

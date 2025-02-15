@@ -120,11 +120,13 @@
 .wpcf7-list-item-label {
     width: 100%;
     max-width: 600px;
-    font-size: rem(14);
+    font-size: rem(16);
     @include mq("md") {
         width: 100%;
     }
 }
+
+
 
 .wpcf7 select {
     @include mq("md") {
@@ -136,9 +138,17 @@
     }
 }
 
+
+
 .wpcf7-form-control-wrap {
     width: 90%;
 }
+.wpcf7-list-item input[type="checkbox"][value="個人情報の取り扱いについて同意のうえ送信します。"] + .wpcf7-list-item-label {
+
+    font-size: rem(14);
+}
+
+
 
 
 
@@ -186,6 +196,7 @@
 
     @include mq("md") {
         justify-content: center;
+        
     }
 }
 
@@ -202,6 +213,7 @@ span.wpcf7-list-item.first.last.custom-checkbox2 {
     grid-template-columns: rem(40) rem(410) rem(0);
     justify-content: center;
     margin-top: rem(0);
+    
     }
 }
 
@@ -218,6 +230,7 @@ span.wpcf7-list-item.first.last.custom-checkbox2 {
     grid-template-columns: rem(40) rem(410) rem(0);
     justify-content: center;
     margin-top: rem(0);
+   
     }
 }
 

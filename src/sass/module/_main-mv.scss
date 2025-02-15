@@ -27,7 +27,7 @@
   letter-spacing: 0.54em;
   line-height: 1;
   text-indent: 0.55em;
-
+  font-family: $sub-english-font-family;
   @include mq("md") {
     font-size: rem(80);
     letter-spacing: 0.55em;

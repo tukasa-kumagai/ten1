@@ -145,11 +145,11 @@
 .page-blog__sub-reviews-title {
   font-size: rem(24);
   font-family: $base-font-family;
-  font-weight: $normal;
+  font-weight: $semibold;
   margin-top: rem(7);
 
   @include mq("md") {
-
+    font-weight: $semibold;
   }
 }
 

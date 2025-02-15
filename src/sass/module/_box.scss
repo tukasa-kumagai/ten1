@@ -68,6 +68,7 @@
   border-bottom: rem(1) solid $green;
   line-height: rem(18);
   margin-top: rem(6);
+  font-weight: $semibold;
 
   @include mq("md") {
     margin-top: rem(4);

@@ -198,7 +198,7 @@
 
     @include mq("md") {
         font-size: rem(24);
-        font-weight: $normal;
+        font-weight: $semibold;
         font-family: $base-font-family;
         padding-bottom: rem(0);
     }
@@ -271,7 +271,7 @@
 .card__foot-regular.card__foot-regular--campaign-position {
     line-height: 2.6;
     font-weight: bold;
-
+    font-family: $sub-english-font-family;
     @include mq("md") {}
 }
 
@@ -280,12 +280,12 @@
     color: $green;
     font-family: $sub-english-font-family;
     letter-spacing: 0em;
-    font-weight: $normal;
+    font-weight: $bold;
     line-height: 1.5;
     letter-spacing: -0.1em;
 
     @include mq("md") {
-        font-weight: $normal;
+        font-weight: $bold;
         font-size: rem(40);
         margin-left: rem(0);
         letter-spacing: -0.12em;
@@ -307,7 +307,7 @@
 
 .card__foot-discount--size {
     letter-spacing: -0.12em;
-
+ 
     @include mq("md") {
         font-size: rem(40);
         margin-left: rem(40);
@@ -344,7 +344,7 @@
 
     @include mq("md") {
         display: inline;
-        font-family: $base-font-family;
+        font-family: $sub-english-font-family;
         font-size: rem(16);
         line-height: 1;
         margin-top: rem(32);
@@ -355,9 +355,10 @@
 }
 
 .card__foot-day--position {
-
+font-family: $sub-english-font-family;
     @include mq("md") {
         margin-top: rem(30);
+
     }
 }
 
@@ -370,9 +371,9 @@
         font-size: rem(14);
         line-height: 1;
         margin-top: rem(12);
-        font-weight: $bold;
+        font-weight: $normal;
         color: $green;
-        font-weight: $regular;
+       
 
     }
 }
