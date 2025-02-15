@@ -76,7 +76,7 @@ img:not([alt]) {
 
 
 /* フォームリセット */
-input,
+
 button,
 select,
 textarea {
@@ -90,13 +90,23 @@ textarea {
   outline: none;
 }
 
+input {
+  //-webkit-appearance: none;
+  //-moz-appearance: none;
+  //appearance: none;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font: inherit;
+  outline: none;
+}
 textarea {
   resize: vertical;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
-  display: none;
+  //display: none;
 }
 
 input[type="submit"],

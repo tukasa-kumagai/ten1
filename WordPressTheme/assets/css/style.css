@@ -101,7 +101,6 @@ img:not([alt]) {
 
 /* フォームリセット */
 
-input,
 button,
 select,
 textarea {
@@ -115,13 +114,16 @@ textarea {
 	outline: none;
 }
 
-textarea {
-	resize: vertical;
+input {
+	background: transparent;
+	border: none;
+	border-radius: 0;
+	font: inherit;
+	outline: none;
 }
 
-input[type=checkbox],
-input[type=radio] {
-	display: none;
+textarea {
+	resize: vertical;
 }
 
 input[type=submit],
@@ -2672,6 +2674,10 @@ dl.price__list {
 	background-color: #fff;
 }
 
+.button.button--white {
+	z-index: 100;
+}
+
 .button__text {
 	color: #fff;
 	font-family: "Gotu", sans-serif;
@@ -2751,6 +2757,88 @@ dl.price__list {
 
 .button--position1 {
 	display: none;
+}
+
+.button--contact {
+	background-color: #408F95;
+	border: 0.0625rem solid #408F95;
+	display: inline-block;
+	height: 3.125rem;
+	padding-bottom: 0rem;
+	padding-left: 2.5rem;
+	padding-top: 0rem;
+	position: relative;
+	text-align: left;
+	transition: background-color 0.3s;
+	width: 12.625rem;
+	z-index: 1;
+}
+
+.button__text--contact {
+	align-items: center; /* 上下中央揃え */
+	color: #fff;
+	display: flex;
+	font-family: "Gotu", sans-serif;
+	font-size: 0.875rem;
+	font-weight: 300;
+	justify-content: flex-start; /* 左右中央揃え */
+	left: 0.625rem;
+	line-height: 1.5714;
+	position: relative; /* 必要に応じて */
+	top: -0.625rem;
+	transition: color 0.3s;
+}
+
+.button--contact::before {
+	background: #fff;
+	content: "";
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: scale(0, 1);
+	transform-origin: left top;
+	transition: 0.2s cubic-bezier(0.45, 0, 0.55, 1);
+	width: 100%;
+	z-index: -1;
+}
+
+.button--contact::after {
+	border: 0.0625rem solid #408F95;
+	bottom: -0.25rem;
+	content: "";
+	left: 0.25rem;
+	position: absolute;
+	right: -0.25rem;
+	top: 0.25rem;
+	z-index: -2;
+}
+
+.button__text--contact::after {
+	border-bottom: 0.0625rem solid #fff;
+	border-right: 0.0625rem solid #fff;
+	content: "";
+	display: inline-block;
+	height: 0.5rem;
+	left: 50;
+	margin-left: 0.3125rem;
+	position: absolute;
+	top: 9%;
+	transform: skew(45deg);
+	transition: border 0.3s;
+	width: 2.5rem;
+}
+
+.button--contact:hover .button__text--contact {
+	color: #408F95;
+}
+
+.button--contact:hover::before {
+	transform: scale(1, 1);
+}
+
+.button--contact:hover .button__text--contact::after {
+	border-color: #408F95;
 }
 
 .button2__items {
@@ -3227,7 +3315,7 @@ div.card2__img img {
 .form__item:nth-child(n+2) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
@@ -3242,7 +3330,7 @@ div.card2__img img {
 .form__item:nth-child(n+3) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
@@ -3257,7 +3345,7 @@ div.card2__img img {
 .form__item:nth-child(n+4) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: block;
 	flex-wrap: wrap;
 	justify-content: left;
 	margin: 0 auto;
@@ -3270,10 +3358,16 @@ div.card2__img img {
 }
 
 .form__item:nth-child(n+5) {
-	padding-top: 0rem;
+	padding-bottom: 2.5rem;
+	padding-top: 1.25rem;
 }
 
 .form__item:nth-child(n+6) {
+	padding-bottom: 1.5rem;
+	padding-top: 1.375rem;
+}
+
+.form__item:nth-child(n+7) {
 	padding-top: 1.375rem;
 }
 
@@ -3321,7 +3415,7 @@ div.card2__img img {
 	height: 2.5rem;
 	margin-left: 0;
 	margin-top: 1.125rem;
-	max-width: 25.625rem;
+	max-width: 31.25rem;
 	padding-left: 1em;
 	padding-right: 1em;
 	width: 100%;
@@ -3334,7 +3428,7 @@ div.card2__img img {
 	color: #111;
 	flex: 1;
 	flex: inherit;
-	font-size: 0.875rem;
+	font-size: 0.75rem;
 	font-weight: 400;
 	height: 2.5rem;
 	margin-top: 1.125rem;
@@ -3353,8 +3447,8 @@ div.card2__img img {
 	flex: inherit;
 	font-size: 0.9375rem;
 	height: 12.5rem;
-	margin-top: 1.125rem;
-	max-width: 25.625rem;
+	margin-top: 0.875rem;
+	max-width: 31.25rem;
 	padding-left: 1em;
 	padding-right: 1em;
 	width: 100%;
@@ -3368,12 +3462,17 @@ div.card2__img img {
 	align-items: center;
 	cursor: pointer;
 	display: flex;
-	justify-content: center;
+	justify-content: end;
 	left: 0;
 	letter-spacing: 0.01em;
-	margin-top: 1.25rem;
+	margin-top: 2.5rem;
 	position: relative;
 	width: 21.0625rem;
+}
+
+.wpcf7-form-control-wrap.form__check-item-label {
+	display: flex;
+	justify-content: center;
 }
 
 .form__check-item-label-square-icon {
@@ -3388,6 +3487,10 @@ div.card2__img img {
 .form__check-item-label-text {
 	font-size: 3.6vw;
 	margin-top: 1rem;
+}
+
+.form__check-item-label-input.custom-checkbox2 {
+	padding: 50px;
 }
 
 .form__btn {
@@ -3468,6 +3571,7 @@ div.card2__img img {
 .select-wrapper {
 	display: inline-block;
 	position: relative;
+	width: 100%;
 }
 
 /* プルダウンメニューのスタイル */
@@ -3476,7 +3580,9 @@ div.card2__img img {
 	-webkit-appearance: none; /* Safari/Chrome用 */
 	-moz-appearance: none; /* Firefox用 */
 	appearance: none;
+	max-width: 29.9375rem;
 	padding-right: 1.875rem; /* 矢印画像の幅 + 余白分 */
+	width: 100%;
 }
 
 /* 矢印画像のスタイル */
@@ -3496,6 +3602,22 @@ div.card2__img img {
 	top: 50%; /* 矢印画像とプルダウンメニューの間隔 */
 	transform: translateY(30%);
 	width: 0.625rem; /* 高さは自動 */
+}
+
+.contact-body {
+	padding-top: 1rem;
+}
+
+.form-checkbox {
+	align-items: center;
+	display: flex;
+	gap: 1px; /* チェックボックスとテキストの間隔 */
+	margin-bottom: -20px; /* 各チェックボックスの下の余白 */
+}
+
+.wpcf7-list-item.first.last input[type=checkbox] {
+	margin-top: 0.0625rem;
+	padding: 0.625rem;
 }
 
 .gallery__content {
@@ -3717,7 +3839,7 @@ div.card2__img img {
 
 .l-page-contact {
 	margin: 0 auto;
-	margin-top: 1.75rem;
+	margin-top: 1.1875rem;
 	max-width: 31.25rem;
 }
 
@@ -4097,6 +4219,7 @@ div.card2__img img {
 }
 
 .pc-nav__item-foot {
+	font-family: "Noto Sans JP", sans-serif;
 	font-size: 0.625rem;
 	opacity: 1;
 	text-align: center;
@@ -4566,6 +4689,146 @@ div.card2__img img {
 
 .campaign-pagination {
 	margin-top: 5rem;
+}
+
+.your-checkbox {
+	display: flex;
+	justify-content: left;
+}
+
+.wpcf7-checkbox.custom-checkbox1 input[type=checkbox] {
+	cursor: pointer; /* サイズ */
+	height: 1rem;
+	width: 1rem; /* クリック可能に */
+}
+
+.wpcf7-checkbox.custom-checkbox1 input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none; /* 枠線の色（後述） */
+	accent-color: #fff;
+	appearance: none;
+	border: 0.0625rem solid #408F95; /* 未選択時の背景色 */
+	cursor: pointer;
+	height: 0.9375rem;
+	margin-top: 0.3125rem;
+	position: relative; /* デフォルトデザインを削除 */
+	width: 0.9375rem;
+}
+
+.wpcf7-checkbox.custom-checkbox1 input[type=checkbox]:checked {
+	background-color: #fff; /* クリック時（チェック時）の背景色 */
+}
+
+.wpcf7-checkbox.custom-checkbox1 input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border: 0.0625rem solid #408F95;
+	border-radius: 0rem;
+	cursor: pointer;
+	height: 0.9375rem;
+	position: relative; /* デフォルトのチェックボックスを削除 */
+	width: 0.9375rem;
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+	cursor: pointer; /* サイズ */
+	height: 1.375rem;
+	width: 1.375rem; /* クリック可能に */
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none; /* 枠線の色（後述） */
+	accent-color: #fff;
+	appearance: none;
+	border: 0.0625rem solid #408F95; /* 未選択時の背景色 */
+	cursor: pointer;
+	height: 1.375rem;
+	margin-top: 0.3125rem;
+	position: relative; /* デフォルトデザインを削除 */
+	width: 1.375rem;
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked {
+	background-color: #fff; /* クリック時（チェック時）の背景色 */
+	margin-top: 40px;
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: #fff;
+	border: 0.0625rem solid #408F95;
+	border-radius: 0rem;
+	cursor: pointer;
+	height: 1.375rem;
+	position: relative; /* デフォルトのチェックボックスを削除 */
+	width: 1.375rem;
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked::after {
+	color: #C94800;
+	content: "✔"; /* チェックマーク */
+	font-size: 1rem;
+	left: 0.125rem; /* レ点（✔）の色を赤に */
+	position: absolute;
+	top: -0.125rem;
+}
+
+.wpcf7-list-item-label {
+	font-size: 0.875rem;
+	max-width: 600px;
+	width: 100%;
+}
+
+.wpcf7-form-control-wrap {
+	width: 90%;
+}
+
+.wpcf7-checkbox input[type=checkbox]:checked::after {
+	left: 0.1875rem;
+	top: -0.5rem;
+}
+
+.wpcf7-list-item.first.last input[type=checkbox] {
+	margin-top: 0.0625rem;
+	padding: 0.3125rem;
+}
+
+.wpcf7-list-item {
+	display: inline-block;
+	display: grid;
+	grid-template-columns: 1.875rem 16.25rem 0rem;
+	margin: 0 0 0 -0.3125rem;
+}
+
+span.wpcf7-list-item.first.last.custom-checkbox2 {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 1.5625rem 17.5rem 0rem;
+	justify-content: flex-start;
+	letter-spacing: 0.05rem;
+	margin-left: -0.3125rem;
+	margin-top: 0rem;
+}
+
+span.wpcf7-list-item.first.last.custom-checkbox2 {
+	align-items: center;
+	display: grid;
+	grid-template-columns: 3.4375rem 17.5rem 0rem;
+	justify-content: flex-start;
+	letter-spacing: 0.05rem;
+	margin-left: -0.3125rem;
+	margin-top: 0rem;
+}
+
+.wpcf7-list-item.custom-checkbox2 input[type=checkbox] {
+	max-width: 100%;
+	padding: 100px;
+	width: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -6340,9 +6603,10 @@ div.card2__img {
 .form__item:nth-child(n+2) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: grid;
 	flex-wrap: nowrap;
-	justify-content: center;
+	grid-template-columns: 13.75rem 30rem 6.25rem;
+	justify-content: left;
 	margin: 0 auto;
 	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
@@ -6353,9 +6617,10 @@ div.card2__img {
 .form__item:nth-child(n+3) {
 	align-items: center;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: grid;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	grid-template-columns: 13.75rem 30rem 6.25rem;
+	justify-content: left;
 	margin: 0 auto;
 	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
@@ -6367,25 +6632,37 @@ div.card2__img {
 	align-items: center;
 	align-items: baseline;
 	border-bottom: 0.0625rem dotted #408F95;
-	display: flex;
+	display: grid;
 	flex-wrap: nowrap;
-	justify-content: space-between;
+	grid-template-columns: 13.75rem 30rem 6.25rem;
+	justify-content: left;
 	margin: 0 auto;
 	max-width: 43.75rem;
-	padding-bottom: 1.625rem;
-	padding-top: 2.4375rem;
+	padding-bottom: 2.5rem;
+	padding-top: 1.5625rem;
 	width: 100%;
 }
 
 .form__item:nth-child(n+5) {
 	max-width: 43.75rem;
+	padding-bottom: 3.75rem;
+	padding-top: 1.5625rem;
+}
+
+.form__item:nth-child(n+6) {
+	display: grid;
+	grid-template-columns: 12.8125rem 30rem 6.25rem;
+	max-width: 43.75rem;
 	padding-bottom: 2.5rem;
 	padding-top: 1.125rem;
 }
 
-.form__item:nth-child(n+6) {
+.form__item:nth-child(n+7) {
+	display: grid;
+	grid-template-columns: 12.8125rem 30rem 6.25rem;
 	max-width: 43.75rem;
-	padding-top: 1.4375rem;
+	padding-bottom: 2.5rem;
+	padding-top: 1.125rem;
 }
 
 .form__item-label {
@@ -6396,7 +6673,7 @@ div.card2__img {
 }
 
 .form__item-label.form__ismsg {
-	margin-top: 0.5rem;
+	margin-top: 1.25rem;
 }
 
 .form__item-label-required {
@@ -6422,10 +6699,10 @@ div.card2__img {
 .form__item-textarea {
 	font-size: 1.125rem;
 	height: 12.5rem;
-	margin-left: 0;
-	margin-top: 0.625rem;
+	margin-left: 16px;
+	margin-top: 1.25rem;
 	max-width: 30rem;
-	padding-left: 0.625rem;
+	padding-left: 1rem;
 }
 
 .form__check-item {
@@ -6433,7 +6710,10 @@ div.card2__img {
 }
 
 .form__check-item-label {
-	margin-top: 4.125rem;
+	display: grid;
+	grid-template-columns: 9.375rem 25.625rem 6.25rem;
+	justify-content: center;
+	margin-top: 4.8125rem;
 	width: 100%;
 }
 
@@ -6475,6 +6755,16 @@ div.card2__img {
 	top: 50%; /* 矢印画像とプルダウンメニューの間隔 */
 	transform: translateY(90%);
 	width: 0.625rem; /* 高さは自動 */
+}
+
+.wpcf7-list-item.first.last input[type=checkbox] {
+	letter-spacing: 0.01rem;
+	margin-top: -0.125rem;
+}
+
+span.wpcf7-list-item.first.last {
+	display: flex;
+	justify-content: center;
 }
 
 .gallery__content {
@@ -6631,6 +6921,7 @@ div.card2__img {
 }
 
 .l-page-contact {
+	margin-top: 5.9375rem;
 	max-width: 46.875rem;
 }
 
@@ -6952,6 +7243,56 @@ div.card2__img {
 
 .campaign-pagination {
 	margin-top: 5rem;
+}
+
+.wpcf7-checkbox.custom-checkbox1 input[type=checkbox] {
+	right: 0.4375rem;
+	top: 0;
+}
+
+.wpcf7-checkbox input[type=checkbox] {
+	right: 0.8125rem;
+	top: -0.1875rem;
+}
+
+.wpcf7-list-item-label {
+	width: 100%;
+}
+
+.wpcf7 select {
+	border: 0.0625rem solid #408F95;
+	font-size: 0.75rem;
+	margin-left: 1rem;
+	padding: 0.3125rem;
+	width: 100%;
+}
+
+.wpcf7-list-item.first.last input[type=checkbox] {
+	letter-spacing: 0.01rem;
+	margin-top: 0.3125rem;
+}
+
+.wpcf7-list-item {
+	grid-template-columns: 2.5rem 25rem 0rem;
+	margin: 0 0 0 0;
+}
+
+.wpcf7-form-control-wrap {
+	justify-content: center;
+}
+
+span.wpcf7-list-item.first.last.custom-checkbox2 {
+	display: grid;
+	grid-template-columns: 2.5rem 25.625rem 0rem;
+	justify-content: center;
+	margin-top: 0rem;
+}
+
+span.wpcf7-list-item.first.last.custom-checkbox2 {
+	display: grid;
+	grid-template-columns: 2.5rem 25.625rem 0rem;
+	justify-content: center;
+	margin-top: 0rem;
 }
 
 }
