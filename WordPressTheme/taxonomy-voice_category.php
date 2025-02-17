@@ -11,7 +11,7 @@
     </div>
 </div>
 <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+<p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     <nav class="breadcrumb breadcrumb--position">
         <div class="breadcrumb__inner inner">
             <?php if (!is_front_page()) { ?>

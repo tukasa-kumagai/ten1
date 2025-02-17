@@ -1872,8 +1872,8 @@ details summary::before {
 
 .sentence__title {
 	font-family: "Noto Sans JP", sans-serif;
-	font-size: 2rem;
-	font-weight: 300;
+	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 .page-site-map__inner {
@@ -1883,6 +1883,10 @@ details summary::before {
 .page-site-map__content {
 	display: flex;
 	justify-content: center;
+}
+
+.page-site-map__group1 {
+	z-index: 100;
 }
 
 .page-site-map__nav1 {
@@ -5712,6 +5716,10 @@ div.information__img {
 	max-width: 62.5rem;
 }
 
+.page-privacy-policy__inner1 {
+	max-width: 59.375rem;
+}
+
 .page-privacy-policy__inner2 {
 	padding: 0rem 4.8125rem 0rem 6.6875rem;
 }
@@ -5730,6 +5738,11 @@ div.information__img {
 
 .page-privacy-policy__inner6 {
 	padding: 0rem 0rem 0rem 0rem;
+}
+
+.sentence__title {
+	font-size: 2rem;
+	font-weight: 500;
 }
 
 .page-site-map__content {
@@ -6248,6 +6261,7 @@ dl.price__list {
 }
 
 .breadcrumb {
+	font-size: 0.875rem;
 	padding: 0.4375rem 0.625rem 0.625rem 0rem;
 }
 
