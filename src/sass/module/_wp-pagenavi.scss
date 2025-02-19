@@ -17,7 +17,7 @@
 
 //（ページ番号のボタン）
 .wp-pagenavi a {
-  padding: rem(9) rem(14) !important;
+  padding: rem(6) rem(12) !important;
   text-decoration: none;
   border: rem(1) solid $green !important;
   background-color: $white;
@@ -41,7 +41,7 @@
   color: $white;
   border: rem(1) solid $green !important;
   font-weight: bold;
-  padding: rem(9) rem(14) !important;
+  padding: rem(6) rem(12) !important;
   font-size: rem(16);
   color: $white;
   text-decoration: none;
@@ -61,7 +61,7 @@
   font-weight: bold;
   background-color: $white;
   border: rem(1) solid $green;
-  padding: rem(11) rem(15);
+  padding: rem(8) rem(12);
   color: $green;
   margin: 0 rem(24) !important;
 }
@@ -70,7 +70,7 @@
 .wp-pagenavi .nextpostslink:hover {
   background-color: $green;
   color: $white;
-  padding: rem(9) rem(14);
+  padding: rem(8) rem(12);
 }
 
 //（「…（省略記号）」）

@@ -566,4 +566,22 @@ span.wpcf7-list-item.first.last {
 }
  
   
+.select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* 必要に応じて調整 */
+}
+
+.form__item-input2 {
+    width: 100%;
+    padding-right: 30px; /* 画像の分だけ余白を確保 */
+    padding-top: 30px;
+    background: url(../../assets/images/contact/contact-logo-image.jpg) no-repeat right 9px center;
+    background-size: 12px ; /* 画像のサイズ調整 */
+    -webkit-appearance: none; /* Safariのデフォルトスタイルを無効化 */
+    -moz-appearance: none; /* Firefoxのデフォルトスタイルを無効化 */
+    appearance: none; /* デフォルトの矢印を非表示 */
+   
+
+}
 
