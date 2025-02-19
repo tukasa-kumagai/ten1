@@ -5,8 +5,8 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets//images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets//images/blog/sp-blog-mv.jpg')); ?>" alt="">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/sp-blog-mv.jpg')); ?>" alt="">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -26,7 +26,6 @@
         <?php } ?>
       </div>
     </nav>
-    </div>
     <section class="l-page-blog-low-page page-blog-low-page">
       <div class="page-blog-low-page__inner inner fish">
         <div class="page-blog-low-page__content">
@@ -44,10 +43,6 @@
                   <p class="page-blog-low-page__text">
                     <?php the_content(); ?>
                   </p>
-                </div>
-
-                <div class="page-blog-low-page__container">
-                 
                   <div class="page-blog-low-page__image">
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail(); ?>
@@ -71,14 +66,12 @@
                 <div class="page-blog-low-page__nav">
                   <div class="page-blog-low-page__nav-item">
                     <div class="l-page-blog-low-page__box page-blog-low-page__box">
-                      <?php previous_post_link(
-                        '<span>%link</span>', // 矢印を削除
-                        '<span class="page-blog-low-page__box-image1"></span>'
-                      ); ?>
-                        <?php previous_post_link(
-                        '<span>%link</span>', // 矢印を削除
-                        '<span class="page-blog-low-page__box-image2"></span>'
-                      ); ?>
+                      <a href="<?php echo get_permalink(get_previous_post(true, '', 'category')->ID); ?>" class="prev-link">
+                        <span class="page-blog-low-page__box-image1"></span>
+                      </a>
+                      <a href="<?php echo get_permalink(get_next_post(true, '', 'category')->ID); ?>" class="next-link">
+                        <span class="page-blog-low-page__box-image2"></span>
+                      </a>
                     </div>
                   </div>
                 </div>

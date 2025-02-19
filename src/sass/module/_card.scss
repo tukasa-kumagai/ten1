@@ -232,7 +232,7 @@
 
 .card__foot-price {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
 
     @include mq("md") {}
 }
@@ -282,13 +282,13 @@
     letter-spacing: 0em;
     font-weight: $bold;
     line-height: 1.5;
-    letter-spacing: -0.1em;
+    letter-spacing: 0;
 
     @include mq("md") {
         font-weight: $bold;
         font-size: rem(40);
         margin-left: rem(0);
-        letter-spacing: -0.12em;
+        letter-spacing: 0;
         margin-right: rem(7);
     }
 }
@@ -306,11 +306,11 @@
 }
 
 .card__foot-discount--size {
-    letter-spacing: -0.12em;
- 
+    letter-spacing: 0;
+    margin-left: rem(20);
     @include mq("md") {
         font-size: rem(40);
-        margin-left: rem(40);
+        margin-left: rem(30);
     }
 }
 

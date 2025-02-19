@@ -2,7 +2,7 @@
 
 .breadcrumb {
   padding: rem(16);
-
+  font-size: rem(14);
   @include mq("md") {
     padding: rem(7) rem(10) rem(10) rem(0);
     font-size: rem(14);

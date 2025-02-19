@@ -2,12 +2,12 @@
 
 .l-information {
     padding-top: rem(78);
-    padding-bottom: rem(86);
+    padding-bottom: rem(90);
     margin-top: rem(76);
 
     @include mq("md") {
-        padding-bottom: rem(74);
-        margin-top: rem(165);
+        padding-bottom: rem(100);
+        margin-top: rem(145);
         padding-top: rem(100);
     }
 }

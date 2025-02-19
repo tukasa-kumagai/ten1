@@ -211,7 +211,7 @@ margin-top: rem(45);
 
 }
 .page-blog__sub-archive {
-  margin-top: rem(24);
+  margin-top: rem(10);
 
   @include mq("md") {
     font-size: rem(24);
@@ -310,7 +310,7 @@ details summary::before {
   bottom: 0;
   content: "";
   height: rem(11);
-  left: rem(6);
+  left: rem(2);
   position: absolute;
   top: rem(15);
   transform: rotate(120deg);

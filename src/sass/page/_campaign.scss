@@ -28,10 +28,10 @@
 
 .campaign__button-inner {
   text-align: center;
-  margin-top: rem(40);
+  margin-top: rem(50);
 
   @include mq("md") {
-    margin-top: rem(76);
+    margin-top: rem(83);
     text-align: center;
   }
 }

@@ -23,11 +23,13 @@
 .page-blog-low-page__content {
   width: 100%;
   display: block;
+
   @include mq("md") {
     display: flex;
     gap: rem(70);
+  }
 }
-}
+
 .page-blog-low-page__container {
 
   @include mq("md") {}
@@ -39,7 +41,7 @@
   font-family: $second-font-family;
 
   @include mq("md") {
-  
+    font-size: rem(16);
   }
 }
 
@@ -50,7 +52,7 @@
   margin-top: rem(10);
   padding-bottom: rem(4);
   border-bottom: rem(1) solid $green;
-
+ font-weight: $semibold;
   @include mq("md") {
     font-size: rem(32);
   }
@@ -58,15 +60,25 @@
 
 .page-blog-low-page__image {
   margin-top: rem(24);
-
+  overflow: hidden;
   @include mq("md") {
     margin-top: rem(37);
   }
 }
 
-.page-blog-low-page__image img {
 
-  @include mq("md") {}
+
+
+.page-blog-low-page__image img {
+  width: 100%;
+  height: rem(230);
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  @include mq("md") {
+    height: rem(468);
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
 }
 
 .page-blog-low-page__text {
@@ -97,14 +109,14 @@
 
 .page-blog-low-page__sub-card {
   display: flex;
-  box-shadow: rem(2) rem(2) rem(4) gray;
+  box-shadow: rem(2) rem(2) rem(4) $gray;
   padding: rem(16);
   width: 100%;
   margin-top: rem(24);
 
   @include mq("md") {
     display: flex;
-    box-shadow: rem(2) rem(2) rem(4) gray;
+    box-shadow: rem(2) rem(2) rem(4) $gray;
     padding: rem(16);
     width: 100%;
     margin-top: rem(24);
@@ -132,12 +144,11 @@
   font-weight: 200;
 }
 
-.page-blog-low-page__box {
+.page-blog-low-page__box {}
 
-}
 .page-blog-low-page__sub-reviews {
   display: block;
- 
+
 }
 
 .page-blog-low-page__sub-reviews-card {}
@@ -297,7 +308,7 @@
 .page-blog-low-page__list {
   padding-left: rem(26);
   line-height: 1.6em;
-  background: url(/assets/images/blog/starfish2.jpg) left rem(0) top rem(3) no-repeat;
+  background: url(../../assets/images/blog/starfish2.jpg) left rem(0) top rem(3) no-repeat;
   background-size: rem(15) auto;
   font-size: rem(16);
   font-weight: $normal;
@@ -328,7 +339,7 @@
 .page-blog-low-page__box-image1 {
   display: inline-block;
   padding: rem(16) rem(16);
-  background-color: #FFF;
+  background-color: $white;
   /* 初期のボタンの背景色 */
   color: $black;
   /* 初期のボタンの文字色 */
