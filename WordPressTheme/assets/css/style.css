@@ -1327,7 +1327,7 @@ div.information__img img {
 	width: 18.75rem;
 }
 
-.page-blog__sub-campaign {
+.page-blog__sub-archive-title {
 	margin: 0 auto;
 	margin-top: 5rem;
 	width: 18.75rem;
@@ -1337,15 +1337,11 @@ div.information__img img {
 	box-shadow: 0.3125rem 0.3125rem 0.625rem rgba(0, 0, 0, 0.3);
 	display: table;
 	margin: 0 auto;
+	margin-top: 2.5rem;
 }
 
 .page-blog__sub-campaign__item {
-	margin-top: 1.5rem;
 	max-width: 17.5rem;
-}
-
-.page-blog__sub-campaign__item + .page-blog__sub-campaign__item {
-	margin-top: 2.8125rem;
 }
 
 .title-name__textarchive {
@@ -2303,6 +2299,16 @@ dl.price__list {
 
 .fish--site-map::before {
 	top: 1.1875rem;
+}
+
+body .is-layout-flex {
+	display: flex;
+	line-height: 2;
+	margin-top: 10px;
+}
+
+.wp-block-preformatted {
+	margin-top: 30px;
 }
 
 .box {
@@ -3437,7 +3443,7 @@ div.card2__img img {
 	font-weight: 400;
 	height: 2.5rem;
 	margin-left: 0;
-	margin-top: 1.125rem;
+	margin-top: 1.0625rem;
 	max-width: 31.25rem;
 	padding-left: 1em;
 	padding-right: 1em;
@@ -3843,7 +3849,7 @@ div.card2__img img {
 }
 
 .l-page-about__gallery {
-	margin-top: 2.1875rem;
+	margin-top: 2.5rem;
 }
 
 .l-page-about {
@@ -3880,7 +3886,7 @@ div.card2__img img {
 
 .l-page-contact {
 	margin: 0 auto;
-	margin-top: 1.1875rem;
+	margin-top: 1.5625rem;
 	max-width: 31.25rem;
 }
 
@@ -4613,7 +4619,7 @@ div.card2__img img {
 	display: flex;
 	gap: 0.3125rem; /* 各ボタン間の間隔 */
 	justify-content: center; /* ページネーションを中央寄せ */
-	margin-top: 3.875rem;
+	margin-top: 4.5625rem;
 	padding: 0.5625rem 0.875rem;
 }
 
@@ -4753,7 +4759,8 @@ div.card2__img img {
 	cursor: pointer;
 	height: 0.9375rem;
 	margin-top: 0.3125rem;
-	position: relative; /* デフォルトデザインを削除 */
+	position: relative;
+	top: 0.3125rem; /* デフォルトデザインを削除 */
 	width: 0.9375rem;
 }
 
@@ -5375,7 +5382,7 @@ div.information__img {
 
 .page-blog-low-page__text {
 	letter-spacing: 0.01em;
-	margin-top: 1.875rem;
+	margin-top: 2.5rem;
 }
 
 .page-blog-low-page__sub {
@@ -5418,7 +5425,7 @@ div.information__img {
 }
 
 .page-blog-low-page__list {
-	margin-left: 2rem;
+	margin-left: 0rem;
 	width: 100%;
 }
 
@@ -5459,7 +5466,7 @@ div.information__img {
 }
 
 .page-blog__sub-reviews {
-	margin-top: 5.625rem;
+	margin-top: 6.375rem;
 }
 
 .page-blog__sub-reviews-title {
@@ -5467,10 +5474,12 @@ div.information__img {
 }
 
 .page-blog__sub-campaign {
+	margin-top: 5.8125rem;
 	width: 100%;
 }
 
-.page-blog__sub-campaign {
+.page-blog__sub-archive-title {
+	margin-top: 4.125rem;
 	width: 100%;
 }
 
@@ -5492,10 +5501,10 @@ div.information__img {
 }
 
 .page-campaign__items {
-	grid-gap: 5.25rem 2.125rem;
+	grid-gap: 5rem 3.125rem;
 	align-items: center;
 	display: grid;
-	gap: 5.25rem 2.125rem;
+	gap: 5rem 3.125rem;
 	grid-template-columns: repeat(2, 1fr);
 	justify-items: center;
 }
@@ -5753,7 +5762,8 @@ div.information__img {
 }
 
 .page-privacy-policy__inner.inner {
-	max-width: 62.5rem;
+	line-height: 2;
+	max-width: 53.125rem;
 }
 
 .page-privacy-policy__inner1 {
@@ -5896,7 +5906,8 @@ div.information__img {
 }
 
 .page-terms-of-service__inner.inner {
-	max-width: 50rem;
+	line-height: 2;
+	max-width: 49.375rem;
 }
 
 .page-terms-of-service__inner2.inner {
@@ -5915,10 +5926,6 @@ div.information__img {
 	max-width: 50rem;
 	padding-left: 0rem;
 	padding-right: 0rem;
-}
-
-.page-terms-of-service__sentence {
-	margin-top: 8.9375rem;
 }
 
 .pagination__list.page-vice__list {
@@ -6139,6 +6146,11 @@ dl.price__list {
 
 .fish--site-map::before {
 	top: -0.5625rem;
+}
+
+.wp-block-preformatted {
+	margin-bottom: 0;
+	margin-top: 0;
 }
 
 .box__img {
@@ -6631,7 +6643,7 @@ div.card2__img {
 	color: #fff;
 	margin-bottom: 0rem;
 	margin-left: 2.75rem;
-	margin-top: 2.1875rem;
+	margin-top: 0.8125rem;
 	max-width: 25rem;
 	width: 100%;
 }
@@ -6983,11 +6995,11 @@ span.wpcf7-list-item.first.last {
 }
 
 .l-page-campaign {
-	margin-top: 8.875rem;
+	margin-top: 9.25rem;
 }
 
 .l-page-contact {
-	margin-top: 5.9375rem;
+	margin-top: 6.25rem;
 	max-width: 46.875rem;
 }
 
@@ -7004,13 +7016,17 @@ span.wpcf7-list-item.first.last {
 }
 
 .l-page-privacy-policy {
-	margin-top: 9.375rem;
+	margin-top: 6.25rem;
 	padding-left: 0;
 	padding-right: 0;
 }
 
 .l-page-site-map {
 	margin-top: 8.8125rem;
+}
+
+.l-page-terms-of-service {
+	margin-top: 8.125rem;
 }
 
 .l-page-voice {

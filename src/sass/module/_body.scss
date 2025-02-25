@@ -1,0 +1,21 @@
+@use "global" as *;
+
+
+body .is-layout-flex {
+    display: flex;
+    margin-top: 10px;
+    line-height: 2;
+
+    @include mq("md") {
+
+    }
+}
+
+
+.wp-block-preformatted {
+    margin-top: 30px;
+    @include mq("md") {
+margin-top: 0;
+margin-bottom: 0;
+    }
+}

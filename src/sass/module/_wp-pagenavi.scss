@@ -6,7 +6,7 @@
   display: flex;
   justify-content: center; /* ページネーションを中央寄せ */
   gap: rem(5); /* 各ボタン間の間隔 */
-  margin-top: rem(62);
+  margin-top: rem(73);
   color: $green;
   padding: rem(9) rem(14);
   @include mq("md") {

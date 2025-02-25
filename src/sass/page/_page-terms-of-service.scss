@@ -11,7 +11,8 @@
   position: relative;
 
   @include mq("md") {
-    max-width: rem(800);
+    max-width: rem(790);
+    line-height: 2;
   }
 }
 
@@ -53,7 +54,7 @@
   margin-top: rem(45);
 
   @include mq("md") {
-    margin-top: rem(143);
+  
   }
 }
 

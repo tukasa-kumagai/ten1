@@ -26,9 +26,8 @@
     /* 未選択時の背景色 */
     cursor: pointer;
     position: relative;
-    @include mq("md") {
-    
-    }  @include mq("md") {
+    top: rem(5);
+ @include mq("md") {
         top: 0;
         right: rem(7);
     }

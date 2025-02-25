@@ -3,10 +3,10 @@
 .l-page-contact {
   max-width: rem(500);
   margin: 0 auto;
-  margin-top: rem(19);
+  margin-top: rem(25);
 
   @include mq("md") {
     max-width: rem(750);
-    margin-top: rem(95);
+    margin-top: rem(100);
   }
 }

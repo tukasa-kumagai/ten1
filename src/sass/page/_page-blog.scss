@@ -113,7 +113,7 @@
   margin-top: rem(80);
 
   @include mq("md") {
-    margin-top: rem(90);
+    margin-top: rem(102);
   }
 }
 
@@ -166,16 +166,18 @@
 
   @include mq("md") {
     width: 100%;
+    margin-top: rem(93);
   }
 }
 
-.page-blog__sub-campaign {
+.page-blog__sub-archive-title{
   margin-top: rem(80);
   margin: 0 auto;
   width: rem(300);
 
   @include mq("md") {
     width: 100%;
+    margin-top: rem(66);
   }
 }
 
@@ -183,6 +185,7 @@
   margin: 0 auto;
   display: table;
   box-shadow: rem(5) rem(5) rem(10) rgba(0, 0, 0, 0.3);
+  margin-top: rem(40);
   @include mq("md") {
     display: block;
   }
@@ -190,15 +193,18 @@
 
 .page-blog__sub-campaign__item {
   max-width: rem(280);
-  margin-top: rem(24);
+
 
   @include mq("md") {
     max-width: rem(333);
   }
 }
 
+
+
 .page-blog__sub-campaign__item+.page-blog__sub-campaign__item {
-margin-top: rem(45);
+
+
   @include mq("md") {
     margin-top: rem(29);
   }

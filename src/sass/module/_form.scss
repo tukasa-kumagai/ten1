@@ -241,7 +241,7 @@
     font-weight: $normal;
     color: $black;
     flex: inherit;
-    margin-top: rem(18);
+    margin-top: rem(17);
 
     @include mq("md") {
         font-size: rem(16);

@@ -18,7 +18,7 @@
   @include mq("md") {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: rem(84) rem(34);
+    gap: rem(80) rem(50);
     justify-items: center;
     align-items: center;
 

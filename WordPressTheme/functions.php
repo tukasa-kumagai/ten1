@@ -323,7 +323,7 @@ function add_dynamic_dropdown($tag, $unused) {
     if ($tag['name'] === 'your-campaign') {
         // 投稿データを取得
         $args = array(
-            'post_type'      => 'campaign_inquiry', // カスタム投稿タイプ (通常の投稿なら 'post')
+            'post_type'      => 'campaign', // カスタム投稿タイプ (通常の投稿なら 'post')
             'posts_per_page' => -1,         // 全件取得
             'post_status'    => 'publish', // 公開済みの投稿のみ取得
             'orderby'        => 'date',    // 並び順を指定

@@ -177,7 +177,7 @@ $contact = esc_url(home_url('/contact'));
           <span class="button__text">View more</span>
         </a>
       </div>
-      <div class="page-blog__sub-campaign">
+      <div class="page-blog__sub-archive-title">
         <div class="title-name">
           <div class="title-name__image">
             <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">

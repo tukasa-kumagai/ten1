@@ -2,4 +2,8 @@
 
 .l-page-terms-of-service {
     position: relative;
+   
+    @include mq("md") {
+        margin-top: rem(130);
+    }
 }
