@@ -3,7 +3,7 @@
 .page-price {}
 
 .page-price__inner.inner {
-  max-width: rem(400);
+  
   margin: 0 auto;
   position: relative;
 
@@ -14,13 +14,13 @@
 }
 
 .page-price__main {
-  max-width: rem(345);
+
   border-right: rem(1) solid $green;
   border-left: rem(1) solid $green;
 
   @include mq("md") {
     display: flex;
-    max-width: rem(700);
+    width: 100%;
   }
 }
 
@@ -48,7 +48,7 @@
 
 .page-price__image {
   background-color: $green;
-  max-width: rem(345);
+  width: 100%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -56,7 +56,7 @@
   width: 100%;
 
   @include mq("md") {
-    max-width: rem(200);
+    width: 49%;
     flex-direction: column;
     text-align: center;
 
@@ -83,9 +83,10 @@
 
 .page-price__table {
   border-bottom: rem(0) solid $green;
-
+  width: 100%;
   @include mq("md") {
     border-bottom: rem(1) solid $green;
+    width: 100%;
   }
 
   
@@ -111,7 +112,7 @@
     border-top:  rem(1) solid $green;
     border-bottom: rem(0) solid $green;
     padding: rem(23) rem(10) rem(20) rem(24);
-    width: rem(338);
+    width: 100%;
     text-align: left;
     padding-left: rem(15);
     line-height: 1;

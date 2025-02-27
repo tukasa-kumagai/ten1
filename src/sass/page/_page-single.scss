@@ -1,0 +1,30 @@
+@use "global" as *;
+
+
+.wp-block-list {
+
+}
+/* 例: 投稿リスト内のul要素を対象にする場合 */
+ul.wp-block-list {
+    list-style: none; /* 既存のマーカーを消す */
+    padding-left: 0;
+}
+
+ul.wp-block-list li {
+    position: relative;  /* 絶対配置するために相対配置を設定 */
+    padding-left: 30px;  /* マーカー画像の幅分余白を確保 */
+}
+
+/* liの先頭に画像を配置 */
+ul.wp-block-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(18);  /* 画像の幅 */
+    height: 20px; /* 画像の高さ */
+    background-image: url('../../assets/images/blog/starfish2.jpg');
+    background-size: contain; /* 画像のサイズを調整 */
+    background-repeat: no-repeat;
+}

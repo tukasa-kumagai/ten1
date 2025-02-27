@@ -47,6 +47,7 @@
         <?php } ?>
       </div>
     </nav>
+    
     <section class="l-page-campaign page-campaign">
       <div class="page-campaign__inner inner fish">
         <div class="page-campaign__categories button2">
@@ -78,6 +79,7 @@
                 </div>
               </div>
             </div>
+            
           </div>
           <div class="page-campaign__main">
             <div class="pagination__list page-campaign__items">

@@ -35,29 +35,6 @@
                 <div class="page-blog-low-page__container">
                   <p class="page-blog-low-page__time"><?php the_date('Y.m.d') ?></p>
                   <p class="page-blog-low-page__title"><?php the_title(); ?></p>
-                  <div class="page-blog-low-page__image">
-                    <?php if (has_post_thumbnail()) : ?>
-                      <?php the_post_thumbnail(); ?>
-                    <?php endif; ?>
-                  </div>
-                  <p class="page-blog-low-page__text">
-                    <?php the_content(); ?>
-                  </p>
-                  <div class="page-blog-low-page__image">
-                    <?php if (has_post_thumbnail()) : ?>
-                      <?php the_post_thumbnail(); ?>
-                    <?php endif; ?>
-                  </div>
-                  <p class="page-blog-low-page__text">
-                    <?php the_content(); ?>
-                  </p>
-                </div>
-                <div class="page-blog-low-page__container">
-                  <ul class="page-blog-low-page__nav">
-                    <li class="page-blog-low-page__list">リスト1</li>
-                    <li class="page-blog-low-page__list">リスト2</li>
-                    <li class="page-blog-low-page__list">リスト3</li>
-                  </ul>
                   <p class="page-blog-low-page__text">
                     <?php the_content(); ?>
                   </p>

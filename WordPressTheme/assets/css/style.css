@@ -483,7 +483,7 @@ input[type=checkbox]:checked + .label_test:before {
 }
 
 .footer__list1 a {
-	background: url(/assets/images/common/starfish.jpg) left 0rem top 0.1875rem no-repeat;
+	background: url(../../assets/images/common/starfish.jpg) left 0rem top 0.1875rem no-repeat;
 	background-size: 0.9375rem auto;
 	display: block;
 	font-size: 1rem;
@@ -651,7 +651,7 @@ body.active {
 }
 
 .sp-nav__left-item:first-child a::before {
-	background-image: url("/assets/images/common/starfish.jpg");
+	background-image: url("../../assets/images/common/starfish.jpg");
 	background-position: 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1696,14 +1696,12 @@ details summary::before {
 
 .page-price__inner.inner {
 	margin: 0 auto;
-	max-width: 25rem;
 	position: relative;
 }
 
 .page-price__main {
 	border-left: 0.0625rem solid #408F95;
 	border-right: 0.0625rem solid #408F95;
-	max-width: 21.5625rem;
 }
 
 .page-price__main:nth-child(n+2) {
@@ -1723,8 +1721,8 @@ details summary::before {
 	display: flex;
 	flex-direction: row-reverse;
 	justify-content: center;
-	max-width: 21.5625rem;
 	padding: 0.375rem 0;
+	width: 100%;
 	width: 100%;
 }
 
@@ -1739,6 +1737,7 @@ details summary::before {
 
 .page-price__table {
 	border-bottom: 0rem solid #408F95;
+	width: 100%;
 }
 
 .page-price__tr {
@@ -1880,6 +1879,33 @@ details summary::before {
 	font-family: "Noto Sans JP", sans-serif;
 	font-size: 1.5rem;
 	font-weight: 500;
+}
+
+/* 例: 投稿リスト内のul要素を対象にする場合 */
+
+ul.wp-block-list {
+	list-style: none; /* 既存のマーカーを消す */
+	padding-left: 0;
+}
+
+ul.wp-block-list li {
+	padding-left: 30px; /* マーカー画像の幅分余白を確保 */
+	position: relative; /* 絶対配置するために相対配置を設定 */
+}
+
+/* liの先頭に画像を配置 */
+
+ul.wp-block-list li::before {
+	background-image: url("../../assets/images/blog/starfish2.jpg");
+	background-repeat: no-repeat;
+	background-size: contain; /* 画像のサイズを調整 */
+	content: "";
+	height: 20px; /* 画像の高さ */
+	left: 0;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 1.125rem; /* 画像の幅 */
 }
 
 .page-site-map__inner {
@@ -5581,46 +5607,55 @@ div.information__img {
 .info-tab__text:nth-child(1)::before {
 	background-image: url(../../assets/images/information/information-tab-image1.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text:nth-child(1):hover::before {
 	background-image: url(../../assets/images/information/information-tab-image4.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text:nth-child(2)::before {
 	background-image: url(../../assets/images/information/information-tab-image2.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text:nth-child(2):hover::before {
 	background-image: url(../../assets/images/information/information-tab-image5.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text:nth-child(3)::before {
 	background-image: url(../../assets/images/information/information-tab-image3.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text:nth-child(3):hover::before {
 	background-image: url(../../assets/images/information/information-tab-image6.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text.is-active:nth-child(1)::before {
 	background-image: url(../../assets/images/information/information-tab-image4.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text.is-active:nth-child(2)::before {
 	background-image: url(../../assets/images/information/information-tab-image5.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-tab__text.is-active:nth-child(3)::before {
 	background-image: url(../../assets/images/information/information-tab-image6.jpg);
 	display: block;
+	transition-duration: 0.8s;
 }
 
 .info-content__wrapper {
@@ -5657,7 +5692,7 @@ div.information__img {
 
 .page-price__main {
 	display: flex;
-	max-width: 43.75rem;
+	width: 100%;
 }
 
 .page-price__main:nth-child(n+2) {
@@ -5674,8 +5709,8 @@ div.information__img {
 
 .page-price__image {
 	flex-direction: column;
-	max-width: 12.5rem;
 	text-align: center;
+	width: 49%;
 }
 
 .page-price__image img {
@@ -5685,6 +5720,7 @@ div.information__img {
 
 .page-price__table {
 	border-bottom: 0.0625rem solid #408F95;
+	width: 100%;
 }
 
 .page-price__th {
@@ -5694,7 +5730,7 @@ div.information__img {
 	padding: 1.4375rem 0.625rem 1.25rem 1.5rem;
 	padding-left: 0.9375rem;
 	text-align: left;
-	width: 21.125rem;
+	width: 100%;
 }
 
 .page-price__th--position1 {

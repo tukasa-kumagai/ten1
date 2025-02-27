@@ -108,6 +108,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image1.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -117,6 +118,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image4.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -126,6 +128,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image2.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -135,6 +138,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image5.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -148,6 +152,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image3.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -157,6 +162,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image6.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -166,7 +172,9 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image4.jpg);
+		transition-duration: 0.8s;
 	}
+
 }
 
 .info-tab__text.is-active:nth-child(2)::before {
@@ -175,6 +183,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image5.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -184,6 +193,7 @@
 	@include mq(md) {
 		display: block;
 		background-image: url(../../assets/images/information/information-tab-image6.jpg);
+		transition-duration: 0.8s;
 	}
 }
 
@@ -288,3 +298,7 @@
 		margin-top: rem(0);
 	}
 }
+
+
+
+

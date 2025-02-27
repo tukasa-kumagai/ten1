@@ -149,82 +149,63 @@ function change_post_object_label() {
 add_action('init', 'change_post_object_label');
 
 
-//コンタクトフォームドロップダウンメニュー
-
-
-
-
-
-//タクソノミーキャンペーン
-//キャンペーン
-function create_campaign_post_type_and_taxonomy() {
-    // Register Custom Post Type
+////タクソノミー
+// カスタム投稿タイプとタクソノミーの登録
+function create_custom_post_types_and_taxonomies() {
+    // カスタム投稿タイプ「キャンペーン」
     register_post_type('campaign', array(
         'labels' => array(
-            'name' => ('キャンペーン'),
-            'singular_name' => ('Campaign')
+            'name'          => 'キャンペーン',
+            'singular_name' => 'Campaign'
         ),
-        'public' => true,
-        'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail'),
+        'public'        => true,
+        'has_archive'   => true,
+        'supports'      => array('title', 'editor', 'thumbnail'),
+        'rewrite'       => array('slug' => 'campaign'),
+        'show_in_rest'  => true, // Gutenberg を有効化
     ));
 
-    // Register Custom Taxonomy
+    // カスタムタクソノミー「キャンペーンカテゴリー」
     register_taxonomy(
         'campaign_category',
         'campaign',
         array(
-            'label' => __('Campaign Categories'),
-            'rewrite' => array('slug' => 'campaign-category'),
+            'label'        => 'キャンペーンカテゴリー',
+            'rewrite'      => array('slug' => 'campaign_category'),
             'hierarchical' => true,
+            'show_in_rest' => true, // Gutenberg でカテゴリーを操作可能に
         )
     );
-}
-add_action('init', 'create_campaign_post_type_and_taxonomy');
 
-// タクソノミーアーカイブページの表示件数を設定
-function custom_campaign_posts_per_page($query) {
-    if (!is_admin() && $query->is_main_query()) {
-        // タクソノミーアーカイブページの場合
-        if (is_tax('campaign_category')) {
-            $query->set('posts_per_page', 4); // 表示件数を4件に設定
-        }
-        // カスタム投稿タイプのアーカイブページの場合
-        if (is_post_type_archive('campaign')) {
-            $query->set('posts_per_page', 4); // 表示件数を4件に設定
-        }
-    }
-}
-add_action('pre_get_posts', 'custom_campaign_posts_per_page');
-
-//タクソノミーボイス
-// カスタム投稿タイプの登録
-// カスタム投稿タイプとタクソノミーを登録
-function create_voice_post_type_and_taxonomy() {
-    // カスタム投稿タイプ "voice" を登録
+    // カスタム投稿タイプ「お客様の声（voice）」
     register_post_type('voice', array(
         'labels' => array(
-            'name' => ('お客様の声'),
-            'singular_name' => ('Voice')
+            'name'          => 'お客様の声',
+            'singular_name' => 'Voice'
         ),
-        'public' => true, // 公開ページと管理画面に表示
-        'has_archive' => true, // アーカイブページを有効化
-        'supports' => array('title', 'editor', 'thumbnail'), // サポートするフィールド
-        'rewrite' => array('slug' => 'voice'), // アーカイブページのスラッグ
+        'public'        => true,
+        'has_archive'   => true,
+        'supports'      => array('title', 'editor', 'thumbnail'),
+        'rewrite'       => array('slug' => 'voice'),
+        'show_in_rest'  => true, // Gutenberg を有効化
     ));
 
-    // タクソノミー "voice_category" を登録
+    // カスタムタクソノミー「お客様の声カテゴリー（voice_category）」
     register_taxonomy(
-        'voice_category', // タクソノミーのスラッグ
-        'voice', // 関連付ける投稿タイプ
+        'voice_category',
+        'voice',
         array(
-            'label' => __('Voiceカテゴリー'), // 管理画面で表示されるラベル
-            'rewrite' => array('slug' => 'voice-category'), // タクソノミーのURLスラッグ
-            'hierarchical' => true, // 階層構造を有効化
+            'label'        => 'お客様の声',
+            'rewrite'      => array('slug' => 'voice_category'),
+            'hierarchical' => true,
+            'show_in_rest' => true, // Gutenberg でカテゴリーを操作可能に
         )
     );
 }
-add_action('init', 'create_voice_post_type_and_taxonomy');
+add_action('init', 'create_custom_post_types_and_taxonomies');
+
+
+
 
 
 ///コンタクトフォーム7
