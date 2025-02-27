@@ -3,7 +3,7 @@
 .page-price {}
 
 .page-price__inner.inner {
-  
+
   margin: 0 auto;
   position: relative;
 
@@ -56,7 +56,7 @@
   width: 100%;
 
   @include mq("md") {
-    width: 49%;
+    width: 39%;
     flex-direction: column;
     text-align: center;
 
@@ -106,12 +106,13 @@
   padding: rem(10) rem(6) rem(7) rem(6);
   text-align: center;
   font-size: rem(16);
+  line-height: 1.7;
   width: 70%;
 
   @include mq("md") {
     border-top:  rem(1) solid $green;
     border-bottom: rem(0) solid $green;
-    padding: rem(23) rem(10) rem(20) rem(24);
+    padding: rem(23) rem(10) rem(20) rem(20);
     width: 100%;
     text-align: left;
     padding-left: rem(15);
@@ -232,6 +233,7 @@ text-align: center;
   border-bottom: rem(1) solid $green;
   width: 30%;
   padding: rem(17) rem(30);
+  line-height: 1.7;
 
   @include mq("md") {
     width: rem(162);
@@ -239,6 +241,7 @@ text-align: center;
     text-align: right;
     border-top: rem(1) solid $green;
     border-bottom: 0 solid $green;
+    width: 43%;
 
   }
 }

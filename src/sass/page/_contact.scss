@@ -190,8 +190,7 @@
 }
 
 .contact__map {
-    text-align: center;
-
+    text-align: -webkit-center;
     @include mq("md") {
         aspect-ratio: 273/148;
         margin-top: 0;

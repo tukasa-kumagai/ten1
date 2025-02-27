@@ -204,8 +204,21 @@ function create_custom_post_types_and_taxonomies() {
 }
 add_action('init', 'create_custom_post_types_and_taxonomies');
 
+//キャンペーンペーの投稿表示件数の指定
+function custom_campaign_posts_per_page($query) {
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('campaign')) {
+        $query->set('posts_per_page', 4);
+    }
+}
+add_action('pre_get_posts', 'custom_campaign_posts_per_page');
 
-
+//ボイスペーの投稿表示件数の指定
+function custom_voice_posts_per_page($query) {
+    if (!is_admin() && $query->is_main_query() && is_post_type_archive('voice')) {
+        $query->set('posts_per_page', 6);
+    }
+}
+add_action('pre_get_posts', 'custom_voice_posts_per_page');
 
 
 ///コンタクトフォーム7
