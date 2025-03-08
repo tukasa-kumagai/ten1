@@ -149,60 +149,7 @@ function change_post_object_label() {
 add_action('init', 'change_post_object_label');
 
 
-////タクソノミー
-// カスタム投稿タイプとタクソノミーの登録
-function create_custom_post_types_and_taxonomies() {
-    // カスタム投稿タイプ「キャンペーン」
-    register_post_type('campaign', array(
-        'labels' => array(
-            'name'          => 'キャンペーン',
-            'singular_name' => 'Campaign'
-        ),
-        'public'        => true,
-        'has_archive'   => true,
-        'supports'      => array('title', 'editor', 'thumbnail'),
-        'rewrite'       => array('slug' => 'campaign'),
-        'show_in_rest'  => true, // Gutenberg を有効化
-    ));
 
-    // カスタムタクソノミー「キャンペーンカテゴリー」
-    register_taxonomy(
-        'campaign_category',
-        'campaign',
-        array(
-            'label'        => 'キャンペーンカテゴリー',
-            'rewrite'      => array('slug' => 'campaign_category'),
-            'hierarchical' => true,
-            'show_in_rest' => true, // Gutenberg でカテゴリーを操作可能に
-        )
-    );
-
-    // カスタム投稿タイプ「お客様の声（voice）」
-    register_post_type('voice', array(
-        'labels' => array(
-            'name'          => 'お客様の声',
-            'singular_name' => 'Voice'
-        ),
-        'public'        => true,
-        'has_archive'   => true,
-        'supports'      => array('title', 'editor', 'thumbnail'),
-        'rewrite'       => array('slug' => 'voice'),
-        'show_in_rest'  => true, // Gutenberg を有効化
-    ));
-
-    // カスタムタクソノミー「お客様の声カテゴリー（voice_category）」
-    register_taxonomy(
-        'voice_category',
-        'voice',
-        array(
-            'label'        => 'お客様の声',
-            'rewrite'      => array('slug' => 'voice_category'),
-            'hierarchical' => true,
-            'show_in_rest' => true, // Gutenberg でカテゴリーを操作可能に
-        )
-    );
-}
-add_action('init', 'create_custom_post_types_and_taxonomies');
 
 //キャンペーンペーの投稿表示件数の指定
 function custom_campaign_posts_per_page($query) {
