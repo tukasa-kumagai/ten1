@@ -51,72 +51,11 @@ EOT;
 
 add_filter( 'style_loader_tag', 'add_rel_preconnect', 10, 4 );
 
-function custom_posts_per_page( $query ) {
-    // 管理画面やメインクエリ以外では動作しないようにする
-    if ( is_admin() || ! $query->is_main_query() ) {
-        return;
-    }
 
-    // 特定のページスラッグに応じて表示数を変更する
-    if ( is_page('blog') ) {
-        $query->set( 'posts_per_page', 10 ); // ページスラッグ 'page-slug-1' では5件表示
-    } elseif ( is_page('license_course') ) {
-        $query->set( 'posts_per_page', 10 ); // ページスラッグ 'page-slug-2' では10件表示
-    } elseif ( is_category('license_course') ) {
-        $query->set( 'posts_per_page', 8 ); // カテゴリー 'category-slug' では8件表示
-    } elseif ( is_post_type_archive('campaign') ) {
-        $query->set( 'posts_per_page', 1 ); // カスタム投稿タイプ 'custom_post_type' では15件表示
-    }  elseif ( is_post_type_archive('blog') ) {
-      $query->set( 'posts_per_page', 10 ); // カスタム投稿タイプ 'custom_post_type' では15件表示
-  }   elseif ( is_post_type_archive('voice') ) {
-    $query->set( 'posts_per_page', 6 ); // カスタム投稿タイプ 'custom_post_type' では15件表示
-}
-}
-add_action( 'pre_get_posts', 'custom_posts_per_page' );
 
 
 
 // アイキャッチ画像を有効化
-add_theme_support('post-thumbnails');
-
-
-
-///contactform
-function cf7_dynamic_select($tag) {
-    // タグ名を確認（安全性を考慮）
-    if (!isset($tag->name) || $tag->name != 'your-dropdown') {
-        return $tag;
-    }
-
-    // 投稿（またはページ）のタイトルを取得
-    $args = array(
-        'post_type' => 'page', // 投稿タイプを指定。ページの場合は 'page'。
-        'posts_per_page' => 10, // 必要に応じて件数を制限。
-        'orderby' => 'date', // 日付順にソート（任意）。
-        'order' => 'DESC'
-    );
-    $posts = get_posts($args);
-
-    // ドロップダウンのオプションを生成
-    $options = array();
-    foreach ($posts as $post) {
-        $options[] = $post->post_title;
-    }
-
-    // オプションをタグに適用
-    $tag->values = $options;
-    $tag->labels = $options;
-
-    // クエリリセット
-    wp_reset_postdata();
-
-    return $tag;
-}
-add_filter('wpcf7_form_tag', 'cf7_dynamic_select', 10, 2);
-
-
-//アイキャッチ画像
-
 add_theme_support('post-thumbnails');
 
 
@@ -179,33 +118,7 @@ function custom_voice_posts_per_page($query) {
 add_action('pre_get_posts', 'custom_voice_posts_per_page');
 
 
-///コンタクトフォーム7
-function generate_post_titles_dropdown() {
-  // 投稿を取得するクエリ
-  $args = array(
-      'post_type' => 'contact_form_title', // 投稿タイプが 'post' の場合
-      'posts_per_page' => -1, // すべての投稿を取得
-      'orderby' => 'title', // タイトルでソート
-      'order' => 'ASC' // 昇順
-  );
-  $posts = get_posts($args);
 
-  // ドロップダウンのオプションを生成
-  $options = '';
-  foreach ($posts as $post) {
-      $options .= '<option value="' . esc_attr($post->post_title) . '">' . esc_html($post->post_title) . '</option>';
-  }
-
-  return $options;
-}
-
-function replace_post_titles_placeholder($form) {
-  // プレースホルダーを検索し、生成されたドロップダウンオプションに置換
-  $dropdown_options = generate_post_titles_dropdown();
-  $form = str_replace('[post_titles_dropdown]', $dropdown_options, $form);
-  return $form;
-}
-add_filter('wpcf7_form_elements', 'replace_post_titles_placeholder');
 
 
 //コンタクトフォームのサンクスページへのURL設定
