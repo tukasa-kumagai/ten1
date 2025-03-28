@@ -17,7 +17,7 @@ $contact = esc_url(home_url('/contact'));
     <div class="page-blog__sub-article">
       <div class="title-name">
         <div class="title-name__image">
-          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
         </div>
         <p class="title-name__text">人気記事</p>
       </div>
@@ -40,7 +40,7 @@ $contact = esc_url(home_url('/contact'));
               <?php if (has_post_thumbnail()) : ?>
                 <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title_attribute(); ?>">
               <?php else : ?>
-                <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/no_image.png')); ?>" alt="No Image">
+                <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/no_image.png')); ?>" alt="No Image">
               <?php endif; ?>
             </div>
             <div class="page-blog__sub-card-text">
@@ -62,7 +62,7 @@ $contact = esc_url(home_url('/contact'));
     <div class="page-blog__sub-reviews">
       <div class="title-name">
         <div class="title-name__image">
-          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
         </div>
         <p class="title-name__text">口コミ</p>
       </div>
@@ -113,7 +113,7 @@ $contact = esc_url(home_url('/contact'));
       <div class="page-blog__sub-campaign">
         <div class="title-name">
           <div class="title-name__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
           </div>
           <p class="title-name__text">キャンペーン</p>
         </div>
@@ -180,7 +180,7 @@ $contact = esc_url(home_url('/contact'));
       <div class="page-blog__sub-archive-title">
         <div class="title-name">
           <div class="title-name__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
           </div>
           <p class="title-name__textarchive">アーカイブ</p>
         </div>

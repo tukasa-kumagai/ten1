@@ -2,8 +2,8 @@
 <div class="lower-page-mv">
   <div class="lower-page-mv__slide">
     <picture class="lower-page-mv__slide-image">
-      <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/information/pc-information-mv.jpg')); ?>" media="(min-width: 767px)">
-      <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/information/sp-information-mv.jpg')); ?>" alt="">
+      <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/information/pc-information-mv.jpg')); ?>" media="(min-width: 767px)">
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/information/sp-information-mv.jpg')); ?>" alt="">
     </picture>
   </div>
   <div class="lower-page-mv__text">
@@ -13,18 +13,8 @@
 
 <body>
   <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-      <div class="breadcrumb__inner inner ">
-        <?php if (!is_front_page()) { ?>
-          <?php if (function_exists('bcn_display')) { ?>
-            <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-              <?php bcn_display(); ?>
-            </div>
-          <?php } ?>
-        <?php } ?>
-      </div>
-    </nav>
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
     <section class="l-page-information page-information">
       <div class="tab__inner inner fish fish--information">
 
@@ -37,7 +27,7 @@
         <div class="sub-information__items info-content">
           <div class="info-content__item js-infoContent-target is-active" data-target="license" id="tab_panel-1">
             <div class="info-content__wrapper">
-              <figure class="info-content__image"><img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/information/information-diving-image1.jpg')); ?>" alt="緑色のくじらのデザイン">
+              <figure class="info-content__image"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/information/information-diving-image1.jpg')); ?>" alt="緑色のくじらのデザイン">
               </figure>
               <div class="info-content__meta">
                 <h3 class="info-content__title">ライセンス講習</h3>
@@ -49,7 +39,7 @@
           </div>
           <div class="info-content__item js-infoContent-target" data-target="fanDiving" id="tab_panel-2">
             <div class="info-content__wrapper">
-              <figure class="info-content__image"><img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/information/information-diving-image2.jpg')); ?>" alt="緑色のくじらのデザイン">
+              <figure class="info-content__image"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/information/information-diving-image2.jpg')); ?>" alt="緑色のくじらのデザイン">
               </figure>
               <div class="info-content__meta">
                 <h3 class="info-content__title">ファンダイビング</h3>
@@ -61,7 +51,7 @@
           </div>
           <div class="info-content__item js-infoContent-target" data-target="diving" id="tab_panel-3">
             <div class=" info-content__wrapper">
-              <figure class="info-content__image"><img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/information/information-diving-image3.jpg')); ?>" alt="緑色の小魚のデザイン"></figure>
+              <figure class="info-content__image"><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/information/information-diving-image3.jpg')); ?>" alt="緑色の小魚のデザイン"></figure>
 
               <div class="info-content__meta">
                 <h3 class="info-content__title">体験ダイビング</h3>

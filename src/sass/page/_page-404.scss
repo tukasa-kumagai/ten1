@@ -3,9 +3,10 @@
 
 .page-404 {
 position: relative;
-
+padding-bottom: rem(40);
 @include mq("md") {
-  margin-top: rem(65);
+  padding-top: rem(65);
+  padding-bottom: rem(120);
 }
 }
 
@@ -15,7 +16,7 @@ margin: 0 auto;
 }
 
 .page-404::before {
-  background-image: url(../../assets/images/404/page-ocean-sea-icon.png);
+  background-image: url(../../assets/images/404/page-ocean-sea-icon.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   content: "";
@@ -25,14 +26,14 @@ margin: 0 auto;
   left: 3%;
   top: rem(-47);
   width: rem(345);
-  z-index: 100;
+  z-index: 700;
 
   @include mq("md") {
     height: rem(698);
     left: 13%;
     top: -24%;
     width: rem(698);
-    z-index: 100;
+    z-index: 800;
    
   }
 }

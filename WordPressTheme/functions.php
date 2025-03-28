@@ -3,24 +3,35 @@
 
 function add_custom_scripts() {
     // Google Fontsの追加
-    wp_enqueue_style( 'google-fonts-montserrat', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap', false );
-    wp_enqueue_style( 'google-fonts-noto', 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@300;400;500;700&display=swap', false );
+    wp_enqueue_style(
+        'google-fonts',
+        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap',
+        array(),
+        null
+    );
 
     // swiperのCSSの追加
     wp_enqueue_style( 'swiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.css', false );
 
     // テーマのCSSの追加
-    wp_enqueue_style( 'theme-styles', get_theme_file_uri('../dist/assets/css/style.css'), false );
+    wp_enqueue_style( 'theme-styles', get_theme_file_uri('/assets/css/style.css'), false );
 
     // jQueryの追加
-    wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.js', array(), '3.6.0', true );
+    wp_enqueue_script( 'jquery-cdn', 'https://code.jquery.com/jquery-3.6.0.js', array(), '3.6.0', true );
+    
 
     // swiperのJSの追加
-    wp_enqueue_script( 'swiper', 'https://unpkg.com/swiper@8/swiper-bundle.min.js', array('jquery'), '8.0.0', true );
+    wp_enqueue_script( 'swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js', array(), '8.0.0', true );
 
-    // テーマのJSの追加
-    wp_enqueue_script( 'theme-scripts', get_theme_file_uri('../dist/assets/js/script.js'), array('jquery'), '1.0.0', true );
+    // jQuery Inview
+    wp_enqueue_script( 'theme-scripts1', get_theme_file_uri('/assets/js/jquery.inview.min.js'), array('jquery'), '1.0.0', true );
+    
 
+    // メインテーマのJSの追加
+    wp_enqueue_script( 'theme-scripts2', get_theme_file_uri('/assets/js/script.js'), array('jquery'), '1.0.0', true );
+
+     // メインテーマのJSの追加
+    
 }
 
 add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );

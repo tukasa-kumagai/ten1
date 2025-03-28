@@ -34,7 +34,7 @@
   $terms_of_service = esc_url(home_url('/terms-of-service'));
   $contact = esc_url(home_url('/contact'));
   ?>
-  <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+  <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
   <?php
   // メインループを妨げないようにサブループを作成
   $args = array(
@@ -115,10 +115,10 @@
       <div class="about__inner">
         <div class="about__main content-block  ">
           <div class="content-block__img1">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/top-aboutus-right-image.jpg')); ?>" alt="セクションタイトル2">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/top-aboutus-right-image.jpg')); ?>" alt="セクションタイトル2">
           </div>
           <div class="content-block__img2">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/top-aboutus-left-image.jpg')); ?>" alt="セクションタイトル2">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/top-aboutus-left-image.jpg')); ?>" alt="セクションタイトル2">
           </div>
           <div class="content-block__group">
             <div class="content-block__title">
@@ -148,7 +148,7 @@
       </div>
       <div class="information__main">
         <div class="information__img">
-          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/top-information-image.jpg')); ?>" alt="information画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/top-information-image.jpg')); ?>" alt="information画像">
         </div>
         <div class="information__group">
           <p class="information__title">ライセンス講習</p>
@@ -165,7 +165,7 @@
   </section>
   <section class="blog l-blog">
     <div class="blog__bg">
-      <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/top-blog-bg-image.jpg')); ?>" alt="水面画像">
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/top-blog-bg-image.jpg')); ?>" alt="水面画像">
     </div>
     <div class="inner">
       <div class="blog__title-inner">
@@ -184,7 +184,6 @@
           'order' => 'DESC' // 新しい順
         );
         $the_query = new WP_Query($args);
-
         if ($the_query->have_posts()) :
           while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="boxes__item box">
@@ -192,7 +191,7 @@
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail('medium'); ?>
                 <?php else : ?>
-                  <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/default-image.jpg')); ?>" alt="デフォルト画像">
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/default-image.jpg')); ?>" alt="デフォルト画像">
                 <?php endif; ?>
               </div>
               <div class="box__body">
@@ -219,7 +218,7 @@
   <section class="l-vice vice">
     <div class="inner">
       <div class="vice__bg-img2">
-        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/top-blog-seabream-image2.png')); ?>" alt="魚画像">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/top-blog-seabream-image2.png')); ?>" alt="魚画像">
       </div>
       <div class="vice__title-inner">
         <div class="section-header">
@@ -297,10 +296,10 @@
       </div>
       <div class="price__main">
         <div class="sp-price__img">
-          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/sp-top-price-image.jpg')); ?>" alt="スマホ用料金画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/sp-top-price-image.jpg')); ?>" alt="スマホ用料金画像">
         </div>
         <div class="pc-price__img">
-          <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/top/pc-top-price-image.jpg')); ?>" alt="PC用料金画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/top/pc-top-price-image.jpg')); ?>" alt="PC用料金画像">
         </div>
         <div class="price__course">
           <?php

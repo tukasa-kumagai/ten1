@@ -26,14 +26,13 @@
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <!-- swiper -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+ 
   <!-- メインcss -->
 
 
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script type="text/javascript" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/js/jquery.inview.min.js')); ?>"></script>
-
+ 
+ 
 
   <!--メインのJS-->
 
@@ -80,7 +79,7 @@
   <header class="l-header header">
     <div class="header__inner">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="header__logo-link">
-        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/codeups-logo-heaser.jpg')); ?>" alt="ヘッダーロゴ">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/codeups-logo-heaser.jpg')); ?>" alt="ヘッダーロゴ">
       </a>
       <button class="header__drawer hamburger js-hamburger">
         <span></span>

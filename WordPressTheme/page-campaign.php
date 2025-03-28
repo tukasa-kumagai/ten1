@@ -15,18 +15,7 @@
   </div>
   <main>
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-      <div class="breadcrumb__inner inner">
-        <ol class="breadcrumb__group breadcrumb__group--position2">
-          <li class="breadcrumb__list">
-            <a class="breadcrumb__item" href="./index.html"><span class="breadcrumb__item-link">TOP</span></a>
-          </li>
-          <li class="breadcrumb__list">
-            <a class="breadcrumb__item" href="./page-campaign.html"><span class="breadcrumb__item-link">キャンペーン</span></a>
-          </li>
-        </ol>
-      </div>
-    </nav>
+    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
     <section class="l-page-campaign page-campaign">
       <div class="page-campaign__inner inner fish">
         <div class="page-campaign__categories button2">

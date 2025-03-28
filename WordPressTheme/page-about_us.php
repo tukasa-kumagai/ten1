@@ -2,38 +2,27 @@
 <div class="lower-page-mv">
   <div class="lower-page-mv__slide">
     <picture class="lower-page-mv__slide-image">
-      <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/about/pc-aboutus-mv-imge.jpg')); ?>" media="(min-width: 768px)">
-      <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/about/sp-aboutus-mv-imge.jpg')); ?>" alt="aboutTOP画像">
+      <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/about/pc-aboutus-mv-imge.jpg')); ?>" media="(min-width: 768px)">
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/about/sp-aboutus-mv-imge.jpg')); ?>" alt="aboutTOP画像">
     </picture>
   </div>
   <div class="lower-page-mv__text">
     <p class="lower-page-mv__title">About&nbsp;us</p>
   </div>
 </div>
-
 <body>
   <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>"
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>"
           alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-      <div class="breadcrumb__inner inner ">
-        <?php if (!is_front_page()) { ?>
-          <?php if (function_exists('bcn_display')) { ?>
-            <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-              <?php bcn_display(); ?>
-            </div>
-          <?php } ?>
-        <?php } ?>
-      </div>
-    </nav>
+          <?php get_template_part( 'template-parts/breadcrumb' ); ?>
     <section class="l-page-about page-about">
       <div class="page-about-inner inner fish fish--about">
         <div class="page-about__main content-block">
           <div class="content-block__img1 content-block__img1--position">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/about/about-aboutus-right-image.jpg')); ?>" alt="セクションタイトル2">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/about/about-aboutus-right-image.jpg')); ?>" alt="セクションタイトル2">
           </div>
           <div class="content-block__img2 content-block__img2--position">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/about/about-aboutus-left-image.jpg')); ?>" alt="セクションタイトル2">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/about/about-aboutus-left-image.jpg')); ?>" alt="セクションタイトル2">
           </div>
           <div class="content-block__group">
             <div class="content-block__title">

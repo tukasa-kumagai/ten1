@@ -13,20 +13,8 @@
 
 <body>
   <main>
-    <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-      <div class="breadcrumb__inner inner">
-        <ol class="breadcrumb__group breadcrumb__group--position2">
-          <?php if (!is_front_page()) { ?>
-            <?php if (function_exists('bcn_display')) { ?>
-              <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-                <?php bcn_display(); ?>
-              </div>
-            <?php } ?>
-          <?php } ?>
-        </ol>
-      </div>
-    </nav>
+    <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
     <section class="l-page-price page-price">
   <div class="page-price__inner inner fish">
     <?php if (have_posts()) : ?>
@@ -48,7 +36,7 @@
           <div id="post-<?php echo $post_id; ?>" class="page-price__image">
             <!-- 改行を反映するために nl2br() を使用 -->
             <p class="page-price__text"><?php echo nl2br(esc_html($text0)); ?></p>
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/price/price-icon-image.jpg')); ?>" alt="2">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/price/price-icon-image.jpg')); ?>" alt="2">
           </div>
           <div class="page-price__table">
             <?php if ($text1 && $text2) : ?>

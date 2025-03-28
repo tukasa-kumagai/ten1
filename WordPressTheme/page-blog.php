@@ -14,18 +14,8 @@
     </div>
   </div>
   <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-      <div class="breadcrumb__inner inner ">
-        <?php if (!is_front_page()) { ?>
-          <?php if (function_exists('bcn_display')) { ?>
-            <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-              <?php bcn_display(); ?>
-            </div>
-          <?php } ?>
-        <?php } ?>
-      </div>
-    </nav>
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
     <section class="l-page-blog page-blog">
       <div class="page-blog__inner inner fish fish--blog">
         <div class="page-blog__content">
@@ -33,7 +23,7 @@
             <div class="pagination__list2  page-blog__items boxes boxes--column">
               <a href="" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -54,7 +44,7 @@
               </a>
               <a href="./page-blog-low-page2.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -75,7 +65,7 @@
               </a>
               <a href="./page-blog-low-page3.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -96,7 +86,7 @@
               </a>
               <a href="./page-blog-low-page4.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード5">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード5">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -117,7 +107,7 @@
               </a>
               <a href="./page-blog-low-page5.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -138,7 +128,7 @@
               </a>
               <a href="./page-blog-low-page6.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -159,7 +149,7 @@
               </a>
               <a href="./page-blog-low-page1.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -180,7 +170,7 @@
               </a>
               <a href="./page-blog-low-page2.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -201,7 +191,7 @@
               </a>
               <a href="./page-blog-low-page3.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -222,7 +212,7 @@
               </a>
               <a href="./page-blog-low-page4.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -243,7 +233,7 @@
               </a>
               <a href="./page-blog-low-page5.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -264,7 +254,7 @@
               </a>
               <a href="./page-blog-low-page6.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -285,7 +275,7 @@
               </a>
               <a href="./page-blog-low-page1.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -306,7 +296,7 @@
               </a>
               <a href="./page-blog-low-page2.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -327,7 +317,7 @@
               </a>
               <a href="./page-blog-low-page3.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -348,7 +338,7 @@
               </a>
               <a href="./page-blog-low-page4.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -369,7 +359,7 @@
               </a>
               <a href="./page-blog-low-page5.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -390,7 +380,7 @@
               </a>
               <a href="./page-blog-low-page6.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -411,7 +401,7 @@
               </a>
               <a href="./page-blog-low-page1.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -432,7 +422,7 @@
               </a>
               <a href="./page-blog-low-page2.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -453,7 +443,7 @@
               </a>
               <a href="./page-blog-low-page3.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -474,7 +464,7 @@
               </a>
               <a href="./page-blog-low-page4.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -495,7 +485,7 @@
               </a>
               <a href="./page-blog-low-page5.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -516,7 +506,7 @@
               </a>
               <a href="./page-blog-low-page6.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -537,7 +527,7 @@
               </a>
               <a href="./page-blog-low-page1.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image1.jpg')); ?>" alt="ブログカード1">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -558,7 +548,7 @@
               </a>
               <a href="./page-blog-low-page2.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image2.jpg')); ?>" alt="ブログカード2">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -579,7 +569,7 @@
               </a>
               <a href="./page-blog-low-page3.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image3.jpg')); ?>" alt="ブログカード3">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -600,7 +590,7 @@
               </a>
               <a href="./page-blog-low-page4.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image4.jpg')); ?>" alt="ブログカード4">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -621,7 +611,7 @@
               </a>
               <a href="./page-blog-low-page5.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image5.jpg')); ?>" alt="ブログカード5">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -642,7 +632,7 @@
               </a>
               <a href="./page-blog-low-page6.html" class="pagination__list-item pagination__list-item--blog-size   box box--hover">
                 <div class="box__image-box">
-                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
+                  <img class="box__image" src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-card-image6.jpg')); ?>" alt="ブログカード6">
                 </div>
                 <div class="box__body box__body--under">
                   <div class="box__head box__head--blog-position">
@@ -673,7 +663,7 @@
           <div class="contact__maim">
             <div class="contact__head">
               <div class="contact__logo">
-                <h2><img src="<?php echo esc_url(get_theme_file_uri('dist/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
+                <h2><img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/codeups-logo-contact.png')); ?>" alt="ロゴ画像"></h2>
               </div>
               <div class="contact__head-under">
                 <div class="contact__information">

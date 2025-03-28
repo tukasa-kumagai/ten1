@@ -5,8 +5,8 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/blog/sp-blog-mv.jpg')); ?>" alt="">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/sp-blog-mv.jpg')); ?>" alt="">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -14,18 +14,8 @@
     </div>
   </div>
   <main>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-      <div class="breadcrumb__inner inner">
-        <?php if (!is_front_page()) { ?>
-          <?php if (function_exists('bcn_display')) { ?>
-            <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-              <?php bcn_display(); ?>
-            </div>
-          <?php } ?>
-        <?php } ?>
-      </div>
-    </nav>
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
     <section class="l-page-blog-low-page page-blog-low-page">
       <div class="page-blog-low-page__inner inner fish">
         <div class="page-blog-low-page__content">
@@ -43,14 +33,24 @@
                 <div class="page-blog-low-page__nav">
                   <div class="page-blog-low-page__nav-item">
                     <div class="l-page-blog-low-page__box page-blog-low-page__box">
-                      <a href="<?php echo get_permalink(get_previous_post(true, '', 'category')->ID); ?>" class="prev-link">
-                        <span class="page-blog-low-page__box-image1"></span>
-                      </a>
-                      <a href="<?php echo get_permalink(get_next_post(true, '', 'category')->ID); ?>" class="next-link">
-                        <span class="page-blog-low-page__box-image2"></span>
-                      </a>
+                      <?php
+                      $prev_post = get_previous_post(true, '', 'category');
+                      if ($prev_post): ?>
+                        <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-link">
+                          <span class="page-blog-low-page__box-image1"></span>
+                        </a>
+                      <?php endif; ?>
+
+                      <?php
+                      $next_post = get_next_post(true, '', 'category');
+                      if ($next_post): ?>
+                        <a href="<?php echo get_permalink($next_post->ID); ?>" class="next-link">
+                          <span class="page-blog-low-page__box-image2"></span>
+                        </a>
+                      <?php endif; ?>
                     </div>
                   </div>
+
                 </div>
               <?php endwhile; ?>
             <?php endif; ?>

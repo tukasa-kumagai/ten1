@@ -2,8 +2,8 @@
 <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
         <picture class="lower-page-mv__slide-image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
         </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -11,18 +11,8 @@
     </div>
 </div>
 <main>
-<p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <nav class="breadcrumb breadcrumb--position">
-        <div class="breadcrumb__inner inner">
-            <?php if (!is_front_page()) { ?>
-                <?php if (function_exists('bcn_display')) { ?>
-                    <div id="breadcrumb" class="w_inner" vocab="http://schema.org/" typeof="BreadcrumbList">
-                        <?php bcn_display(); ?>
-                    </div>
-                <?php } ?>
-            <?php } ?>
-        </div>
-    </nav>
+<p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+<?php get_template_part( 'template-parts/breadcrumb' ); ?>
     <section class="l-page-voice page-voice">
         <div class="inner page-voice__inner fish fish--blog">
         <div class="page-campaign__category button2__items">

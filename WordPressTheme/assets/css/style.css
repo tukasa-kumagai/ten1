@@ -868,6 +868,7 @@ div.information__img img {
 }
 
 .page-404 {
+	padding-bottom: 2.5rem;
 	position: relative;
 }
 
@@ -877,7 +878,7 @@ div.information__img img {
 }
 
 .page-404::before {
-	background-image: url(../../assets/images/404/page-ocean-sea-icon.png);
+	background-image: url(../../assets/images/404/page-ocean-sea-icon.jpg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
@@ -887,7 +888,7 @@ div.information__img img {
 	position: absolute;
 	top: -2.9375rem;
 	width: 21.5625rem;
-	z-index: 100;
+	z-index: 700;
 }
 
 .page-404__title {
@@ -3825,6 +3826,7 @@ div.card2__img img {
 }
 
 .l-contact {
+	margin-bottom: 6.4375rem;
 	margin-top: 5rem;
 	position: relative;
 }
@@ -3875,7 +3877,7 @@ div.card2__img img {
 }
 
 .l-footer {
-	margin-top: 6.4375rem;
+	margin-top: 0rem;
 	padding-bottom: 3.25rem;
 	padding-top: 2.9375rem;
 }
@@ -5379,7 +5381,8 @@ div.information__img {
 }
 
 .page-404 {
-	margin-top: 4.0625rem;
+	padding-bottom: 7.5rem;
+	padding-top: 4.0625rem;
 }
 
 .page-404::before {
@@ -5387,7 +5390,7 @@ div.information__img {
 	left: 13%;
 	top: -24%;
 	width: 43.625rem;
-	z-index: 100;
+	z-index: 800;
 }
 
 .page-404__title {
@@ -6984,6 +6987,7 @@ span.wpcf7-list-item.first.last {
 }
 
 .l-contact {
+	margin-bottom: 10.3125rem;
 	margin-top: 8.5rem;
 	position: relative;
 }
@@ -7034,7 +7038,7 @@ span.wpcf7-list-item.first.last {
 }
 
 .l-footer {
-	margin-top: 10.3125rem;
+	margin-top: 0rem;
 	padding-bottom: 7.1875rem;
 	padding-top: 5rem;
 }
@@ -7098,6 +7102,7 @@ span.wpcf7-list-item.first.last {
 }
 
 .l-page-contact {
+	margin-bottom: 7.5rem;
 	margin-top: 6.25rem;
 	max-width: 46.875rem;
 }
