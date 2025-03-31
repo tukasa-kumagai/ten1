@@ -27,14 +27,14 @@ margin: 0 auto;
   left: 3%;
   top: rem(-47);
   width: rem(345);
-  z-index: 700;
+  z-index: 80;
 
   @include mq("md") {
     height: rem(698);
     left: 13%;
     top: 0%;
     width: rem(698);
-    z-index: 800;
+    z-index: 80;
    
   }
 }
@@ -67,7 +67,17 @@ line-height: 1.25;
   }
 }
 
-
+.page-404__text--size {
+  font-size: rem(16);
+  font-weight: $regular;
+  font-family: $sub-english-font-family;
+  color: $white;
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(20);
+    font-size: rem(16);
+  }
+}
 
 .page-404__button-inner {
   margin-top: rem(37);
