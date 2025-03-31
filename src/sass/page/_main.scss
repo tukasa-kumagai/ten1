@@ -3,4 +3,11 @@
 
 .main__content {
   background-color: $green;
+  padding-top: rem(50);
+  font-size: rem(12);
+  color: $white;
+
+  @include mq("md") {
+    padding-top: rem(75);
+  }
 }

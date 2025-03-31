@@ -4,9 +4,10 @@
 .page-404 {
 position: relative;
 padding-bottom: rem(40);
+padding-top: rem(40);
 @include mq("md") {
-  padding-top: rem(65);
-  padding-bottom: rem(120);
+  padding-top: rem(110);
+  padding-bottom: rem(150);
 }
 }
 
@@ -31,7 +32,7 @@ margin: 0 auto;
   @include mq("md") {
     height: rem(698);
     left: 13%;
-    top: -24%;
+    top: 0%;
     width: rem(698);
     z-index: 800;
    
@@ -41,12 +42,12 @@ margin: 0 auto;
 .page-404__title {
 font-size: rem(80);
 font-weight: $regular;
-font-family: $second-font-family;
+font-family: $sub-english-font-family;
 color: $white;
 margin: 0 auto;
 letter-spacing: 0.5em;
 width: rem(220);
-line-height: 1.6;
+line-height: 1.25;
 @include mq("md") {
   font-size: rem(160);
   width: rem(440);
@@ -57,10 +58,16 @@ line-height: 1.6;
 .page-404__text {
   font-size: rem(16);
   font-weight: $regular;
-  font-family: $second-font-family;
+  font-family: $sub-english-font-family;
   color: $white;
   text-align: center;
+  @include mq("md") {
+    margin-top: rem(20);
+    font-size: rem(16);
+  }
 }
+
+
 
 .page-404__button-inner {
   margin-top: rem(37);

@@ -865,10 +865,14 @@ div.information__img img {
 
 .main__content {
 	background-color: #408F95;
+	color: #fff;
+	font-size: 0.75rem;
+	padding-top: 3.125rem;
 }
 
 .page-404 {
 	padding-bottom: 2.5rem;
+	padding-top: 2.5rem;
 	position: relative;
 }
 
@@ -893,18 +897,18 @@ div.information__img img {
 
 .page-404__title {
 	color: #fff;
-	font-family: "Gotu", sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 5rem;
 	font-weight: 300;
 	letter-spacing: 0.5em;
-	line-height: 1.6;
+	line-height: 1.25;
 	margin: 0 auto;
 	width: 13.75rem;
 }
 
 .page-404__text {
 	color: #fff;
-	font-family: "Gotu", sans-serif;
+	font-family: "Lato", sans-serif;
 	font-size: 1rem;
 	font-weight: 300;
 	text-align: center;
@@ -5380,15 +5384,19 @@ div.information__img {
 	margin-top: 2.375rem;
 }
 
+.main__content {
+	padding-top: 4.6875rem;
+}
+
 .page-404 {
-	padding-bottom: 7.5rem;
-	padding-top: 4.0625rem;
+	padding-bottom: 9.375rem;
+	padding-top: 6.875rem;
 }
 
 .page-404::before {
 	height: 43.625rem;
 	left: 13%;
-	top: -24%;
+	top: 0%;
 	width: 43.625rem;
 	z-index: 800;
 }
@@ -5396,6 +5404,11 @@ div.information__img {
 .page-404__title {
 	font-size: 10rem;
 	width: 27.5rem;
+}
+
+.page-404__text {
+	font-size: 1rem;
+	margin-top: 1.25rem;
 }
 
 .page-404__button-inner {

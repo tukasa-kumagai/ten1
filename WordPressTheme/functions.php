@@ -215,4 +215,9 @@ function add_dynamic_dropdown($tag, $unused) {
 
 $prev_post = get_previous_post(true, '', 'category'); // カテゴリー内の前の投稿を取得
 $next_post = get_next_post(true, '', 'category'); // カテゴリー内の次の投稿を取得
+
+
+
 ?>
+
+
