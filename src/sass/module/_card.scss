@@ -10,12 +10,12 @@
 
 .card__img {
     width: 100%;
-    padding-top: 66.971429%; //比率の計算式 横233/縦350*100%=画像の比率
+    padding-top: 65.971429%; //比率の計算式 横233/縦350*100%=画像の比率
     position: relative;
 
     @include mq("md") {
         width: 100%;
-
+        padding-top: 66.971429%; //比率の計算式 横233/縦350*100%=画像の比率
     }
 }
 
@@ -31,6 +31,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    
 
     @include mq("md") {
         top: 50%;
