@@ -6,7 +6,7 @@
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
         <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/campaign/pc-campign-mv-image.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/campaign/sp-campign-mv-image.jpg')); ?>" alt="キャンペーンメイン画像">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/campaign/sp-campign-mv-image.jpg')); ?>" alt="taxonomy-campaign_categoryページのメインビュー">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -35,7 +35,7 @@
   $terms_of_service = esc_url(home_url('/terms-of-service'));
   $contact = esc_url(home_url('/contact'));
   ?>
-    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
+    <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     <nav class="breadcrumb breadcrumb--position">
       <div class="breadcrumb__inner inner">
         <?php if (!is_front_page()) { ?>
@@ -102,7 +102,7 @@
                                                           echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
                                                         }
                                                       } else {
-                                                        echo '<li>No categories assigned.</li>';
+                                                        echo '<li>未分類.</li>';
                                                       }
                                                       ?></div>
                         <p class="card__head-text card__head-text--campaign-size"><?php the_title(); ?></p>
@@ -118,7 +118,7 @@
                     <div class="card__foot-text card__foot-text--campaign-width">
                       <?php the_content(); ?>
                     </div>
-                    <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+                    <time class="card__foot-day card__foot-day--position"><?php the_time( get_option( 'date_format' ) ); ?></time>
                     <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
                     <a href="<?php echo $contact ?>" class="button button--position1">
                       <span class="button__text">Contact us</span>

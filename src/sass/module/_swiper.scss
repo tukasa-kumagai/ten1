@@ -12,7 +12,9 @@
 }
 
 .swiper {
-    @include mq("md") {}
+    @include mq("md") {
+        padding-top: rem(8);
+    }
 }
 
 .swiper-wrapper {

@@ -3,7 +3,7 @@
   <div class="lower-page-mv__slide">
     <picture class="lower-page-mv__slide-image">
       <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/information/pc-information-mv.jpg')); ?>" media="(min-width: 767px)">
-      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/information/sp-information-mv.jpg')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/information/sp-information-mv.jpg')); ?>" alt="informationページのメインビュー">
     </picture>
   </div>
   <div class="lower-page-mv__text">

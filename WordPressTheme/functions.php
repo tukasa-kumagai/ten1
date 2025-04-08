@@ -157,19 +157,6 @@ add_action('init', 'create_custom_post_type');
 add_image_size('custom-size', 294, 218, true); // 400px × 300pxのサイズ（切り抜きあり）
 
 
-// TOPページのswiperの下層ページの反映,カスタム投稿タイプの追加
-// タクソノミーでフィルタリングする場合
-$args = array(
-    'post_type' => 'campaign',
-    'posts_per_page' => 8,
-    'tax_query' => array(
-        array(
-            'taxonomy' => 'campaign_category',
-            'field' => 'slug',
-            'terms' => 'featured'  // 特定のカテゴリーのみ表示
-        )
-    )
-);
 
 // 特定の投稿を除外する場合
 $args['post__not_in'] = array(1, 2, 3);  // 除外したい投稿IDを指定

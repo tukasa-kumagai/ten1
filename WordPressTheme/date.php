@@ -4,7 +4,7 @@
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
         <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/pc-blog-mv.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/sp-blog-mv.jpg')); ?>" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/sp-blog-mv.jpg')); ?>" alt="singleページのメインビュー">
       </picture>
     </div>
     <div class="lower-page-mv__text">

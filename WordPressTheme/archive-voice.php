@@ -2,8 +2,8 @@
 <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
         <picture class="lower-page-mv__slide-image">
-            <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
-            <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
+            <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="voiceページメインビュー">
         </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -54,7 +54,7 @@
                                             <div class="card2__head">
                                                 <div class="card2__detail">
                                                     <div class="card2__category">
-                                                        <p class="card2__age">30代(女性)</p>
+                                                        <p class="card2__age"><?php the_field('voice-age'); ?></p>
                                                         <p class="card2__course">
                                                             <?php
                                                             // the_terms() 関数を使用してタームを表示
@@ -62,7 +62,7 @@
                                                             if (!empty($terms) && !is_wp_error($terms)) {
                                                                 the_terms(get_the_ID(), 'voice_category', '', ', ');
                                                             } else {
-                                                                echo 'No categories assigned';
+                                                                echo '未分類';
                                                             }
                                                             ?>
                                                         </p>

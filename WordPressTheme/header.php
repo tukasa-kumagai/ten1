@@ -17,26 +17,14 @@
   <meta property="og:description" content="私のポートフォリオサイトでは、これまでのプロジェクトやスキルを紹介しています。" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
-  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/common/codeups-logo-contact.png')); ?>" id="favicon">
-  <link rel="apple-touch-icon" sizes="180x180" href="../dist/assets/images/common/apple-touch-icon.png">
+  <link rel="icon" href="<?php echo esc_url(get_theme_file_uri('/assets/images/common/codeups-logo-contact.png')); ?>" id="favicon">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/common/apple-touch-icon.png">
   <!-- googleフォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Gotu&family=Noto+Sans+JP:wght@200;300;400;700&display=swap"
     rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- swiper -->
- 
-  <!-- メインcss -->
-
-
-  <!-- JavaScript -->
- 
- 
-
-  <!--メインのJS-->
-
-  <!-- JavaScript -->
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZP6NEWWYY"></script>
   <script>

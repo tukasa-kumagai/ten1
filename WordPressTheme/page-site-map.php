@@ -3,7 +3,7 @@
   <div class="lower-page-mv__slide">
     <picture class="lower-page-mv__slide-image">
       <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/site-map/pc-sitemap-mv.jpg')); ?>" media="(min-width: 768px)">
-      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/site-map/sp-sitemap-mv.jpg')); ?>" alt="">
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/site-map/sp-sitemap-mv.jpg')); ?>" alt="site-mapページのメインビュー">
     </picture>
   </div>
   <div class="lower-page-mv__text">

@@ -65,16 +65,20 @@
                   <div class="card__img">
                     <?php if (has_post_thumbnail()) : ?>
                       <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
+                    <?php else : ?>
+                      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="No Image">
                     <?php endif; ?>
                   </div>
                   <div class="card__body card__body--under">
                     <div class="card__head">
-                      <p class="card__head-title"> <?php
-                                                    $terms = get_the_terms(get_the_ID(), 'campaign_category');
-                                                    if (!empty($terms) && !is_wp_error($terms)) {
-                                                      echo esc_html($terms[0]->name); // 最初のカテゴリーのみ表示
-                                                    }
-                                                    ?></p>
+                      <p class="card__head-title">
+                        <?php
+                        $terms = get_the_terms(get_the_ID(), 'campaign_category');
+                        if (!empty($terms) && !is_wp_error($terms)) {
+                          echo esc_html($terms[0]->name);
+                        }
+                        ?>
+                      </p>
                       <p class="card__head-text"><?php the_title(); ?></p>
                     </div>
                   </div>
@@ -191,9 +195,10 @@
                 <?php if (has_post_thumbnail()) : ?>
                   <?php the_post_thumbnail('medium'); ?>
                 <?php else : ?>
-                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/default-image.jpg')); ?>" alt="デフォルト画像">
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像">
                 <?php endif; ?>
               </div>
+
               <div class="box__body">
                 <p class="box__day"><?php echo get_the_date('Y.m/d'); ?></p>
                 <p class="box__title"><?php the_title(); ?></p>
@@ -254,7 +259,7 @@
                       if (!empty($terms) && !is_wp_error($terms)) {
                         the_terms(get_the_ID(), 'voice_category', '', ', ');
                       } else {
-                        echo 'No categories assigned';
+                        echo '未分類';
                       }
                       ?>
                     </p>
@@ -264,6 +269,8 @@
                 <div class="card2__img">
                   <?php if (has_post_thumbnail()) : ?>
                     <?php the_post_thumbnail('medium'); ?>
+                  <?php else : ?>
+                    <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像">
                   <?php endif; ?>
                 </div>
               </div>

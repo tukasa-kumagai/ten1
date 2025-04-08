@@ -26,6 +26,14 @@
                   <p class="page-blog-low-page__time"><?php the_date('Y.m.d') ?></p>
                   <p class="page-blog-low-page__title"><?php the_title(); ?></p>
                   <p class="page-blog-low-page__text">
+                  <div class="page-blog-low-page-thumbnail">
+                  <?php if (has_post_thumbnail()) : ?>
+                  
+      <?php the_post_thumbnail('full'); // サムネイル画像を表示 ?>
+    <?php else : ?>
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="150" height="150">
+    <?php endif; ?>
+    </div>
                     <?php the_content(); ?>
                   </p>
                 </div>

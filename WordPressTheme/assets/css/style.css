@@ -899,18 +899,20 @@ div.information__img img {
 	color: #fff;
 	font-family: "Lato", sans-serif;
 	font-size: 5rem;
-	font-weight: 300;
+	font-weight: 400;
 	letter-spacing: 0.5em;
 	line-height: 1.25;
 	margin: 0 auto;
 	width: 13.75rem;
+	z-index: 1;
 }
 
 .page-404__text {
 	color: #fff;
 	font-family: "Lato", sans-serif;
 	font-size: 1rem;
-	font-weight: 300;
+	font-weight: 400;
+	line-height: 1.5;
 	text-align: center;
 }
 
@@ -1235,6 +1237,23 @@ div.information__img img {
 
 .page-blog-low-page__box-image2:hover::after {
 	border-color: #fff; /* ホバー時の矢印の色 */
+}
+
+.page-blog-low-page-thumbnail {
+	padding-top: 65.971429%;
+	position: relative;
+	width: 100%;
+}
+
+.page-blog-low-page-thumbnail img {
+	-o-object-fit: cover;
+	height: 100%;
+	left: 50%;
+	object-fit: cover;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
 }
 
 .page-blog {
@@ -2965,7 +2984,7 @@ body .is-layout-flex {
 }
 
 .card__img {
-	padding-top: 66.971429%;
+	padding-top: 65.971429%;
 	position: relative;
 	width: 100%;
 }
@@ -5514,6 +5533,15 @@ div.information__img {
 	width: 100%;
 }
 
+.page-blog-low-page-thumbnail img {
+	-o-object-fit: cover;
+	aspect-ratio: 233/350;
+	height: 100%;
+	object-fit: cover;
+	top: 50%;
+	width: 100%;
+}
+
 .page-blog__content {
 	display: flex;
 	gap: 4.375rem;
@@ -6423,11 +6451,17 @@ dl.price__list {
 }
 
 .card__img {
+	padding-top: 66.971429%;
 	width: 100%;
 }
 
 .card__img img {
+	-o-object-fit: cover;
+	aspect-ratio: 233/350;
+	height: 100%;
+	object-fit: cover;
 	top: 50%;
+	width: 100%;
 }
 
 .card__body {
@@ -7389,6 +7423,10 @@ span.wpcf7-list-item.first.last {
 .swiper-area {
 	display: flex;
 	margin-top: 2.5rem;
+}
+
+.swiper {
+	padding-top: 0.5rem;
 }
 
 .swiper-wrapper {

@@ -3,7 +3,7 @@
     <div class="lower-page-mv__slide">
         <picture class="lower-page-mv__slide-image">
             <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/pc-voice-mv-image.jpg')); ?>" media="(min-width: 768px)">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/voice/sp-voice-mv-image.jpg')); ?>" alt="taxonomy-voice_categoryページのメインビュー">
         </picture>
     </div>
     <div class="lower-page-mv__text">

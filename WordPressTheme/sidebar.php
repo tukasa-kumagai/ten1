@@ -85,14 +85,15 @@ $contact = esc_url(home_url('/contact'));
         <div class="custom-posts-sidebar">
           <div class="page-blog__sub-reviews-card">
             <!-- アイキャッチ画像 -->
-            <?php if (has_post_thumbnail()) : ?>
-              <div class="page-blog__sub-reviews-image">
-                <a href="<?php the_permalink(); ?>">
-                  <?php the_post_thumbnail('custom-size'); // custom-sizeサイズの画像を表示 
-                  ?>
-                </a>
-              </div>
-            <?php endif; ?>
+            <div class="page-blog__sub-reviews-image">
+  <a href="<?php the_permalink(); ?>">
+    <?php if (has_post_thumbnail()) : ?>
+      <?php the_post_thumbnail('custom-size'); // アイキャッチ画像がある場合 ?>
+    <?php else : ?>
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="294" height="218">
+    <?php endif; ?>
+  </a>
+</div>
             <div class="page-blog__sub-reviews-text">
               <div class="page-blog__sub-reviews-age">30代(カップル)</div>
               <p class="page-blog__sub-reviews-title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
@@ -134,15 +135,15 @@ $contact = esc_url(home_url('/contact'));
         <?php while ($custom_posts_query->have_posts()) : $custom_posts_query->the_post(); ?>
           <div class="page-blog__sub-campaign__items">
             <a href="./page-campaign-low-page1.html" class="page-blog__sub-campaign__item card">
-              <div class="card__img">
-                <!-- アイキャッチ画像 -->
-                <?php if (has_post_thumbnail()) : ?>
-                  <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail('thumbnail'); // サムネイルサイズの画像を表示 
-                    ?>
-                  </a>
-                <?php endif; ?>
-              </div>
+            <div class="card__img">
+  <a href="<?php the_permalink(); ?>">
+    <?php if (has_post_thumbnail()) : ?>
+      <?php the_post_thumbnail('thumbnail'); // サムネイル画像を表示 ?>
+    <?php else : ?>
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="150" height="150">
+    <?php endif; ?>
+  </a>
+</div>
               <div class="card__body card__body--under">
                 <div class="card__head card__head--blog-position card__head--blog-size">
                   <p class="card__head-text card__head-text--size"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>

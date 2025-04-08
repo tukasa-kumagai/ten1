@@ -5,8 +5,8 @@
   <div class="lower-page-mv">
     <div class="lower-page-mv__slide">
       <picture class="lower-page-mv__slide-image">
-        <source srcset="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/campaign/pc-campign-mv-image.jpg')); ?>" media="(min-width: 768px)">
-        <img src="<?php echo esc_url(get_theme_file_uri('../dist/assets/images/campaign/sp-campign-mv-image.jpg')); ?>" alt="キャンペーンメイン画像">
+        <source srcset="<?php echo esc_url(get_theme_file_uri('/assets/images/campaign/pc-campign-mv-image.jpg')); ?>" media="(min-width: 768px)">
+        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/campaign/sp-campign-mv-image.jpg')); ?>" alt="キャンペーンメイン画像">
       </picture>
     </div>
     <div class="lower-page-mv__text">
@@ -14,30 +14,30 @@
     </div>
   </div>
   <main>
-  <?php
-  $home = esc_url(home_url('/home'));
-  $campaign = esc_url(home_url('/campaign'));
-  $about_us = esc_url(home_url('/about_us'));
-  $information = esc_url(home_url('/information'));
-  $information1 = esc_url(home_url('/information#tab_panel-1'));
-  $information2 = esc_url(home_url('/information#tab_panel-2'));
-  $information3 = esc_url(home_url('/information#tab_panel-3'));
-  $blog = esc_url(home_url('/blog'));
-  $voice = esc_url(home_url('/voice'));
-  $price = esc_url(home_url('/price'));
-  $price1 = esc_url(home_url('/price#post-316'));
-  $price2 = esc_url(home_url('/price#post-315'));
-  $price3 = esc_url(home_url('/price#post-314'));
-  $price4 = esc_url(home_url('/price#post-292'));
-  $faq = esc_url(home_url('/faq'));
-  $sitemap = esc_url(home_url('/site-map'));
-  $privacy_policy = esc_url(home_url('/privacy_policy'));
-  $terms_of_service = esc_url(home_url('/terms-of-service'));
-  $contact = esc_url(home_url('/contact'));
+    <?php
+    $home = esc_url(home_url('/home'));
+    $campaign = esc_url(home_url('/campaign'));
+    $about_us = esc_url(home_url('/about_us'));
+    $information = esc_url(home_url('/information'));
+    $information1 = esc_url(home_url('/information#tab_panel-1'));
+    $information2 = esc_url(home_url('/information#tab_panel-2'));
+    $information3 = esc_url(home_url('/information#tab_panel-3'));
+    $blog = esc_url(home_url('/blog'));
+    $voice = esc_url(home_url('/voice'));
+    $price = esc_url(home_url('/price'));
+    $price1 = esc_url(home_url('/price#post-316'));
+    $price2 = esc_url(home_url('/price#post-315'));
+    $price3 = esc_url(home_url('/price#post-314'));
+    $price4 = esc_url(home_url('/price#post-292'));
+    $faq = esc_url(home_url('/faq'));
+    $sitemap = esc_url(home_url('/site-map'));
+    $privacy_policy = esc_url(home_url('/privacy_policy'));
+    $terms_of_service = esc_url(home_url('/terms-of-service'));
+    $contact = esc_url(home_url('/contact'));
 
-  ?>
+    ?>
     <p class="pagetop"><a href="#"><img class="pagetop__button" src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
-    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
     <section class="l-page-campaign page-campaign">
       <div class="page-campaign__inner inner fish">
         <div class="page-campaign__categories button2">
@@ -77,6 +77,10 @@
                         <div class="campaign-item-thumbnail">
                           <?php the_post_thumbnail('full'); ?>
                         </div>
+                      <?php else : ?>
+                        <div class="campaign-item-thumbnail">
+                          <img src="<?php echo get_template_directory_uri(); ?>/assets/images/common/noimage.jpg" alt="No Image Available">
+                        </div>
                       <?php endif; ?>
                     </div>
                     <div class="card__body card__body--under">
@@ -88,7 +92,7 @@
                                                           echo '<li><a href="' . esc_url(get_term_link($term)) . '">' . esc_html($term->name) . '</a></li>';
                                                         }
                                                       } else {
-                                                        echo '<li>No categories assigned.</li>';
+                                                        echo '<li>未分類</li>';
                                                       }
                                                       ?></div>
                         <p class="card__head-text card__head-text--campaign-size"><?php the_title(); ?></p>
@@ -104,7 +108,7 @@
                     <div class="card__foot-text card__foot-text--campaign-width">
                       <?php the_content(); ?>
                     </div>
-                    <p class="card__foot-day card__foot-day--position">2023/6/1-9/30</p>
+                    <time class="card__foot-day card__foot-day--position"><?php the_time( get_option( 'date_format' ) ); ?></time>
                     <p class="card__foot-inquiry">ご予約・お問い合わせはコチラ</p>
                     <a href="<?php echo $contact ?>" class="button button--position1">
                       <span class="button__text">Contact us</span>

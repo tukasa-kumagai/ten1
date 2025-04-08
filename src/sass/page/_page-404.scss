@@ -41,12 +41,13 @@ margin: 0 auto;
 
 .page-404__title {
 font-size: rem(80);
-font-weight: $regular;
+font-weight: $normal;
 font-family: $sub-english-font-family;
 color: $white;
 margin: 0 auto;
 letter-spacing: 0.5em;
 width: rem(220);
+z-index: 1;
 line-height: 1.25;
 @include mq("md") {
   font-size: rem(160);
@@ -57,10 +58,11 @@ line-height: 1.25;
 
 .page-404__text {
   font-size: rem(16);
-  font-weight: $regular;
+  font-weight: $normal;
   font-family: $sub-english-font-family;
   color: $white;
   text-align: center;
+  line-height: 1.5;
   @include mq("md") {
     margin-top: rem(20);
     font-size: rem(16);
