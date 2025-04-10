@@ -14,7 +14,7 @@
     <p class="pagetop">
     <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
     </p>
-    <?php get_template_part( 'template-parts/breadcrumb' ); ?>
+    <?php get_template_part('template-parts/breadcrumb'); ?>
     <section class="l-page-voice page-voice">
         <div class="inner page-voice__inner fish fish--blog">
             <div class="page-campaign__categories button2">
@@ -70,11 +70,12 @@
                                                     <p class="card2__title"><?php the_title(); ?></p>
                                                 </div>
                                                 <div class="card2__img">
-                                                    <?php
-                                                    if (has_post_thumbnail()) {
-                                                        the_post_thumbnail('medium'); // サイズ指定
-                                                    }
-                                                    ?>
+                                                    <?php if (has_post_thumbnail()) : ?>
+                                                        <?php the_post_thumbnail('medium'); // mediumサイズのサムネイルを表示 
+                                                        ?>
+                                                    <?php else : ?>
+                                                        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="300" height="200">
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
                                             <p class="card2__text card2__text--position ">

@@ -16,7 +16,6 @@
   <section class="l-page-blog page-blog">
     <div class="page-blog__inner inner fish fish--blog">
       <div class="page-blog__content">
-
         <!-- メインコンテンツ -->
         <div class="page-blog__main">
           <div class="pagination__list2  page-blog__items boxes boxes--column">
@@ -28,7 +27,7 @@
                                                   if (has_post_thumbnail()) {
                                                     echo get_the_post_thumbnail_url();
                                                   } else {
-                                                    echo esc_url(get_theme_file_uri('/assets/images/common/no_image.png'));
+                                                    echo esc_url(get_theme_file_uri('/assets/images/common/noimage.png'));
                                                   }
                                                   ?>" alt="<?php the_title_attribute(); ?>">
                   </div>
