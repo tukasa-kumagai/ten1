@@ -1,18 +1,23 @@
 <?php get_header();  ?>
+<?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
 <div class="main-mv">
   <div class="main-mv__slide">
-    <div class="main-mv__slide-image">
-      <img src="<?php the_field('top_mv1'); ?>" alt="トップ画像1">
-    </div>
-    <div class="main-mv__slide-image">
-      <img src="<?php the_field('top_mv2'); ?>" alt="トップ画像1">
-    </div>
-    <div class="main-mv__slide-image">
-      <img src="<?php the_field('top_mv3'); ?>" alt="トップ画像1">
-    </div>
-    <div class="main-mv__slide-image">
-      <img src="<?php the_field('top_mv4'); ?>" alt="トップ画像1">
-    </div>
+    <picture class="main-mv__slide-image">
+      <source srcset="<?php the_field('top_mv1'); ?>" media="(min-width: 768px)">
+      <img src="<?php the_field('sp_top_mv1'); ?>" alt="トップ画像1">
+    </picture>
+    <picture class="main-mv__slide-image">
+      <source srcset="<?php the_field('top_mv2'); ?>" media="(min-width: 768px)">
+      <img src="<?php the_field('sp_top_mv2'); ?>" alt="トップ画像2">
+    </picture>
+    <picture class="main-mv__slide-image">
+      <source srcset="<?php the_field('top_mv3'); ?>" media="(min-width: 768px)">
+      <img src="<?php the_field('sp_top_mv3'); ?>" alt="トップ画像3">
+    </picture>
+    <picture class="main-mv__slide-image">
+      <source srcset="<?php the_field('top_mv4'); ?>" media="(min-width: 768px)">
+      <img src="<?php the_field('sp_top_mv4'); ?>" alt="トップ画像4">
+    </picture>
   </div>
   <div class="main-mv__text">
     <p class="main-mv__title">DIVING</p>
@@ -20,20 +25,6 @@
   </div>
 </div>
 <main>
-  <?php
-  $home = esc_url(home_url('/home'));
-  $campaign = esc_url(home_url('/campaign'));
-  $about_us = esc_url(home_url('/about_us'));
-  $information = esc_url(home_url('/information'));
-  $blog = esc_url(home_url('/blog'));
-  $voice = esc_url(home_url('/voice'));
-  $price = esc_url(home_url('/price'));
-  $faq = esc_url(home_url('/faq'));
-  $sitemap = esc_url(home_url('/site-map'));
-  $privacy_policy = esc_url(home_url('/privacy_policy'));
-  $terms_of_service = esc_url(home_url('/terms-of-service'));
-  $contact = esc_url(home_url('/contact'));
-  ?>
   <p class="pagetop"><a href="#"> <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/back-up-image.jpg')); ?>" alt="戻るボタン"></a></p>
   <?php
   // メインループを妨げないようにサブループを作成
@@ -61,35 +52,40 @@
           <div class="swiper-wrapper campaign__cards">
             <?php if ($campaign_query->have_posts()) : ?>
               <?php while ($campaign_query->have_posts()) : $campaign_query->the_post(); ?>
-                <a href="<?php the_permalink(); ?>" class="swiper-slide campaign__item card">
-                  <div class="card__img">
-                    <?php if (has_post_thumbnail()) : ?>
-                      <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
-                    <?php else : ?>
-                      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="No Image">
-                    <?php endif; ?>
-                  </div>
-                  <div class="card__body card__body--under">
-                    <div class="card__head">
-                      <p class="card__head-title">
-                        <?php
-                        $terms = get_the_terms(get_the_ID(), 'campaign_category');
-                        if (!empty($terms) && !is_wp_error($terms)) {
-                          echo esc_html($terms[0]->name);
-                        }
-                        ?>
-                      </p>
-                      <p class="card__head-text"><?php the_title(); ?></p>
+                <?php
+                $left_price = get_field('left_price');
+                $right_price = get_field('right_price');
+                if ($left_price && $right_price): ?>
+                  <a href="<?php the_permalink(); ?>" class="swiper-slide campaign__item card">
+                    <div class="card__img">
+                      <?php if (has_post_thumbnail()) : ?>
+                        <?php the_post_thumbnail('full', array('alt' => get_the_title())); ?>
+                      <?php else : ?>
+                        <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="No Image">
+                      <?php endif; ?>
                     </div>
-                  </div>
-                  <div class="card__foot card__foot--under">
-                    <p class="card__foot-title">全部コミコミ(お一人様)</p>
-                    <div class="card__foot-price">
-                      <p class="card__foot-regular card__foot-regular--campaign-position"><?php the_field('left_price'); ?></p>
-                      <p class="card__foot-discount card__foot-discount--size"><?php the_field('right_price'); ?></p>
+                    <div class="card__body card__body--under">
+                      <div class="card__head">
+                        <p class="card__head-title">
+                          <?php
+                          $terms = get_the_terms(get_the_ID(), 'campaign_category');
+                          if (!empty($terms) && !is_wp_error($terms)) {
+                            echo esc_html($terms[0]->name);
+                          }
+                          ?>
+                        </p>
+                        <p class="card__head-text"><?php the_title(); ?></p>
+                      </div>
                     </div>
-                  </div>
-                </a>
+                    <div class="card__foot card__foot--under">
+                      <p class="card__foot-title">全部コミコミ(お一人様)</p>
+                      <div class="card__foot-price">
+                        <p class="card__foot-regular card__foot-regular--campaign-position"><?php echo esc_html($left_price); ?></p>
+                        <p class="card__foot-discount card__foot-discount--size"><?php echo esc_html($right_price); ?></p>
+                      </div>
+                    </div>
+                  </a>
+                <?php endif; ?>
               <?php endwhile; ?>
             <?php endif; ?>
           </div>

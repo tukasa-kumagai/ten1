@@ -54,7 +54,7 @@
                                             <div class="card2__head">
                                                 <div class="card2__detail">
                                                     <div class="card2__category">
-                                                        <p class="card2__age"><?php the_field('voice-age'); ?></p>
+                                                        <p class="card2__age"><?php the_field('voice-age'); ?><?php the_field('sex'); ?></p>
                                                         <p class="card2__course">
                                                             <?php
                                                             // the_terms() 関数を使用してタームを表示

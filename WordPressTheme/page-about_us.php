@@ -38,32 +38,43 @@
         </div>
       </div>
     </section>
-    <section class="l-page-about__gallery page-about__gallery gallery ">
-      <div class="page-about__gallery-inner inner">
-        <div class="page-about__gallery-title section-header">
-          <h2 class="section-header__english"> Gallery</h2>
-          <p class="section-header__japanese">フォト</p>
-        </div>
-        <?php
-        $gallery_images = SCF::get('about_gallery'); // 繰り返し画像フィールドの取得
-        ?>
-        <div class="gallery__content">
-          <?php if (! empty($gallery_images)) : // フィールドが空でない場合のみ実行 
-          ?>
-            <?php foreach ($gallery_images as $image) : // 画像をループ処理 
-            ?>
-              <div class="gallery__image js-modal-img">
-                <img src="<?php echo wp_get_attachment_image_url($image, 'large'); ?>" alt="ギャラリー画像">
-              </div>
-            <?php endforeach; ?>
-          <?php else : ?>
-            <p>画像がありません。</p>
-          <?php endif; ?>
-        </div>
-        <div class="gallery__modal js-modal">
-          <div class="gallery__modal-content js-modal-content"></div>
-        </div>
+    <?php
+$gallery_images = SCF::get('about_gallery');
+
+// 実際に画像があるかどうかをチェック
+$has_gallery_image = false;
+if (!empty($gallery_images) && is_array($gallery_images)) {
+  foreach ($gallery_images as $image) {
+    if (!empty($image)) {
+      $has_gallery_image = true;
+      break;
+    }
+  }
+}
+
+// 画像が1枚でもあればセクションを表示
+if ($has_gallery_image) : ?>
+  <section class="l-page-about__gallery page-about__gallery gallery">
+    <div class="page-about__gallery-inner inner">
+      <div class="page-about__gallery-title section-header">
+        <h2 class="section-header__english">Gallery</h2>
+        <p class="section-header__japanese">フォト</p>
       </div>
-    </section>
+      <div class="gallery__content">
+        <?php foreach ($gallery_images as $image) : ?>
+          <?php if (!empty($image)) : ?>
+            <div class="gallery__image js-modal-img">
+              <img src="<?php echo wp_get_attachment_image_url($image, 'large'); ?>" alt="ギャラリー画像">
+            </div>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
+      <div class="gallery__modal js-modal">
+        <div class="gallery__modal-content js-modal-content"></div>
+      </div>
+    </div>
+  </section>
+<?php endif; ?>
+
   </main>
   <?php get_footer();  ?>

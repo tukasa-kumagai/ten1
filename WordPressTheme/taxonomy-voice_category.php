@@ -53,8 +53,18 @@
                                         <div class="card2__head">
                                             <div class="card2__detail">
                                                 <div class="card2__category">
-                                                    <p class="card2__age"><?php the_field('voice-age'); ?></p>
-                                                    <p class="card2__course"><?php single_term_title(); ?></p>
+                                                <p class="card2__age"><?php the_field('voice-age'); ?><?php the_field('sex'); ?></p>
+                                                <p class="card2__course">
+                                                            <?php
+                                                            // the_terms() 関数を使用してタームを表示
+                                                            $terms = get_the_terms(get_the_ID(), 'voice_category');
+                                                            if (!empty($terms) && !is_wp_error($terms)) {
+                                                                the_terms(get_the_ID(), 'voice_category', '', ', ');
+                                                            } else {
+                                                                echo '未分類';
+                                                            }
+                                                            ?>
+                                                        </p>
                                                 </div>
                                                 <p class="card2__title"><?php the_title(); ?></p>
                                             </div>
