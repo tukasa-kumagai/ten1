@@ -230,6 +230,92 @@ function set_global_urls() {
     $contact = esc_url(home_url('/contact'));
 }
 add_action('wp', 'set_global_urls'); // 'init' より後のタイミングが安心
+
+
+
+// ダッシュボードにショートカットリンクウィジェットを追加
+function add_custom_dashboard_widget() {
+    wp_add_dashboard_widget(
+        'custom_dashboard_shortcut', // ID
+        '管理画面ショートカット',    // タイトル
+        'custom_dashboard_widget_content' // コンテンツを表示する関数
+    );
+}
+add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
+
+// ショートカットの中身
+function custom_dashboard_widget_content() {
+    ?>
+    <ul>
+        <li><a href="<?php echo admin_url('edit.php?post_type=page'); ?>">固定ページ一覧</a></li>
+        <li><a href="<?php echo admin_url('edit.php'); ?>">投稿一覧</a></li>
+        <li><a href="<?php echo admin_url('upload.php'); ?>">メディアライブラリ</a></li>
+        <li><a href="<?php echo home_url(); ?>" target="_blank">サイトを見る</a></li>
+        
+        <!-- カスタム投稿タイプのリンクを追加 -->
+        <li><a href="<?php echo admin_url('edit.php?post_type=voice'); ?>">お客様の投稿一覧</a></li>
+        <li><a href="<?php echo admin_url('edit.php?post_type=price'); ?>">価格投稿一覧</a></li>
+        <li><a href="<?php echo admin_url('edit.php?post_type=campaign'); ?>">キャンペーン投稿一覧</a></li>
+        <li><a href="<?php echo admin_url('edit.php?post_type=question'); ?>">質問投稿一覧</a></li>
+        
+        <!-- 必要に応じて追加 -->
+    </ul>
+    <?php
+}
+
+// カスタムフィールドを表示するためのメタボックスを追加
+function my_custom_meta_box() {
+    // "voice"カスタム投稿タイプのみにメタボックスを追加
+    if ('voice' == get_post_type()) {
+        add_meta_box(
+            'my_custom_fields', // メタボックスID
+            'Voice Custom Fields', // メタボックスのタイトル
+            'my_custom_meta_box_content', // メタボックス内に表示するコンテンツ
+            'voice', // カスタム投稿タイプ
+            'normal', // メタボックスの位置（normal, side, advanced）
+            'default' // 優先度（default, high, low）
+        );
+    }
+}
+add_action('add_meta_boxes', 'my_custom_meta_box');
+
+// メタボックス内に表示する内容
+function my_custom_meta_box_content($post) {
+    // nonceフィールド（セキュリティ）
+    wp_nonce_field('my_custom_nonce', 'my_custom_nonce_field');
+
+    // 投稿に関連するカスタムフィールドの取得
+    $my_custom_field = get_post_meta($post->ID, '_my_custom_field', true);
+
+    // 権限に基づいて表示を制御（ここでは "editor" 以上の権限を持つユーザーに表示）
+    if (current_user_can('editor')) {
+        echo '<label for="my_custom_field">Custom Field</label>';
+        echo '<input type="text" name="my_custom_field" id="my_custom_field" value="' . esc_attr($my_custom_field) . '" />';
+    } else {
+        echo '<p>You do not have permission to view this field.</p>';
+    }
+}
+
+// カスタムフィールドの保存処理
+function my_save_custom_meta($post_id) {
+    // nonceチェック
+    if (!isset($_POST['my_custom_nonce_field']) || !wp_verify_nonce($_POST['my_custom_nonce_field'], 'my_custom_nonce')) {
+        return;
+    }
+
+    // 自動保存を防止
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
+        return;
+    }
+
+    // 入力データの保存
+    if (isset($_POST['my_custom_field'])) {
+        update_post_meta($post_id, '_my_custom_field', sanitize_text_field($_POST['my_custom_field']));
+    }
+}
+add_action('save_post', 'my_save_custom_meta');
+
+
 ?>
 
 

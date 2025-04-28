@@ -42,28 +42,7 @@
 <?php wp_body_open();  ?>
 
 <body>
-  <?php
-  $home = esc_url(home_url('/home'));
-  $campaign = esc_url(home_url('/campaign'));
-  $about_us = esc_url(home_url('/about_us'));
-  $information = esc_url(home_url('/information'));
-  $information1 = esc_url(home_url('/information#tab_panel-1'));
-  $information2 = esc_url(home_url('/information#tab_panel-2'));
-  $information3 = esc_url(home_url('/information#tab_panel-3'));
-  $blog = esc_url(home_url('/blog'));
-  $voice = esc_url(home_url('/voice'));
-  $price = esc_url(home_url('/price'));
-  $price1 = esc_url(home_url('/price#post-316'));
-  $price2 = esc_url(home_url('/price#post-315'));
-  $price3 = esc_url(home_url('/price#post-314'));
-  $price4 = esc_url(home_url('/price#post-292'));
-  $faq = esc_url(home_url('/faq'));
-  $sitemap = esc_url(home_url('/site-map'));
-  $privacy_policy = esc_url(home_url('/privacy_policy'));
-  $terms_of_service = esc_url(home_url('/terms-of-service'));
-  $contact = esc_url(home_url('/contact'));
-
-  ?>
+  <?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
   <header class="l-header header">
     <div class="header__inner">
       <a href="<?php echo esc_url(home_url('/')); ?>" class="header__logo-link">
@@ -78,65 +57,31 @@
         <div class="sp-nav__inner">
           <div class="sp-nav__left">
             <ul class="sp-nav__left-items">
-              <li class="sp-nav__left-item"><a href="<?php echo $campaign ?>">キャンペーン</a></li>
+              <li class="sp-nav__left-item">
+                <a class="footer__button" href="<?php echo esc_url($campaign); ?>">キャンペーン</a>
+              </li>
               <?php
-              // 用語IDとタクソノミー名を指定
-              $term_id = 5; // 用語ID
-              $taxonomy = 'campaign_category'; // タクソノミー名
+              $taxonomy = 'campaign_category';
 
-              // タクソノミーページリンクを取得
-              $term_link = get_term_link($term_id, $taxonomy);
+              // タクソノミーの全カテゴリーを取得
+              $terms = get_terms([
+                'taxonomy'   => $taxonomy,
+                'hide_empty' => false, // 投稿がなくても表示
+              ]);
 
-              // リンクを表示（li タグを含める）
-              if (!is_wp_error($term_link)) {
-                echo '<li class="sp-nav__left-item">';
-                echo '<a class="footer__button" href="' . esc_url($term_link) . '">ライセンス取得</a>';
-                echo '</li>';
+              // 取得したカテゴリーごとにリンクを作成
+              if (!empty($terms) && !is_wp_error($terms)) {
+                foreach ($terms as $term) {
+                  $term_link = get_term_link($term);
+
+                  if (!is_wp_error($term_link)) {
+                    echo '<li class="sp-nav__left-item">';
+                    echo '<a class="footer__button" href="' . esc_url($term_link) . '">' . esc_html($term->name) . '</a>';
+                    echo '</li>';
+                  }
+                }
               } else {
-                // エラーハンドリング（リンクが取得できない場合）
-                echo '<li class="sp-nav__left-item">';
-                echo '<a class="footer__button" href="#">リンクが無効です</a>';
-                echo '</li>';
-              }
-              ?>
-              <?php
-              // 用語IDとタクソノミー名を指定
-              $term_id = 6; // 用語ID
-              $taxonomy = 'campaign_category'; // タクソノミー名
-
-              // タクソノミーページリンクを取得
-              $term_link = get_term_link($term_id, $taxonomy);
-
-              // リンクを表示（li タグを含める）
-              if (!is_wp_error($term_link)) {
-                echo '<li class="sp-nav__left-item">';
-                echo '<a class="footer__button" href="' . esc_url($term_link) . '">貸切体験ダイビング</a>';
-                echo '</li>';
-              } else {
-                // エラーハンドリング（リンクが取得できない場合）
-                echo '<li class="sp-nav__left-item">';
-                echo '<a class="footer__button" href="#">リンクが無効です</a>';
-                echo '</li>';
-              }
-              ?>
-              <?php
-              // 用語IDとタクソノミー名を指定
-              $term_id = 7; // 用語ID
-              $taxonomy = 'campaign_category'; // タクソノミー名
-
-              // タクソノミーページリンクを取得
-              $term_link = get_term_link($term_id, $taxonomy);
-
-              // リンクを表示（li タグを含める）
-              if (!is_wp_error($term_link)) {
-                echo '<li class="sp-nav__left-item">';
-                echo '<a class="footer__button" href="' . esc_url($term_link) . '">ファンダイビング</a>';
-                echo '</li>';
-              } else {
-                // エラーハンドリング（リンクが取得できない場合）
-                echo '<li class="sp-nav__left-item">';
-                echo '<a class="footer__button" href="#">リンクが無効です</a>';
-                echo '</li>';
+                echo '<li class="sp-nav__left-item"><a class="footer__button" href="#">カテゴリーがありません</a></li>';
               }
               ?>
             </ul>

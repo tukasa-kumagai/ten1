@@ -7,7 +7,15 @@
         </picture>
     </div>
     <div class="lower-page-mv__text">
-        <p class="lower-page-mv__title">Voice</p>
+        <p class="lower-page-mv__title"><?php 
+    if (is_tax('voice_category')) {
+      // タクソノミーページ（voice_category）でカテゴリー名を表示
+      single_term_title(); 
+    } else {
+      // 他のアーカイブページなどではタイトルを表示
+      echo 'カテゴリーなし';
+    }
+    ?></p>
     </div>
 </div>
 <main>
@@ -43,6 +51,7 @@
                 </div>
               </div>
             </div>
+            
                 </div>
                 <div class="page-vice__list">
                     <div class="pagination__list3 page-vice__items cards2 cards2--grid">

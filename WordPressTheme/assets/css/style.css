@@ -1529,15 +1529,15 @@ details summary::before {
 }
 
 .accordion__title::before {
-	transform: rotate(90deg);
-}
-
-.accordion__title.is-open::before {
 	transform: rotate(180deg);
 }
 
+.accordion__title.is-open::before {
+	transform: rotate(90deg);
+}
+
 .accordion__title.is-open::after {
-	opacity: 0;
+	opacity: 1;
 }
 
 .accordion__title-text {

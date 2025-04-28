@@ -1,5 +1,5 @@
 <?php get_header();  ?>
-
+<?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
 <body>
   <?php wp_body_open();  ?>
   <div class="lower-page-mv">

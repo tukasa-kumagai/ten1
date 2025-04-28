@@ -1,4 +1,5 @@
   <?php if (!is_404() && !is_page('contact')): ?>
+  
     <?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
     <section class="l-contact contact">
       <div class="contact__bg">
@@ -41,7 +42,7 @@
     </section>
     </main>
   <?php endif; ?>
-
+  <?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
   <footer class="l-footer footer ">
     <div class="inner">
       <div class="footer__logo">
@@ -57,6 +58,7 @@
           </a>
         </div>
       </div>
+      
       <div class="footer__content">
         <div class="footer__wrapper1">
           <div class="footer__group1">

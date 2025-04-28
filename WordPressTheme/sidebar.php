@@ -1,17 +1,4 @@
-<?php
-$home = esc_url(home_url('/home'));
-$campaign = esc_url(home_url('/campaign'));
-$about_us = esc_url(home_url('/about_us'));
-$information = esc_url(home_url('/information'));
-$blog = esc_url(home_url('/blog'));
-$voice = esc_url(home_url('/voice'));
-$price = esc_url(home_url('/price'));
-$faq = esc_url(home_url('/faq'));
-$sitemap = esc_url(home_url('/site-map'));
-$privacy_policy = esc_url(home_url('/privacy_policy'));
-$terms_of_service = esc_url(home_url('/terms-of-service'));
-$contact = esc_url(home_url('/contact'));
-?>
+<?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
 <div class="l-page-blog__sub page-blog__sub ">
   <div class="page-blog__sub-inner inner">
     <div class="page-blog__sub-article">
@@ -86,14 +73,15 @@ $contact = esc_url(home_url('/contact'));
           <div class="page-blog__sub-reviews-card">
             <!-- アイキャッチ画像 -->
             <div class="page-blog__sub-reviews-image">
-  <a href="<?php the_permalink(); ?>">
-    <?php if (has_post_thumbnail()) : ?>
-      <?php the_post_thumbnail('custom-size'); // アイキャッチ画像がある場合 ?>
-    <?php else : ?>
-      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="294" height="218">
-    <?php endif; ?>
-  </a>
-</div>
+              <a href="<?php the_permalink(); ?>">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('custom-size'); // アイキャッチ画像がある場合 
+                  ?>
+                <?php else : ?>
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="294" height="218">
+                <?php endif; ?>
+              </a>
+            </div>
             <div class="page-blog__sub-reviews-text">
               <div class="page-blog__sub-reviews-age">30代(カップル)</div>
               <p class="page-blog__sub-reviews-title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
@@ -120,64 +108,65 @@ $contact = esc_url(home_url('/contact'));
         </div>
       </div>
       <?php
-      // カスタム投稿タイプ「campaign」の最新の投稿を取得するクエリ
-      $args = [
-        'post_type'      => 'campaign', // カスタム投稿タイプを指定（ここでは「campaign」）
-        'posts_per_page' => 2,          // 表示する投稿数
-        'post_status'    => 'publish',  // 公開されている投稿のみを取得
-        'orderby'        => 'date',     // 投稿日順
-        'order'          => 'DESC'      // 降順（新しいものが上）
-      ];
-      // クエリを実行
-      $custom_posts_query = new WP_Query($args);
-      // 投稿が存在する場合
-      if ($custom_posts_query->have_posts()) : ?>
-        <?php while ($custom_posts_query->have_posts()) : $custom_posts_query->the_post(); ?>
-          <div class="page-blog__sub-campaign__items">
-            <a href="./page-campaign-low-page1.html" class="page-blog__sub-campaign__item card">
-            <div class="card__img">
-  <a href="<?php the_permalink(); ?>">
-    <?php if (has_post_thumbnail()) : ?>
-      <?php the_post_thumbnail('thumbnail'); // サムネイル画像を表示 ?>
-    <?php else : ?>
-      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="150" height="150">
-    <?php endif; ?>
+$args = [
+  'post_type'      => 'campaign',
+  'posts_per_page' => 2,
+  'post_status'    => 'publish',
+  'orderby'        => 'date',
+  'order'          => 'DESC'
+];
+
+$custom_posts_query = new WP_Query($args);
+
+if ($custom_posts_query->have_posts()) :
+  while ($custom_posts_query->have_posts()) : $custom_posts_query->the_post();
+
+    // カスタムフィールドの取得
+    $left_price = get_post_meta(get_the_ID(), 'left_price', true);
+    $right_price = get_post_meta(get_the_ID(), 'right_price', true);
+
+    // 両方のフィールドが入力されていない場合はスキップ
+    if (empty($left_price) || empty($right_price)) {
+      continue;
+    }
+    ?>
+    <div class="page-blog__sub-campaign__items">
+      <a href="<?php the_permalink(); ?>" class="page-blog__sub-campaign__item card">
+        <div class="card__img">
+          <?php if (has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
+          <?php else : ?>
+            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="150" height="150">
+          <?php endif; ?>
+        </div>
+        <div class="card__body card__body--under">
+          <div class="card__head card__head--blog-position card__head--blog-size">
+            <p class="card__head-text card__head-text--size">
+              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </p>
+          </div>
+        </div>
+        <div class="card__foot card__foot--under2">
+          <p class="card__foot-title card__foot-title--font-size">全部コミコミ(お一人様)</p>
+          <div class="card__foot-price">
+            <p class="card__foot-regular card__foot-regular--position"><?php echo esc_html($left_price); ?></p>
+            <p class="card__foot-discount card__foot-discount--position"><?php echo esc_html($right_price); ?></p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <?php
+  endwhile;
+  wp_reset_postdata();
+endif;
+?>
+
+<div class="page-blog__sub-reviews-button-inner">
+  <a href="<?php echo esc_url($campaign); ?>" class="button">
+    <span class="button__text">View more</span>
   </a>
 </div>
-              <div class="card__body card__body--under">
-                <div class="card__head card__head--blog-position card__head--blog-size">
-                  <p class="card__head-text card__head-text--size"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-                </div>
-              </div>
-              <div class="card__foot card__foot--under2">
-                <p class="card__foot-title card__foot-title--font-size ">全部コミコミ(お一人様)</p>
-                <div class="card__foot-price">
-                  <?php
-                  // カスタムフィールド「price」の値を取得して表示
-                  $price = get_post_meta(get_the_ID(), 'left_price', true);
-                  if ($price) {
-                    echo '<p class="card__foot-regular card__foot-regular--position">' . esc_html($price) . '</p>';
-                  }
-                  // カスタムフィールド「discount」の値を取得して表示
-                  $discount = get_post_meta(get_the_ID(), 'right_price', true);
-                  if ($discount) {
-                    echo '<p class="card__foot-discount card__foot-discount--position">' . esc_html($discount) . '</p>';
-                  }
-                  ?>
-                </div>
-              </div>
-            </a>
-          </div>
-        <?php endwhile; ?>
-      <?php
-        wp_reset_postdata(); // メインクエリを復元
-      endif;
-      ?>
-      <div class="page-blog__sub-reviews-button-inner">
-        <a href="<?php echo $campaign ?>" class="button">
-          <span class="button__text">View more</span>
-        </a>
-      </div>
+
       <div class="page-blog__sub-archive-title">
         <div class="title-name">
           <div class="title-name__image">
