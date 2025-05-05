@@ -6550,6 +6550,11 @@ dl.price__list {
 	margin-top: 0rem;
 }
 
+.card__foot-price {
+	display: flex;
+	justify-content: center;
+}
+
 .card__foot-price--campaign-position {
 	justify-content: center;
 }

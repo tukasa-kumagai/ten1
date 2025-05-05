@@ -232,36 +232,57 @@ function set_global_urls() {
 add_action('wp', 'set_global_urls'); // 'init' より後のタイミングが安心
 
 
-
-// ダッシュボードにショートカットリンクウィジェットを追加
-function add_custom_dashboard_widget() {
+function custom_dashboard_shortcut_widget() {
     wp_add_dashboard_widget(
-        'custom_dashboard_shortcut', // ID
-        '管理画面ショートカット',    // タイトル
-        'custom_dashboard_widget_content' // コンテンツを表示する関数
+        'custom_shortcut_widget', // ウィジェットID
+        '管理ショートカット',    // タイトル
+        'custom_dashboard_shortcut_widget_display' // 表示用関数
     );
 }
-add_action('wp_dashboard_setup', 'add_custom_dashboard_widget');
+add_action('wp_dashboard_setup', 'custom_dashboard_shortcut_widget');
 
-// ショートカットの中身
-function custom_dashboard_widget_content() {
-    ?>
-    <ul>
-        <li><a href="<?php echo admin_url('edit.php?post_type=page'); ?>">固定ページ一覧</a></li>
-        <li><a href="<?php echo admin_url('edit.php'); ?>">投稿一覧</a></li>
-        <li><a href="<?php echo admin_url('upload.php'); ?>">メディアライブラリ</a></li>
-        <li><a href="<?php echo home_url(); ?>" target="_blank">サイトを見る</a></li>
-        
-        <!-- カスタム投稿タイプのリンクを追加 -->
-        <li><a href="<?php echo admin_url('edit.php?post_type=voice'); ?>">お客様の投稿一覧</a></li>
-        <li><a href="<?php echo admin_url('edit.php?post_type=price'); ?>">価格投稿一覧</a></li>
-        <li><a href="<?php echo admin_url('edit.php?post_type=campaign'); ?>">キャンペーン投稿一覧</a></li>
-        <li><a href="<?php echo admin_url('edit.php?post_type=question'); ?>">質問投稿一覧</a></li>
-        
-        <!-- 必要に応じて追加 -->
-    </ul>
-    <?php
+function custom_dashboard_shortcut_widget_display() {
+    $shortcuts = [
+        [
+            'url' => admin_url('edit.php'), // 投稿一覧
+            'icon' => 'dashicons-admin-post',
+            'label' => '投稿一覧'
+        ],
+        [
+            'url' => admin_url('upload.php'), // メディアライブラリ
+            'icon' => 'dashicons-format-image',
+            'label' => 'メディア'
+        ],
+        [
+            'url' => admin_url('edit.php?post_type=page'), // 固定ページ
+            'icon' => 'dashicons-admin-page',
+            'label' => '固定ページ'
+        ],
+        [
+            'url' => admin_url('edit.php?post_type=news'), // カスタム投稿タイプ「お知らせ」
+            'icon' => 'dashicons-megaphone',
+            'label' => 'お知らせ'
+        ],
+        [
+            'url' => admin_url('admin.php?page=contact-form-7'), // Contact Form 7
+            'icon' => 'dashicons-email-alt',
+            'label' => 'お問い合わせ'
+        ],
+    ];
+
+    echo '<div style="display:flex; flex-wrap:wrap; gap:40px;">'; // 横の間隔を広げる
+    foreach ($shortcuts as $item) {
+        echo '<div style="text-align:center; width:200px; height:100px;">'; // 幅と高さを倍に設定
+        echo '<a href="' . esc_url($item['url']) . '" style="text-decoration:none; color:inherit; display:block; height:100%; width:100%; display:flex; flex-direction:column; justify-content:center;">';
+        echo '<span class="dashicons ' . esc_attr($item['icon']) . '" style="font-size:64px; margin-bottom:10px;"></span>'; // アイコンサイズを倍に
+        echo esc_html($item['label']);
+        echo '</a>';
+        echo '</div>';
+    }
+    echo '</div>';
 }
+
+
 
 // カスタムフィールドを表示するためのメタボックスを追加
 function my_custom_meta_box() {
@@ -315,7 +336,26 @@ function my_save_custom_meta($post_id) {
 }
 add_action('save_post', 'my_save_custom_meta');
 
+function remove_editor_from_multiple_custom_post_types() {
+    $post_types = ['price', 'voice', 'campaign', 'question','about_img',]; // ←スラッグを配列で並べる！
+  
+    foreach ($post_types as $post_type) {
+      remove_post_type_support($post_type, 'editor');
+    }
+  }
+  add_action('init', 'remove_editor_from_multiple_custom_post_types');
 
+
+  // Classic Editor をカスタム投稿タイプだけに制限し、通常の投稿ではブロックエディタを使う
+add_filter('use_block_editor_for_post_type', function($use_block_editor, $post_type) {
+    if ($post_type === 'post') {
+        return true; // 通常の投稿（post）はブロックエディタを使用
+    } else {
+        return false; // その他の投稿タイプでは Classic Editor を使用
+    }
+}, 10, 2);
+
+  
 ?>
 
 

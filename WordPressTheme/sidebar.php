@@ -55,111 +55,131 @@
       </div>
     </div>
     <?php
-    // カスタム投稿タイプ「campaign」の最新の投稿を取得するクエリ
-    $args = [
-      'post_type'      => 'voice', // カスタム投稿タイプを指定（ここでは「campaign」）
-      'posts_per_page' => 1,          // 表示する投稿数
-      'post_status'    => 'publish',  // 公開されている投稿のみを取得
-      'orderby'        => 'date',     // 投稿日順
-      'order'          => 'DESC'      // 降順（新しいものが上）
-    ];
-    // クエリを実行
-    $custom_posts_query = new WP_Query($args);
-
-    // 投稿が存在する場合
-    if ($custom_posts_query->have_posts()) : ?>
-      <?php while ($custom_posts_query->have_posts()) : $custom_posts_query->the_post(); ?>
-        <div class="custom-posts-sidebar">
-          <div class="page-blog__sub-reviews-card">
-            <!-- アイキャッチ画像 -->
-            <div class="page-blog__sub-reviews-image">
-              <a href="<?php the_permalink(); ?>">
-                <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail('custom-size'); // アイキャッチ画像がある場合 
-                  ?>
-                <?php else : ?>
-                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="294" height="218">
-                <?php endif; ?>
-              </a>
-            </div>
-            <div class="page-blog__sub-reviews-text">
-              <div class="page-blog__sub-reviews-age">30代(カップル)</div>
-              <p class="page-blog__sub-reviews-title"> <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></p>
-              <div class="page-blog__sub-reviews-button-inner">
-                <a href="<?php echo $voice ?>" class="button">
-                  <span class="button__text">View more</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        <?php endwhile; ?>
-        </ul>
-        </div>
-      <?php
-      wp_reset_postdata(); // メインクエリを復元
-    endif;
-      ?>
-      <div class="page-blog__sub-campaign">
-        <div class="title-name">
-          <div class="title-name__image">
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="画像">
-          </div>
-          <p class="title-name__text">キャンペーン</p>
-        </div>
-      </div>
-      <?php
 $args = [
-  'post_type'      => 'campaign',
-  'posts_per_page' => 2,
+  'post_type'      => 'voice',
+  'posts_per_page' => 1,
   'post_status'    => 'publish',
   'orderby'        => 'date',
   'order'          => 'DESC'
 ];
-
 $custom_posts_query = new WP_Query($args);
 
-if ($custom_posts_query->have_posts()) :
-  while ($custom_posts_query->have_posts()) : $custom_posts_query->the_post();
-
-    // カスタムフィールドの取得
-    $left_price = get_post_meta(get_the_ID(), 'left_price', true);
-    $right_price = get_post_meta(get_the_ID(), 'right_price', true);
-
-    // 両方のフィールドが入力されていない場合はスキップ
-    if (empty($left_price) || empty($right_price)) {
-      continue;
-    }
-    ?>
-    <div class="page-blog__sub-campaign__items">
-      <a href="<?php the_permalink(); ?>" class="page-blog__sub-campaign__item card">
-        <div class="card__img">
-          <?php if (has_post_thumbnail()) : ?>
-            <?php the_post_thumbnail('thumbnail'); ?>
-          <?php else : ?>
-            <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="150" height="150">
-          <?php endif; ?>
-        </div>
-        <div class="card__body card__body--under">
-          <div class="card__head card__head--blog-position card__head--blog-size">
-            <p class="card__head-text card__head-text--size">
-              <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-            </p>
-          </div>
-        </div>
-        <div class="card__foot card__foot--under2">
-          <p class="card__foot-title card__foot-title--font-size">全部コミコミ(お一人様)</p>
-          <div class="card__foot-price">
-            <p class="card__foot-regular card__foot-regular--position"><?php echo esc_html($left_price); ?></p>
-            <p class="card__foot-discount card__foot-discount--position"><?php echo esc_html($right_price); ?></p>
-          </div>
-        </div>
-      </a>
-    </div>
+if ($custom_posts_query->have_posts()) : ?>
+  <?php while ($custom_posts_query->have_posts()) : $custom_posts_query->the_post(); ?>
     <?php
-  endwhile;
-  wp_reset_postdata();
-endif;
-?>
+    $group = get_field('customer_group');
+    $voice_age = $group['voice-age'] ?? '';
+    $sex = $group['sex'] ?? '';
+    ?>
+    <div class="custom-posts-sidebar">
+      <div class="page-blog__sub-reviews-card">
+        <div class="page-blog__sub-reviews-image">
+          <a href="<?php the_permalink(); ?>">
+            <?php if (has_post_thumbnail()) : ?>
+              <?php the_post_thumbnail('custom-size'); ?>
+            <?php else : ?>
+              <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="デフォルト画像" width="294" height="218">
+            <?php endif; ?>
+          </a>
+        </div>
+        <div class="page-blog__sub-reviews-text">
+          <?php if ($voice_age && $sex): ?>
+            <div class="page-blog__sub-reviews-age"><?php echo esc_html($voice_age . '代(' . $sex . ')'); ?></div>
+          <?php endif; ?>
+          <p class="page-blog__sub-reviews-title">
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          </p>
+          <div class="page-blog__sub-reviews-button-inner">
+            <a href="<?php the_permalink(); ?>" class="button">
+              <span class="button__text">View more</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endwhile; ?>
+  <?php wp_reset_postdata(); ?>
+<?php endif; ?>
+
+   <div class="page-blog__sub-campaign">
+  <div class="title-name">
+    <div class="title-name__image">
+      <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/blog/blog-article-logo-image.jpg')); ?>" alt="キャンペーンロゴ">
+    </div>
+    <p class="title-name__text">キャンペーン</p>
+  </div>
+
+  <div class="page-blog__sub-campaign__items">
+    <?php
+    $campaign_query = new WP_Query([
+      'post_type'      => 'campaign',
+      'posts_per_page' => 2,
+      'post_status'    => 'publish',
+      'orderby'        => 'date',
+      'order'          => 'DESC'
+    ]);
+
+    if ($campaign_query->have_posts()) :
+      while ($campaign_query->have_posts()) : $campaign_query->the_post();
+        $campaign_group = get_field('campaign_group');
+
+        if (!empty($campaign_group)) :
+          $left_price  = $campaign_group['left_price'] ?? '';
+          $right_price = $campaign_group['right_price'] ?? '';
+          $price_text  = $campaign_group['price_text'] ?? '';
+          $start_date  = $campaign_group['start_date'] ?? '';
+          $end_date    = $campaign_group['end_date'] ?? '';
+
+          $period = ($start_date && $end_date) ? $start_date . ' - ' . $end_date : '';
+
+          if ($left_price && $right_price && $price_text && $period) :
+    ?>
+            <a href="<?php the_permalink(); ?>" class="page-blog__sub-campaign__item card">
+              <div class="card__img">
+                <?php if (has_post_thumbnail()) : ?>
+                  <?php the_post_thumbnail('thumbnail'); ?>
+                <?php else : ?>
+                  <img src="<?php echo esc_url(get_theme_file_uri('/assets/images/common/noimage.jpg')); ?>" alt="No Image" width="150" height="150">
+                <?php endif; ?>
+              </div>
+
+              <div class="card__body card__body--under">
+                <div class="card__head card__head--blog-position card__head--blog-size">
+                  <p class="card__head-text card__head-text--size">
+                    <?php
+                    $title = get_the_title();
+                    $short_title = mb_substr($title, 0, 20);
+                    if (mb_strlen($title) > 20) {
+                      $short_title .= '…';
+                    }
+                    echo esc_html($short_title);
+                    ?>
+                  </p>
+                </div>
+              </div>
+
+              <div class="card__foot card__foot--under2">
+                <p class="card__foot-title card__foot-title--font-size">全部コミコミ(お一人様)</p>
+                <div class="card__foot-price">
+                  <p class="card__foot-regular card__foot-regular--position">
+                    ¥<?php echo number_format((int)str_replace(['¥', ','], '', $left_price)); ?>
+                  </p>
+                  <p class="card__foot-discount card__foot-discount--position">
+                    ¥<?php echo number_format((int)str_replace(['¥', ','], '', $right_price)); ?>
+                  </p>
+                </div>
+            
+              </div>
+            </a>
+    <?php
+          endif;
+        endif;
+      endwhile;
+      wp_reset_postdata();
+    endif;
+    ?>
+  </div>
+</div>
 
 <div class="page-blog__sub-reviews-button-inner">
   <a href="<?php echo esc_url($campaign); ?>" class="button">

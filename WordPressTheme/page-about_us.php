@@ -39,21 +39,34 @@
       </div>
     </section>
     <?php
-$gallery_images = SCF::get('about_gallery');
+$args = array(
+  'post_type'      => 'about_img', // ←ここはカスタム投稿タイプ名に変更
+  'posts_per_page' => -1,         // すべての投稿取得
+);
 
-// 実際に画像があるかどうかをチェック
+$campaign_query = new WP_Query($args);
+
+// 画像がある投稿を1つでも検出したら表示する
 $has_gallery_image = false;
-if (!empty($gallery_images) && is_array($gallery_images)) {
-  foreach ($gallery_images as $image) {
-    if (!empty($image)) {
-      $has_gallery_image = true;
-      break;
-    }
-  }
-}
+$all_gallery_images = [];
 
-// 画像が1枚でもあればセクションを表示
-if ($has_gallery_image) : ?>
+if ($campaign_query->have_posts()) :
+  while ($campaign_query->have_posts()) : $campaign_query->the_post();
+    $gallery_images = SCF::get('about_gallery'); // フィールド名に合わせて変更
+    if (!empty($gallery_images) && is_array($gallery_images)) {
+      foreach ($gallery_images as $image) {
+        if (!empty($image)) {
+          $all_gallery_images[] = $image;
+          $has_gallery_image = true;
+        }
+      }
+    }
+  endwhile;
+  wp_reset_postdata();
+endif;
+?>
+
+<?php if ($has_gallery_image) : ?>
   <section class="l-page-about__gallery page-about__gallery gallery">
     <div class="page-about__gallery-inner inner">
       <div class="page-about__gallery-title section-header">
@@ -61,12 +74,10 @@ if ($has_gallery_image) : ?>
         <p class="section-header__japanese">フォト</p>
       </div>
       <div class="gallery__content">
-        <?php foreach ($gallery_images as $image) : ?>
-          <?php if (!empty($image)) : ?>
-            <div class="gallery__image js-modal-img">
-              <img src="<?php echo wp_get_attachment_image_url($image, 'large'); ?>" alt="ギャラリー画像">
-            </div>
-          <?php endif; ?>
+        <?php foreach ($all_gallery_images as $image_id) : ?>
+          <div class="gallery__image js-modal-img">
+            <img src="<?php echo wp_get_attachment_image_url($image_id, 'large'); ?>" alt="ギャラリー画像">
+          </div>
         <?php endforeach; ?>
       </div>
       <div class="gallery__modal js-modal">
@@ -75,6 +86,7 @@ if ($has_gallery_image) : ?>
     </div>
   </section>
 <?php endif; ?>
+
 
   </main>
   <?php get_footer();  ?>

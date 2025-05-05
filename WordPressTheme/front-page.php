@@ -1,24 +1,41 @@
 <?php get_header();  ?>
 <?php global $home, $campaign, $about_us, $information, $information1, $information2, $information3, $blog, $voice, $price, $price1, $price2, $price3, $faq, $sitemap, $privacy_policy, $terms_of_service, $contact; ?>
-<div class="main-mv">
-  <div class="main-mv__slide">
-    <picture class="main-mv__slide-image">
-      <source srcset="<?php the_field('top_mv1'); ?>" media="(min-width: 768px)">
-      <img src="<?php the_field('sp_top_mv1'); ?>" alt="トップ画像1">
-    </picture>
-    <picture class="main-mv__slide-image">
-      <source srcset="<?php the_field('top_mv2'); ?>" media="(min-width: 768px)">
-      <img src="<?php the_field('sp_top_mv2'); ?>" alt="トップ画像2">
-    </picture>
-    <picture class="main-mv__slide-image">
-      <source srcset="<?php the_field('top_mv3'); ?>" media="(min-width: 768px)">
-      <img src="<?php the_field('sp_top_mv3'); ?>" alt="トップ画像3">
-    </picture>
-    <picture class="main-mv__slide-image">
-      <source srcset="<?php the_field('top_mv4'); ?>" media="(min-width: 768px)">
-      <img src="<?php the_field('sp_top_mv4'); ?>" alt="トップ画像4">
-    </picture>
-  </div>
+<div class="main-mv__slide">
+  <?php
+  // 最新の「top_mv」投稿を1件取得
+  $args = array(
+    'post_type' => 'top_mv',
+    'posts_per_page' => 1,
+  );
+
+  $mv_query = new WP_Query($args);
+
+  if ($mv_query->have_posts()) :
+    while ($mv_query->have_posts()) : $mv_query->the_post();
+
+      // top_mv_groupの中の画像を順に取得
+      $mv_group = get_field('top_mv_group');
+
+      if ($mv_group):
+        for ($i = 1; $i <= 4; $i++) :
+          $pc_field = 'top_mv' . $i;
+          $sp_field = 'sp_top_mv' . $i;
+          $pc_img = isset($mv_group[$pc_field]) ? $mv_group[$pc_field] : '';
+          $sp_img = isset($mv_group[$sp_field]) ? $mv_group[$sp_field] : '';
+          ?>
+          <picture class="main-mv__slide-image">
+            <source srcset="<?php echo esc_url($pc_img); ?>" media="(min-width: 768px)">
+            <img src="<?php echo esc_url($sp_img); ?>" alt="トップ画像<?php echo $i; ?>">
+          </picture>
+          <?php
+        endfor;
+      endif;
+
+    endwhile;
+    wp_reset_postdata();
+  endif;
+  ?>
+</div>
   <div class="main-mv__text">
     <p class="main-mv__title">DIVING</p>
     <p class="main-mv__subtitle">into the ocean</p>
@@ -52,10 +69,12 @@
           <div class="swiper-wrapper campaign__cards">
             <?php if ($campaign_query->have_posts()) : ?>
               <?php while ($campaign_query->have_posts()) : $campaign_query->the_post(); ?>
-                <?php
-                $left_price = get_field('left_price');
-                $right_price = get_field('right_price');
-                if ($left_price && $right_price): ?>
+  <?php
+  $campaign_group = get_field('campaign_group');
+  if ($campaign_group && !empty($campaign_group['left_price']) && !empty($campaign_group['right_price'])) :
+    $left_price = $campaign_group['left_price'];
+    $right_price = $campaign_group['right_price'];
+  ?>
                   <a href="<?php the_permalink(); ?>" class="swiper-slide campaign__item card">
                     <div class="card__img">
                       <?php if (has_post_thumbnail()) : ?>
@@ -99,6 +118,7 @@
       </div>
     </div>
   </section>
+  
   <?php
   // メインループを元に戻す
   wp_reset_postdata();

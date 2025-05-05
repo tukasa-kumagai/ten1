@@ -239,7 +239,10 @@
     display: flex;
     justify-content: start;
 
-    @include mq("md") {}
+    @include mq("md") {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .card__foot-price--campaign-position {

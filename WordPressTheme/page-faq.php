@@ -18,21 +18,25 @@
       <nav class="page-faq__nav">
         <ul class="accordion__items">
           <?php
+          // 「question」投稿タイプから全件取得
           $args = array(
-            'post_type' => 'question', // カスタム投稿タイプのスラッグに変更
-            'posts_per_page' => -1, // 全件表示
+            'post_type' => 'question',
+            'posts_per_page' => -1,
             'orderby' => 'date',
             'order' => 'DESC'
           );
           $faq_query = new WP_Query($args);
+
           if ($faq_query->have_posts()) :
             while ($faq_query->have_posts()) : $faq_query->the_post();
-              // SCF（Smart Custom Fields）で登録されたフィールドを取得
-              $faq_items = SCF::get('faq_group'); // フィールドグループ名
+
+              // 投稿内の繰り返しフィールド取得
+              $faq_items = SCF::get('faq_group');
+
               if (!empty($faq_items)) :
                 foreach ($faq_items as $faq_item) :
-                  $question = $faq_item['fq_problem']; // 質問フィールド名
-                  $answer = $faq_item['fq_answer'];   // 回答フィールド名
+                  $question = $faq_item['fq_problem'];
+                  $answer = $faq_item['fq_answer'];
           ?>
                   <li class="accordion__item js-accordion-item">
                     <div class="accordion__title js-accordion-title">
@@ -45,10 +49,11 @@
           <?php
                 endforeach;
               endif;
+
             endwhile;
             wp_reset_postdata();
           else :
-            echo '';
+            echo '<li>よくある質問は現在ありません。</li>';
           endif;
           ?>
         </ul>
